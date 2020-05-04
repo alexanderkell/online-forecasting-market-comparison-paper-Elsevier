@@ -1,0 +1,243 @@
+\begin{thebibliography}{10}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \def\href#1#2{#2} \def\path#1{#1}\fi
+
+\bibitem{Masson-Delmotte2018}
+V.~Masson-Delmotte, P.~Zhai, H.~P{\"{o}}rtner, D.~Roberts, J.~Skea, P.~R.
+  Shukla, A.~Pirani, W.~Moufouma-Okia, C.~P{\'{e}}an, R.~Pidcock, S.~Connors,
+  J.~B. Matthews, Y.~Chen, X.~Zhou, M.~I. Gomis, E.~Lonnoy, T.~Maycock,
+  M.~Tignor, T.~Waterfield, {IPCC Special Report 1.5 - Summary for
+  Policymakers}, IPCC, 2018.
+
+\bibitem{May2002}
+{Paris Agreement}, United Nations 21 (2015) 1--23.
+
+\bibitem{Salas2017}
+P.~Salas,
+  \href{https://www.repository.cam.ac.uk/bitstream/handle/1810/265885/Thesis{\_}Pablo{\_}Salas.pdf?sequence=1{\&}isAllowed=y}{{The
+  Effects of Uncertainty in the Technological Transitions of the Power
+  Sector}}~(March) (2017).
+\newline\urlprefix\url{https://www.repository.cam.ac.uk/bitstream/handle/1810/265885/Thesis{\_}Pablo{\_}Salas.pdf?sequence=1{\&}isAllowed=y}
+
+\bibitem{EpsteinJoshuaM.author.GSSS}
+a.~Epstein, Joshua~M., Generative Social Science: Studies in Agent-Based
+  Computational Modeling /, course book. Edition, Princeton University Press,,
+  Princeton, N.J. :.
+
+\bibitem{Ringler2016}
+P.~Ringler, D.~Keles, W.~Fichtner, {Agent-based modelling and simulation of
+  smart electricity grids and markets - A literature review}, Renewable and
+  Sustainable Energy Reviews 57 (2016) 205--215.
+
+\bibitem{Kell}
+A.~Kell, M.~Forshaw, A.~S. Mcgough, {ElecSim : Monte-Carlo Open-Source
+  Agent-Based Model to Inform Policy for Long-Term Electricity Planning}, The
+  Tenth ACM International Conference on Future Energy Systems (ACM e-Energy)
+  (2019) 556--565.
+
+\bibitem{Nahmmacher2016}
+P.~Nahmmacher, E.~Schmid, L.~Hirth, B.~Knopf,
+  \href{http://dx.doi.org/10.1016/j.energy.2016.06.081}{{Carpe diem: A novel
+  approach to select representative days for long-term power system modeling}},
+  Energy 112 (2016) 430--442.
+\newblock \href {https://doi.org/10.1016/j.energy.2016.06.081}
+  {\path{doi:10.1016/j.energy.2016.06.081}}.
+\newline\urlprefix\url{http://dx.doi.org/10.1016/j.energy.2016.06.081}
+
+\bibitem{forgy65}
+E.~Forgy, Cluster analysis of multivariate data: Efficiency versus
+  interpretability of classification, Biometrics 21~(3) (1965) 768--769.
+
+\bibitem{doi:10.1080/01621459.1963.10500845}
+J.~H.~W. Jr.,
+  \href{https://www.tandfonline.com/doi/abs/10.1080/01621459.1963.10500845}{Hierarchical
+  grouping to optimize an objective function}, Journal of the American
+  Statistical Association 58~(301) (1963) 236--244.
+\newblock \href
+  {http://arxiv.org/abs/https://www.tandfonline.com/doi/pdf/10.1080/01621459.1963.10500845}
+  {\path{arXiv:https://www.tandfonline.com/doi/pdf/10.1080/01621459.1963.10500845}},
+  \href {https://doi.org/10.1080/01621459.1963.10500845}
+  {\path{doi:10.1080/01621459.1963.10500845}}.
+\newline\urlprefix\url{https://www.tandfonline.com/doi/abs/10.1080/01621459.1963.10500845}
+
+\bibitem{Beckman2011}
+J.~Beckman, T.~Hertel, W.~Tyner,
+  \href{http://dx.doi.org/10.1016/j.eneco.2011.01.005}{{Validating
+  energy-oriented CGE models}}, Energy Economics 33~(5) (2011) 799--806.
+\newblock \href {https://doi.org/10.1016/j.eneco.2011.01.005}
+  {\path{doi:10.1016/j.eneco.2011.01.005}}.
+\newline\urlprefix\url{http://dx.doi.org/10.1016/j.eneco.2011.01.005}
+
+\bibitem{Howells2011}
+M.~Howells, H.~Rogner, N.~Strachan, C.~Heaps, H.~Huntington, S.~Kypreos,
+  A.~Hughes, S.~Silveira, J.~DeCarolis, M.~Bazillian, A.~Roehrl,
+  \href{http://dx.doi.org/10.1016/j.enpol.2011.06.033}{{OSeMOSYS: The Open
+  Source Energy Modeling System}}, Energy Policy 39~(10) (2011) 5850--5870.
+\newblock \href {https://doi.org/10.1016/j.enpol.2011.06.033}
+  {\path{doi:10.1016/j.enpol.2011.06.033}}.
+\newline\urlprefix\url{http://dx.doi.org/10.1016/j.enpol.2011.06.033}
+
+\bibitem{Hunter2013}
+K.~Hunter, S.~Sreepathi, J.~F. DeCarolis, {Modeling for insight using Tools for
+  Energy Model Optimization and Analysis (Temoa)}, Energy Economics
+  40~(November 2018) (2013) 339--349.
+\newblock \href {https://doi.org/10.1016/j.eneco.2013.07.014}
+  {\path{doi:10.1016/j.eneco.2013.07.014}}.
+
+\bibitem{Noble2004}
+K.~Noble, {ANSWERv6-MARKAL User Manual ANSWER MARKAL , an Energy Policy
+  Optimization Tool}, Energy Policy (2004).
+
+\bibitem{Ringler2012}
+P.~Ringler, {PowerACE Agent-based simulation of electricity markets}, MOCAP
+  Workshop on Modelling Carbon Prices - Interacting agent networks {\&}
+  Strategies under risk (2012).
+
+\bibitem{Hodges}
+J.~S. Hodges, J.~A. Dewar, {Is it you or your model talking? A framework for
+  Model Validation} (1992).
+
+\bibitem{Craig2002}
+P.~P. Craig, A.~Gadgil, J.~G. Koomey, {What can history teach us? A
+  retrospective examination of long-term energy forecasts for the United
+  States}, Annual Review of Energy and the Environment 27~(1) (2002) 83--118.
+\newblock \href {https://doi.org/10.1146/annurev.energy.27.122001.083425}
+  {\path{doi:10.1146/annurev.energy.27.122001.083425}}.
+
+\bibitem{Koomey2003}
+J.~Koomey, P.~Craig, A.~Gadgil, D.~Lorenzetti, {Improving Long-Range Energy
+  Modeling: A Plea for Historical Retrospectives}, Energy Journal 24~(4) (2003)
+  75--92.
+\newblock \href {https://doi.org/10.5547/ISSN0195-6574-EJ-Vol24-No4-4}
+  {\path{doi:10.5547/ISSN0195-6574-EJ-Vol24-No4-4}}.
+
+\bibitem{Hoffman_1973}
+K.~C. Hoffman, The u.s. energy system: A unified planning framework, energy
+  modeling, resources for the future (1973) 103–--43.
+
+\bibitem{ERDA_48}
+National plan for energy research, development, and demonstration: Creating
+  energy choices for the future (1975).
+
+\bibitem{Hoffman2011}
+K.~Hoffman, {Perspectives on the Validation of Energy System Models
+  Motivation}, MITRE~(February 2006) (2011) 1--13.
+
+\bibitem{Schurr_1961}
+A.~P. Usher, Energy in the american economy, 1850–1975. an economic study of
+  its history and prospects., The Journal of Economic History 21~(03) (1961)
+  418--421.
+
+\bibitem{gillespie_1979}
+J.~V. Gillespie, Forecasting: An appraisal for policy-makers and planners. by
+  william ascher. (baltimore: Johns hopkins university press, 1978. pp. xiii
+  239. \$15.00, paper.), American Political Science Review 73~(2) (1979)
+  554–--555.
+\newblock \href {https://doi.org/10.2307/1954899} {\path{doi:10.2307/1954899}}.
+
+\bibitem{dukes_511}
+D.~for Business~Energy, I.~Strategy, Power stations in the united kingdom, may
+  2019, Digest of United Kingdom Energy Statistics (DUKES) (2019).
+
+\bibitem{Department2016}
+{Department for Business Energy {\&} Industrial Strategy}, {Electricity
+  Generation Costs}~(November) (2016).
+
+\bibitem{IEA2015}
+IEA, {Projected Costs of Generating Electricity} (2015) 215.
+
+\bibitem{eia_efficiency}
+U.~E.~I. Administration, Power plant operations report.
+
+\bibitem{ARIMA}
+N.~W. et~al.", "autoregressive integrated moving average" (1930).
+
+\bibitem{KPMG2017}
+KPMG, {Cost of Capital Study 2017}, KPMG (2017).
+
+\bibitem{Paper2012}
+I.~W. Paper, P.~Heptonstall, {Cost estimates for nuclear power in the UK},
+  ICEPT Working Paper~(August) (2012).
+
+\bibitem{KincheloeStephenC1990TWAC}
+S.~C. Kincheloe, The weighted average cost of capital - the correct discount,
+  The Appraisal journal. 58~(1) (1990).
+
+\bibitem{Poncelet2017}
+K.~Poncelet, H.~Hoschle, E.~Delarue, A.~Virag, W.~Drhaeseleer, {Selecting
+  representative days for capturing the implications of integrating
+  intermittent renewables in generation expansion planning problems}, IEEE
+  Transactions on Power Systems 32~(3) (2017) 1936--1948.
+\newblock \href {https://doi.org/10.1109/TPWRS.2016.2596803}
+  {\path{doi:10.1109/TPWRS.2016.2596803}}.
+
+\bibitem{Ludig2011}
+S.~Ludig, M.~Haller, E.~Schmid, N.~Bauer,
+  \href{http://dx.doi.org/10.1016/j.energy.2011.08.021}{{Fluctuating renewables
+  in a long-term climate change mitigation strategy}}, Energy 36~(11) (2011)
+  6674--6685.
+\newblock \href {https://doi.org/10.1016/j.energy.2011.08.021}
+  {\path{doi:10.1016/j.energy.2011.08.021}}.
+\newline\urlprefix\url{http://dx.doi.org/10.1016/j.energy.2011.08.021}
+
+\bibitem{Haydt2011}
+G.~Haydt, V.~Leal, A.~Pina, C.~A. Silva,
+  \href{http://dx.doi.org/10.1016/j.renene.2011.03.028}{{The relevance of the
+  energy resource dynamics in the mid/long-term energy planning models}},
+  Renewable Energy 36~(11) (2011) 3068--3074.
+\newblock \href {https://doi.org/10.1016/j.renene.2011.03.028}
+  {\path{doi:10.1016/j.renene.2011.03.028}}.
+\newline\urlprefix\url{http://dx.doi.org/10.1016/j.renene.2011.03.028}
+
+\bibitem{Staffell2016}
+I.~Staffell, S.~Pfenninger,
+  \href{http://dx.doi.org/10.1016/j.energy.2016.08.068}{{Using bias-corrected
+  reanalysis to simulate current and future wind power output}}, Energy 114
+  (2016) 1224--1239.
+\newblock \href {https://doi.org/10.1016/j.energy.2016.08.068}
+  {\path{doi:10.1016/j.energy.2016.08.068}}.
+\newline\urlprefix\url{http://dx.doi.org/10.1016/j.energy.2016.08.068}
+
+\bibitem{gridwatch}
+\href{https://gridwatch.co.uk/}{Gb fuel type power generation production}.
+\newline\urlprefix\url{https://gridwatch.co.uk/}
+
+\bibitem{Dhaeseleer2015}
+W.~D'haeseleer, J.~Duerinck, K.~Poncelet, D.~Six, E.~Delarue,
+  \href{http://dx.doi.org/10.1016/j.apenergy.2015.10.100}{{Impact of the level
+  of temporal and operational detail in energy-system planning models}},
+  Applied Energy 162 (2015) 631--643.
+\newblock \href {https://doi.org/10.1016/j.apenergy.2015.10.100}
+  {\path{doi:10.1016/j.apenergy.2015.10.100}}.
+\newline\urlprefix\url{http://dx.doi.org/10.1016/j.apenergy.2015.10.100}
+
+\bibitem{Hilbers2019}
+A.~P. Hilbers, D.~J. Brayshaw, A.~Gandy,
+  \href{https://doi.org/10.1016/j.apenergy.2019.04.110}{{Importance
+  subsampling: improving power system planning under climate-based
+  uncertainty}}, Applied Energy 251~(May) (2019) 113114.
+\newblock \href {https://doi.org/10.1016/j.apenergy.2019.04.110}
+  {\path{doi:10.1016/j.apenergy.2019.04.110}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.apenergy.2019.04.110}
+
+\bibitem{IRENA2014}
+IRENA, {Renewable Power Generation Costs in 2014}, 2014.
+
+\bibitem{FogelDavidB2009}
+T.~Back, D.~B. Fogel, Z.~Michalewicz,
+  \href{http://www.sciencedirect.com/science/article/pii/B9780444527011090025}{{Evolutionary
+  Computation 1 Basic Algorithms and Operators}}, Comprehensive Chemometrics
+  (2009) ix -- x\href {https://doi.org/10.1016/B978-044452701-1.09002-5}
+  {\path{doi:10.1016/B978-044452701-1.09002-5}}.
+\newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/B9780444527011090025}
+
+\bibitem{UKDECC2013}
+U.~DECC,
+  \href{https://www.gov.uk/government/uploads/system/uploads/attachment{\_}data/file/239937/uep{\_}2013.pdf}{{Updated
+  energy and emissions projections 2013}}, Vol. 947, 2013.
+\newline\urlprefix\url{https://www.gov.uk/government/uploads/system/uploads/attachment{\_}data/file/239937/uep{\_}2013.pdf}
+
+\end{thebibliography}

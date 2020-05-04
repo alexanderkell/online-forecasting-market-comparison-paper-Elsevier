@@ -1,0 +1,71 @@
+This is BibTeX, Version 0.99d (TeX Live 2016)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: elsarticle-template-harv.aux
+The style file: elsarticle-num.bst
+Database file #1: library.bib
+Database file #2: bib_custom.bib
+Repeated entry---line 49 of file bib_custom.bib
+ : @article{forgy65
+ :                 ,
+I'm skipping whatever remains of this entry
+Warning--empty author in May2002
+Warning--empty journal in Salas2017
+Warning--there's a number but no volume in Salas2017
+Warning--empty year in EpsteinJoshuaM.author.GSSS
+Warning--empty journal in Hoffman_1973
+Warning--empty author in ERDA_48
+Warning--empty journal in ERDA_48
+Warning--there's a number but no volume in Hoffman2011
+Warning--empty journal in Department2016
+Warning--there's a number but no volume in Department2016
+Warning--empty journal in IEA2015
+Warning--empty journal in eia_efficiency
+Warning--empty year in eia_efficiency
+Warning--empty journal in ARIMA
+Warning--there's a number but no volume in Paper2012
+Warning--empty year in gridwatch
+Warning--empty publisher in IRENA2014
+Warning--can't use both volume and number fields in UKDECC2013
+Warning--empty publisher in UKDECC2013
+You've used 40 entries,
+            2952 wiz_defined-function locations,
+            958 strings with 13110 characters,
+and the built_in function-call counts, 11339 in all, are:
+= -- 1071
+> -- 351
+< -- 3
++ -- 143
+- -- 103
+* -- 863
+:= -- 1566
+add.period$ -- 54
+call.type$ -- 40
+change.case$ -- 38
+chr.to.int$ -- 6
+cite$ -- 59
+duplicate$ -- 327
+empty$ -- 1304
+format.name$ -- 122
+if$ -- 2928
+int.to.chr$ -- 0
+int.to.str$ -- 40
+missing$ -- 42
+newline$ -- 155
+num.names$ -- 37
+pop$ -- 246
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 714
+stack$ -- 0
+substring$ -- 550
+swap$ -- 83
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 19
+while$ -- 77
+width$ -- 42
+write$ -- 354
+(There was 1 error message)
