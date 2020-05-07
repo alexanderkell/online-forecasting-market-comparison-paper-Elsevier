@@ -293,10 +293,30 @@ The goal of the Passive-Aggressive (PA) algorithm is to change the model as litt
 
 \noindent where $\alpha_t=max\left\{\frac{1-y_t(\boldsymbol{w}_t\cdot\boldsymbol{x}_t)}{\left|\left|\boldsymbol{x}_t\right|\right|^2},0\right\}$. Full details of the derivation can be found in \cite{Gzik2014}.
 
-\subsection{ElecSim model}
+\subsection{Long-term Energy Market Model}
 
 
-- Introduce ElecSim.\\
+In order to evaluate the different carbon strategies we used the model developed by Kell \textit{et al}., ElecSim \cite{Kell,Kell2020}. ElecSim is an agent-based model which mimics the behaviour of decentralised electricity markets. For this paper, we have parametrised the model to data for the UK in 2018 to act as a digital twin of the UK electricity market. This includes the power plants in operation in 2018, and the funds available to their respective companies \cite{dukes_511, companies_house}.
+
+Six fundamental sections make up ElecSim: 1) power plant data; 2) scenario data; 3) the time-steps of the algorithm; 4) the power exchange; 5) the investment algorithm and 6) the generation companies (GenCos) as agents. ElecSim uses a subset of representative days of electricity demand, solar irradiance and wind speed to approximate a full year. In this context, representative days are a subset of days which when scaled up can adequately represent a year. Figure \ref{fig:model_details} details how these components interact. 
+
+Specifically, the configuration file details the scenario which can be set by the user. This includes electricity demand, carbon price and fuel prices. The data sources parametrise the digital twin to a particular country, including information such as wind capacity and power plants in operation. Generation Companies own and invest in power plants. These power plants are then matched to electricity demand using a spot market.
+
+
+
+\begin{figure}
+	\includegraphics[width=0.48\textwidth,natwidth=610,natheight=400]{figures/methods/System_overview_large.png}
+	\caption{System overview of ElecSim \cite{Kell}.}
+	\label{fig:model_details}
+\end{figure}
+
+
+The market runs in merit-order dispatch and bids are made by the power plant's short-run marginal cost (SRMC). Investment in power plants are based upon a net present value (NPV) calculation. NPV is able to evaluate and compare investments with cash flows spread over many years. This is shown formally in Equation \ref{eq:npv_eq}, where $t$ is the year of the cash flow, $i$ is the discount rate, $N$ is the total number of years, or lifetime of power plant, and $R_t$ is the net cash flow of the year $t$:
+\begin{equation} \label{eq:npv_eq}
+NPV(t, N) = \sum_{t=0}^{N}\frac{R_t}{(1+t)^t}.
+\end{equation}
+The yearly income for each power plant is estimated for each generation company by running a merit-order dispatch electricity market 10 years into the future. However, the expected cost of electricity 10 years into the future is uncertain. We therefore use the reference scenario projected by BEIS and use the predicted costs of electricity calibrated by Kell \textit{et al} \cite{DBEIS2019, Kell2020}. The agents predict the future carbon price by using a linear regression model.
+
 
  
 \section{Methods}
