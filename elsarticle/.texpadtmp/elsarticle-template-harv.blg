@@ -1,0 +1,60 @@
+This is BibTeX, Version 0.99d (TeX Live 2020)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: /Users/alexanderkell/Documents/PhD/Papers/7-day-ahead-forecasting-comparison/elsarticle/.texpadtmp/elsarticle-template-harv.aux
+The style file: ../elsarticle-num.bst
+Database file #1: ../library.bib
+Database file #2: ../bib_custom.bib
+Repeated entry---line 49 of file ../bib_custom.bib
+ : @article{forgy65
+ :                 ,
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "Nazarko2005ARIMAApproach"
+Warning--empty pages in Kell2018a
+Warning--empty journal in Hong2014
+Warning--there's a number but no volume in Tiong2008
+Warning--empty journal in Quilumba2014
+Warning--empty journal in Huang2003
+Warning--empty publisher in Witten2011
+Warning--empty journal in 316
+You've used 36 entries,
+            2952 wiz_defined-function locations,
+            957 strings with 13806 characters,
+and the built_in function-call counts, 11518 in all, are:
+= -- 1130
+> -- 411
+< -- 0
++ -- 161
+- -- 125
+* -- 1004
+:= -- 1600
+add.period$ -- 58
+call.type$ -- 36
+change.case$ -- 35
+chr.to.int$ -- 0
+cite$ -- 43
+duplicate$ -- 293
+empty$ -- 1213
+format.name$ -- 153
+if$ -- 2861
+int.to.chr$ -- 0
+int.to.str$ -- 36
+missing$ -- 37
+newline$ -- 143
+num.names$ -- 36
+pop$ -- 181
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 683
+stack$ -- 0
+substring$ -- 704
+swap$ -- 93
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 7
+while$ -- 96
+width$ -- 38
+write$ -- 340
+(There was 1 error message)

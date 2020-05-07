@@ -39,6 +39,8 @@
 \usepackage{amssymb}
 %% The amsthm package provides extended theorem environments
 \usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{mathtools}
 
 \usepackage{mhchem}
 \usepackage{xcolor}
@@ -208,7 +210,49 @@ We trial the previously mentioned statistical and machine learning algorithms, a
 In this section we give a brief outline of the most successful online learning algorithms in this work.
 
 \subsubsection{Multilayer perceptron}
-Here goes deets on MLP
+
+
+\begin{figure}
+	\includegraphics[width=0.4\textwidth]{figures/methods/Kell_eEnergy_Fig1.eps}
+	\caption{A three layer feed forward neural network.}
+	\label{fig:mlp}
+\end{figure}
+
+Artificial Neural Networks are a type of model which allow for non-linear relationships to be modeled between the input and output data \cite{Akaike1974}. A popular neural network is a feed forward multilayer network. Fig. \ref{fig:mlp} shows a three layer feed forward neural network with a single output unit, \textit{k} hidden units, $n$ input units. $w_{ij}$ is the connection weight from the $i$th input unit to the $j$th hidden unit,  and $T_j$ is the connecting weight from the $j$th hidden unit to the output unit \cite{Pao2007}. These weights transform the input variables in the first layer to the output variable in the final layer based upon the training data. 
+
+Typically, a dataset is split into three sections, the test set, training set and validation set. The training set is used to find the connection weights of the network, whilst the test set is used to determine the accuracy of the models. The validation set allows for an unbiased evaluation of the model whilst tuning the hyperparameters, and can avoid overfitting by stopping training if the error begins to increase.
+
+For a univariate time series forecasting problem, suppose we have N observations $y_1, y_2, \ldots, y_N$ in the training set, 
+\begin{equation}
+y_{N+1}, y_{N+2}, \ldots, y_{N+m}
+\end{equation}
+\noindent in the test set and we are required to predict \textit{m} periods ahead \cite{Pao2007}. 
+
+The training patterns are as follows:
+\begin{align}
+y_{p+m} & =f(y_p, y_{p-1},\ldots,y_1)\\
+y_{p+m+1} & =f(y_{p+1}, y_{p},\ldots,y_2)\\
+&\vdotswithin  \notag \\
+y_{N} & =f(y_{N-m},y_{N-m-1},\ldots,y_{N-m-p+1})
+\end{align}
+
+\noindent where $f$ is the function made up of weights and activation functions in the trained neural network.
+
+The $m$ testing patterns are 
+
+\begin{align}
+y_{N+1} & =f(y_{N+1-m}, y_{N-m},\ldots,y_{N-m-p+2})\\
+y_{N+2} & =f(y_{N+2-m}, y_{N-m+1},\ldots,y_{N-m-p+3})\\
+&\vdotswithin  \notag \\
+y_{N+m} & =f(y_{N},y_{N-1},\ldots,y_{N-p+1})
+\end{align}
+
+The training objective is to minimize the overall predictive error means (SSE) by adjusting the connection weights. For this network structure the SSE can be written as:
+\begin{equation}
+SSE = \sum_{i=p+m}^N(y_i-\hat{y}_i)
+\end{equation}
+
+\noindent where $\hat{y}_i$ is the output from the network. The number of input nodes corresponds to the number of lagged observations. Having too few or too many input nodes can affect the predictive ability of the neural network \cite{Pao2007}.
 
 \subsubsection{Box-Cox regressor}
 
