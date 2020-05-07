@@ -255,8 +255,17 @@ J.~Ma, L.~K. Saul, S.~Savage, G.~M. Voelker, {Identifying suspicious URLs: An
 D.~for Business~Energy, I.~Strategy, Power stations in the united kingdom, may
   2019, Digest of United Kingdom Energy Statistics (DUKES) (2019).
 
+\bibitem{companies_house}
+E.~. I.~S. Department~for Business, Companies house - gov.uk, UK Government
+  (2019).
+
 \bibitem{DBEIS2019}
 {Department for Business Energy {\&} Industrial Strategy}, {Updated energy and
   emissions projections 2018}, The Energy White Paper~(April) (2019).
+
+\bibitem{gbnationalgridstatus_2019}
+ (2019).
+\newblock \href{https://www.gridwatch.templar.co.uk/}{[link]}.
+\newline\urlprefix\url{https://www.gridwatch.templar.co.uk/}
 
 \end{thebibliography}

@@ -8,8 +8,22 @@ Repeated entry---line 49 of file ../bib_custom.bib
  : @article{forgy65
  :                 ,
 I'm skipping whatever remains of this entry
+Database file #3: ../custombibtex.bib
+Warning--entry type for "gbnationalgridstatus_2019" isn't style-file defined
+--line 10 of file ../custombibtex.bib
+Repeated entry---line 91 of file ../custombibtex.bib
+ : @article{forgy65
+ :                 ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 130 of file ../custombibtex.bib
+ : @article{forgy65
+ :                 ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 168 of file ../custombibtex.bib
+ : @article{dukes_511
+ :                   , title={Power stations in the United Kingdom, May 2019}, author={Department for Business Energy and Industrial Strategy}, year={2019}, journal={Digest of United Kingdom Energy Statistics (DUKES)}
+I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "Nazarko2005ARIMAApproach"
-Warning--I didn't find a database entry for "companies_house"
 Warning--empty pages in Kell2018a
 Warning--empty journal in Hong2014
 Warning--there's a number but no volume in Tiong2008
@@ -18,45 +32,45 @@ Warning--empty journal in Huang2003
 Warning--empty publisher in Witten2011
 Warning--empty journal in 316
 Warning--there's a number but no volume in DBEIS2019
-You've used 39 entries,
+You've used 41 entries,
             2952 wiz_defined-function locations,
-            974 strings with 14380 characters,
-and the built_in function-call counts, 12246 in all, are:
-= -- 1199
-> -- 435
+            981 strings with 14570 characters,
+and the built_in function-call counts, 12617 in all, are:
+= -- 1232
+> -- 440
 < -- 0
-+ -- 171
-- -- 132
-* -- 1042
-:= -- 1705
-add.period$ -- 61
-call.type$ -- 39
-change.case$ -- 38
++ -- 174
+- -- 133
+* -- 1054
+:= -- 1753
+add.period$ -- 64
+call.type$ -- 41
+change.case$ -- 39
 chr.to.int$ -- 0
-cite$ -- 47
-duplicate$ -- 316
-empty$ -- 1298
-format.name$ -- 162
-if$ -- 3054
+cite$ -- 49
+duplicate$ -- 331
+empty$ -- 1353
+format.name$ -- 163
+if$ -- 3162
 int.to.chr$ -- 0
-int.to.str$ -- 39
-missing$ -- 40
-newline$ -- 152
-num.names$ -- 39
-pop$ -- 200
+int.to.str$ -- 41
+missing$ -- 41
+newline$ -- 160
+num.names$ -- 40
+pop$ -- 218
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 737
+skip$ -- 767
 stack$ -- 0
 substring$ -- 729
-swap$ -- 96
+swap$ -- 99
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 8
-while$ -- 101
-width$ -- 41
-write$ -- 364
-(There was 1 error message)
+while$ -- 102
+width$ -- 43
+write$ -- 380
+(There were 4 error messages)
