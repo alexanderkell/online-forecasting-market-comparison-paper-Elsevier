@@ -70,7 +70,7 @@
 %% use the cortext command for theassociated footnote;
 %% use the ead command for the email address,
 %% and the form \ead[url] for the home page:
- \title{The impact of online machine-learning methods on long-term investment decisions in electricity markets}
+ \title{The impact of online machine-learning methods on long-term investment decisions and generator utilization in electricity markets}
 % \tnotetext[label1]{}
  \author{Alexander J. M. Kell}
  \ead{a.kell2@newcastle.ac.uk}
@@ -188,8 +188,42 @@ Goncalves Da Silva \textit{et al}. show the effect of prediction accuracy on loc
 \section{Material}
 \label{sec:material}
 
-- Introduce online learning, machine learning and ElecSim.\\
-- Should I introduce theory behind machine learning techniques? If so, just the most successful?
+\subsection{Machine Learning}
+
+Machine learning is a methodology for finding and describing structural patterns in data \cite{Witten2011}. Typically machine learning algorithms are algorithms which are trained using data. These generate models which can make predictions or decisions with regards to classification of data \cite{Johansson2017}. Machine learning algorithms can be used for both static datasets as well as streaming data.
+
+
+
+
+\subsection{Online learning}
+
+Online machine learning is an extension of machine learning algorithms, that can be used on dynamic datasets, such as time-series data. In traditional machine learning algorithms, when new data is obtained, the historical data must be used to retrain the entire model with new model. This can be costly both in terms of time and in computation power \cite{Li2016}. Online algorithms therefore  avoids the repeated retraining of data and improves the learning efficiency \cite{Rong2009}.
+
+Examples of such algorithms are Passive Aggressive Regressor \cite{Gzik2014}, Linear Regression, Box-Cox Regressor \cite{Box1964}, K-Neighbors Regressor \cite{forgy65}, Softmax Regression, Multilayer perceptron regressor \cite{Hinton1989}. For our work, we trial the stated algorithms, in addition to a host of offline learning techniques. The online techniques trialled were Lasso regression \cite{Tibshirani1996a}, ridge regression \cite{GeladiPaul1994Mrac},  Elastic Net \cite{Geostatistics2010}, least angle regression \cite{Fike1988}, Extra Trees Regressor \cite{Fike1988}, Random Forest Regressor \cite{Breiman2001}, AdaBoost Regressor \cite{Freund1997}, Gradient Boosting Regressor \cite{316}, Support vector regression \cite{Cortes1995}, and offline versions of Multilayer perceptron regressor, K-Neighbors regressor, linear regression.
+
+We trial the previously mentioned statistical and machine learning algorithms, and vary the parameters using grid search and cross-validation in the python package, scikit learn \cite{scikit-learn}.
+
+\subsection{Algorithms}
+
+In this section we give a brief outline of the most successful online learning algorithms in this work.
+
+\subsubsection{Multilayer perceptron}
+Here goes deets on MLP
+
+\subsubsection{Box-Cox regressor}
+
+Box deets here
+
+\subsubsection{Passive-Aggressive regressor}
+
+Passive agressive regressor here
+
+
+\subsection{ElecSim model}
+
+
+- Introduce ElecSim.\\
+
  
 \section{Methods}
 \label{sec:methods}
