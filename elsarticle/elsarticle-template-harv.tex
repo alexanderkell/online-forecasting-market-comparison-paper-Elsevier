@@ -256,12 +256,42 @@ SSE = \sum_{i=p+m}^N(y_i-\hat{y}_i)
 
 \subsubsection{Box-Cox regressor}
 
-Box deets here
+The ordinary least squares regression assumes normal distribution of residuals. However, when this is not the case the Box-Cox Regression may be useful \cite{Box1964}. It transforms the dependent variable using the Box-Cox Transformation fnction, and employs maxium likelihood estimatino to determine the optimal level of the power parameter lambda. The Box-Cox Regression requires that no dependent variable has any negative values.
+
+Variable selection and ordinary least qquares output diagogues are identical to that of linear regression. 
+
+The Box-Cox regression will transform the dependent variable as follows:
+
+\begin{equation}
+	y^{(\lambda)} = \frac{y^{\lambda}-1}{\lambda}\:if\:\lambda\neq0
+\end{equation}
+\begin{equation}
+	y^{(\lambda)} = Ln(y)\; if\: \lambda=0
+\end{equation}
+
+and determine the optimal value of lambda by maximising the following log-likelihood function:
+
+\begin{equation}
+	L^{(\lambda)}=-\frac{n}{2}Ln(\hat{\sigma}^2_{(\lambda)}+(\lambda - 1)\sum_{i=1}^nLn(y_i)
+\end{equation}
+
+\noindent where $\hat{\sigma}^2_{(\lambda)}$ is the estimate of the least squares variance using the transformed y variable. 
 
 \subsubsection{Passive-Aggressive regressor}
 
-Passive agressive regressor here
+The goal of the Passive-Aggressive (PA) algorithm is to change the model as little as possible to correct for any mistakes and low-confidence predictions it encounters \cite{Gzik2014}. Specficially, with each example PA solves the following optimisation \cite{Ma2009}:
 
+\begin{align}
+	\boldsymbol{w}_{t+1}\leftarrow argmin \frac{1}{2}\left|\left|{\boldsymbol{w}_t-\boldsymbol{w}}\right|\right|^2 \\
+	s.t. \; \; y_i(\boldsymbol{w}\cdot \boldsymbol{x}_t)\geq1.
+\end{align}
+
+\noindent Updates occur when the inner product does not exceed a fixed confidence margin - i.e., $y_i(\boldsymbol{w}\cdot \boldsymbol{x}_t)\geq1$. The closed-form update for all examples is as follows:
+\begin{equation}
+	\boldsymbol{w}_{t+1}\leftarrow \boldsymbol{w}_{t} + \alpha_t y_t \boldsymbol{x}_t
+\end{equation}
+
+\noindent where $\alpha_t=max\left\{\frac{1-y_t(\boldsymbol{w}_t\cdot\boldsymbol{x}_t)}{\left|\left|\boldsymbol{x}_t\right|\right|^2},0\right\}$. Full details of the derivation can be found in \cite{Gzik2014}.
 
 \subsection{ElecSim model}
 

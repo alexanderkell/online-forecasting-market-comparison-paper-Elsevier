@@ -16,45 +16,45 @@ Warning--empty journal in Quilumba2014
 Warning--empty journal in Huang2003
 Warning--empty publisher in Witten2011
 Warning--empty journal in 316
-You've used 36 entries,
+You've used 37 entries,
             2952 wiz_defined-function locations,
-            957 strings with 13806 characters,
-and the built_in function-call counts, 11518 in all, are:
-= -- 1130
-> -- 411
+            963 strings with 14057 characters,
+and the built_in function-call counts, 11817 in all, are:
+= -- 1156
+> -- 424
 < -- 0
-+ -- 161
-- -- 125
-* -- 1004
-:= -- 1600
-add.period$ -- 58
-call.type$ -- 36
-change.case$ -- 35
++ -- 166
+- -- 129
+* -- 1027
+:= -- 1641
+add.period$ -- 59
+call.type$ -- 37
+change.case$ -- 36
 chr.to.int$ -- 0
-cite$ -- 43
-duplicate$ -- 293
-empty$ -- 1213
-format.name$ -- 153
-if$ -- 2861
+cite$ -- 44
+duplicate$ -- 301
+empty$ -- 1244
+format.name$ -- 158
+if$ -- 2933
 int.to.chr$ -- 0
-int.to.str$ -- 36
-missing$ -- 37
-newline$ -- 143
-num.names$ -- 36
-pop$ -- 181
+int.to.str$ -- 37
+missing$ -- 38
+newline$ -- 146
+num.names$ -- 37
+pop$ -- 188
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 683
+skip$ -- 700
 stack$ -- 0
-substring$ -- 704
-swap$ -- 93
+substring$ -- 729
+swap$ -- 94
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 7
-while$ -- 96
-width$ -- 38
-write$ -- 340
+while$ -- 99
+width$ -- 39
+write$ -- 347
 (There was 1 error message)
