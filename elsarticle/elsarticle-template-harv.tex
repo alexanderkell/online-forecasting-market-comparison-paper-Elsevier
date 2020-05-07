@@ -324,15 +324,19 @@ The yearly income for each power plant is estimated for each generation company 
 
 In this section we present the methodology for the approach taken in this paper. The work here was run on a MacBook Pro with a 2.3GHz 8-Core Intel Core i9 processor, with 32GB 2667 MHz DDR4 RAM.
 
-\subsection{Algorithmic prediction}
+\subsection{Data preparation}
 
-Similarly to the work by Kell \textit{et al.} \cite{Kell2018a}, we selected a number of calendar attributes from the following dataset \cite{gbnationalgridstatus_2019}. The calendar attributes used as predictors to the models were hour, month, day of the week, day of the month and year. These attributes allow us to take into acccount the periodicity of the data within each day, month and year.
+Similarly to the work by Kell \textit{et al.} \cite{Kell2018a}, we selected a number of calendar attributes from the following dataset \cite{gbnationalgridstatus_2019}. This dataset contained data between the years 2011-2018 for the United Kingdom. The calendar attributes used as predictors to the models were hour, month, day of the week, day of the month and year. These attributes allow us to take into acccount the periodicity of the data within each day, month and year.
 
 It is also the case that electricity demand on a public holiday which falls on a weekday falls is dissimilar to load behaviours of ordinary weekdays \cite{Kim2000}. We therefore passed a holiday variable to allow the model to account for this.
 
 In addition to this, as time-series demand data is correlated in the time-domain, we lagged the input demand data. This enabled us to take into account correlations on previous days, weeks and the previous month. Specifically, we used the previous 28 hours before the time step to be predicted for the previous 1st, 2nd, 7th and 30th day. We chose this as we believe that the previous 2 days were the most relevant to the day to be predicted, as well as the weekday of the previous week and the previous month. We could have increased the number of days provided to the algorithm, however due to time and computational constraints we used our previously described intuition for lagged data selection. Future work could be in selecting the optimum number of lagged inputs.
 
+In addition to this, we gave the data information with regards to six different seasons. These seasons were defined by the National Grid Short Term Operating Reserve (STOR) Market Information Report \cite{ESO2019}. Finally, to predict a full 24-hours ahead, we used 24 different models, 1 for each hour of the day. 
 
+\subsection{Algorithm Tuning}
+
+Many machine learning and statistical models have different parameters to train, known as hyperparameters. To find the optimum hyperparameters, cross-validation was used. Cross-validation is the process of training the model on a certain subset of data, and testing it with the remaining subset. As this time-series data was correlated in the time-domain, we took the first 6 years of data (2011-2017) for training and tested on the remaining year of data (2017-2018).
 
 - Use of hyperparameter tuning, talk about time taken to train/query models.\\
 - Talk about ML methods used\\
