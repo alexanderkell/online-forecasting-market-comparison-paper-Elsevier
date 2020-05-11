@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.4.22)  7 MAY 2020 17:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.4.22)  11 MAY 2020 16:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -823,9 +823,6 @@ Underfull \hbox (badness 1990) in paragraph at lines 144--150
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 Underfull \hbox (badness 1314) in paragraph at lines 169--173
 \OT1/txr/m/n/8 In-tel-li-gence 40 (1-3) (1989) 185--234.  doi:10.1016/0004-
  []
@@ -834,6 +831,9 @@ Underfull \hbox (badness 1314) in paragraph at lines 169--173
 Underfull \hbox (badness 1117) in paragraph at lines 175--180
 \OT1/txr/m/n/8 Lasso, Jour-nal of the Royal Sta-tis-ti-cal So-ci-ety: Se-ries B
  []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \hbox (badness 1102) in paragraph at lines 182--186
@@ -873,10 +873,10 @@ Package natbib Warning: There were undefined citations.
 Here is how much of TeX's memory you used:
  8403 strings out of 480609
  142579 string characters out of 5903656
- 420670 words of memory out of 5000000
+ 419670 words of memory out of 5000000
  24142 multiletter control sequences out of 15000+600000
  558176 words of font info for 100 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  43i,15n,48p,896b,344s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on /Users/alexanderkell/Documents/PhD/Papers/7-day-ahead-forecasting-comparison/elsarticle/.texpadtmp/elsarticle-template-harv.dvi (6 pages, 43464 bytes).
+Output written on /Users/alexanderkell/Documents/PhD/Papers/7-day-ahead-forecasting-comparison/elsarticle/.texpadtmp/elsarticle-template-harv.dvi (6 pages, 43204 bytes).
