@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.4.22)  11 MAY 2020 16:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.4.22)  12 MAY 2020 16:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -498,6 +498,25 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 130.
 \l_MT_below_shortintertext_sep=\dimen168
 \xmathstrut@box=\box53
 \xmathstrut@dim=\dimen169
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen170
+\lightrulewidth=\dimen171
+\cmidrulewidth=\dimen172
+\belowrulesep=\dimen173
+\belowbottomsep=\dimen174
+\aboverulesep=\dimen175
+\abovetopsep=\dimen176
+\cmidrulesep=\dimen177
+\cmidrulekern=\dimen178
+\defaultaddspace=\dimen179
+\@cmidla=\count267
+\@cmidlb=\count268
+\@aboverulesep=\dimen180
+\@belowrulesep=\dimen181
+\@thisruleclass=\count269
+\@lastruleclass=\count270
+\@thisrulewidth=\dimen182
 ) (/usr/local/texlive/2020/texmf-dist/tex/latex/mhchem/mhchem.sty
 Package: mhchem 2018/06/22 v4.08 for typesetting chemical formulae
  (/usr/local/texlive/2020/texmf-dist/tex/latex/l3kernel/expl3.sty
@@ -505,26 +524,26 @@ Package: expl3 2020-03-06 L3 programming layer (loader)
  (/usr/local/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
 File: l3backend-dvips.def 2020-03-12 L3 backend support: dvips
 \l__pdf_internal_box=\box54
-\g__pdf_backend_object_int=\count267
+\g__pdf_backend_object_int=\count271
 \l__pdf_backend_content_box=\box55
 \l__pdf_backend_model_box=\box56
-\g__pdf_backend_annotation_int=\count268
-\g__pdf_backend_link_int=\count269
-\g__pdf_backend_link_sf_int=\count270
+\g__pdf_backend_annotation_int=\count272
+\g__pdf_backend_link_int=\count273
+\g__pdf_backend_link_sf_int=\count274
 )) (/usr/local/texlive/2020/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
 Package: l3keys2e 2020-03-06 LaTeX2e option processing using LaTeX3 keys
 ) (/usr/local/texlive/2020/texmf-dist/tex/latex/chemgreek/chemgreek.sty (/usr/local/texlive/2020/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
 Package: xparse 2020-03-06 L3 Experimental document command parser
-\l__xparse_current_arg_int=\count271
-\g__xparse_grabber_int=\count272
-\l__xparse_m_args_int=\count273
-\l__xparse_v_nesting_int=\count274
+\l__xparse_current_arg_int=\count275
+\g__xparse_grabber_int=\count276
+\l__xparse_m_args_int=\count277
+\l__xparse_v_nesting_int=\count278
 )
 Package: chemgreek 2020/01/16 v1.1a interface for upright Greek letters for use in chemistry (CN)
-\l__chemgreek_tmpa_int=\count275
-\g__chemgreek_tmpa_int=\count276
+\l__chemgreek_tmpa_int=\count279
+\g__chemgreek_tmpa_int=\count280
 )
-\l__mhchem_ce_distanceFromLastComma_int=\count277
+\l__mhchem_ce_distanceFromLastComma_int=\count281
 \__mhchem_arrow_extPgfLength_skip=\skip63
 \mhchem@minispace@tmp=\skip64
 \mhchem@minibackspace@tmp=\skip65
@@ -535,11 +554,11 @@ Package: chemgreek 2020/01/16 v1.1a interface for upright Greek letters for use 
 \mhchem@smallbondwidth=\skip70
 \mhchem@bondtmp@minussidebearingleft=\skip71
 \mhchem@bondtmp@minussidebearingright=\skip72
-\l__mhchem_option_version_int=\count278
-\mhchem@option@minusmathsidebearingleft=\dimen170
-\mhchem@option@minusmathsidebearingright=\dimen171
-\mhchem@option@minustextsidebearingleft=\dimen172
-\mhchem@option@minustextsidebearingright=\dimen173
+\l__mhchem_option_version_int=\count282
+\mhchem@option@minusmathsidebearingleft=\dimen183
+\mhchem@option@minusmathsidebearingright=\dimen184
+\mhchem@option@minustextsidebearingleft=\dimen185
+\mhchem@option@minustextsidebearingright=\dimen186
 
 
 Package mhchem Warning: You did not specify a 'version' option for the mhchem
@@ -566,8 +585,8 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 Package: csvsimple 2019/04/09 version 1.21 LaTeX CSV file processing
  (/usr/local/texlive/2020/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
 \pgfutil@everybye=\toks31
-\pgfutil@tempdima=\dimen174
-\pgfutil@tempdimb=\dimen175
+\pgfutil@tempdima=\dimen187
+\pgfutil@tempdimb=\dimen188
  (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.tex)) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
 \pgfutil@abb=\box57
  (/usr/local/texlive/2020/texmf-dist/tex/latex/ms/everyshi.sty
@@ -583,35 +602,16 @@ Package: pgfrcs 2020/01/08 v3.1.5b (3.1.5b)
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 ) (/usr/local/texlive/2020/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count279
+\etb@tempcnta=\count283
 ) (/usr/local/texlive/2020/texmf-dist/tex/latex/tools/shellesc.sty
 Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
 Package shellesc Info: Restricted shell escape enabled on input line 77.
 )
 \csv@file=\read2
-\c@csvinputline=\count280
-\c@csvrow=\count281
-\c@csvcol=\count282
+\c@csvinputline=\count284
+\c@csvrow=\count285
+\c@csvcol=\count286
 \csv@out=\write4
-) (/usr/local/texlive/2020/texmf-dist/tex/latex/booktabs/booktabs.sty
-Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen176
-\lightrulewidth=\dimen177
-\cmidrulewidth=\dimen178
-\belowrulesep=\dimen179
-\belowbottomsep=\dimen180
-\aboverulesep=\dimen181
-\abovetopsep=\dimen182
-\cmidrulesep=\dimen183
-\cmidrulekern=\dimen184
-\defaultaddspace=\dimen185
-\@cmidla=\count283
-\@cmidlb=\count284
-\@aboverulesep=\dimen186
-\@belowrulesep=\dimen187
-\@thisruleclass=\count285
-\@lastruleclass=\count286
-\@thisrulewidth=\dimen188
 ) (/usr/local/texlive/2020/texmf-dist/tex/latex/algorithms/algorithm.sty
 Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating environment
  (/usr/local/texlive/2020/texmf-dist/tex/latex/float/float.sty
@@ -763,21 +763,46 @@ Overfull \hbox (2.638pt too wide) in paragraph at lines 308--309
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 341--345
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 352.
+
+
+Overfull \hbox (44.57014pt too wide) in paragraph at lines 353--368
+[][] 
+ []
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 376.
+
+
+Underfull \hbox (badness 4805) in paragraph at lines 383--383
+[]\OT1/txr/m/n/10 [(10, 50, 100),
+ []
+
+
+Underfull \hbox (badness 1226) in paragraph at lines 383--383
+\OT1/txr/m/n/10 (10), (20), (50),
+ []
+
+
+Overfull \hbox (44.81656pt too wide) in paragraph at lines 377--388
+[][] 
+ []
+
+File: figures/results/offline_mae_plot.eps Graphic file (type eps)
+<figures/results/offline_mae_plot.eps>
+Underfull \hbox (badness 10000) in paragraph at lines 429--430
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 350--351
+Underfull \hbox (badness 10000) in paragraph at lines 431--432
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 352--353
-
- []
-
-(/Users/alexanderkell/Documents/PhD/Papers/7-day-ahead-forecasting-comparison/elsarticle/.texpadtmp/elsarticle-template-harv.bbl
+[5] [6] (/Users/alexanderkell/Documents/PhD/Papers/7-day-ahead-forecasting-comparison/elsarticle/.texpadtmp/elsarticle-template-harv.bbl
 Overfull \hbox (5.10028pt too wide) in paragraph at lines 15--22
 \OT1/txr/m/n/8 URL \OT1/cmtt/m/n/8 http://dx.doi.org/10.1016/j.procs.2014.05.450 
  []
@@ -787,7 +812,7 @@ Underfull \hbox (badness 2351) in paragraph at lines 53--58
 \OT1/txr/m/n/8 A re-view, ICPCES 2012 - 2012 2nd In-ter-na-tional Con-
  []
 
-[5]
+
 Overfull \hbox (0.85022pt too wide) in paragraph at lines 94--101
 \OT1/txr/m/n/8 URL \OT1/cmtt/m/n/8 http://ieeexplore.ieee.org/document/7998331/ 
  []
@@ -833,14 +858,14 @@ Underfull \hbox (badness 1117) in paragraph at lines 175--180
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 Underfull \hbox (badness 1102) in paragraph at lines 182--186
 []\OT1/txr/m/n/8 P. Geladi, Mea-sure-ment, re-gres-sion and cal-i-bra-tion, philip
  []
 
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [7]
 Underfull \hbox (badness 1163) in paragraph at lines 202--208
 \OT1/txr/m/n/8 5--32.  arXiv:/dx.doi.org/10.1023%2FA%3A1010933404324,
  []
@@ -869,14 +894,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 236--242
 
 Package natbib Warning: There were undefined citations.
 
-[6] (/Users/alexanderkell/Documents/PhD/Papers/7-day-ahead-forecasting-comparison/elsarticle/.texpadtmp/elsarticle-template-harv.aux) ) 
+[8
+
+] (/Users/alexanderkell/Documents/PhD/Papers/7-day-ahead-forecasting-comparison/elsarticle/.texpadtmp/elsarticle-template-harv.aux) ) 
 Here is how much of TeX's memory you used:
- 8403 strings out of 480609
- 142579 string characters out of 5903656
- 419670 words of memory out of 5000000
- 24142 multiletter control sequences out of 15000+600000
+ 8412 strings out of 480609
+ 142861 string characters out of 5903656
+ 420694 words of memory out of 5000000
+ 24149 multiletter control sequences out of 15000+600000
  558176 words of font info for 100 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 43i,15n,48p,896b,344s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 43i,15n,48p,896b,368s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on /Users/alexanderkell/Documents/PhD/Papers/7-day-ahead-forecasting-comparison/elsarticle/.texpadtmp/elsarticle-template-harv.dvi (6 pages, 43204 bytes).
+Output written on /Users/alexanderkell/Documents/PhD/Papers/7-day-ahead-forecasting-comparison/elsarticle/.texpadtmp/elsarticle-template-harv.dvi (8 pages, 48028 bytes).

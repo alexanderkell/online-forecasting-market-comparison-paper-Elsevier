@@ -41,7 +41,7 @@
 \usepackage{amsthm}
 \usepackage{amsmath}
 \usepackage{mathtools}
-
+ \usepackage{booktabs}
 \usepackage{mhchem}
 \usepackage{xcolor}
 \usepackage{csvsimple,booktabs}
@@ -338,14 +338,93 @@ In addition to this, we gave the data information with regards to six different 
 
 Many machine learning and statistical models have different parameters to train, known as hyperparameters. To find the optimum hyperparameters, cross-validation was used. Cross-validation is the process of training the model on a certain subset of data, and testing it with the remaining subset. As this time-series data was correlated in the time-domain, we took the first 6 years of data (2011-2017) for training and tested on the remaining year of data (2017-2018).
 
-- Use of hyperparameter tuning, talk about time taken to train/query models.\\
-- Talk about ML methods used\\
-- Talk about residuals\\
-- Talk about sampling from residuals and placing these errors on the day-ahead market.\\
+Each machine learning algorithm has a different set of parameters to tune. To tune the parameters in this paper, we used a grid search method. Grid search is effectively a brute force approach that trials each combination of parameters at our choosing.
+
+Tables \ref{table:hyperparameter-tuning-offline} and \ref{table:hyperparameter-tuning-online} display each of the models and respective parameters that were used in the grid search. Table \ref{table:hyperparameter-tuning-offline} shows the offline machine learning methods, whereas Table \ref{table:hyperparameter-tuning-online} displays the online machine learning methods. Each of the parameters within the columns ``Values'' are trialled with every other parameter.
+
+Whilst there is room to increase the total number of parameters, due to the exponential nature of grid-search, we chose a smaller subset of hyperparameters to choose, and a larger number of regressor types.
+
+
+
+
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+\begin{table*}[]
+\begin{tabular}{@{}lllllll@{}}
+\toprule
+\textbf{Regressor Type} & \textbf{Parameters} & \textbf{Values}   & \textbf{Parameters} & \textbf{Values} & \textbf{Parameters} & \textbf{Values}       \\ \midrule
+Linear                  & N/A                 & N/A               &                     &                 &                     &                       \\
+Lasso                   & N/A                 & N/A               &                     &                 &                     &                       \\
+Elastic Net             & N/A                 & N/A               &                     &                 &                     &                       \\
+Least-Angle             & N/A                 & N/A               &                     &                 &                     &                       \\
+Extra Trees             & \# Estimators       & {[}16, 32{]}      &                     &                 &                     &                       \\
+Random Forest           & \# Estimators       & {[}16, 32{]}      &                     &                 &                     &                       \\
+AdaBoost                & \# Estimators       & {[}16, 32{]}      &                     &                 &                     &                       \\
+Gradient Boosting       & \# Estimators       & {[}16, 32{]}      & learning rate       & {[}0.8, 1.0{]}  &                     &                       \\
+Support Vector          & Kernel              & {[}linear, rbf{]} & C                   & {[}1, 10{]}     & Gamma               & {[}0.001, 0.0001{]}   \\
+Multilayer Perceptron   & Activation function & {[}tanh, relu{]}  & hidden layer sizes  & {[}1, 50{]}     & Alpha               & {[}0.00005, 0.0005{]} \\
+K-Neighbours            & \# Neighbours       & {[}5, 20, 50{]}   &                     &                 &                     &                       \\ \bottomrule
+\end{tabular}
+\caption{Hyperparameters for offline machine learning regression algorithms}
+\label{table:hyperparameter-tuning-offline}
+\end{table*}
+
+
+
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+\begin{table*}[]
+\begin{tabular}{@{}llp{2.5cm}lllp{1.6cm}@{}}
+\toprule
+\textbf{Regressor Type} & \textbf{Parameters} & \textbf{Values}                                  & \textbf{Parameters} & \textbf{Values}   & \textbf{Parameters} & \textbf{Values}        \\ \midrule
+Linear                  & N/A                 & N/A                                              &                     &                   &                     &                        \\
+Box-Cox                 & Power               & {[}0.1, 0.05, 0.01{]}                            &                     &                   &                     &                        \\
+Softmax                 & N/A                 & N/A                                              &                     &                   &                     &                        \\
+Multilayer Perceptron   & Hidden layer sizes  & {[}(10, 50, 100), (10),  (20), (50), (10, 50){]} & 
+                    &                   &                     &                        \\ 
+                    Passive Aggressive      & C                   & {[}0.1, 1, 2{]}                                  & Fit intercept?      & {[}True, False{]} & Max iterations      & {[}1, 10, 100, 1000{]} \\
+\bottomrule
+\end{tabular}
+\caption{Hyperparameters for online machine learning regression algorithms}
+\label{table:hyperparameter-tuning-online}
+\end{table*}
+
+
+
+\subsection{Prediction Residuals in ElecSim}
+
+Each of the previously mentioned models trialled will have a certain amount of errors. Prediction residuals is the difference between the estimated and actual values. We collect the prediction residuals to form a distribution for each of the models. We then trial 80 different closed-form distributions to see which of the distributions best fits the residuals from each of the models.
+
+Once each of the prediction residual distributions are fit with a sensible closed-form distribution, we sample from this new distribution and perturb the demand for the electricity market at each time step within ElecSim.
+
+By perturbing the market by the residuals, we are able to observe what the effects are of incorrect predictions of demand in an electricity market using the long-term electricity market model, ElecSim. We are able to understand the differences that prediction residuals have on long-term investment decisions as well as generators utilised.
+
+
 
 
 \section{Results}
 \label{sec:results}
+
+
+
+\subsection{Offline Machine Learning}
+
+\begin{figure}
+\centering
+\includegraphics[width=\columnwidth]{figures/results/offline_mae_plot.eps}
+\caption{Offline machine learning mean absolute errror comparson, with 95\% confidence interval for 5 runs of each model.}
+\label{fig:beis_elecsim_historic_comparison}
+\end{figure}
+
+
+
+\subsection{Online Machine Learning}
+
+
+\subsection{Scenario Comparison}
+
+
+
 
 - Results of offline learning, online machine learning shown. Include residuals and MAE,MAPE,MASE etc\\
 
