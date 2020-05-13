@@ -45,7 +45,7 @@
 \usepackage{mhchem}
 \usepackage{xcolor}
 \usepackage{csvsimple,booktabs}
-
+\usepackage{graphicx}
 
 \usepackage{algorithm}
 \usepackage{algorithmicx}
@@ -334,6 +334,8 @@ In addition to this, as time-series demand data is correlated in the time-domain
 
 In addition to this, we gave the data information with regards to six different seasons. These seasons were defined by the National Grid Short Term Operating Reserve (STOR) Market Information Report \cite{ESO2019}. Finally, to predict a full 24-hours ahead, we used 24 different models, 1 for each hour of the day. 
 
+The data is standardized and normalized using min-max scaling between -1 and 1 before training and predicting with the model.
+
 \subsection{Algorithm Tuning}
 
 Many machine learning and statistical models have different parameters to train, known as hyperparameters. To find the optimum hyperparameters, cross-validation was used. Cross-validation is the process of training the model on a certain subset of data, and testing it with the remaining subset. As this time-series data was correlated in the time-domain, we took the first 6 years of data (2011-2017) for training and tested on the remaining year of data (2017-2018).
@@ -409,10 +411,11 @@ By perturbing the market by the residuals, we are able to observe what the effec
 
 \subsection{Offline Machine Learning}
 
+
 \begin{figure}
 \centering
-\includegraphics[width=\columnwidth]{figures/results/offline_mae_plot.eps}
-\caption{Offline machine learning mean absolute errror comparson, with 95\% confidence interval for 5 runs of each model.}
+\includegraphics[width=\columnwidth]{figures/results/offline_model_mae.eps}
+\caption{Offline machine learning mean absolute error comparison, with 95\% confidence interval for 5 runs of each model.}
 \label{fig:beis_elecsim_historic_comparison}
 \end{figure}
 
@@ -420,7 +423,7 @@ By perturbing the market by the residuals, we are able to observe what the effec
 \begin{figure}
 \centering
 \includegraphics[width=\columnwidth]{figures/results/best_offline_learning_day_simulation.eps}
-\caption{Best offline machine learning learning algorithm (Random Forest) predictions versus actuals for a single day.}
+\caption{Best offline machine learning learning algorithm (Extra Trees Regressor) predictions versus actuals for a single day.}
 \label{fig:best_offline_learning_day_simulation}
 \end{figure}
 
@@ -428,10 +431,39 @@ By perturbing the market by the residuals, we are able to observe what the effec
 \begin{figure}
 \centering
 \includegraphics[width=\columnwidth]{figures/results/ExtraTreesRegressor_distribution_plot.eps}
-\caption{Best offline machine learning learning algorithm (Random Forest) predictions versus actuals for a single day.}
+\caption{Best offline machine learning learning algorithm (Extra Trees Regressor) distribution.}
 \label{fig:best_offline_learning_day_distribution}
 \end{figure}
 
+\subsection{Online Machine Learning}
+
+
+\begin{figure*}
+\centering
+\includegraphics[width=0.8\textwidth]{figures/results/online_model_mae_barplot.eps}
+\caption{Best online machine learning learning algorithm (Box-Cox Regressor) distribution.}
+\label{fig:best_online_learning_day_distribution}
+\end{figure*}
+
+
+
+\begin{figure}
+\centering
+\includegraphics[width=\columnwidth]{figures/results/online_learning_dists-power-0.1.eps}
+\caption{Best online machine learning learning algorithm (Box-Cox Regressor) distribution.}
+\label{fig:best_online_learning_day_distribution}
+\end{figure}
+
+
+\begin{figure}
+\centering
+\includegraphics[width=\columnwidth]{figures/results/online_learning_dists-PA-regressor-C-2-fit_intercept-false-max_iter-1000-shuffle-false-tol-0.001.eps}
+\caption{Online machine learning learning algorithm distribution. (Passive Aggressive Regressor (C=2, fit intercept = false, maximum iterations = 1000, shuffle = false, tolerance = 0.001).}
+\label{fig:bad_online_learning_day_distribution}
+\end{figure}
+
+
+%online_learning_dists-PA-regressor-C-2-fit_intercept-false-max_iter-1000-shuffle-false-tol-0.001.eps
 
 
 
