@@ -171,3 +171,9 @@ ggsave("plots/best_offline_learning_day_simulation.eps", randomforest_plot, dpi=
 ```
 
 
+```{r}
+offline_rf_actual_predicted = read.csv('/Users/alexanderkell/Documents/PhD/Projects/10-ELECSIM/run/market_forecasting_comparison/data/results/results/RandomForestRegressor_actual_vs_predicted.csv')
+offline_rf_actual_predicted
+ggplot(offline_rf_actual_predicted) + geom_line(aes(x=hour, colour=variable, y=value)) + theme_classic() + theme(text = element_text(size=40), legend.position = "bottom", plot.margin=grid::unit(c(0,0,0,0), "mm"))```
+
+

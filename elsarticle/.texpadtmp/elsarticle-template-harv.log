@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.4.22)  13 MAY 2020 17:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.4.22)  14 MAY 2020 11:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -797,8 +797,8 @@ Overfull \hbox (44.81656pt too wide) in paragraph at lines 379--390
 
 File: figures/results/offline_model_mae.eps Graphic file (type eps)
 <figures/results/offline_model_mae.eps>
-File: figures/results/best_offline_learning_day_simulation.eps Graphic file (type eps)
- <figures/results/best_offline_learning_day_simulation.eps>
+File: figures/results/offline_rf_actual_predicted.eps Graphic file (type eps)
+ <figures/results/offline_rf_actual_predicted.eps>
 File: figures/results/ExtraTreesRegressor_distribution_plot.eps Graphic file (type eps)
  <figures/results/ExtraTreesRegressor_distribution_plot.eps>
 File: figures/results/online_model_mae_barplot.eps Graphic file (type eps)
@@ -915,11 +915,11 @@ LaTeX Warning: There were multiply-defined labels.
  ) 
 Here is how much of TeX's memory you used:
  8433 strings out of 480609
- 144054 string characters out of 5903656
+ 144018 string characters out of 5903656
  421765 words of memory out of 5000000
  24165 multiletter control sequences out of 15000+600000
  558176 words of font info for 100 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  43i,15n,48p,896b,344s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on /Users/alexanderkell/Documents/PhD/Papers/7-day-ahead-forecasting-comparison/elsarticle/.texpadtmp/elsarticle-template-harv.dvi (9 pages, 50124 bytes).
+Output written on /Users/alexanderkell/Documents/PhD/Papers/7-day-ahead-forecasting-comparison/elsarticle/.texpadtmp/elsarticle-template-harv.dvi (9 pages, 50120 bytes).
