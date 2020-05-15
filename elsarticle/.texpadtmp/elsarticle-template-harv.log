@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.4.22)  14 MAY 2020 11:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.4.22)  14 MAY 2020 22:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -797,8 +797,6 @@ Overfull \hbox (44.81656pt too wide) in paragraph at lines 379--390
 
 File: figures/results/offline_model_mae.eps Graphic file (type eps)
 <figures/results/offline_model_mae.eps>
-File: figures/results/offline_rf_actual_predicted.eps Graphic file (type eps)
- <figures/results/offline_rf_actual_predicted.eps>
 File: figures/results/ExtraTreesRegressor_distribution_plot.eps Graphic file (type eps)
  <figures/results/ExtraTreesRegressor_distribution_plot.eps>
 File: figures/results/online_model_mae_barplot.eps Graphic file (type eps)
@@ -807,12 +805,14 @@ File: figures/results/online_learning_dists-power-0.1.eps Graphic file (type eps
  <figures/results/online_learning_dists-power-0.1.eps>
 File: figures/results/online_learning_dists-PA-regressor-C-2-fit_intercept-false-max_iter-1000-shuffle-false-tol-0.001.eps Graphic file (type eps)
  <figures/results/online_learning_dists-PA-regressor-C-2-fit_intercept-false-max_iter-1000-shuffle-false-tol-0.001.eps>
-Underfull \hbox (badness 10000) in paragraph at lines 481--482
+File: figures/results/both_actual_predicted.eps Graphic file (type eps)
+ <figures/results/both_actual_predicted.eps>
+Underfull \hbox (badness 10000) in paragraph at lines 491--492
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 483--484
+Underfull \hbox (badness 10000) in paragraph at lines 493--494
 
  []
 
@@ -826,7 +826,7 @@ Underfull \hbox (badness 2351) in paragraph at lines 53--58
 \OT1/txr/m/n/8 A re-view, ICPCES 2012 - 2012 2nd In-ter-na-tional Con-
  []
 
-[7] [8]
+
 Overfull \hbox (0.85022pt too wide) in paragraph at lines 94--101
 \OT1/txr/m/n/8 URL \OT1/cmtt/m/n/8 http://ieeexplore.ieee.org/document/7998331/ 
  []
@@ -852,6 +852,9 @@ Overfull \hbox (34.85071pt too wide) in paragraph at lines 132--136
  []
 
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [7] [8]
 Underfull \hbox (badness 1436) in paragraph at lines 144--150
 \OT1/txr/m/n/8 Prob-lems, IEEE Trans-ac-tions on Sys-tems, Man, and Cy-
  []
@@ -872,9 +875,6 @@ Underfull \hbox (badness 1117) in paragraph at lines 175--180
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 Underfull \hbox (badness 1102) in paragraph at lines 182--186
 []\OT1/txr/m/n/8 P. Geladi, Mea-sure-ment, re-gres-sion and cal-i-bra-tion, philip
  []
@@ -884,7 +884,7 @@ Underfull \hbox (badness 1163) in paragraph at lines 202--208
 \OT1/txr/m/n/8 5--32.  arXiv:/dx.doi.org/10.1023%2FA%3A1010933404324,
  []
 
-
+[9]
 Underfull \hbox (badness 1533) in paragraph at lines 221--227
 []\OT1/txr/m/n/8 C. Cortes, V. Vap-nik, Support-Vector Net-works, Ma-chine
  []
@@ -908,18 +908,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 236--242
 
 Package natbib Warning: There were undefined citations.
 
-[9] (/Users/alexanderkell/Documents/PhD/Papers/7-day-ahead-forecasting-comparison/elsarticle/.texpadtmp/elsarticle-template-harv.aux)
+[10
+
+] (/Users/alexanderkell/Documents/PhD/Papers/7-day-ahead-forecasting-comparison/elsarticle/.texpadtmp/elsarticle-template-harv.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 8433 strings out of 480609
- 144018 string characters out of 5903656
+ 8431 strings out of 480609
+ 143868 string characters out of 5903656
  421765 words of memory out of 5000000
- 24165 multiletter control sequences out of 15000+600000
+ 24163 multiletter control sequences out of 15000+600000
  558176 words of font info for 100 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 43i,15n,48p,896b,344s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 43i,15n,48p,896b,382s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on /Users/alexanderkell/Documents/PhD/Papers/7-day-ahead-forecasting-comparison/elsarticle/.texpadtmp/elsarticle-template-harv.dvi (9 pages, 50120 bytes).
+Output written on /Users/alexanderkell/Documents/PhD/Papers/7-day-ahead-forecasting-comparison/elsarticle/.texpadtmp/elsarticle-template-harv.dvi (10 pages, 50332 bytes).

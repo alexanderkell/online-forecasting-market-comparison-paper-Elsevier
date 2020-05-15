@@ -420,12 +420,12 @@ By perturbing the market by the residuals, we are able to observe what the effec
 \end{figure}
 
 
-\begin{figure}
-\centering
-\includegraphics[width=\columnwidth]{figures/results/offline_rf_actual_predicted.eps}
-\caption{Best offline machine learning learning algorithm (Extra Trees Regressor) predictions versus actuals for a week in June 2018.}
-\label{fig:best_offline_learning_day_simulation}
-\end{figure}
+%\begin{figure}
+%\centering
+%\includegraphics[width=\columnwidth]{figures/results/offline_rf_actual_predicted.eps}
+%\caption{Best offline machine learning learning algorithm (Extra Trees Regressor) predictions versus actuals for a week in June 2018.}
+%\label{fig:best_offline_learning_day_simulation}
+%\end{figure}
 
 
 
@@ -442,8 +442,8 @@ By perturbing the market by the residuals, we are able to observe what the effec
 
 \begin{figure*}
 %\centering
-\includegraphics[width=0.8\textwidth]{figures/results/online_model_mae_barplot.eps}
-\caption{Best online machine learning learning algorithm (Box-Cox Regressor) distribution.}
+\includegraphics[width=0.8\textwidth,natwidth=1000,natheight=1000]{figures/results/online_model_mae_barplot.eps}
+\caption{Comparison of mean absolute errors (MAE) for different online regressor models (identical MAEs removed).}
 \label{fig:best_online_learning_day_distribution}
 \end{figure*}
 
@@ -463,6 +463,16 @@ By perturbing the market by the residuals, we are able to observe what the effec
 \caption{Online machine learning learning algorithm distribution. (Passive Aggressive Regressor (C=2, fit intercept = false, maximum iterations = 1000, shuffle = false, tolerance = 0.001).}
 \label{fig:bad_online_learning_day_distribution}
 \end{figure}
+
+
+\begin{figure}
+\centering
+\includegraphics[width=\columnwidth,natwidth=1100,natheight=700]{figures/results/both_actual_predicted.eps}
+\caption{Actual demand versus predicted for random forest and box cox regressor (offline and online resectively) for the dates of 10th to the 17th June 2018.}
+\label{fig:both_actual_predicted}
+\end{figure}
+
+
 
 
 %online_learning_dists-PA-regressor-C-2-fit_intercept-false-max_iter-1000-shuffle-false-tol-0.001.eps
