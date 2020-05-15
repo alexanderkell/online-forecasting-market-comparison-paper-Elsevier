@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.4.22)  15 MAY 2020 15:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.4.22)  15 MAY 2020 15:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -646,6 +646,12 @@ Document Style - pseudocode environments for use with the `algorithmicx' style
 
 LaTeX Warning: Label `fig:best_online_learning_day_distribution' multiply defined.
 
+
+LaTeX Warning: Label `fig:total_Coal_mean_output' multiply defined.
+
+
+LaTeX Warning: Label `fig:total_PV_mean_output' multiply defined.
+
 )
 \openout1 = `elsarticle-template-harv.aux'.
 
@@ -819,12 +825,26 @@ File: figures/results/elecsim_results/contributed_PV_mean_output.eps Graphic fil
  <figures/results/elecsim_results/contributed_PV_mean_output.eps>
 File: figures/results/elecsim_results/contributed_Recip_gas_mean_output.eps Graphic file (type eps)
  <figures/results/elecsim_results/contributed_Recip_gas_mean_output.eps>
-Underfull \hbox (badness 10000) in paragraph at lines 540--541
+File: figures/results/elecsim_results/total_CCGT_mean_output.eps Graphic file (type eps)
+ <figures/results/elecsim_results/total_CCGT_mean_output.eps>
+File: figures/results/elecsim_results/total_Coal_mean_output.eps Graphic file (type eps)
+ <figures/results/elecsim_results/total_Coal_mean_output.eps>
+File: figures/results/elecsim_results/total_Coal_mean_output.eps Graphic file (type eps)
+ <figures/results/elecsim_results/total_Coal_mean_output.eps>
+File: figures/results/elecsim_results/total_Offshore_mean_output.eps Graphic file (type eps)
+ <figures/results/elecsim_results/total_Offshore_mean_output.eps>
+File: figures/results/elecsim_results/total_Onshore_mean_output.eps Graphic file (type eps)
+ <figures/results/elecsim_results/total_Onshore_mean_output.eps>
+File: figures/results/elecsim_results/total_PV_mean_output.eps Graphic file (type eps)
+ <figures/results/elecsim_results/total_PV_mean_output.eps>
+File: figures/results/elecsim_results/total_Recip_gas_mean_output.eps Graphic file (type eps)
+ <figures/results/elecsim_results/total_Recip_gas_mean_output.eps>
+Underfull \hbox (badness 10000) in paragraph at lines 602--603
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 542--543
+Underfull \hbox (badness 10000) in paragraph at lines 604--605
 
  []
 
@@ -866,7 +886,7 @@ Overfull \hbox (34.85071pt too wide) in paragraph at lines 132--136
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [7] [8] [9] [10]
+ [7] [8] [9] [10] [11] [12]
 Underfull \hbox (badness 1436) in paragraph at lines 144--150
 \OT1/txr/m/n/8 Prob-lems, IEEE Trans-ac-tions on Sys-tems, Man, and Cy-
  []
@@ -890,9 +910,6 @@ Underfull \hbox (badness 1117) in paragraph at lines 175--180
 Underfull \hbox (badness 1102) in paragraph at lines 182--186
 []\OT1/txr/m/n/8 P. Geladi, Mea-sure-ment, re-gres-sion and cal-i-bra-tion, philip
  []
-
-
-Underfull \vbox (badness 7379) has occurred while \output is active []
 
 
 Underfull \hbox (badness 1163) in paragraph at lines 202--208
@@ -919,22 +936,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 236--242
 \OT1/txr/m/n/8 19 (6) (1974) 716--723.  arXiv:arXiv:1011.1669v3,
  []
 
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 )
 
 Package natbib Warning: There were undefined citations.
 
-[11] (/Users/alexanderkell/Documents/PhD/Papers/7-day-ahead-forecasting-comparison/elsarticle/.texpadtmp/elsarticle-template-harv.aux)
+[13] (/Users/alexanderkell/Documents/PhD/Papers/7-day-ahead-forecasting-comparison/elsarticle/.texpadtmp/elsarticle-template-harv.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 8465 strings out of 480609
- 145814 string characters out of 5903656
- 423823 words of memory out of 5000000
- 24190 multiletter control sequences out of 15000+600000
+ 8494 strings out of 480609
+ 147284 string characters out of 5903656
+ 426514 words of memory out of 5000000
+ 24213 multiletter control sequences out of 15000+600000
  558176 words of font info for 100 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 43i,15n,48p,896b,350s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 43i,15n,48p,896b,358s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on /Users/alexanderkell/Documents/PhD/Papers/7-day-ahead-forecasting-comparison/elsarticle/.texpadtmp/elsarticle-template-harv.dvi (11 pages, 52160 bytes).
+Output written on /Users/alexanderkell/Documents/PhD/Papers/7-day-ahead-forecasting-comparison/elsarticle/.texpadtmp/elsarticle-template-harv.dvi (13 pages, 54788 bytes).
