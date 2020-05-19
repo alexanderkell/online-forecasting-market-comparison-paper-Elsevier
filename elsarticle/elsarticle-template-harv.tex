@@ -447,7 +447,7 @@ Figure \ref{fig:best_offline_learning_day_distribution} displays the distributio
 
 To see if we can improve on the predictions we utilize an online machine learning approach. If we are successful, we should be able to reduce the national grid reserves, reducing cost and emissions.
 
-Figure \ref{fig:best_online_learning_day_distribution} displays the comparison of mean absolute errors for the different trialled online regressor models. To produce this graph, we showed the various hyperparameter trials. Where the hyperparameters had the same results we removed them. For the multilayer perceptron (MLP), we aggregated all hyperparameters, due to the similar nature of the predictions.
+Figure \ref{fig:online_model_mae_barplot} displays the comparison of mean absolute errors for the different trialled online regressor models. To produce this graph, we showed the various hyperparameter trials. Where the hyperparameters had the same results we removed them. For the multilayer perceptron (MLP), we aggregated all hyperparameters, due to the similar nature of the predictions.
 
 It can be seen that the best performing model was the Box-Cox regressor, with a MAE of 1100. This is an improvement of over 30\% on the best offline model. The other models perform less well, however, it can be seen that the linear regression model improves significantly for the online case, when compared to the offline case. The passive aggressive (PA) model improve significantly with the varying parameters, and the MLP performs poorly in all cases.
 
@@ -455,7 +455,7 @@ It can be seen that the best performing model was the Box-Cox regressor, with a 
 %\centering
 \includegraphics[width=\columnwidth,natwidth=1300,natheight=1300]{figures/results/online_model_mae_barplot.eps}
 \caption{Comparison of mean absolute errors (MAE) for different online regressor models (identical MAEs removed).}
-\label{fig:best_online_learning_day_distribution}
+\label{fig:online_model_mae_barplot}
 \end{figure}
 
 Figure \ref{fig:best_online_learning_day_distribution} displays the best online model. We can see a significant improvement over the best online model distribution, shown in Figure \ref{fig:best_offline_learning_day_distribution}. We remain within the max tendered national grid reserve for the vast majority of the time, and the average available tendered national grid reserve is close to the 5\% and 95\% percentiles.
@@ -488,8 +488,13 @@ In this section we explore the effect of these residuals on investments made and
 \subsubsection{Mean Contributed Energy Generation}
 
 
+Figure \ref{fig:contributed_PV_mean_output} displays the mean photovoltaic (PV) contributed between 2018 and 2035 vs. men absolute error of the various online regressor models displayed in Figure \ref{fig:online_model_mae_barplot}. A positive correlation can be seen with PV contributed and mean absolute error. This is similar for coal and nuclear output, shown in Figures \ref{fig:contributed_Coal_mean_output} and \ref{fig:contributed_Nuclear_mean_output} respectively. However, as shown by Figure \ref{fig:contributed_Offshore_mean_output.eps}, offshore wind reduces with mean absolute error. Figure \ref{fig:contributed_Recip_gas_mean_output} displays the mean reciprocal gas engine output vs. mean absolute error between the same time period. Output for the reciprocal gas engine also increases with mean absolute error.
 
+The reciprocal gas engine was expected to increase with times of high error. This is because, traditionally, reciprocal gas engines are peaker power plants. Peaker power plants provide power at times of peak demand, which can't be covered by other plants due to them being at their maximum capacity level or out of service.
 
+It is hypothesised that coal and nuclear output increase to cover the predicted increased demands of the service. As these generation types are dispatchable, meaning operators can choose when they generate electricity, they are more likely to be used in times of higher predicted demand.
+
+Photovoltaics may be used more with higher errors due to the times at which the errors were greatest. For example, during the day, where demand is higher, as is solar irradiance.
 
 
 \begin{figure*}
@@ -521,6 +526,7 @@ In this section we explore the effect of these residuals on investments made and
 \caption{Offshore output.}
 \label{fig:contributed_Offshore_mean_output.eps}
 \end{subfigure}
+\label{fig:pv_coal_nuclear_offshore_outputs}
 \caption{Mean outputs of various technologies vs. mean absolute error from 2018 to 2035 in ElecSim.}
 \end{figure*}
     
@@ -583,6 +589,14 @@ In this section we explore the effect of these residuals on investments made and
 
 
 
+In this section we detail difference in total technologies invested in over the time period between 2018 to 2035, as predicted by ElecSim.
+
+CCGT, Onshore, and reciprocal gas engines are invested in less over the time period, as shown by Figures \ref{fig:total_CCGT_mean_output}, \ref{fig:total_Offshore_mean_output}, \ref{fig:total_Recip_gas_mean_output.eps} respectively. While coal, offshore, nuclear and photovoltaics all exhibit increasing investments.
+
+It is hypothesised that coal and nuclear increase in investment due to their dispatchable nature. While onshore, non-dispatchable by nature, become a less attractive investment when compared to the other technologies.
+
+CCGT and reciprocal gas engines may have decreased in capacity over this time, due to the increase in coal. This could be because of the consistent large errors in prediction accuracy that meant that reciprocal gas engines were perceived to be less value.
+
 
 \begin{figure*}
 %\centering
@@ -625,8 +639,8 @@ In this section we explore the effect of these residuals on investments made and
 \begin{figure*}
 %\centering
 \begin{subfigure}[b]{0.475\textwidth}
-\includegraphics[width=\columnwidth]{figures/results/elecsim_results/total_Onshore_mean_output.eps}
-\caption{Total onshore.}
+\includegraphics[width=\columnwidth]{figures/results/elecsim_results/total_Nuclear_mean_output.eps}
+\caption{Total nuclear.}
 \label{fig:total_Onshore_mean_output}
 \end{subfigure}
 \hfill
