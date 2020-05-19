@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.4.22)  19 MAY 2020 12:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.4.22)  19 MAY 2020 12:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -886,17 +886,7 @@ File: figures/results/elecsim_results/total_PV_mean_output.eps Graphic file (typ
 File: figures/results/elecsim_results/total_Recip_gas_mean_output.eps Graphic file (type eps)
  <figures/results/elecsim_results/total_Recip_gas_mean_output.eps>
 File: figures/results/elecsim_results/Carbon_emitted_mean_output.eps Graphic file (type eps)
- <figures/results/elecsim_results/Carbon_emitted_mean_output.eps>
-Underfull \hbox (badness 10000) in paragraph at lines 739--740
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 741--742
-
- []
-
-(./elsarticle-template-harv.bbl
+ <figures/results/elecsim_results/Carbon_emitted_mean_output.eps> (./elsarticle-template-harv.bbl
 Overfull \hbox (5.10028pt too wide) in paragraph at lines 15--22
 \OT1/txr/m/n/8 URL \OT1/cmtt/m/n/8 http://dx.doi.org/10.1016/j.procs.2014.05.450 
  []
@@ -906,7 +896,7 @@ Underfull \hbox (badness 2351) in paragraph at lines 53--58
 \OT1/txr/m/n/8 A re-view, ICPCES 2012 - 2012 2nd In-ter-na-tional Con-
  []
 
-
+[10] [11] [12]
 Overfull \hbox (0.85022pt too wide) in paragraph at lines 94--101
 \OT1/txr/m/n/8 URL \OT1/cmtt/m/n/8 http://ieeexplore.ieee.org/document/7998331/ 
  []
@@ -921,7 +911,7 @@ Overfull \hbox (9.35034pt too wide) in paragraph at lines 103--110
 \OT1/txr/m/n/8 URL \OT1/cmtt/m/n/8 http://dx.doi.org/10.1016/j.egypro.2017.05.068 
  []
 
-[10] [11] [12]
+
 Underfull \hbox (badness 1348) in paragraph at lines 124--130
 []\OT1/txr/m/n/8 P. Goncalves Da Silva, D. Ilic, S. Karnouskos, The Im-
  []
@@ -957,12 +947,12 @@ Underfull \hbox (badness 1102) in paragraph at lines 182--186
  []
 
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 Underfull \hbox (badness 1163) in paragraph at lines 202--208
 \OT1/txr/m/n/8 5--32.  arXiv:/dx.doi.org/10.1023%2FA%3A1010933404324,
  []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \hbox (badness 1533) in paragraph at lines 221--227
@@ -1002,4 +992,4 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  48i,15n,48p,901b,473s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on elsarticle-template-harv.dvi (13 pages, 62124 bytes).
+Output written on elsarticle-template-harv.dvi (13 pages, 63008 bytes).
