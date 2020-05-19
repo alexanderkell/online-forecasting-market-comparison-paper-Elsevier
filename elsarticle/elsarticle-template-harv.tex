@@ -410,15 +410,18 @@ By perturbing the market by the residuals, we are able to observe what the effec
 \section{Results}
 \label{sec:results}
 
-
+In this section we detail the accuracy of the algorithms and statistical models to predict 24 hours ahead for the day ahead market. In addition to this, we display the impact of the errors on electricity generation investment and electricity mix from the years 2018 to 2035 using the agent-based model ElecSim.
 
 \subsection{Offline Machine Learning}
 
+Figure \ref{fig:beis_elecsim_historic_comparison} displays the mean absolute error of each of the offline statistical and machine learning models on a log scale. It can be seen that the different models have varying degrees of success. The least accurate models were linear regression, the multilayer perceptron (MLP) model and the Least Angle Regression (llars). These all have mean absolute errors over $10,000$MWh. This error would be prohibitively high in practice; the max tendered natoinal grid reserve is 6,000MWh, while the average tendered national grid reserve is 2,000MWh \cite{ESO2019}.
+
+A number of models, however, perform well, with a low mean absolute errors. These include the Lasso, gradient Boosting Regressor and K neighbours regressor. The best model, similarly to \cite{Kell2018a}, was the decision tree based model, Extra Trees Regressor, with a mean absolute error of $1604$MWh. This level is well within the average national grid reserve of 2,000MWh.
 
 \begin{figure}
 \centering
 \includegraphics[width=\columnwidth]{figures/results/offline_model_mae.eps}
-\caption{Offline machine learning mean absolute error comparison, with 95\% confidence interval for 5 runs of each model.}
+\caption{Offline models mean absolute error comparison, with 95\% confidence interval for 5 runs of each model.}
 \label{fig:beis_elecsim_historic_comparison}
 \end{figure}
 
@@ -430,7 +433,7 @@ By perturbing the market by the residuals, we are able to observe what the effec
 %\label{fig:best_offline_learning_day_simulation}
 %\end{figure}
 
-
+Figure \ref{fig:best_offline_learning_day_distribution} displays the distribution of the best offline machine result (Extra Trees Regressor), as previously discussed. It can be seen that the max tendered national grid reserve falls well above the 5\% and 95\% percentiles. However, there are occasions, where the errors are greater than the maximum tendered national grid reserve. In addition, the majority of the time, the models predictions fall within the average available tendered national grid reserve.
 
 \begin{figure}
 \centering
@@ -442,6 +445,11 @@ By perturbing the market by the residuals, we are able to observe what the effec
 
 \subsection{Online Machine Learning}
 
+To see if we can improve on the predictions we utilize an online machine learning approach. If we are successful, we should be able to reduce the national grid reserves, reducing cost and emissions.
+
+Figure \ref{fig:best_online_learning_day_distribution} displays the comparison of mean absolute errors for the different trialled online regressor models. To produce this graph, we showed the various hyperparameter trials. Where the hyperparameters had the same results we removed them. For the multilayer perceptron (MLP), we aggregated all hyperparameters, due to the similar nature of the predictions.
+
+It can be seen that the best performing model was the Box-Cox regressor, with a MAE of 1100. This is an improvement of over 30\% on the best offline model. The other models perform less well, however, it can be seen that the linear regression model improves significantly for the online case, when compared to the offline case. The passive aggressive (PA) model improve significantly with the varying parameters, and the MLP performs poorly in all cases.
 
 \begin{figure}
 %\centering
@@ -450,15 +458,18 @@ By perturbing the market by the residuals, we are able to observe what the effec
 \label{fig:best_online_learning_day_distribution}
 \end{figure}
 
+Figure \ref{fig:best_online_learning_day_distribution} displays the best online model. We can see a significant improvement over the best online model distribution, shown in Figure \ref{fig:best_offline_learning_day_distribution}. We remain within the max tendered national grid reserve for the vast majority of the time, and the average available tendered national grid reserve is close to the 5\% and 95\% percentiles.
+
 
 
 \begin{figure}
 \centering
 \includegraphics[width=\columnwidth,natwidth=500,natheight=500]{figures/results/online_learning_dists-power-0.1.eps}
-\caption{Best online machine learning learning algorithm (Box-Cox Regressor) distribution.}
+\caption{Best online model (Box-Cox Regressor) distribution.}
 \label{fig:best_online_learning_day_distribution}
 \end{figure}
 
+Figure \ref{fig:bad_online_learning_day_distribution} displays the residuals for a model with poor predictive ability, the passive aggressive regressor. It displays a large period of time of prediction errors at -20000MWh, and often falls outside of the national grid reserve. These results demonstrate the importance of trying a multitude of different models and parameters to improve prediction accuracy.
 
 \begin{figure}
 \centering
@@ -472,19 +483,11 @@ By perturbing the market by the residuals, we are able to observe what the effec
 
 \subsection{Scenario Comparison}
 
+In this section we explore the effect of these residuals on investments made and the electricity generation mix.
 
 \subsubsection{Mean Contributed Energy Generation}
 
 
-
-
-    
-%\begin{figure}
-%\centering
-%\includegraphics[width=\columnwidth]{figures/results/elecsim_results/Carbon_emitted_mean_output.eps}
-%\caption{Mean carbon emitted vs. mean absolute error from 2018 to 2035 in ElecSim.}
-%\label{fig:Carbon_emitted_mean_output}
-%\end{figure}
 
 
 
@@ -599,7 +602,7 @@ By perturbing the market by the residuals, we are able to observe what the effec
 \vskip\baselineskip
 \begin{subfigure}[b]{0.475\textwidth}   
 \includegraphics[width=\columnwidth]{figures/results/elecsim_results/total_Onshore_mean_output.eps}
-\caption{Total Onshore invested in vs. mean absolute error from 2018 to 2035 in ElecSim.}
+\caption{Total Onshore.}
 \label{fig:total_Onshore_mean_output}
 \end{subfigure}
 \quad
@@ -719,7 +722,7 @@ By perturbing the market by the residuals, we are able to observe what the effec
 
 
 
-- Results of offline learning, online machine learning shown. Include residuals and MAE,MAPE,MASE etc\\
+- Include residuals and MAE,MAPE,MASE etc\\
 
 - Results of the residuals on the output of ElecSim until 2035.\\
 
