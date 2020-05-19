@@ -97,9 +97,25 @@
 \address{School of Computing, Newcastle University, Newcastle-upon-Tyne, United Kingdom}
 
 \begin{abstract}
-%% Text of abstract
+
+% Background
+
+Electricity supply must be matched with demand at all times. This is to maintain a high quality service to customers, as well as for load-frequency control. To gain a better understanding of the load that may be required in the future, estimations under uncertainty are required. 
+
+% Methodology
+
+In this paper we use different machine learning and statistical methods to predict electricity demand 24 hours ahead to simulate a day-ahead market. Once we have made the predictions, we sample from the residual distributions and perturb the electricity market in a long-term agent-based model, ElecSim. This enables us to understand the impact of errors on the long-term dynamics of a decentralized electicity market.
+ 
+
+% Results  
+
+Our results show that we are able to reduce the mean absolute error by 30\% using an online algorithm when compared to the best offline model, whilst reducing the required tendered national grid reserve required. We also show that large errors in prediction accuracy have a disproportionate error on investments made over a 17 year time frame, as well as electricity mix.
+
 
 \end{abstract}
+
+
+
 %
 %%%Graphical abstract
 %\begin{graphicalabstract}

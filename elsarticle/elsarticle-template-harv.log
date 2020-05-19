@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.4.22)  19 MAY 2020 15:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.4.22)  19 MAY 2020 16:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -774,27 +774,22 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <10> not available
 (Font)              Font shape `OT1/txr/bx/n' tried instead on input line 99.
-LaTeX Font Info:    Trying to load font information for U+txmia on input line 127.
+LaTeX Font Info:    Trying to load font information for U+txmia on input line 143.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/txfonts/utxmia.fd
 File: utxmia.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 127.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 143.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 127.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 143.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+txsyc on input line 127.
+LaTeX Font Info:    Trying to load font information for U+txsyc on input line 143.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/txfonts/utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
 )
-Underfull \hbox (badness 1655) in paragraph at lines 165--166
-\OT1/txr/m/n/10 on-shore, pho-to-voltaics, re-cip-ro-cal gas en-gines and
- []
-
-
 Overfull \hbox (1.90001pt too wide) has occurred while \output is active
 [] 
  []
@@ -803,57 +798,62 @@ Overfull \hbox (1.90001pt too wide) has occurred while \output is active
 
 
 ]
+Underfull \hbox (badness 1655) in paragraph at lines 181--182
+\OT1/txr/m/n/10 on-shore, pho-to-voltaics, re-cip-ro-cal gas en-gines and
+ []
 
-Package natbib Warning: Citation `Nazarko2005ARIMAApproach' on page 2 undefined on input line 178.
+
+Package natbib Warning: Citation `Nazarko2005ARIMAApproach' on page 2 undefined on input line 194.
 
 [2]
 File: figures/methods/Kell_eEnergy_Fig1.eps Graphic file (type eps)
  <figures/methods/Kell_eEnergy_Fig1.eps> [3]
 File: figures/methods/System_overview_large.png Graphic file (type eps)
  <figures/methods/System_overview_large.png>
-Overfull \hbox (2.638pt too wide) in paragraph at lines 314--315
+Overfull \hbox (2.638pt too wide) in paragraph at lines 330--331
 [][] 
  []
 
 [4]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 361.
+               Default added (so using `tbp') on input line 377.
 
 
-Overfull \hbox (44.57014pt too wide) in paragraph at lines 362--377
+Overfull \hbox (44.57014pt too wide) in paragraph at lines 378--393
 [][] 
  []
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 385.
+               Default added (so using `tbp') on input line 401.
 
 
-Underfull \hbox (badness 4805) in paragraph at lines 392--392
+Underfull \hbox (badness 4805) in paragraph at lines 408--408
 []\OT1/txr/m/n/10 [(10, 50, 100),
  []
 
 
-Underfull \hbox (badness 1226) in paragraph at lines 392--392
+Underfull \hbox (badness 1226) in paragraph at lines 408--408
 \OT1/txr/m/n/10 (10), (20), (50),
  []
 
 
-Overfull \hbox (44.81656pt too wide) in paragraph at lines 386--397
+Overfull \hbox (44.81656pt too wide) in paragraph at lines 402--413
 [][] 
  []
 
+[5] [6]
 File: figures/results/offline_model_mae.eps Graphic file (type eps)
-<figures/results/offline_model_mae.eps> [5] [6]
+ <figures/results/offline_model_mae.eps>
 File: figures/results/ExtraTreesRegressor_distribution_plot.eps Graphic file (type eps)
  <figures/results/ExtraTreesRegressor_distribution_plot.eps>
 File: figures/results/online_model_mae_barplot.eps Graphic file (type eps)
- <figures/results/online_model_mae_barplot.eps> [7]
+ <figures/results/online_model_mae_barplot.eps>
 File: figures/results/online_learning_dists-power-0.1.eps Graphic file (type eps)
- <figures/results/online_learning_dists-power-0.1.eps>
+ <figures/results/online_learning_dists-power-0.1.eps> [7]
 File: figures/results/online_learning_dists-PA-regressor-C-2-fit_intercept-false-max_iter-1000-shuffle-false-tol-0.001.eps Graphic file (type eps)
- <figures/results/online_learning_dists-PA-regressor-C-2-fit_intercept-false-max_iter-1000-shuffle-false-tol-0.001.eps>
+ <figures/results/online_learning_dists-PA-regressor-C-2-fit_intercept-false-max_iter-1000-shuffle-false-tol-0.001.eps> [8]
 File: figures/results/elecsim_results/contributed_PV_mean_output.eps Graphic file (type eps)
  <figures/results/elecsim_results/contributed_PV_mean_output.eps>
 File: figures/results/elecsim_results/contributed_Coal_mean_output.eps Graphic file (type eps)
@@ -865,17 +865,16 @@ File: figures/results/elecsim_results/contributed_Offshore_mean_output.eps Graph
 File: figures/results/elecsim_results/contributed_Recip_gas_mean_output.eps Graphic file (type eps)
  <figures/results/elecsim_results/contributed_Recip_gas_mean_output.eps>
 
-LaTeX Warning: Reference `fig:total_CCGT_mean_output' on page 8 undefined on input line 598.
+LaTeX Warning: Reference `fig:total_CCGT_mean_output' on page 9 undefined on input line 614.
 
 
-LaTeX Warning: Reference `fig:total_Offshore_mean_output' on page 8 undefined on input line 598.
+LaTeX Warning: Reference `fig:total_Offshore_mean_output' on page 9 undefined on input line 614.
 
 
-LaTeX Warning: Reference `fig:total_Recip_gas_mean_output.eps' on page 8 undefined on input line 598.
+LaTeX Warning: Reference `fig:total_Recip_gas_mean_output.eps' on page 9 undefined on input line 614.
 
-[8] [9]
 File: figures/results/elecsim_results/total_CCGT_mean_output.eps Graphic file (type eps)
- <figures/results/elecsim_results/total_CCGT_mean_output.eps>
+<figures/results/elecsim_results/total_CCGT_mean_output.eps>
 File: figures/results/elecsim_results/total_Coal_mean_output.eps Graphic file (type eps)
  <figures/results/elecsim_results/total_Coal_mean_output.eps>
 File: figures/results/elecsim_results/total_Onshore_mean_output.eps Graphic file (type eps)
@@ -883,7 +882,7 @@ File: figures/results/elecsim_results/total_Onshore_mean_output.eps Graphic file
 File: figures/results/elecsim_results/total_Offshore_mean_output.eps Graphic file (type eps)
  <figures/results/elecsim_results/total_Offshore_mean_output.eps>
 
-LaTeX Warning: Reference `fig:Carbon_emitted_mean_output' on page 10 undefined on input line 639.
+LaTeX Warning: Reference `fig:Carbon_emitted_mean_output' on page 9 undefined on input line 655.
 
 File: figures/results/elecsim_results/total_Nuclear_mean_output.eps Graphic file (type eps)
 <figures/results/elecsim_results/total_Nuclear_mean_output.eps>
@@ -892,15 +891,12 @@ File: figures/results/elecsim_results/total_PV_mean_output.eps Graphic file (typ
 File: figures/results/elecsim_results/total_Recip_gas_mean_output.eps Graphic file (type eps)
  <figures/results/elecsim_results/total_Recip_gas_mean_output.eps>
 File: figures/results/elecsim_results/Carbon_emitted_mean_output.eps Graphic file (type eps)
- <figures/results/elecsim_results/Carbon_emitted_mean_output.eps>
-Underfull \vbox (badness 2142) has occurred while \output is active []
-
- (./elsarticle-template-harv.bbl
+ <figures/results/elecsim_results/Carbon_emitted_mean_output.eps> (./elsarticle-template-harv.bbl
 Overfull \hbox (5.10028pt too wide) in paragraph at lines 15--22
 \OT1/txr/m/n/8 URL \OT1/cmtt/m/n/8 http://dx.doi.org/10.1016/j.procs.2014.05.450 
  []
 
-[10]
+[9] [10]
 Underfull \hbox (badness 2351) in paragraph at lines 53--58
 \OT1/txr/m/n/8 A re-view, ICPCES 2012 - 2012 2nd In-ter-na-tional Con-
  []
@@ -909,6 +905,9 @@ Underfull \hbox (badness 2351) in paragraph at lines 53--58
 Overfull \hbox (0.85022pt too wide) in paragraph at lines 94--101
 \OT1/txr/m/n/8 URL \OT1/cmtt/m/n/8 http://ieeexplore.ieee.org/document/7998331/ 
  []
+
+
+Underfull \vbox (badness 7667) has occurred while \output is active []
 
 
 Underfull \hbox (badness 2717) in paragraph at lines 103--110
@@ -941,9 +940,6 @@ Underfull \hbox (badness 1990) in paragraph at lines 144--150
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 Underfull \hbox (badness 1314) in paragraph at lines 169--173
 \OT1/txr/m/n/8 In-tel-li-gence 40 (1-3) (1989) 185--234.  doi:10.1016/0004-
  []
@@ -964,6 +960,9 @@ Underfull \hbox (badness 1163) in paragraph at lines 202--208
  []
 
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [11]
 Underfull \hbox (badness 1533) in paragraph at lines 221--227
 []\OT1/txr/m/n/8 C. Cortes, V. Vap-nik, Support-Vector Net-works, Ma-chine
  []
@@ -983,10 +982,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 236--242
 \OT1/txr/m/n/8 19 (6) (1974) 716--723.  arXiv:arXiv:1011.1669v3,
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [11])
+)
 
 Package natbib Warning: There were undefined citations.
 
@@ -1000,10 +996,10 @@ LaTeX Warning: There were undefined references.
 Here is how much of TeX's memory you used:
  9994 strings out of 480609
  174639 string characters out of 5903656
- 621977 words of memory out of 5000000
+ 620977 words of memory out of 5000000
  25686 multiletter control sequences out of 15000+600000
  558176 words of font info for 100 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  48i,15n,48p,901b,472s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on elsarticle-template-harv.dvi (12 pages, 62340 bytes).
+Output written on elsarticle-template-harv.dvi (12 pages, 63632 bytes).
