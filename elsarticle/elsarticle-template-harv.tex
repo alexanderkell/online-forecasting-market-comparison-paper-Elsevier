@@ -22,8 +22,6 @@
 %% Use the option review to obtain double line spacing
 %% \documentclass[authoryear,preprint,review,12pt]{elsarticle}
 
-
-\pdfoutput=1
 %% Use the options 1p,twocolumn; 3p; 3p,twocolumn; 5p; or 5p,twocolumn
 %% for a journal layout:
 %% \documentclass[final,1p,times,authoryear]{elsarticle}
@@ -52,6 +50,9 @@
 \usepackage{algorithm}
 \usepackage{algorithmicx}
 \usepackage{algpseudocode}
+
+\usepackage{subcaption}
+\usepackage{mwe}
 
 %% The lineno packages adds line numbers. Start line numbering with
 %% \begin{linenumbers}, end it with \end{linenumbers}. Or switch it on
@@ -203,7 +204,7 @@ Machine learning is a methodology for finding and describing structural patterns
 
 Online machine learning is an extension of machine learning algorithms, that can be used on dynamic datasets, such as time-series data. In traditional machine learning algorithms, when new data is obtained, the historical data must be used to retrain the entire model with new model. This can be costly both in terms of time and in computation power \cite{Li2016}. Online algorithms therefore  avoids the repeated retraining of data and improves the learning efficiency \cite{Rong2009}.
 
-Examples of such algorithms are Passive Aggressive Regressor \cite{Gzik2014}, Linear Regression, Box-Cox Regressor \cite{Box1964}, K-Neighbors Regressor \cite{forgy65}, Softmax Regression, Multilayer perceptron regressor \cite{Hinton1989}. For our work, we trial the stated algorithms, in addition to a host of offline learning techniques. The online techniques trialled were Lasso regression \cite{Tibshirani1996a}, ridge regression \cite{GeladiPaul1994Mrac},  Elastic Net \cite{Geostatistics2010}, least angle regression \cite{Fike1988}, Extra Trees Regressor \cite{Fike1988}, Random Forest Regressor \cite{Breiman2001}, AdaBoost Regressor \cite{Freund1997}, Gradient Boosting Regressor \cite{316}, Support vector regression \cite{Cortes1995}, and offline versions of Multilayer perceptron regressor, K-Neighbors regressor, linear regression.
+Examples of such algorithms are Passive Aggressive (PA) Regressor \cite{Gzik2014}, Linear Regression, Box-Cox Regressor \cite{Box1964}, K-Neighbors Regressor \cite{forgy65}, Softmax Regression, Multilayer perceptron regressor \cite{Hinton1989}. For our work, we trial the stated algorithms, in addition to a host of offline learning techniques. The online techniques trialled were Lasso regression \cite{Tibshirani1996a}, ridge regression \cite{GeladiPaul1994Mrac},  Elastic Net \cite{Geostatistics2010}, least angle regression \cite{Fike1988}, Extra Trees Regressor \cite{Fike1988}, Random Forest Regressor \cite{Breiman2001}, AdaBoost Regressor \cite{Freund1997}, Gradient Boosting Regressor \cite{316}, Support vector regression \cite{Cortes1995}, and offline versions of Multilayer perceptron regressor, K-Neighbors regressor, linear regression.
 
 We trial the previously mentioned statistical and machine learning algorithms, and vary the parameters using grid search and cross-validation in the python package, scikit learn \cite{scikit-learn}.
 
@@ -307,7 +308,7 @@ Specifically, the configuration file details the scenario which can be set by th
 
 
 \begin{figure}
-	\includegraphics[width=0.48\textwidth]{figures/methods/System_overview_large.png}
+	\includegraphics[width=0.48\textwidth,natwidth=610,natheight=400]{figures/methods/System_overview_large.png}
 	\caption{System overview of ElecSim \cite{Kell}.}
 	\label{fig:model_details}
 \end{figure}
@@ -433,7 +434,7 @@ By perturbing the market by the residuals, we are able to observe what the effec
 
 \begin{figure}
 \centering
-\includegraphics[width=\columnwidth]{figures/results/ExtraTreesRegressor_distribution_plot.eps}
+\includegraphics[width=\columnwidth,natwidth=500,natheight=500]{figures/results/ExtraTreesRegressor_distribution_plot.eps}
 \caption{Best offline machine learning learning algorithm (Extra Trees Regressor) distribution.}
 \label{fig:best_offline_learning_day_distribution}
 \end{figure}
@@ -442,18 +443,18 @@ By perturbing the market by the residuals, we are able to observe what the effec
 \subsection{Online Machine Learning}
 
 
-\begin{figure*}
+\begin{figure}
 %\centering
-\includegraphics[width=0.8\textwidth]{figures/results/online_model_mae_barplot.eps}
+\includegraphics[width=\columnwidth,natwidth=1300,natheight=1300]{figures/results/online_model_mae_barplot.eps}
 \caption{Comparison of mean absolute errors (MAE) for different online regressor models (identical MAEs removed).}
 \label{fig:best_online_learning_day_distribution}
-\end{figure*}
+\end{figure}
 
 
 
 \begin{figure}
 \centering
-\includegraphics[width=\columnwidth]{figures/results/online_learning_dists-power-0.1.eps}
+\includegraphics[width=\columnwidth,natwidth=500,natheight=500]{figures/results/online_learning_dists-power-0.1.eps}
 \caption{Best online machine learning learning algorithm (Box-Cox Regressor) distribution.}
 \label{fig:best_online_learning_day_distribution}
 \end{figure}
@@ -461,7 +462,7 @@ By perturbing the market by the residuals, we are able to observe what the effec
 
 \begin{figure}
 \centering
-\includegraphics[width=\columnwidth]{figures/results/online_learning_dists-PA-regressor-C-2-fit_intercept-false-max_iter-1000-shuffle-false-tol-0.001.eps}
+\includegraphics[width=\columnwidth,natwidth=500,natheight=500]{figures/results/online_learning_dists-PA-regressor-C-2-fit_intercept-false-max_iter-1000-shuffle-false-tol-0.001.eps}
 \caption{Online machine learning learning algorithm distribution. (Passive Aggressive Regressor (C=2, fit intercept = false, maximum iterations = 1000, shuffle = false, tolerance = 0.001).}
 \label{fig:bad_online_learning_day_distribution}
 \end{figure}
@@ -474,56 +475,100 @@ By perturbing the market by the residuals, we are able to observe what the effec
 
 \subsubsection{Mean Contributed Energy Generation}
 
-\begin{figure}
-\centering
-\includegraphics[width=\columnwidth]{figures/results/elecsim_results/Carbon_emitted_mean_output.pdf}
-\caption{Mean carbon emitted vs. mean absolute error from 2018 to 2035 in ElecSim.}
-\label{fig:Carbon_emitted_mean_output}
-\end{figure}
 
 
-\begin{figure}
-\centering
-\includegraphics[width=\columnwidth]{figures/results/elecsim_results/contributed_Coal_mean_output.pdf}
-\caption{Mean coal output vs. mean absolute error from 2018 to 2035 in ElecSim.}
-\label{fig:contributed_Coal_mean_output}
-\end{figure}
+
+    
+%\begin{figure}
+%\centering
+%\includegraphics[width=\columnwidth]{figures/results/elecsim_results/Carbon_emitted_mean_output.eps}
+%\caption{Mean carbon emitted vs. mean absolute error from 2018 to 2035 in ElecSim.}
+%\label{fig:Carbon_emitted_mean_output}
+%\end{figure}
 
 
-\begin{figure}
-\centering
-\includegraphics[width=\columnwidth]{figures/results/elecsim_results/contributed_Nuclear_mean_output.pdf}
-\caption{Mean nuclear output vs. mean absolute error from 2018 to 2035 in ElecSim.}
-\label{fig:contributed_Nuclear_mean_output}
-\end{figure}
 
 
-\begin{figure}
-\centering
-\includegraphics[width=\columnwidth]{figures/results/elecsim_results/contributed_Offshore_mean_output.pdf}
-\caption{Mean offshore output vs. mean absolute error from 2018 to 2035 in ElecSim.}
-\label{fig:contributed_Offshore_mean_output.pdf}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=\columnwidth]{figures/results/elecsim_results/contributed_Onshore_mean_output.pdf}
-\caption{Mean onshore output vs. mean absolute error from 2018 to 2035 in ElecSim.}
-\label{fig:contributed_Onshore_mean_output.pdf}
-\end{figure}
-
-
-\begin{figure}
+\begin{figure*}
+%\centering
+\begin{subfigure}[b]{0.475\textwidth}
 \centering
 \includegraphics[width=\columnwidth]{figures/results/elecsim_results/contributed_PV_mean_output}
-\caption{Mean photovoltaic output vs. mean absolute error from 2018 to 2035 in ElecSim.}
+\caption{Photovoltaic output.}
 \label{fig:contributed_PV_mean_output}
-\end{figure}
+\end{subfigure}
+\hfill
+\begin{subfigure}[b]{0.475\textwidth}  
+%\centering
+\includegraphics[width=\columnwidth]{figures/results/elecsim_results/contributed_Coal_mean_output.eps}
+\caption{Coal output.}
+\label{fig:contributed_Coal_mean_output}
+\end{subfigure}
+\vskip\baselineskip
+\begin{subfigure}[b]{0.475\textwidth}   
+%\centering
+\includegraphics[width=\columnwidth]{figures/results/elecsim_results/contributed_Nuclear_mean_output.eps}
+\caption{Nuclear output.}
+\label{fig:contributed_Nuclear_mean_output}
+\end{subfigure}
+\quad
+\begin{subfigure}[b]{0.475\textwidth}   
+%\centering
+\includegraphics[width=\columnwidth]{figures/results/elecsim_results/contributed_Offshore_mean_output.eps}
+\caption{Offshore output.}
+\label{fig:contributed_Offshore_mean_output.eps}
+\end{subfigure}
+\caption{Mean outputs of various technologies vs. mean absolute error from 2018 to 2035 in ElecSim.}
+\end{figure*}
+    
+    
+    
+%
+%
+%\begin{figure}
+%\centering
+%\includegraphics[width=\columnwidth]{figures/results/elecsim_results/contributed_Coal_mean_output.eps}
+%\caption{Mean coal output vs. mean absolute error from 2018 to 2035 in ElecSim.}
+%\label{fig:contributed_Coal_mean_output}
+%\end{figure}
+%
+%
+%\begin{figure}
+%\centering
+%\includegraphics[width=\columnwidth]{figures/results/elecsim_results/contributed_Nuclear_mean_output.eps}
+%\caption{Mean nuclear output vs. mean absolute error from 2018 to 2035 in ElecSim.}
+%\label{fig:contributed_Nuclear_mean_output}
+%\end{figure}
+%
+%
+%\begin{figure}
+%\centering
+%\includegraphics[width=\columnwidth]{figures/results/elecsim_results/contributed_Offshore_mean_output.eps}
+%\caption{Mean offshore output vs. mean absolute error from 2018 to 2035 in ElecSim.}
+%\label{fig:contributed_Offshore_mean_output.eps}
+%\end{figure}
+
+%\begin{figure}
+%\centering
+%\includegraphics[width=\columnwidth]{figures/results/elecsim_results/contributed_Onshore_mean_output.eps}
+%\caption{Mean onshore output vs. mean absolute error from 2018 to 2035 in ElecSim.}
+%\label{fig:contributed_Onshore_mean_output.eps}
+%\end{figure}
+
+
+%\begin{figure}
+%\centering
+%\includegraphics[width=\columnwidth]{figures/results/elecsim_results/contributed_PV_mean_output}
+%\caption{Mean photovoltaic output vs. mean absolute error from 2018 to 2035 in ElecSim.}
+%\label{fig:contributed_PV_mean_output}
+%\end{figure}
+
+
 
 
 \begin{figure}
 \centering
-\includegraphics[width=\columnwidth]{figures/results/elecsim_results/contributed_Recip_gas_mean_output.pdf}
+\includegraphics[width=\columnwidth]{figures/results/elecsim_results/contributed_Recip_gas_mean_output.eps}
 \caption{Mean reciprocal gas engine output vs. mean absolute error from 2018 to 2035 in ElecSim.}
 \label{fig:contributed_Recip_gas_mean_output}
 \end{figure}
@@ -533,58 +578,131 @@ By perturbing the market by the residuals, we are able to observe what the effec
 
 \subsubsection{Total Energy Generation}
 
-\begin{figure}
+
+
+
+\begin{figure*}
+%\centering
+\begin{subfigure}[b]{0.475\textwidth}
 \centering
-\includegraphics[width=\columnwidth]{figures/results/elecsim_results/total_CCGT_mean_output.pdf}
-\caption{Total CCGT invested in vs. mean absolute error from 2018 to 2035 in ElecSim.}
+\includegraphics[width=\columnwidth]{figures/results/elecsim_results/total_CCGT_mean_output.eps}
+\caption{Total CCGT.}
 \label{fig:total_CCGT_mean_output}
-\end{figure}
-
-
-\begin{figure}
-\centering
-\includegraphics[width=\columnwidth]{figures/results/elecsim_results/total_Coal_mean_output.pdf}
-\caption{Total Coal invested in vs. mean absolute error from 2018 to 2035 in ElecSim.}
+\end{subfigure}
+\hfill
+\begin{subfigure}[b]{0.475\textwidth}  
+%\centering
+\includegraphics[width=\columnwidth]{figures/results/elecsim_results/total_Coal_mean_output.eps}
+\caption{Total Coal.}
 \label{fig:total_Coal_mean_output}
-\end{figure}
-
-
-\begin{figure}
-\centering
-\includegraphics[width=\columnwidth]{figures/results/elecsim_results/total_Coal_mean_output.pdf}
-\caption{Total Coal invested in vs. mean absolute error from 2018 to 2035 in ElecSim.}
-\label{fig:total_Coal_mean_output}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=\columnwidth]{figures/results/elecsim_results/total_Offshore_mean_output.pdf}
-\caption{Total Offshore invested in vs. mean absolute error from 2018 to 2035 in ElecSim.}
-\label{fig:total_Offshore_mean_output}
-\end{figure}
-
-
-\begin{figure}
-\centering
-\includegraphics[width=\columnwidth]{figures/results/elecsim_results/total_Onshore_mean_output.pdf}
+\end{subfigure}
+\vskip\baselineskip
+\begin{subfigure}[b]{0.475\textwidth}   
+\includegraphics[width=\columnwidth]{figures/results/elecsim_results/total_Onshore_mean_output.eps}
 \caption{Total Onshore invested in vs. mean absolute error from 2018 to 2035 in ElecSim.}
 \label{fig:total_Onshore_mean_output}
-\end{figure}
+\end{subfigure}
+\quad
+\begin{subfigure}[b]{0.475\textwidth}   
+%\centering
+\includegraphics[width=\columnwidth]{figures/results/elecsim_results/total_Offshore_mean_output.eps}
+\caption{Total Offshore.}
+\label{fig:total_Offshore_mean_output}
+\end{subfigure}
+\caption{Total technologies invested in vs. mean absolute error from 2018 to 2035 in ElecSim.}
+\end{figure*}
 
 
-\begin{figure}
+
+
+
+
+
+
+\begin{figure*}
+%\centering
+\begin{subfigure}[b]{0.475\textwidth}
+\includegraphics[width=\columnwidth]{figures/results/elecsim_results/total_Onshore_mean_output.eps}
+\caption{Total onshore.}
+\label{fig:total_Onshore_mean_output}
+\end{subfigure}
+\hfill
+\begin{subfigure}[b]{0.475\textwidth}  
+%\centering
 \centering
-\includegraphics[width=\columnwidth]{figures/results/elecsim_results/total_PV_mean_output.pdf}
-\caption{Total photovoltaics invested in vs. mean absolute error from 2018 to 2035 in ElecSim.}
+\includegraphics[width=\columnwidth]{figures/results/elecsim_results/total_PV_mean_output.eps}
+\caption{Total photovoltaics.}
 \label{fig:total_PV_mean_output}
-\end{figure}
+\end{subfigure}
+\vskip\baselineskip
+\begin{subfigure}[b]{0.475\textwidth}   
+\includegraphics[width=\columnwidth]{figures/results/elecsim_results/total_Recip_gas_mean_output.eps}
+\caption{Total Reciprocal gas engine.}
+\label{fig:total_Recip_gas_mean_output.eps}
+\end{subfigure}
+\quad
+\begin{subfigure}[b]{0.475\textwidth}   
+\includegraphics[width=\columnwidth]{figures/results/elecsim_results/Carbon_emitted_mean_output.eps}
+\caption{Mean carbon emitted.}
+\label{fig:Carbon_emitted_mean_output}
+\end{subfigure}
+\caption{a), b), c) Investments in various technologies vs. mean absolute error from 2018 to 2035 in ElecSim and d) mean carbon emissions between 2018 and 2035.}
+\end{figure*}
 
-\begin{figure}
-\centering
-\includegraphics[width=\columnwidth]{figures/results/elecsim_results/total_Recip_gas_mean_output.pdf}
-\caption{Total Reciprocal gas engine invested in vs. mean absolute error from 2018 to 2035 in ElecSim.}
-\label{fig:total_Recip_gas_mean_output.pdf}
-\end{figure}
+
+
+
+
+
+%\begin{figure}
+%\centering
+%\includegraphics[width=\columnwidth]{figures/results/elecsim_results/total_CCGT_mean_output.eps}
+%\caption{Total CCGT invested in vs. mean absolute error from 2018 to 2035 in ElecSim.}
+%\label{fig:total_CCGT_mean_output}
+%\end{figure}
+%
+%
+%\begin{figure}
+%\centering
+%\includegraphics[width=\columnwidth]{figures/results/elecsim_results/total_Coal_mean_output.eps}
+%\caption{Total Coal invested in vs. mean absolute error from 2018 to 2035 in ElecSim.}
+%\label{fig:total_Coal_mean_output}
+%\end{figure}
+%
+%
+%
+%\begin{figure}
+%\centering
+%\includegraphics[width=\columnwidth]{figures/results/elecsim_results/total_Offshore_mean_output.eps}
+%\caption{Total Offshore invested in vs. mean absolute error from 2018 to 2035 in ElecSim.}
+%\label{fig:total_Offshore_mean_output}
+%\end{figure}
+
+
+
+
+
+%\begin{figure}
+%\centering
+%\includegraphics[width=\columnwidth]{figures/results/elecsim_results/total_Onshore_mean_output.eps}
+%\caption{Total Onshore invested in vs. mean absolute error from 2018 to 2035 in ElecSim.}
+%\label{fig:total_Onshore_mean_output}
+%\end{figure}
+
+
+%\begin{figure}
+%\centering
+%\includegraphics[width=\columnwidth]{figures/results/elecsim_results/total_PV_mean_output.eps}
+%\caption{Total photovoltaics invested in vs. mean absolute error from 2018 to 2035 in ElecSim.}
+%\label{fig:total_PV_mean_output}
+%\end{figure}
+
+%\begin{figure}
+%\centering
+%\includegraphics[width=\columnwidth]{figures/results/elecsim_results/total_Recip_gas_mean_output.eps}
+%\caption{Total Reciprocal gas engine invested in vs. mean absolute error from 2018 to 2035 in ElecSim.}
+%\label{fig:total_Recip_gas_mean_output.eps}
+%\end{figure}
 
 
 
