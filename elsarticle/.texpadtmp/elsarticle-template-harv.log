@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.4.22)  15 MAY 2020 15:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.4.22)  16 MAY 2020 07:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -649,9 +649,6 @@ LaTeX Warning: Label `fig:best_online_learning_day_distribution' multiply define
 
 LaTeX Warning: Label `fig:total_Coal_mean_output' multiply defined.
 
-
-LaTeX Warning: Label `fig:total_PV_mean_output' multiply defined.
-
 )
 \openout1 = `elsarticle-template-harv.aux'.
 
@@ -951,7 +948,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  8494 strings out of 480609
  147284 string characters out of 5903656
- 426514 words of memory out of 5000000
+ 426524 words of memory out of 5000000
  24213 multiletter control sequences out of 15000+600000
  558176 words of font info for 100 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
