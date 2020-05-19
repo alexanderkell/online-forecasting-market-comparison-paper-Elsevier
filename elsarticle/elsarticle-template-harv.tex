@@ -22,6 +22,8 @@
 %% Use the option review to obtain double line spacing
 %% \documentclass[authoryear,preprint,review,12pt]{elsarticle}
 
+
+\pdfoutput=1
 %% Use the options 1p,twocolumn; 3p; 3p,twocolumn; 5p; or 5p,twocolumn
 %% for a journal layout:
 %% \documentclass[final,1p,times,authoryear]{elsarticle}
@@ -305,7 +307,7 @@ Specifically, the configuration file details the scenario which can be set by th
 
 
 \begin{figure}
-	\includegraphics[width=0.48\textwidth,natwidth=610,natheight=400]{figures/methods/System_overview_large.png}
+	\includegraphics[width=0.48\textwidth]{figures/methods/System_overview_large.png}
 	\caption{System overview of ElecSim \cite{Kell}.}
 	\label{fig:model_details}
 \end{figure}
@@ -431,7 +433,7 @@ By perturbing the market by the residuals, we are able to observe what the effec
 
 \begin{figure}
 \centering
-\includegraphics[width=\columnwidth,natwidth=500,natheight=500]{figures/results/ExtraTreesRegressor_distribution_plot.eps}
+\includegraphics[width=\columnwidth]{figures/results/ExtraTreesRegressor_distribution_plot.eps}
 \caption{Best offline machine learning learning algorithm (Extra Trees Regressor) distribution.}
 \label{fig:best_offline_learning_day_distribution}
 \end{figure}
@@ -442,7 +444,7 @@ By perturbing the market by the residuals, we are able to observe what the effec
 
 \begin{figure*}
 %\centering
-\includegraphics[width=0.8\textwidth,natwidth=1000,natheight=1000]{figures/results/online_model_mae_barplot.eps}
+\includegraphics[width=0.8\textwidth]{figures/results/online_model_mae_barplot.eps}
 \caption{Comparison of mean absolute errors (MAE) for different online regressor models (identical MAEs removed).}
 \label{fig:best_online_learning_day_distribution}
 \end{figure*}
@@ -451,7 +453,7 @@ By perturbing the market by the residuals, we are able to observe what the effec
 
 \begin{figure}
 \centering
-\includegraphics[width=\columnwidth,natwidth=500,natheight=500]{figures/results/online_learning_dists-power-0.1.eps}
+\includegraphics[width=\columnwidth]{figures/results/online_learning_dists-power-0.1.eps}
 \caption{Best online machine learning learning algorithm (Box-Cox Regressor) distribution.}
 \label{fig:best_online_learning_day_distribution}
 \end{figure}
@@ -459,7 +461,7 @@ By perturbing the market by the residuals, we are able to observe what the effec
 
 \begin{figure}
 \centering
-\includegraphics[width=\columnwidth,natwidth=500,natheight=500]{figures/results/online_learning_dists-PA-regressor-C-2-fit_intercept-false-max_iter-1000-shuffle-false-tol-0.001.eps}
+\includegraphics[width=\columnwidth]{figures/results/online_learning_dists-PA-regressor-C-2-fit_intercept-false-max_iter-1000-shuffle-false-tol-0.001.eps}
 \caption{Online machine learning learning algorithm distribution. (Passive Aggressive Regressor (C=2, fit intercept = false, maximum iterations = 1000, shuffle = false, tolerance = 0.001).}
 \label{fig:bad_online_learning_day_distribution}
 \end{figure}
@@ -474,7 +476,7 @@ By perturbing the market by the residuals, we are able to observe what the effec
 
 \begin{figure}
 \centering
-\includegraphics[width=\columnwidth]{figures/results/elecsim_results/Carbon_emitted_mean_output.eps}
+\includegraphics[width=\columnwidth]{figures/results/elecsim_results/Carbon_emitted_mean_output.pdf}
 \caption{Mean carbon emitted vs. mean absolute error from 2018 to 2035 in ElecSim.}
 \label{fig:Carbon_emitted_mean_output}
 \end{figure}
@@ -482,7 +484,7 @@ By perturbing the market by the residuals, we are able to observe what the effec
 
 \begin{figure}
 \centering
-\includegraphics[width=\columnwidth]{figures/results/elecsim_results/contributed_Coal_mean_output.eps}
+\includegraphics[width=\columnwidth]{figures/results/elecsim_results/contributed_Coal_mean_output.pdf}
 \caption{Mean coal output vs. mean absolute error from 2018 to 2035 in ElecSim.}
 \label{fig:contributed_Coal_mean_output}
 \end{figure}
@@ -490,7 +492,7 @@ By perturbing the market by the residuals, we are able to observe what the effec
 
 \begin{figure}
 \centering
-\includegraphics[width=\columnwidth]{figures/results/elecsim_results/contributed_Nuclear_mean_output.eps}
+\includegraphics[width=\columnwidth]{figures/results/elecsim_results/contributed_Nuclear_mean_output.pdf}
 \caption{Mean nuclear output vs. mean absolute error from 2018 to 2035 in ElecSim.}
 \label{fig:contributed_Nuclear_mean_output}
 \end{figure}
@@ -498,16 +500,16 @@ By perturbing the market by the residuals, we are able to observe what the effec
 
 \begin{figure}
 \centering
-\includegraphics[width=\columnwidth]{figures/results/elecsim_results/contributed_Offshore_mean_output.eps}
+\includegraphics[width=\columnwidth]{figures/results/elecsim_results/contributed_Offshore_mean_output.pdf}
 \caption{Mean offshore output vs. mean absolute error from 2018 to 2035 in ElecSim.}
-\label{fig:contributed_Offshore_mean_output.eps}
+\label{fig:contributed_Offshore_mean_output.pdf}
 \end{figure}
 
 \begin{figure}
 \centering
-\includegraphics[width=\columnwidth]{figures/results/elecsim_results/contributed_Onshore_mean_output.eps}
+\includegraphics[width=\columnwidth]{figures/results/elecsim_results/contributed_Onshore_mean_output.pdf}
 \caption{Mean onshore output vs. mean absolute error from 2018 to 2035 in ElecSim.}
-\label{fig:contributed_Onshore_mean_output.eps}
+\label{fig:contributed_Onshore_mean_output.pdf}
 \end{figure}
 
 
@@ -521,7 +523,7 @@ By perturbing the market by the residuals, we are able to observe what the effec
 
 \begin{figure}
 \centering
-\includegraphics[width=\columnwidth]{figures/results/elecsim_results/contributed_Recip_gas_mean_output.eps}
+\includegraphics[width=\columnwidth]{figures/results/elecsim_results/contributed_Recip_gas_mean_output.pdf}
 \caption{Mean reciprocal gas engine output vs. mean absolute error from 2018 to 2035 in ElecSim.}
 \label{fig:contributed_Recip_gas_mean_output}
 \end{figure}
@@ -533,7 +535,7 @@ By perturbing the market by the residuals, we are able to observe what the effec
 
 \begin{figure}
 \centering
-\includegraphics[width=\columnwidth]{figures/results/elecsim_results/total_CCGT_mean_output.eps}
+\includegraphics[width=\columnwidth]{figures/results/elecsim_results/total_CCGT_mean_output.pdf}
 \caption{Total CCGT invested in vs. mean absolute error from 2018 to 2035 in ElecSim.}
 \label{fig:total_CCGT_mean_output}
 \end{figure}
@@ -541,7 +543,7 @@ By perturbing the market by the residuals, we are able to observe what the effec
 
 \begin{figure}
 \centering
-\includegraphics[width=\columnwidth]{figures/results/elecsim_results/total_Coal_mean_output.eps}
+\includegraphics[width=\columnwidth]{figures/results/elecsim_results/total_Coal_mean_output.pdf}
 \caption{Total Coal invested in vs. mean absolute error from 2018 to 2035 in ElecSim.}
 \label{fig:total_Coal_mean_output}
 \end{figure}
@@ -549,14 +551,14 @@ By perturbing the market by the residuals, we are able to observe what the effec
 
 \begin{figure}
 \centering
-\includegraphics[width=\columnwidth]{figures/results/elecsim_results/total_Coal_mean_output.eps}
+\includegraphics[width=\columnwidth]{figures/results/elecsim_results/total_Coal_mean_output.pdf}
 \caption{Total Coal invested in vs. mean absolute error from 2018 to 2035 in ElecSim.}
 \label{fig:total_Coal_mean_output}
 \end{figure}
 
 \begin{figure}
 \centering
-\includegraphics[width=\columnwidth]{figures/results/elecsim_results/total_Offshore_mean_output.eps}
+\includegraphics[width=\columnwidth]{figures/results/elecsim_results/total_Offshore_mean_output.pdf}
 \caption{Total Offshore invested in vs. mean absolute error from 2018 to 2035 in ElecSim.}
 \label{fig:total_Offshore_mean_output}
 \end{figure}
@@ -564,7 +566,7 @@ By perturbing the market by the residuals, we are able to observe what the effec
 
 \begin{figure}
 \centering
-\includegraphics[width=\columnwidth]{figures/results/elecsim_results/total_Onshore_mean_output.eps}
+\includegraphics[width=\columnwidth]{figures/results/elecsim_results/total_Onshore_mean_output.pdf}
 \caption{Total Onshore invested in vs. mean absolute error from 2018 to 2035 in ElecSim.}
 \label{fig:total_Onshore_mean_output}
 \end{figure}
@@ -572,16 +574,16 @@ By perturbing the market by the residuals, we are able to observe what the effec
 
 \begin{figure}
 \centering
-\includegraphics[width=\columnwidth]{figures/results/elecsim_results/total_PV_mean_output.eps}
+\includegraphics[width=\columnwidth]{figures/results/elecsim_results/total_PV_mean_output.pdf}
 \caption{Total photovoltaics invested in vs. mean absolute error from 2018 to 2035 in ElecSim.}
 \label{fig:total_PV_mean_output}
 \end{figure}
 
 \begin{figure}
 \centering
-\includegraphics[width=\columnwidth]{figures/results/elecsim_results/total_Recip_gas_mean_output.eps}
+\includegraphics[width=\columnwidth]{figures/results/elecsim_results/total_Recip_gas_mean_output.pdf}
 \caption{Total Reciprocal gas engine invested in vs. mean absolute error from 2018 to 2035 in ElecSim.}
-\label{fig:total_Recip_gas_mean_output.eps}
+\label{fig:total_Recip_gas_mean_output.pdf}
 \end{figure}
 
 

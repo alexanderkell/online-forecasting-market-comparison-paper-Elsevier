@@ -200,16 +200,25 @@ offline_rf_actual_predicted_wide = reshape(offline_rf_actual_predicted, idvar = 
 offline_rf_actual_predicted_wide = select(offline_rf_actual_predicted_wide, -X.predictions, -X.actuals)
 
 
-offline_rf_actual_predicted_wide = reshape(offline_rf_actual_predicted, idvar = "hour", timevar = "variable", direction = "wide") %>% select(-X.predictions, -X.actuals) %>% rename(c("value.actuals"="rf_actual", 'value.predictions'="rf_predictions"))
+offline_rf_actual_predicted_wide = reshape(offline_rf_actual_predicted, idvar = "hour", timevar = "variable", direction = "wide") %>% select(-X.predictions, -X.actuals) %>% rename(c("value.actuals"="Actuals", 'value.predictions'="Random Forest"))
 
 
-online_bc_actual_predicted_wide = reshape(online_bc_actual_predicted, idvar = "hour", timevar = "variable", direction = "wide") %>% select(-X.predictions, -X.actuals) %>% rename(c("value.actuals"="bc_actual", 'value.predictions'="bc_predictions"))
+online_bc_actual_predicted_wide = reshape(online_bc_actual_predicted, idvar = "hour", timevar = "variable", direction = "wide") %>% select(-X.predictions, -X.actuals) %>% rename(c("value.actuals"="Actuals", 'value.predictions'="BoxCox Predictions"))
                                                                                                                                                                                   
-                                                                                                                            both_long = cbind(online_bc_actual_predicted_wide, select(offline_rf_actual_predicted_wide, rf_predictions)) %>% melt(id.vars='hour', measure.vars=c('bc_actual', 'bc_predictions', 'rf_predictions'))
+                                                                                                                            both_long = cbind(online_bc_actual_predicted_wide, select(offline_rf_actual_predicted_wide, `Random Forest`)) %>% melt(id.vars='hour', measure.vars=c('Actuals', 'BoxCox Predictions', 'Random Forest'))
 
-                                                                                                                            both_pred_actuals_plot = ggplot(both_long) + geom_line(aes(x=hour, colour=variable, y=value), size=2) + theme_classic() + coord_cartesian(clip = 'off') + theme(text = element_text(size=40), legend.position = "bottom", plot.margin=grid::unit(c(0,0,0,0), "mm")) + ylab("Demand (MW)") + xlab("Hour of Week") +
+                                                                                                                            both_pred_actuals_plot = ggplot(both_long) + geom_line(aes(x=hour, colour=variable, y=value), size=1.5) + theme_classic() + coord_cartesian(clip = 'off') + theme(text = element_text(size=40), legend.position = "right", plot.margin=grid::unit(c(0,0,0,0), "mm")) + ylab("Demand (MW)") + xlab("Hour of Week") +
   scale_y_continuous(expand = c(0.1,0.1))
-print(offline_rf_pred_actuals_plot)
-ggsave("plots/offline_rf_actual_predicted.eps", offline_rf_pred_actuals_plot, dpi=1000, width = 40, height = 20, units = "cm")
+print(both_pred_actuals_plot)
+ggsave("plots/both_actual_predicted.eps", both_pred_actuals_plot, dpi=1000, width = 40, height = 20, units = "cm")
 ```
+
+
+
+```{r}
+online_results = read.csv('/Users/alexanderkell/Documents/PhD/Projects/10-ELECSIM/run/market_forecasting_comparison/data/results/online_learning/all_mean_results.csv')
+
+
+```
+
 
