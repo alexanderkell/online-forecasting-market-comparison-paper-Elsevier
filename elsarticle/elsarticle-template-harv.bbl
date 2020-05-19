@@ -24,8 +24,6 @@ A.~Mahmood, M.~N. Ullah, S.~Razzaq, A.~Basit, U.~Mustafa, M.~Naeem, N.~Javaid,
 A.~Kell, A.~McGough, M.~Forshaw, {Segmenting residential smart meter data for
   short-Term load forecasting}, in: e-Energy 2018 - Proceedings of the 9th ACM
   International Conference on Future Energy Systems, 2018.
-\newblock \href {https://doi.org/10.1145/3208903.3208923}
-  {\path{doi:10.1145/3208903.3208923}}.
 
 \bibitem{Al-Musaylh2018}
 M.~Al-Musaylh, R.~Deo, J.~Adamowski, Y.~Li,
@@ -104,8 +102,6 @@ C.~Johansson, M.~Bergkvist, D.~Geysen, O.~D. Somer, N.~Lavesson, D.~Vanhoudt,
   \href{http://dx.doi.org/10.1016/j.egypro.2017.05.068}{{Operational Demand
   Forecasting in District Heating Systems Using Ensembles of Online Machine
   Learning Algorithms}}, Energy Procedia 116 (2017) 208--216.
-\newblock \href {https://doi.org/10.1016/j.egypro.2017.05.068}
-  {\path{doi:10.1016/j.egypro.2017.05.068}}.
 \newline\urlprefix\url{http://dx.doi.org/10.1016/j.egypro.2017.05.068}
 
 \bibitem{Baram2003}
@@ -129,10 +125,8 @@ P.~{Goncalves Da Silva}, D.~Ilic, S.~Karnouskos, {The Impact of Smart Grid
   {\path{doi:10.1109/TSG.2013.2278868}}.
 
 \bibitem{Witten2011}
-I.~H. Witten, E.~Frank, M.~a. Hall,
-  \href{http://books.google.com/books?id=bDtLM8CODsQC{\&}pgis=1}{{Data Mining:
-  Practical Machine Learning Tools and Techniques}}, 2011.
-\newline\urlprefix\url{http://books.google.com/books?id=bDtLM8CODsQC{\&}pgis=1}
+I.~H. Witten, E.~Frank, M.~a. Hall, {Data Mining: Practical Machine Learning
+  Tools and Techniques}, 2011.
 
 \bibitem{Li2016}
 Y.~Li, P.~Guo, X.~Li, {Short-Term Load Forecasting Based on the Analysis of
