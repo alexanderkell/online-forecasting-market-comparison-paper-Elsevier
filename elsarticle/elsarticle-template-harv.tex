@@ -221,7 +221,8 @@ In this section we give a brief outline of the most successful online learning a
 	\label{fig:mlp}
 \end{figure}
 
-Artificial Neural Networks are a type of model which allow for non-linear relationships to be modeled between the input and output data \cite{Akaike1974}. A popular neural network is a feed forward multilayer network. Fig. \ref{fig:mlp} shows a three layer feed forward neural network with a single output unit, \textit{k} hidden units, $n$ input units. $w_{ij}$ is the connection weight from the $i$th input unit to the $j$th hidden unit,  and $T_j$ is the connecting weight from the $j$th hidden unit to the output unit \cite{Pao2007}. These weights transform the input variables in the first layer to the output variable in the final layer based upon the training data. 
+
+Artificial Neural Networks are a model which can model non-linear relationships between input and output data \cite{Akaike1974}. A popular neural network is a feed forward multilayer perceptron. Fig. \ref{fig:mlp} shows a three layer feed forward neural network with a single output unit, \textit{k} hidden units, $n$ input units. $w_{ij}$ is the connection weight from the $i$th input unit to the $j$th hidden unit,  and $T_j$ is the connecting weight from the $j$th hidden unit to the output unit \cite{Pao2007}. These weights transform the input variables in the first layer to the output variable in the final layer using the training data. 
 
 Typically, a dataset is split into three sections, the test set, training set and validation set. The training set is used to find the connection weights of the network, whilst the test set is used to determine the accuracy of the models. The validation set allows for an unbiased evaluation of the model whilst tuning the hyperparameters, and can avoid overfitting by stopping training if the error begins to increase.
 
@@ -299,11 +300,13 @@ The goal of the Passive-Aggressive (PA) algorithm is to change the model as litt
 \subsection{Long-term Energy Market Model}
 
 
-In order to evaluate the different carbon strategies we used the model developed by Kell \textit{et al}., ElecSim \cite{Kell,Kell2020}. ElecSim is an agent-based model which mimics the behaviour of decentralised electricity markets. For this paper, we have parametrised the model to data for the UK in 2018 to act as a digital twin of the UK electricity market. This includes the power plants in operation in 2018, and the funds available to their respective companies \cite{dukes_511, companies_house}.
+In order to test the impact of the different residual distributions we used the model develop by Kell \textit{et al}., ElecSim \cite{Kell,Kell2020}. ElecSim is an agent-based model which mimic the behaviour of decentralised electricity markets. In this paper we parametrised the model with data of the United Kingdom in 2018. This enabled us to create a digital twin of the UK electricity market and project forward. The data used for this parametrisation included power plants in operation in 2018 and the funds available to the generation companies \cite{dukes_511, companies_house}.
 
-Six fundamental sections make up ElecSim: 1) power plant data; 2) scenario data; 3) the time-steps of the algorithm; 4) the power exchange; 5) the investment algorithm and 6) the generation companies (GenCos) as agents. ElecSim uses a subset of representative days of electricity demand, solar irradiance and wind speed to approximate a full year. In this context, representative days are a subset of days which when scaled up can adequately represent a year. Figure \ref{fig:model_details} details how these components interact. 
+ElecSim is made up of six fundamental components: 1) power plant data; 2) scenario data; 3) the time-steps of the algorithm; 4) the power exchange; 5) the investment algorithm and 6) the generation companies (GenCos) as agents. ElecSim uses a subset of representative days of  electricity demand, solar irradiance and wind speed to approximate a full year. In this context, representative days are a subset of days which when scaled up represent an entire year \cite{Kell2020}. We show how these components interact in Figure \ref{fig:model_details} \cite{Kell}. 
 
-Specifically, the configuration file details the scenario which can be set by the user. This includes electricity demand, carbon price and fuel prices. The data sources parametrise the digital twin to a particular country, including information such as wind capacity and power plants in operation. Generation Companies own and invest in power plants. These power plants are then matched to electricity demand using a spot market.
+
+
+The configuration file details the scenario which can be set by the user. This includes electricity demand, carbon price and fuel prices. The data sources parametrise the digital twin to a particular country, including information such as wind capacity and power plants in operation. Generation Companies own and invest in power plants. These power plants are then matched to electricity demand using a spot market.
 
 
 
@@ -314,11 +317,12 @@ Specifically, the configuration file details the scenario which can be set by th
 \end{figure}
 
 
-The market runs in merit-order dispatch and bids are made by the power plant's short-run marginal cost (SRMC). Investment in power plants are based upon a net present value (NPV) calculation. NPV is able to evaluate and compare investments with cash flows spread over many years. This is shown formally in Equation \ref{eq:npv_eq}, where $t$ is the year of the cash flow, $i$ is the discount rate, $N$ is the total number of years, or lifetime of power plant, and $R_t$ is the net cash flow of the year $t$:
+The market runs a merit-order dispatch model and bids are made by the power plant's short-run marginal cost (SRMC). Investment in power plants are based upon a net present value (NPV) calculation. NPV is able to evaluate and compare investments with cash flows spread over many years. This is shown in Equation \ref{eq:npv_eq}, where $t$ is the year of the cash flow, $i$ is the discount rate, $N$ is the total number of years, or lifetime of power plant, and $R_t$ is the net cash flow of the year $t$:
 \begin{equation} \label{eq:npv_eq}
 NPV(t, N) = \sum_{t=0}^{N}\frac{R_t}{(1+t)^t}.
 \end{equation}
-The yearly income for each power plant is estimated for each generation company by running a merit-order dispatch electricity market 10 years into the future. However, the expected cost of electricity 10 years into the future is uncertain. We therefore use the reference scenario projected by BEIS and use the predicted costs of electricity calibrated by Kell \textit{et al} \cite{DBEIS2019, Kell2020}. The agents predict the future carbon price by using a linear regression model.
+
+Each of the GenCos estimate the yearly income for each prospective power plant by running a merit-order dispatch electricity market 10 years into the future. However, it is true that the expected cost of electricity 10 years into the future is particularly difficult to predict. We therefore use a reference scenario projected by the UK Government Department for Business and Industrial Strategy (BEIS), and use the predicted costs of electricity calibrated by Kell \textit{et al} \cite{DBEIS2019, Kell2020}. The agents predict the future carbon price by using a linear regression model.
 
 
  
@@ -598,7 +602,7 @@ It is hypothesised that coal and nuclear increase in investment due to their dis
 CCGT and reciprocal gas engines may have decreased in capacity over this time, due to the increase in coal. This could be because of the consistent large errors in prediction accuracy that meant that reciprocal gas engines were perceived to be less value.
 
 
-\begin{figure*}
+\begin{figure*}[H]
 %\centering
 \begin{subfigure}[b]{0.475\textwidth}
 \centering
@@ -636,7 +640,7 @@ Figure \ref{fig:Carbon_emitted_mean_output} shows an increase in relative mean c
 
 
 
-\begin{figure*}
+\begin{figure*}[H]
 %\centering
 \begin{subfigure}[b]{0.475\textwidth}
 \includegraphics[width=\columnwidth]{figures/results/elecsim_results/total_Nuclear_mean_output.eps}
@@ -752,7 +756,13 @@ Additionally, the impact on the wider electricity market has been shown to be si
 \section{Conclusion}
 \label{sec:conclusion}
 
-- Summary of work and future work.
+In this paper, we trialled multiple different machine learning and statistical models to predict electricity demand in the UK for the day-ahead market. Specifically, we used both online and offline algorithms to predict electricity demand 24 hours ahead. 
+
+We then measured the errors and compared these to each model as well as the national grid reserve. We found that through the use of an online learning approach we were able to significantly reduce error by 30\% on the best offline algorithm. We were also able to reduce our errors to significantly below the national grid's mean and maximum tendered reserve.
+
+In addition to this, we took these errors, or residuals, and perturbed the electricity market of the agent-based model ElecSim. This enabled us to see the impact of different error distributions on the long-term electricity market, both in terms of investment and in terms of electricity mix.
+
+In future work we would like to trial a different selection of algorithms and statistical models and trial different inputs to the models. For instance, by giving 2 months worth of historical data.
 
 \section{Funding Sources}
 
