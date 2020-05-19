@@ -517,14 +517,14 @@ It is hypothesised that coal and nuclear output increase to cover the predicted 
 Photovoltaics may be used more with higher errors due to the times at which the errors were greatest. For example, during the day, where demand is higher, as is solar irradiance.
 
 
-\begin{figure*}
+\begin{figure*}[h!]
 %\centering
 \begin{subfigure}[b]{0.475\textwidth}
 \centering
 \includegraphics[width=\columnwidth]{figures/results/elecsim_results/contributed_PV_mean_output}
 \caption{Photovoltaic output.}
-\label{fig:contributed_PV_mean_output}
 \end{subfigure}
+\label{fig:contributed_PV_mean_output}
 \hfill
 \begin{subfigure}[b]{0.475\textwidth}  
 %\centering
@@ -611,14 +611,14 @@ Photovoltaics may be used more with higher errors due to the times at which the 
 
 In this section we detail difference in total technologies invested in over the time period between 2018 to 2035, as predicted by ElecSim.
 
-CCGT, Onshore, and reciprocal gas engines are invested in less over the time period, as shown by Figures \ref{fig:total_CCGT_mean_output}, \ref{fig:total_Offshore_mean_output}, \ref{fig:total_Recip_gas_mean_output.eps} respectively. While coal, offshore, nuclear and photovoltaics all exhibit increasing investments.
+CCGT, onshore, and reciprocal gas engines are invested in less over the time period, as shown by Figures \ref{fig:total_CCGT_mean_output}, \ref{fig:total_Offshore_mean_output}, \ref{fig:total_Recip_gas_mean_output.eps} respectively. While coal, offshore, nuclear and photovoltaics all exhibit increasing investments.
 
 It is hypothesised that coal and nuclear increase in investment due to their dispatchable nature. While onshore, non-dispatchable by nature, become a less attractive investment when compared to the other technologies.
 
 CCGT and reciprocal gas engines may have decreased in capacity over this time, due to the increase in coal. This could be because of the consistent large errors in prediction accuracy that meant that reciprocal gas engines were perceived to be less value.
 
 
-\begin{figure*}[H]
+\begin{figure*}[h!]
 %\centering
 \begin{subfigure}[b]{0.475\textwidth}
 \centering
@@ -646,6 +646,7 @@ CCGT and reciprocal gas engines may have decreased in capacity over this time, d
 \caption{Total Offshore.}
 \label{fig:total_Offshore_mean_output}
 \end{subfigure}
+\label{fig:ccgt_coal_onshore_offshore_totals}
 \caption{Total technologies invested in vs. mean absolute error from 2018 to 2035 in ElecSim.}
 \end{figure*}
 
@@ -656,12 +657,12 @@ Figure \ref{fig:Carbon_emitted_mean_output} shows an increase in relative mean c
 
 
 
-\begin{figure*}[H]
+\begin{figure*}[h!]
 %\centering
 \begin{subfigure}[b]{0.475\textwidth}
 \includegraphics[width=\columnwidth]{figures/results/elecsim_results/total_Nuclear_mean_output.eps}
 \caption{Total nuclear.}
-\label{fig:total_Onshore_mean_output}
+\label{fig:total_nuclear_mean_output}
 \end{subfigure}
 \hfill
 \begin{subfigure}[b]{0.475\textwidth}  
@@ -683,6 +684,7 @@ Figure \ref{fig:Carbon_emitted_mean_output} shows an increase in relative mean c
 \caption{Mean carbon emitted.}
 \label{fig:Carbon_emitted_mean_output}
 \end{subfigure}
+\label{fig:nuclear_pv_carbon_totals}
 \caption{a), b), c) Investments in various technologies vs. mean absolute error from 2018 to 2035 in ElecSim and d) mean carbon emissions between 2018 and 2035.}
 \end{figure*}
 
@@ -740,20 +742,6 @@ Figure \ref{fig:Carbon_emitted_mean_output} shows an increase in relative mean c
 %\caption{Total Reciprocal gas engine invested in vs. mean absolute error from 2018 to 2035 in ElecSim.}
 %\label{fig:total_Recip_gas_mean_output.eps}
 %\end{figure}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 %- Include residuals and MAE,MAPE,MASE etc\\
