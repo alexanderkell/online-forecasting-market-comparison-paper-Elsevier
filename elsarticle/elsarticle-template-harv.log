@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.4.22)  19 MAY 2020 16:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.4.22)  19 MAY 2020 17:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -875,17 +875,8 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 File: figures/results/elecsim_results/contributed_Recip_gas_mean_output.eps Graphic file (type eps)
 <figures/results/elecsim_results/contributed_Recip_gas_mean_output.eps>
-
-LaTeX Warning: Reference `fig:total_CCGT_mean_output' on page 9 undefined on input line 614.
-
-
-LaTeX Warning: Reference `fig:total_Offshore_mean_output' on page 9 undefined on input line 614.
-
-
-LaTeX Warning: Reference `fig:total_Recip_gas_mean_output.eps' on page 9 undefined on input line 614.
-
 File: figures/results/elecsim_results/total_CCGT_mean_output.eps Graphic file (type eps)
-<figures/results/elecsim_results/total_CCGT_mean_output.eps>
+ <figures/results/elecsim_results/total_CCGT_mean_output.eps>
 File: figures/results/elecsim_results/total_Coal_mean_output.eps Graphic file (type eps)
  <figures/results/elecsim_results/total_Coal_mean_output.eps>
 File: figures/results/elecsim_results/total_Onshore_mean_output.eps Graphic file (type eps)
@@ -894,9 +885,6 @@ File: figures/results/elecsim_results/total_Offshore_mean_output.eps Graphic fil
  <figures/results/elecsim_results/total_Offshore_mean_output.eps>
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: Reference `fig:Carbon_emitted_mean_output' on page 9 undefined on input line 656.
 
 File: figures/results/elecsim_results/total_Nuclear_mean_output.eps Graphic file (type eps)
 <figures/results/elecsim_results/total_Nuclear_mean_output.eps>
@@ -1012,9 +1000,6 @@ Package natbib Warning: There were undefined citations.
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
  10006 strings out of 480609
@@ -1025,4 +1010,4 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  48i,15n,48p,901b,473s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on elsarticle-template-harv.dvi (13 pages, 65936 bytes).
+Output written on elsarticle-template-harv.dvi (13 pages, 66040 bytes).
