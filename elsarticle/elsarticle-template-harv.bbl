@@ -25,6 +25,10 @@ A.~Kell, A.~McGough, M.~Forshaw, {Segmenting residential smart meter data for
   short-Term load forecasting}, in: e-Energy 2018 - Proceedings of the 9th ACM
   International Conference on Future Energy Systems, 2018.
 
+\bibitem{Hong2014}
+T.~Hong, J.~Wilson, J.~Xie, A.~Member, {Long Term Probabilistic Load
+  Forecasting and Normalization With Hourly Information} 5~(1) (2014) 456--462.
+
 \bibitem{Al-Musaylh2018}
 M.~Al-Musaylh, R.~Deo, J.~Adamowski, Y.~Li,
   \href{https://doi.org/10.1016/j.aei.2017.11.002}{{Short-term electricity
@@ -43,16 +47,26 @@ P.~Vrablecov{\'{a}}, A.~{Bou Ezzeddine}, V.~Rozinajov{\'{a}},
 \newblock \href {https://doi.org/10.1016/j.compeleceng.2017.07.006}
   {\path{doi:10.1016/j.compeleceng.2017.07.006}}.
 
-\bibitem{Hong2014}
-T.~Hong, J.~Wilson, J.~Xie, A.~Member, {Long Term Probabilistic Load
-  Forecasting and Normalization With Hourly Information} 5~(1) (2014) 456--462.
-
 \bibitem{Singh2012}
 A.~K. Singh, Ibraheem, S.~Khatoon, M.~Muazzam, D.~K. Chaturvedi, {Load
   forecasting techniques and methodologies: A review}, ICPCES 2012 - 2012 2nd
   International Conference on Power, Control and Embedded Systems (2012).
 \newblock \href {https://doi.org/10.1109/ICPCES.2012.6508132}
   {\path{doi:10.1109/ICPCES.2012.6508132}}.
+
+\bibitem{Huang2003}
+S.-j. Huang, S.~Member, K.-r. Shih, {Short-Term Load Forecasting Via ARMA Model
+  Identification Including Non-Gaussian} 18~(2) (2003) 673--679.
+
+\bibitem{Andersen2013}
+F.~M. Andersen, H.~V. Larsen, T.~K. Boomsma,
+  \href{http://dx.doi.org/10.1016/j.enconman.2013.01.018}{{Long-term
+  forecasting of hourly electricity load: Identification of consumption
+  profiles and segmentation of customers}}, Energy Conversion and Management 68
+  (2013) 244--252.
+\newblock \href {https://doi.org/10.1016/j.enconman.2013.01.018}
+  {\path{doi:10.1016/j.enconman.2013.01.018}}.
+\newline\urlprefix\url{http://dx.doi.org/10.1016/j.enconman.2013.01.018}
 
 \bibitem{Kell}
 A.~Kell, M.~Forshaw, A.~S. Mcgough, {ElecSim : Monte-Carlo Open-Source
@@ -83,10 +97,6 @@ J.~Nagi, S.~K. Yap, S.~K. Tiong, S.~K. Ahmed, {Electrical Power Load
 F.~L. Quilumba, W.-j. Lee, H.~Huang, D.~Y. Wang, S.~Member, R.~L. Szabados,
   {Using Smart Meter Data to Improve the Accuracy of Intraday Load Forecasting
   Considering Customer Behavior Similarities} (2014) 1--8.
-
-\bibitem{Huang2003}
-S.-j. Huang, S.~Member, K.-r. Shih, {Short-Term Load Forecasting Via ARMA Model
-  Identification Including Non-Gaussian} 18~(2) (2003) 673--679.
 
 \bibitem{Nguyen2017}
 H.~Nguyen, C.~K. Hansen,
@@ -124,10 +134,6 @@ P.~{Goncalves Da Silva}, D.~Ilic, S.~Karnouskos, {The Impact of Smart Grid
 \newblock \href {https://doi.org/10.1109/TSG.2013.2278868}
   {\path{doi:10.1109/TSG.2013.2278868}}.
 
-\bibitem{Witten2011}
-I.~H. Witten, E.~Frank, M.~a. Hall, {Data Mining: Practical Machine Learning
-  Tools and Techniques}, 2011.
-
 \bibitem{Li2016}
 Y.~Li, P.~Guo, X.~Li, {Short-Term Load Forecasting Based on the Analysis of
   User Electricity Behavior}, Algorithms 9~(4) (2016) 1--14.
@@ -149,11 +155,8 @@ K.~Crammer, O.~Dekel, J.~Keshet, S.~Shalev-Shwartz, Y.~Singer, {Online
   {\path{doi:10.1201/b15810-63}}.
 
 \bibitem{Box1964}
-G.~E.~P. Box, D.~Cox, {An Analysis of Transformations Author ( s ): G . E . P .
-  Box and D . R . Cox Published by : Wiley for the Royal Statistical Society
-  Stable URL : http://www.jstor.org/stable/2984418 Accessed : 08-03-2016 06 :
-  53 UTC Your use of the JSTOR archive indicates}, Journal, Source Statistical,
-  Royal Series, Society 26~(2) (1964) 211--252.
+G.~E.~P. Box, D.~Cox, {An Analysis of Transformations}, Journal, Source
+  Statistical, Royal Series, Society 26~(2) (1964) 211--252.
 
 \bibitem{forgy65}
 E.~Forgy, Cluster analysis of multivariate data: Efficiency versus
@@ -246,23 +249,23 @@ J.~Ma, L.~K. Saul, S.~Savage, G.~M. Voelker, {Identifying suspicious URLs: An
   International Conference On Machine Learning, ICML 2009 (2009) 681--688.
 
 \bibitem{dukes_511}
-D.~for Business~Energy, I.~Strategy, Power stations in the united kingdom, may
-  2019, Digest of United Kingdom Energy Statistics (DUKES) (2019).
+{Department for Business and Industrial Strategy, UK Government}, Power
+  stations in the united kingdom, may 2019, Digest of United Kingdom Energy
+  Statistics (DUKES) (2019).
 
 \bibitem{companies_house}
-E.~. I.~S. Department~for Business, Companies house - gov.uk, UK Government
-  (2019).
+{Department for Business, Energy \& Industrial Strategy}, Companies house -
+  gov.uk, UK Government (2019).
 
 \bibitem{DBEIS2019}
 {Department for Business Energy {\&} Industrial Strategy}, {Updated energy and
   emissions projections 2018}, The Energy White Paper~(April) (2019).
 
 \bibitem{gbnationalgridstatus_2019}
- (2019).
-\newblock \href{https://www.gridwatch.templar.co.uk/}{[link]}.
-\newline\urlprefix\url{https://www.gridwatch.templar.co.uk/}
+{Elexon portal and Sheffield University}, G.b. national grid status,
+  https://www.gridwatch.templar.co.uk/.
 
 \bibitem{ESO2019}
-N.~G. ESO, {STOR Market Information Report}~(October) (2019) 0--11.
+N.~Grid, {STOR Market Information Report}~(October) (2019) 0--11.
 
 \end{thebibliography}
