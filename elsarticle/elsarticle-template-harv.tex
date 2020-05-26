@@ -518,39 +518,55 @@ Photovoltaics may be used more with higher errors due to the times at which the 
 
 
 \begin{figure*}[h!]
-%\centering
-\begin{subfigure}[b]{0.475\textwidth}
 \centering
+\begin{subfigure}[b]{0.3\textwidth}
+%\centering
 \includegraphics[width=\columnwidth]{figures/results/elecsim_results/contributed_PV_mean_output}
 \caption{Photovoltaic output.}
-\end{subfigure}
 \label{fig:contributed_PV_mean_output}
-\hfill
-\begin{subfigure}[b]{0.475\textwidth}  
+\end{subfigure}
+\hfil
+\begin{subfigure}[b]{0.3\textwidth}  
 %\centering
 \includegraphics[width=\columnwidth]{figures/results/elecsim_results/contributed_Coal_mean_output.eps}
 \caption{Coal output.}
 \label{fig:contributed_Coal_mean_output}
 \end{subfigure}
-\vskip\baselineskip
-\begin{subfigure}[b]{0.475\textwidth}   
+\hfil
+%\vskip\baselineskip
+\begin{subfigure}[b]{0.3\textwidth}   
 %\centering
 \includegraphics[width=\columnwidth]{figures/results/elecsim_results/contributed_Nuclear_mean_output.eps}
 \caption{Nuclear output.}
 \label{fig:contributed_Nuclear_mean_output}
 \end{subfigure}
-\quad
-\begin{subfigure}[b]{0.475\textwidth}   
+%\quad
+\medskip
+\begin{subfigure}[b]{0.3\textwidth}   
 %\centering
 \includegraphics[width=\columnwidth]{figures/results/elecsim_results/contributed_Offshore_mean_output.eps}
 \caption{Offshore output.}
 \label{fig:contributed_Offshore_mean_output.eps}
+\end{subfigure}
+\hfil
+\begin{subfigure}[b]{0.3\textwidth}   
+%\centering
+\includegraphics[width=1\columnwidth]{figures/results/elecsim_results/contributed_Recip_gas_mean_output.eps}
+\caption{Reciprocal gas engine output.}
+\label{fig:contributed_Recip_gas_mean_output}
 \end{subfigure}
 \label{fig:pv_coal_nuclear_offshore_outputs}
 \caption{Mean outputs of various technologies vs. mean absolute error from 2018 to 2035 in ElecSim.}
 \end{figure*}
     
     
+
+%\begin{subfigure}
+%%\centering
+%\includegraphics[width=0.3\textwidth]{figures/results/elecsim_results/contributed_Recip_gas_mean_output.eps}
+%\caption{Mean reciprocal gas engine output vs. mean absolute error from 2018 to 2035 in ElecSim.}
+%\label{fig:contributed_Recip_gas_mean_output}
+%\end{subfigure}
     
 %
 %
@@ -595,12 +611,6 @@ Photovoltaics may be used more with higher errors due to the times at which the 
 
 
 
-\begin{figure}
-\centering
-\includegraphics[width=\columnwidth]{figures/results/elecsim_results/contributed_Recip_gas_mean_output.eps}
-\caption{Mean reciprocal gas engine output vs. mean absolute error from 2018 to 2035 in ElecSim.}
-\label{fig:contributed_Recip_gas_mean_output}
-\end{figure}
 
 
 
@@ -619,32 +629,48 @@ CCGT and reciprocal gas engines may have decreased in capacity over this time, d
 
 
 \begin{figure*}[h!]
-%\centering
-\begin{subfigure}[b]{0.475\textwidth}
 \centering
+\begin{subfigure}[b]{0.3\textwidth}
+%\centering
 \includegraphics[width=\columnwidth]{figures/results/elecsim_results/total_CCGT_mean_output.eps}
 \caption{Total CCGT.}
 \label{fig:total_CCGT_mean_output}
 \end{subfigure}
-\hfill
-\begin{subfigure}[b]{0.475\textwidth}  
+\hfil
+\begin{subfigure}[b]{0.3\textwidth}  
 %\centering
 \includegraphics[width=\columnwidth]{figures/results/elecsim_results/total_Coal_mean_output.eps}
 \caption{Total Coal.}
 \label{fig:total_Coal_mean_output}
 \end{subfigure}
-\vskip\baselineskip
-\begin{subfigure}[b]{0.475\textwidth}   
+\hfil
+%\vskip\baselineskip
+\begin{subfigure}[b]{0.3\textwidth}   
 \includegraphics[width=\columnwidth]{figures/results/elecsim_results/total_Onshore_mean_output.eps}
 \caption{Total Onshore.}
 \label{fig:total_Onshore_mean_output}
 \end{subfigure}
-\quad
-\begin{subfigure}[b]{0.475\textwidth}   
+%\quad
+\medskip
+\begin{subfigure}[b]{0.3\textwidth}   
 %\centering
 \includegraphics[width=\columnwidth]{figures/results/elecsim_results/total_Offshore_mean_output.eps}
 \caption{Total Offshore.}
 \label{fig:total_Offshore_mean_output}
+\end{subfigure}
+\hfil
+\begin{subfigure}[b]{0.3\textwidth}
+\includegraphics[width=\columnwidth]{figures/results/elecsim_results/total_Nuclear_mean_output.eps}
+\caption{Total nuclear.}
+\label{fig:total_nuclear_mean_output}
+\end{subfigure}
+\hfil
+\begin{subfigure}[b]{0.3\textwidth}  
+%\centering
+%\centering
+\includegraphics[width=\columnwidth]{figures/results/elecsim_results/total_PV_mean_output.eps}
+\caption{Total photovoltaics.}
+\label{fig:total_PV_mean_output}
 \end{subfigure}
 \label{fig:ccgt_coal_onshore_offshore_totals}
 \caption{Total technologies invested in vs. mean absolute error from 2018 to 2035 in ElecSim.}
@@ -657,36 +683,25 @@ Figure \ref{fig:Carbon_emitted_mean_output} shows an increase in relative mean c
 
 
 
-\begin{figure*}[h!]
-%\centering
-\begin{subfigure}[b]{0.475\textwidth}
-\includegraphics[width=\columnwidth]{figures/results/elecsim_results/total_Nuclear_mean_output.eps}
-\caption{Total nuclear.}
-\label{fig:total_nuclear_mean_output}
-\end{subfigure}
-\hfill
-\begin{subfigure}[b]{0.475\textwidth}  
-%\centering
+\begin{figure}[h!]
 \centering
-\includegraphics[width=\columnwidth]{figures/results/elecsim_results/total_PV_mean_output.eps}
-\caption{Total photovoltaics.}
-\label{fig:total_PV_mean_output}
-\end{subfigure}
-\vskip\baselineskip
-\begin{subfigure}[b]{0.475\textwidth}   
+%\vskip\baselineskip
+\begin{subfigure}[b]{0.33\textwidth}   
 \includegraphics[width=\columnwidth]{figures/results/elecsim_results/total_Recip_gas_mean_output.eps}
 \caption{Total Reciprocal gas engine.}
 \label{fig:total_Recip_gas_mean_output.eps}
 \end{subfigure}
-\quad
-\begin{subfigure}[b]{0.475\textwidth}   
+%\quad
+%\medskip
+\hfil
+\begin{subfigure}[b]{0.33\textwidth}   
 \includegraphics[width=\columnwidth]{figures/results/elecsim_results/Carbon_emitted_mean_output.eps}
 \caption{Mean carbon emitted.}
 \label{fig:Carbon_emitted_mean_output}
 \end{subfigure}
 \label{fig:nuclear_pv_carbon_totals}
-\caption{a), b), c) Investments in various technologies vs. mean absolute error from 2018 to 2035 in ElecSim and d) mean carbon emissions between 2018 and 2035.}
-\end{figure*}
+\caption{a) Investments in reciprocal gas engine technologies vs. mean absolute error from 2018 to 2035 in ElecSim and d) mean carbon emissions between 2018 and 2035.}
+\end{figure}
 
 
 
