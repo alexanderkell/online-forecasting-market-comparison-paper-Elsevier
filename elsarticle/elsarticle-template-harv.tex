@@ -104,7 +104,7 @@ Electricity supply must be matched with demand at all times. This is to maintain
 
 % Methodology
 
-In this paper, we use different machine learning and statistical methods to predict electricity demand 24 hours ahead to simulate a day-ahead market. Once we have made the predictions, we sample from the residual distributions and perturb the electricity market in a long-term agent-based model, ElecSim. This enables us to understand the impact of errors on the long-term dynamics of a decentralized electricity market.
+In this paper, we trial different machine learning and statistical methods to predict electricity demand 24 hours ahead to simulate a day-ahead market. Once we have made the predictions, we sample from the residual distributions and perturb the electricity market in a long-term agent-based model, ElecSim. This enables us to understand the impact of errors on the long-term dynamics of a decentralized electricity market.
  
 
 % Results  
@@ -152,24 +152,24 @@ The integration of higher proportions of intermittent renewable energy sources (
 
 Typically, peaker plants, such as reciprocal gas engines, are used to fill fluctuations in demand, that had not been previously planned for. These peaker plants are typically expensive to run and have higher greenhouse gas emissions than their non-peaker counterparts \cite{Mahmood2014}. 
 
-To reduce reliance on peaker plants, it is helpful to know how much electricity demand there will be in the future so that more efficient plants can be used to meet this demand. To aid in this, machine learning and statistical techniques have been used to accurately predict demand based on several different factors and data sources, such as weather, day of the week and holidays \cite{Kell2018a, Al-Musaylh2018, Vrablecova2017, Hong2014}. 
+To reduce reliance on peaker plants, it is helpful to know how much electricity demand there will be in the future so that more efficient plants can be used to meet this demand. To aid in this, machine learning and statistical techniques have been used to accurately predict demand based on several different factors and data sources \cite{Kell2018a}, such as weather \cite{Hong2014}, day of the week \cite{Al-Musaylh2018} and holidays \cite{Vrablecova2017}. 
 
 %- Why the current approaches / systems don't solve the problem
 
 
-While various studies have looked at how to predict electricity demand at various time horizons with the highest accuracy \cite{Singh2012}, the impact that the differing methods used have on a long-term electricity market has been studied to a lesser degree. In this paper, we compare several machine learning and statistical techniques to forecast 24 hours ahead to simulate a day-ahead market. 
+While various studies have looked at how to predict electricity demand at various time horizons with the highest accuracy \cite{Singh2012,Huang2003,Andersen2013}, the impact that the differing methods used have on a long-term electricity market has been studied to a lesser degree. 
 
-In addition to this, we use the long-term agent-based model, ElecSim \cite{Kell, Kell2020}, to simulate the impact of different forecasting methods on long-term investments, power plant usage and carbon emissions from the year 2018 to 2035 in the United Kingdom. 
+In this paper, we compare several machine learning and statistical techniques to forecast 24 hours ahead to simulate a day-ahead market. In addition to this, we use our long-term agent-based model, ElecSim \cite{Kell, Kell2020}, to simulate the impact of different forecasting methods on long-term investments, power plant usage and carbon emissions from the year 2018 to 2035 in the United Kingdom. 
 
 
 %- What is the innovation in this work
 
-To compare the impact of different methods, we trial both online and offline machine learning and statistical techniques. Online learning methods can learn from novel data while maintaining what was learnt from previous data. This type of statistical modelling is useful for non-stationary datasets, and time-series data where recalculation of a model would take a prohibitive amount of time. We trial different algorithms and split times of the year into seasons, weekdays, weekends and holidays.
+We compare the impact of both online and offline machine learning and statistical techniques. Online learning methods can learn from novel data while maintaining what was learnt from previous data. This type of statistical modelling is useful for non-stationary datasets, and time-series data where recalculation of a model would take a prohibitive amount of time. We trial different algorithms and split times of the year into seasons, weekdays, weekends and holidays.
 
 %- A short description of the solution
 
 
-Using these methods, we take the error distributions, or residuals, and fit a variety of distributions. The distribution that best fits the respective residuals is then used and sampled from to adjust the demand in the model ElecSim. We then observe the differences in carbon emissions, and power plants invested in and utilised with each of the different statistical and machine learning methods to a base case.
+Using these methods, we take the error distributions, or residuals, and fit a variety of distributions. The distribution that best fits the respective residuals is then used and sampled from to adjust the demand in the ElecSim model. We then observe the differences in carbon emissions, and power plants invested in and utilised with each of the different statistical and machine learning methods to a base case.
 
 
 
@@ -209,9 +209,9 @@ Goncalves Da Silva \textit{et al}. show the effect of prediction accuracy on loc
 \section{Material}
 \label{sec:material}
 
-\subsection{Machine Learning}
-
-Machine learning is a methodology for finding and describing structural patterns in data \cite{Witten2011}. Typically machine learning algorithms are algorithms which are trained using data. These generate models which can make predictions or decisions with regards to classification of data \cite{Johansson2017}. Machine learning algorithms can be used for both static datasets as well as streaming data.
+%\subsection{Machine Learning}
+%
+%Machine learning is a methodology for finding and describing structural patterns in data \cite{Witten2011}. Typically machine learning algorithms are algorithms which are trained using data. These generate models which can make predictions or decisions with regards to classification of data \cite{Johansson2017}. Machine learning algorithms can be used for both static datasets as well as streaming data.
 
 
 
@@ -353,7 +353,7 @@ Similarly to the work by Kell \textit{et al.} \cite{Kell2018a}, we selected a nu
 
 It is also the case that electricity demand on a public holiday which falls on a weekday falls is dissimilar to load behaviours of ordinary weekdays \cite{Kim2000}. We, therefore, passed a holiday variable to allow the model to account for this.
 
-In addition to this, as time-series demand data is correlated in the time-domain, we lagged the input demand data. This enabled us to take into account correlations on previous days, weeks and the previous month. Specifically, we used the previous 28 hours before the time step to be predicted for the previous 1st, 2nd, 7th and 30th day. We chose this as we believe that the previous two days were the most relevant to the day to be predicted, as well as the weekday of the previous week and the previous month. We could have increased the number of days provided to the algorithm. However, due to time and computational constraints, we used our previously described intuition for lagged data selection. Future work could be in selecting the optimum number of lagged inputs.
+As time-series demand data is correlated in the time-domain, we lagged the input demand data. This enabled us to take into account correlations on previous days, weeks and the previous month. Specifically, we used the previous 28 hours before the time step to be predicted for the previous 1st, 2nd, 7th and 30th day. We chose this as we believe that the previous two days were the most relevant to the day to be predicted, as well as the weekday of the previous week and the previous month. We could have increased the number of days provided to the algorithm. However, due to time and computational constraints, we used our previously described intuition for lagged data selection. Future work could be in selecting the optimum number of lagged inputs.
 
 In addition to this, we gave the data information with regards to six different seasons. These seasons were defined by the National Grid Short Term Operating Reserve (STOR) Market Information Report \cite{ESO2019}. Finally, to predict a full 24-hours ahead, we used 24 different models, 1 for each hour of the day. 
 
@@ -361,7 +361,7 @@ The data is standardized and normalized using min-max scaling between -1 and 1 b
 
 \subsection{Algorithm Tuning}
 
-Many machine learning and statistical models have different parameters to train, known as hyperparameters. To find the optimum hyperparameters, cross-validation was used. Cross-validation is the process of training the model on a certain subset of data and testing it with the remaining subset. As this time-series data were correlated in the time-domain, we took the first six years of data (2011-2017) for training and tested on the remaining year of data (2017-2018).
+To find the optimum hyperparameters, cross-validation is used. As this time-series data were correlated in the time-domain, we took the first six years of data (2011-2017) for training and tested on the remaining year of data (2017-2018).
 
 Each machine learning algorithm has a different set of parameters to tune. To tune the parameters in this paper, we used a grid search method. Grid search is effectively a brute force approach that trials each combination of parameters at our choosing.
 
@@ -434,7 +434,7 @@ In this section, we detail the accuracy of the algorithms and statistical models
 
 \subsection{Offline Machine Learning}
 
-Figure \ref{fig:beis_elecsim_historic_comparison} displays the mean absolute error of each of the offline statistical and machine learning models on a log scale. It can be seen that the different models have varying degrees of success. The least accurate models were linear regression, the multilayer perceptron (MLP) model and the Least Angle Regression (llars). These all have mean absolute errors over $10,000$MWh. This error would be prohibitively high in practice; the max tendered national grid reserve is 6,000MWh, while the average tendered national grid reserve is 2,000MWh \cite{ESO2019}.
+Figure \ref{fig:beis_elecsim_historic_comparison} displays the mean absolute error of each of the offline statistical and machine learning models on a log scale. It can be seen that the different models have varying degrees of success. The least accurate models were linear regression, the multilayer perceptron (MLP) model and the Least Angle Regression (LARS). These all have mean absolute errors over 10,000MWh. This error would be prohibitively high in practice; the max tendered national grid reserve is 6,000MWh, while the average tendered national grid reserve is 2,000MWh \cite{ESO2019}.
 
 A number of models, however, perform well, with a low mean absolute error. These include the Lasso, gradient Boosting Regressor and K neighbours regressor. The best model, similarly to \cite{Kell2018a}, was the decision tree-based model, Extra Trees Regressor, with a mean absolute error of $1604$MWh. This level is well within the average national grid reserve of 2,000MWh.
 
@@ -474,7 +474,7 @@ It can be seen that the best performing model was the Box-Cox regressor, with a 
 \begin{figure}
 %\centering
 \includegraphics[width=\columnwidth,natwidth=1300,natheight=1300]{figures/results/online_model_mae_barplot.eps}
-\caption{Comparison of mean absolute errors (MAE) for different online regressor models (identical MAEs removed).}
+\caption{Comparison of mean absolute errors (MAE) for different online regressor models (the same models with different hyperparameters, but identical MAEs were removed from this figure).}
 \label{fig:online_model_mae_barplot}
 \end{figure}
 
@@ -493,8 +493,8 @@ Figure \ref{fig:bad_online_learning_day_distribution} displays the residuals for
 
 \begin{figure}
 \centering
-\includegraphics[width=\columnwidth,natwidth=500,natheight=500]{figures/results/online_learning_dists-PA-regressor-C-2-fit_intercept-false-max_iter-1000-shuffle-false-tol-0.001.eps}
-\caption{Online machine learning learning algorithm distribution. (Passive Aggressive Regressor (C=2, fit intercept = false, maximum iterations = 1000, shuffle = false, tolerance = 0.001).}
+\includegraphics[width=\columnwidth,natwidth=500,natheight=500]{figures/results/online_learning_dists-C-0.1-fit_intercept-true-max_iter-1000-shuffle-false-tol 0.001.eps}
+\caption{Online machine learning learning algorithm distribution. (Passive Aggressive Regressor (C=0.1, fit intercept = true, maximum iterations = 1000, shuffle = false, tolerance = 0.001), chosen as it was the worst result for the passive aggressive model.}
 \label{fig:bad_online_learning_day_distribution}
 \end{figure}
 
@@ -802,7 +802,6 @@ This work was supported by the Engineering and Physical Sciences Research Counci
 %% bibitems, please use
 %%
   \bibliographystyle{elsarticle-num} 
-  \section*{References}
   \bibliography{library,bib_custom,custombibtex}
 
 %% else use the following coding to input the bibitems directly in the

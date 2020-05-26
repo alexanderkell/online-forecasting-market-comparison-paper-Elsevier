@@ -11,68 +11,73 @@ I'm skipping whatever remains of this entry
 Database file #3: custombibtex.bib
 Warning--entry type for "gbnationalgridstatus_2019" isn't style-file defined
 --line 10 of file custombibtex.bib
-Repeated entry---line 91 of file custombibtex.bib
+I was expecting a `,' or a `}'---line 13 of file custombibtex.bib
+ :  
+ :  url={https://www.gridwatch.templar.co.uk/},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 97 of file custombibtex.bib
  : @article{forgy65
  :                 ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 130 of file custombibtex.bib
+Repeated entry---line 136 of file custombibtex.bib
  : @article{forgy65
  :                 ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 168 of file custombibtex.bib
+Repeated entry---line 174 of file custombibtex.bib
  : @article{dukes_511
  :                   , title={Power stations in the United Kingdom, May 2019}, author={Department for Business Energy and Industrial Strategy}, year={2019}, journal={Digest of United Kingdom Energy Statistics (DUKES)}
 I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "Nazarko2005ARIMAApproach"
 Warning--empty pages in Kell2018a
 Warning--empty journal in Hong2014
+Warning--empty journal in Huang2003
 Warning--there's a number but no volume in Tiong2008
 Warning--empty journal in Quilumba2014
-Warning--empty journal in Huang2003
-Warning--empty publisher in Witten2011
 Warning--empty journal in 316
 Warning--there's a number but no volume in DBEIS2019
+Warning--empty year in gbnationalgridstatus_2019
 Warning--empty journal in ESO2019
 Warning--there's a number but no volume in ESO2019
 You've used 42 entries,
             2952 wiz_defined-function locations,
-            984 strings with 14506 characters,
-and the built_in function-call counts, 12767 in all, are:
-= -- 1241
+            988 strings with 14491 characters,
+and the built_in function-call counts, 12861 in all, are:
+= -- 1259
 > -- 444
 < -- 0
 + -- 176
 - -- 134
-* -- 1055
-:= -- 1773
+* -- 1073
+:= -- 1792
 add.period$ -- 63
 call.type$ -- 42
-change.case$ -- 40
+change.case$ -- 42
 chr.to.int$ -- 0
 cite$ -- 52
-duplicate$ -- 336
+duplicate$ -- 335
 empty$ -- 1374
-format.name$ -- 164
-if$ -- 3201
+format.name$ -- 163
+if$ -- 3215
 int.to.chr$ -- 0
 int.to.str$ -- 42
-missing$ -- 42
+missing$ -- 41
 newline$ -- 160
-num.names$ -- 41
-pop$ -- 225
+num.names$ -- 42
+pop$ -- 213
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 780
+skip$ -- 785
 stack$ -- 0
-substring$ -- 745
-swap$ -- 95
+substring$ -- 770
+swap$ -- 97
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 10
-while$ -- 105
+while$ -- 108
 width$ -- 44
-write$ -- 382
-(There were 4 error messages)
+write$ -- 384
+(There were 5 error messages)
