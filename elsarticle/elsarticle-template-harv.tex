@@ -104,7 +104,7 @@ Electricity supply must be matched with demand at all times. This is to maintain
 
 % Methodology
 
-In this paper, we trial different machine learning and statistical methods to predict electricity demand 24 hours ahead to simulate a day-ahead market. Once we have made the predictions, we sample from the residual distributions and perturb the electricity market in a long-term agent-based model, ElecSim. This enables us to understand the impact of errors on the long-term dynamics of a decentralized electricity market.
+In this paper, we trial 18 different machine learning and statistical methods, including multilayer perceptron neural networks, support vector regression and linear regression, to predict electricity demand 24 hours ahead to simulate a day-ahead market. Once we have made the predictions, we sample from the residual distributions and perturb the electricity market in a long-term agent-based model, ElecSim. This enables us to understand the impact of errors on the long-term dynamics of a decentralized electricity market.
  
 
 % Results  
@@ -164,7 +164,7 @@ In this paper, we compare several machine learning and statistical techniques to
 
 %- What is the innovation in this work
 
-We compare the impact of both online and offline machine learning and statistical techniques. Online learning methods can learn from novel data while maintaining what was learnt from previous data. This type of statistical modelling is useful for non-stationary datasets, and time-series data where recalculation of a model would take a prohibitive amount of time. We trial different algorithms and split times of the year into seasons, weekdays, weekends and holidays.
+We compare the impact of 16 different online and offline machine learning and statistical techniques. Online learning methods can learn from novel data while maintaining what was learnt from previous data. This type of statistical modelling is useful for non-stationary datasets, and time-series data where recalculation of a model would take a prohibitive amount of time. We trial different algorithms and split times of the year into seasons, weekdays, weekends and holidays. Examples of the algorithms used are: linear regression, lasso regression, random forests, support vector regression, multilayer neural network perceptron neural network, box-cox transformation linear regression and the passive aggressive model.
 
 %- A short description of the solution
 
@@ -220,7 +220,7 @@ Goncalves Da Silva \textit{et al}. show the effect of prediction accuracy on loc
 
 Online machine learning is an extension of machine learning algorithms, that can be used on dynamic datasets, such as time-series data. In traditional machine learning algorithms, when new data is obtained, the historical data must be used to retrain the entire model with a new model. This can be costly both in terms of time and in computation power \cite{Li2016}. Online algorithms, therefore, avoids the repeated retraining of data and improves the learning efficiency \cite{Rong2009}.
 
-Examples of such algorithms are Passive Aggressive (PA) Regressor \cite{Gzik2014}, Linear Regression, Box-Cox Regressor \cite{Box1964}, K-Neighbors Regressor \cite{forgy65}, Softmax Regression, Multilayer perceptron regressor \cite{Hinton1989}. For our work, we trial the stated algorithms, in addition to a host of offline learning techniques. The online techniques trialled were Lasso regression \cite{Tibshirani1996a}, ridge regression \cite{GeladiPaul1994Mrac},  Elastic Net \cite{Geostatistics2010}, least angle regression \cite{Fike1988}, Extra Trees Regressor \cite{Fike1988}, Random Forest Regressor \cite{Breiman2001}, AdaBoost Regressor \cite{Freund1997}, Gradient Boosting Regressor \cite{316}, Support vector regression \cite{Cortes1995}, and offline versions of Multilayer perceptron regressor, K-Neighbors regressor, linear regression.
+Examples of such algorithms are Passive Aggressive (PA) Regressor \cite{Gzik2014}, Linear Regression, Box-Cox Regressor \cite{Box1964}, K-Neighbors Regressor \cite{forgy65}, Softmax Regression, Multilayer perceptron regressor \cite{Hinton1989}. For our work, we trial the stated algorithms, in addition to a host of offline learning techniques. The offline techniques trialled were Lasso regression \cite{Tibshirani1996a}, ridge regression \cite{GeladiPaul1994Mrac},  Elastic Net \cite{Geostatistics2010}, Least Angle Regression \cite{Fike1988}, Extra Trees Regressor \cite{Fike1988}, Random Forest Regressor \cite{Breiman2001}, AdaBoost Regressor \cite{Freund1997}, Gradient Boosting Regressor \cite{316}, Support vector regression \cite{Cortes1995}, and online versions of Multilayer perceptron regressor, K-Neighbors regressor, linear regression.
 
 We trial the previously mentioned statistical and machine learning algorithms and vary the parameters using grid search and cross-validation in the python package, scikit learn \cite{scikit-learn}.
 
@@ -775,7 +775,7 @@ Additionally, the impact on the broader electricity market has been shown to be 
 \section{Conclusion}
 \label{sec:conclusion}
 
-In this paper, we trialled multiple different machine learning and statistical models to predict electricity demand in the UK for the day-ahead market. Specifically, we used both online and offline algorithms to predict electricity demand 24 hours ahead. 
+In this paper, we trialled 16 different machine learning and statistical models to predict electricity demand in the UK for the day-ahead market. Specifically, we used both online and offline algorithms to predict electricity demand 24 hours ahead. We compared the ability for linear regressions, lasso regression, random forests, support vector regression, multilayer perceptron, Box-Cox transformation and the passive aggressive regressor, amongst others.
 
 We then measured the errors and compared these to each model as well as the national grid reserve. We found that through the use of an online learning approach, we were able to significantly reduce error by 30\% on the best offline algorithm. We were also able to reduce our errors to significantly below the national grid's mean and maximum tendered reserve.
 
