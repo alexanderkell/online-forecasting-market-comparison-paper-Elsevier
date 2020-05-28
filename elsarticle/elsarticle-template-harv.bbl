@@ -107,6 +107,14 @@ H.~Nguyen, C.~K. Hansen,
   {\path{doi:10.1109/ICPHM.2017.7998331}}.
 \newline\urlprefix\url{http://ieeexplore.ieee.org/document/7998331/}
 
+\bibitem{Humeau2013}
+S.~Humeau, T.~K. Wijaya, M.~Vasirani, K.~Aberer, {Electricity load forecasting
+  for residential customers: Exploiting aggregation and correlation between
+  households}, 2013 Sustainable Internet and ICT for Sustainability, SustainIT
+  2013 (2013).
+\newblock \href {https://doi.org/10.1109/SustainIT.2013.6685208}
+  {\path{doi:10.1109/SustainIT.2013.6685208}}.
+
 \bibitem{Johansson2017}
 C.~Johansson, M.~Bergkvist, D.~Geysen, O.~D. Somer, N.~Lavesson, D.~Vanhoudt,
   \href{http://dx.doi.org/10.1016/j.egypro.2017.05.068}{{Operational Demand
