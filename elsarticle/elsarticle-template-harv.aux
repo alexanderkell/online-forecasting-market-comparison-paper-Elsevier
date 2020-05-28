@@ -12,7 +12,7 @@
 \newlabel{sec:intro}{{1}{1}}
 \citation{Singh2012}
 \citation{Kim2000,Tiong2008,Quilumba2014}
-\citation{Nazarko2005ARIMAApproach,Huang2003,Nguyen2017}
+\citation{Huang2003,Nguyen2017}
 \citation{Johansson2017}
 \citation{Baram2003}
 \citation{Schmitt2008}
@@ -21,9 +21,6 @@
 \citation{Rong2009}
 \@writefile{toc}{\contentsline {section}{\numberline {2}Literature Review}{2}\protected@file@percent }
 \newlabel{sec:lit-review}{{2}{2}}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Material}{2}\protected@file@percent }
-\newlabel{sec:material}{{3}{2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Online learning}{2}\protected@file@percent }
 \citation{Gzik2014}
 \citation{Box1964}
 \citation{forgy65}
@@ -46,6 +43,9 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces A three layer feed forward neural network.\relax }}{3}\protected@file@percent }
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{fig:mlp}{{1}{3}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Material}{3}\protected@file@percent }
+\newlabel{sec:material}{{3}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Online learning}{3}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Algorithms}{3}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.1}Multilayer perceptron}{3}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.2}Box-Cox regressor}{3}\protected@file@percent }
@@ -58,12 +58,12 @@
 \citation{Kell}
 \citation{Kell}
 \citation{Kell}
-\citation{DBEIS2019,Kell2020}
+\citation{Kell2020,DBEIS2019}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.3}Passive-Aggressive regressor}{4}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Long-term Energy Market Model}{4}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces System overview of ElecSim \cite  {Kell}.\relax }}{4}\protected@file@percent }
 \newlabel{fig:model_details}{{2}{4}}
-\newlabel{eq:npv_eq}{{15}{4}}
+\newlabel{eq:npv_eq}{{14}{4}}
 \citation{Kell2018a}
 \citation{gbnationalgridstatus_2019}
 \citation{Kim2000}
@@ -76,7 +76,6 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Prediction Residuals in ElecSim}{5}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {5}Results}{5}\protected@file@percent }
 \newlabel{sec:results}{{5}{5}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Offline Machine Learning}{5}\protected@file@percent }
 \@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Hyperparameters for offline machine learning regression algorithms\relax }}{6}\protected@file@percent }
 \newlabel{table:hyperparameter-tuning-offline}{{1}{6}}
 \@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Hyperparameters for online machine learning regression algorithms\relax }}{6}\protected@file@percent }
@@ -84,16 +83,17 @@
 \citation{Kell2018a}
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Offline models mean absolute error comparison, with 95\% confidence interval for 5 runs of each model.\relax }}{7}\protected@file@percent }
 \newlabel{fig:beis_elecsim_historic_comparison}{{3}{7}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Offline Machine Learning}{7}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Online Machine Learning}{7}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Best offline machine learning learning algorithm (Extra Trees Regressor) distribution.\relax }}{7}\protected@file@percent }
 \newlabel{fig:best_offline_learning_day_distribution}{{4}{7}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Scenario Comparison}{7}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Comparison of mean absolute errors (MAE) for different online regressor models (the same models with different hyperparameters, but identical MAEs were removed from this figure).\relax }}{8}\protected@file@percent }
 \newlabel{fig:online_model_mae_barplot}{{5}{8}}
 \@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Best online model (Box-Cox Regressor) distribution.\relax }}{8}\protected@file@percent }
 \newlabel{fig:best_online_learning_day_distribution}{{6}{8}}
 \@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Online machine learning learning algorithm distribution. (Passive Aggressive Regressor (C=0.1, fit intercept = true, maximum iterations = 1000, shuffle = false, tolerance = 0.001), chosen as it was the worst result for the passive aggressive model.\relax }}{8}\protected@file@percent }
 \newlabel{fig:bad_online_learning_day_distribution}{{7}{8}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Scenario Comparison}{8}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.1}Mean Contributed Energy Generation}{8}\protected@file@percent }
 \bibstyle{elsarticle-num}
 \bibdata{library,bib_custom,custombibtex}
@@ -103,13 +103,13 @@
 \bibcite{Hong2014}{{4}{}{{}}{{}}}
 \bibcite{Al-Musaylh2018}{{5}{}{{}}{{}}}
 \bibcite{Vrablecova2017}{{6}{}{{}}{{}}}
-\bibcite{Singh2012}{{7}{}{{}}{{}}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.2}Total Energy Generation}{9}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {6}Discussion}{9}\protected@file@percent }
 \newlabel{sec:discussion}{{6}{9}}
 \@writefile{toc}{\contentsline {section}{\numberline {7}Conclusion}{9}\protected@file@percent }
 \newlabel{sec:conclusion}{{7}{9}}
 \@writefile{toc}{\contentsline {section}{\numberline {8}Funding Sources}{9}\protected@file@percent }
+\bibcite{Singh2012}{{7}{}{{}}{{}}}
 \bibcite{Huang2003}{{8}{}{{}}{{}}}
 \bibcite{Andersen2013}{{9}{}{{}}{{}}}
 \bibcite{Kell}{{10}{}{{}}{{}}}
@@ -121,7 +121,6 @@
 \bibcite{Johansson2017}{{16}{}{{}}{{}}}
 \bibcite{Baram2003}{{17}{}{{}}{{}}}
 \bibcite{Schmitt2008}{{18}{}{{}}{{}}}
-\bibcite{GoncalvesDaSilva2014}{{19}{}{{}}{{}}}
 \newlabel{fig:contributed_PV_mean_output}{{8a}{10}}
 \newlabel{sub@fig:contributed_PV_mean_output}{{a}{10}}
 \newlabel{fig:contributed_Coal_mean_output}{{8b}{10}}
@@ -132,8 +131,9 @@
 \newlabel{sub@fig:contributed_Offshore_mean_output.eps}{{d}{10}}
 \newlabel{fig:contributed_Recip_gas_mean_output}{{8e}{10}}
 \newlabel{sub@fig:contributed_Recip_gas_mean_output}{{e}{10}}
-\newlabel{fig:pv_coal_nuclear_offshore_outputs}{{\caption@xref {fig:pv_coal_nuclear_offshore_outputs}{ on input line 558}}{10}}
+\newlabel{fig:pv_coal_nuclear_offshore_outputs}{{\caption@xref {fig:pv_coal_nuclear_offshore_outputs}{ on input line 555}}{10}}
 \@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Mean outputs of various technologies vs. mean absolute error from 2018 to 2035 in ElecSim.\relax }}{10}\protected@file@percent }
+\bibcite{GoncalvesDaSilva2014}{{19}{}{{}}{{}}}
 \bibcite{Li2016}{{20}{}{{}}{{}}}
 \bibcite{Rong2009}{{21}{}{{}}{{}}}
 \bibcite{Gzik2014}{{22}{}{{}}{{}}}
@@ -161,7 +161,7 @@
 \newlabel{sub@fig:total_nuclear_mean_output}{{e}{11}}
 \newlabel{fig:total_PV_mean_output}{{9f}{11}}
 \newlabel{sub@fig:total_PV_mean_output}{{f}{11}}
-\newlabel{fig:ccgt_coal_onshore_offshore_totals}{{\caption@xref {fig:ccgt_coal_onshore_offshore_totals}{ on input line 675}}{11}}
+\newlabel{fig:ccgt_coal_onshore_offshore_totals}{{\caption@xref {fig:ccgt_coal_onshore_offshore_totals}{ on input line 672}}{11}}
 \@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Total technologies invested in vs. mean absolute error from 2018 to 2035 in ElecSim.\relax }}{11}\protected@file@percent }
 \bibcite{Akaike1974}{{35}{}{{}}{{}}}
 \bibcite{Pao2007}{{36}{}{{}}{{}}}
@@ -176,5 +176,5 @@
 \newlabel{sub@fig:total_Recip_gas_mean_output.eps}{{a}{12}}
 \newlabel{fig:Carbon_emitted_mean_output}{{10b}{12}}
 \newlabel{sub@fig:Carbon_emitted_mean_output}{{b}{12}}
-\newlabel{fig:nuclear_pv_carbon_totals}{{\caption@xref {fig:nuclear_pv_carbon_totals}{ on input line 702}}{12}}
+\newlabel{fig:nuclear_pv_carbon_totals}{{\caption@xref {fig:nuclear_pv_carbon_totals}{ on input line 699}}{12}}
 \@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces a) Investments in reciprocal gas engine technologies vs. mean absolute error from 2018 to 2035 in ElecSim and d) mean carbon emissions between 2018 and 2035.\relax }}{12}\protected@file@percent }

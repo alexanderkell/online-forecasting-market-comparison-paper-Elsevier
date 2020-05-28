@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.4.22)  26 MAY 2020 15:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.4.22)  28 MAY 2020 11:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -803,47 +803,52 @@ Underfull \hbox (badness 1655) in paragraph at lines 181--182
  []
 
 
-Package natbib Warning: Citation `Nazarko2005ARIMAApproach' on page 2 undefined on input line 194.
+Underfull \vbox (badness 1377) has occurred while \output is active []
 
-[2]
+ [2]
 File: figures/methods/Kell_eEnergy_Fig1.eps Graphic file (type eps)
- <figures/methods/Kell_eEnergy_Fig1.eps> [3]
+ <figures/methods/Kell_eEnergy_Fig1.eps>
+Underfull \hbox (badness 2753) in paragraph at lines 245--246
+\OT1/txr/m/n/10 sup-pose we have N ob-ser-va-tions $\OML/txmi/m/it/10 y[]; y[]; [] ; y[]$ \OT1/txr/m/n/10 in
+ []
+
+[3]
 File: figures/methods/System_overview_large.png Graphic file (type eps)
  <figures/methods/System_overview_large.png>
-Overfull \hbox (2.638pt too wide) in paragraph at lines 330--331
+Overfull \hbox (2.638pt too wide) in paragraph at lines 326--327
 [][] 
  []
 
 [4]
-Underfull \hbox (badness 6893) in paragraph at lines 364--365
+Underfull \hbox (badness 6893) in paragraph at lines 361--362
 []\OT1/txr/m/n/10 To find the op-ti-mum hy-per-pa-ram-e-ters, cross-
  []
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 377.
+               Default added (so using `tbp') on input line 374.
 
 
-Overfull \hbox (44.57014pt too wide) in paragraph at lines 378--393
+Overfull \hbox (44.57014pt too wide) in paragraph at lines 375--390
 [][] 
  []
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 401.
+               Default added (so using `tbp') on input line 398.
 
 
-Underfull \hbox (badness 4805) in paragraph at lines 408--408
+Underfull \hbox (badness 4805) in paragraph at lines 405--405
 []\OT1/txr/m/n/10 [(10, 50, 100),
  []
 
 
-Underfull \hbox (badness 1226) in paragraph at lines 408--408
+Underfull \hbox (badness 1226) in paragraph at lines 405--405
 \OT1/txr/m/n/10 (10), (20), (50),
  []
 
 
-Overfull \hbox (44.81656pt too wide) in paragraph at lines 402--413
+Overfull \hbox (44.81656pt too wide) in paragraph at lines 399--410
 [][] 
  []
 
@@ -898,12 +903,12 @@ Overfull \hbox (5.10028pt too wide) in paragraph at lines 15--22
 \OT1/txr/m/n/8 URL \OT1/cmtt/m/n/8 http://dx.doi.org/10.1016/j.procs.2014.05.450 
  []
 
-
+[9]
 Underfull \hbox (badness 2351) in paragraph at lines 51--56
 \OT1/txr/m/n/8 A re-view, ICPCES 2012 - 2012 2nd In-ter-na-tional Con-
  []
 
-[9]
+
 Underfull \hbox (badness 1990) in paragraph at lines 62--70
 []\OT1/txr/m/n/8 F. M. An-der-sen, H. V. Larsen, T. K. Boomsma, Long-
  []
@@ -942,14 +947,14 @@ Overfull \hbox (9.35034pt too wide) in paragraph at lines 111--116
  []
 
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [10]
 Underfull \hbox (badness 1348) in paragraph at lines 130--136
 []\OT1/txr/m/n/8 P. Goncalves Da Silva, D. Ilic, S. Karnouskos, The Im-
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [10]
 Underfull \hbox (badness 1436) in paragraph at lines 144--150
 \OT1/txr/m/n/8 Prob-lems, IEEE Trans-ac-tions on Sys-tems, Man, and Cy-
  []
@@ -970,12 +975,12 @@ Underfull \hbox (badness 1117) in paragraph at lines 172--177
  []
 
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 Underfull \hbox (badness 1102) in paragraph at lines 179--183
 []\OT1/txr/m/n/8 P. Geladi, Mea-sure-ment, re-gres-sion and cal-i-bra-tion, philip
  []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \hbox (badness 1163) in paragraph at lines 199--205
@@ -1008,11 +1013,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 233--239
 
 Underfull \vbox (badness 3623) has occurred while \output is active []
 
-)
-
-Package natbib Warning: There were undefined citations.
-
-[12] (./elsarticle-template-harv.aux) ) 
+) [12] (./elsarticle-template-harv.aux) ) 
 Here is how much of TeX's memory you used:
  10008 strings out of 480609
  175106 string characters out of 5903656
@@ -1020,6 +1021,6 @@ Here is how much of TeX's memory you used:
  25700 multiletter control sequences out of 15000+600000
  558176 words of font info for 100 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 48i,15n,48p,901b,471s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 48i,15n,48p,945b,471s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on elsarticle-template-harv.dvi (12 pages, 65864 bytes).
+Output written on elsarticle-template-harv.dvi (12 pages, 66584 bytes).

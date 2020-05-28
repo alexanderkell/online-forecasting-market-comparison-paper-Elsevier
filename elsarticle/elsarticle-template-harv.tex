@@ -100,11 +100,11 @@
 
 % Background
 
-Electricity supply must be matched with demand at all times. This is to maintain a high-quality service to customers, as well as for load-frequency control. To gain a better understanding of the load that may be required in the future, estimations under uncertainty are needed. 
+Electricity supply must be matched with demand at all times. This is for load-frequency control and to reduce electricity blackouts. To gain a better understanding of the load that may be required in the future, estimations under uncertainty are needed. This is especially difficult in a decentralized electricity market with many micro-producers who are not under a central control. 
 
 % Methodology
 
-In this paper, we trial 18 different machine learning and statistical methods, including multilayer perceptron neural networks, support vector regression and linear regression, to predict electricity demand 24 hours ahead to simulate a day-ahead market. Once we have made the predictions, we sample from the residual distributions and perturb the electricity market in a long-term agent-based model, ElecSim. This enables us to understand the impact of errors on the long-term dynamics of a decentralized electricity market.
+In this paper, we trial 18 different machine learning and statistical methods, including multilayer perceptron neural networks, support vector regression and linear regression, to predict the electricity demand profile over the next 24 hours which can be used to simulate a day-ahead market. Once we have made the predictions, we sample from the residual distributions and perturb the electricity market in a long-term agent-based model, ElecSim. This enables us to understand the impact of errors on the long-term dynamics of a decentralized electricity market.
  
 
 % Results  
@@ -148,18 +148,18 @@ Long-Term Energy Modelling \sep Online learning \sep Machine learning \sep Marke
 \section{Introduction}
 \label{sec:intro}
 
-The integration of higher proportions of intermittent renewable energy sources (IRES) in the smart grid will mean that the forecasting of electricity demand will become increasingly important. This is due to the fact that supply must mean demand at all times and that IRES are less predictable than dispatchable energy sources such as coal and combined-cycle gas turbines (CCGTs) \cite{Lu1993}.
+The integration of higher proportions of intermittent renewable energy sources (IRES) in the electricity grid will mean that the forecasting of electricity demand will become increasingly important and difficult. Examples of IRES are solar panels and wind turbines, which fluctuate in terms of power output based on localized wind speed and solar irradiance. This is due to the fact that supply must meet demand at all times and the fact that IRES are less predictable than dispatchable energy sources such as coal and combined-cycle gas turbines (CCGTs) \cite{Lu1993}. A dispatchable source is one that can be turned on and off by human control.
 
-Typically, peaker plants, such as reciprocal gas engines, are used to fill fluctuations in demand, that had not been previously planned for. These peaker plants are typically expensive to run and have higher greenhouse gas emissions than their non-peaker counterparts \cite{Mahmood2014}. 
+Typically, peaker plants, such as reciprocal gas engines, are used to fill fluctuations in demand, that had not been previously planned for. Specifically, peaker plants meet the peaks in demand where other cheaper options are at full capacity. These peaker plants are typically expensive to run and have higher greenhouse gas emissions than their non-peaker counterparts \cite{Mahmood2014}. 
 
 To reduce reliance on peaker plants, it is helpful to know how much electricity demand there will be in the future so that more efficient plants can be used to meet this demand. To aid in this, machine learning and statistical techniques have been used to accurately predict demand based on several different factors and data sources \cite{Kell2018a}, such as weather \cite{Hong2014}, day of the week \cite{Al-Musaylh2018} and holidays \cite{Vrablecova2017}. 
 
 %- Why the current approaches / systems don't solve the problem
 
 
-While various studies have looked at how to predict electricity demand at various time horizons with the highest accuracy \cite{Singh2012,Huang2003,Andersen2013}, the impact that the differing methods used have on a long-term electricity market has been studied to a lesser degree. 
+While various studies have looked at how to predict electricity demand at various time horizons with the highest accuracy \cite{Singh2012,Huang2003,Andersen2013}, the impact that differing methods have on a long-term electricity market have been studied to a lesser degree. 
 
-In this paper, we compare several machine learning and statistical techniques to forecast 24 hours ahead to simulate a day-ahead market. In addition to this, we use our long-term agent-based model, ElecSim \cite{Kell, Kell2020}, to simulate the impact of different forecasting methods on long-term investments, power plant usage and carbon emissions from the year 2018 to 2035 in the United Kingdom. 
+In this paper, we compare several machine learning and statistical techniques to forecast 24 hours ahead to simulate a day-ahead market. In addition to this, we use our long-term agent-based model, ElecSim \cite{Kell, Kell2020}, to simulate the impact of different forecasting methods on long-term investments, power plant usage and carbon emissions for the years 2018 to 2035 in the United Kingdom. 
 
 
 %- What is the innovation in this work
@@ -191,7 +191,7 @@ In Section \ref{sec:lit-review} we review the literature. We introduce the model
 \section{Literature Review}
 \label{sec:lit-review}
 
-Multiple papers have looked at demand-side forecasting \cite{Singh2012}. These include both artificial intelligence \cite{Kim2000, Tiong2008,Quilumba2014} and statistical techniques \cite{Nazarko2005ARIMAApproach,Huang2003,Nguyen2017}. However, the impact of online learning has been discussed with less frequency. In addition to this, our research shows the impact of different algorithms on investments made, electricity sources contribution and carbon emissions over a 17 year period using the long-term electricity market agent-based model, ElecSim.
+Multiple papers have looked at demand-side forecasting \cite{Singh2012}. These include both artificial intelligence \cite{Kim2000, Tiong2008,Quilumba2014} and statistical techniques \cite{Huang2003,Nguyen2017}. To the best of our knowledge the impact of online learning has been discussed with less frequency. In addition to this, our research shows the impact of different algorithms on investments made and electricity sources contribution over a 17 year period. To achieve this, we use the long-term electricity market agent-based model, ElecSim.
 
 There have been several studies in diverse applications on the use of online machine learning to predict time-series data. Johansson \textit{et al}. apply online machine learning algorithms for heat demand forecasting \cite{Johansson2017}. They find that their demand predictions display robust behaviour within acceptable error margins. They find that artificial neural networks (ANNs) provide the best forecasting ability of the standard algorithms and can handle data outside of the training set.
 
@@ -218,7 +218,7 @@ Goncalves Da Silva \textit{et al}. show the effect of prediction accuracy on loc
 
 \subsection{Online learning}
 
-Online machine learning is an extension of machine learning algorithms, that can be used on dynamic datasets, such as time-series data. In traditional machine learning algorithms, when new data is obtained, the historical data must be used to retrain the entire model with a new model. This can be costly both in terms of time and in computation power \cite{Li2016}. Online algorithms, therefore, avoids the repeated retraining of data and improves the learning efficiency \cite{Rong2009}.
+Online machine learning is a type of machine learning algorithms, that can be used on dynamic datasets, such as time-series data. In traditional machine learning algorithms, when new data is obtained, the historical and new data must be used to retrain the entire model with a new model. This can be costly both in terms of time and in computation power \cite{Li2016}. Online algorithms, therefore, avoids the repeated retraining of data and improves the learning efficiency \cite{Rong2009}.
 
 Examples of such algorithms are Passive Aggressive (PA) Regressor \cite{Gzik2014}, Linear Regression, Box-Cox Regressor \cite{Box1964}, K-Neighbors Regressor \cite{forgy65}, Softmax Regression, Multilayer perceptron regressor \cite{Hinton1989}. For our work, we trial the stated algorithms, in addition to a host of offline learning techniques. The offline techniques trialled were Lasso regression \cite{Tibshirani1996a}, ridge regression \cite{GeladiPaul1994Mrac},  Elastic Net \cite{Geostatistics2010}, Least Angle Regression \cite{Fike1988}, Extra Trees Regressor \cite{Fike1988}, Random Forest Regressor \cite{Breiman2001}, AdaBoost Regressor \cite{Freund1997}, Gradient Boosting Regressor \cite{316}, Support vector regression \cite{Cortes1995}, and online versions of Multilayer perceptron regressor, K-Neighbors regressor, linear regression.
 
@@ -238,15 +238,11 @@ In this section, we give a brief outline of the most successful online learning 
 \end{figure}
 
 
-Artificial Neural Networks are a model which can model non-linear relationships between input and output data \cite{Akaike1974}. A popular neural network is a feed-forward multilayer perceptron. Fig. \ref{fig:mlp} shows a three-layer feed-forward neural network with a single output unit, \textit{k} hidden units, $n$ input units. $w_{ij}$ is the connection weight from the $i$th input unit to the $j$th hidden unit,  and $T_j$ is the connecting weight from the $j$th hidden unit to the output unit \cite{Pao2007}. These weights transform the input variables in the first layer to the output variable in the final layer using the training data. 
+Artificial Neural Networks are a model which can model non-linear relationships between input and output data \cite{Akaike1974}. A popular neural network is a feed-forward multilayer perceptron. Fig. \ref{fig:mlp} shows a three-layer feed-forward neural network with a single output unit, \textit{k} hidden units, $n$ input units. $w_{ij}$ is the connection weight from the $i^{th}$ input unit to the $j^{th}$ hidden unit,  and $T_j$ is the connecting weight from the $j^{th}$ hidden unit to the output unit \cite{Pao2007}. These weights transform the input variables in the first layer to the output variable in the final layer using the training data. 
 
-Typically, a dataset is split into three sections, the test set, training set and validation set. The training set is used to find the connection weights of the network, whilst the test set is used to determine the accuracy of the models. The validation set allows for an unbiased evaluation of the model whilst tuning the hyperparameters, and can avoid overfitting by stopping training if the error begins to increase.
+%Typically, a dataset is split into three sections, the test set, training set and validation set. The training set is used to find the connection weights of the network, whilst the test set is used to determine the accuracy of the models. The validation set allows for an unbiased evaluation of the model whilst tuning the hyperparameters, and can avoid overfitting by stopping training if the error begins to increase.
 
-For a univariate time series forecasting problem, suppose we have N observations $y_1, y_2, \ldots, y_N$ in the training set, 
-\begin{equation}
-y_{N+1}, y_{N+2}, \ldots, y_{N+m}
-\end{equation}
-\noindent in the test set and we are required to predict \textit{m} periods ahead \cite{Pao2007}. 
+For a univariate time series forecasting problem, suppose we have N observations $y_1, y_2, \ldots, y_N$ in the training set, and $m$ observations in the test set, $y_{N+1}, y_{N+2}, \ldots, y_{N+m}$ in the test set and we are required to predict \textit{m} periods ahead \cite{Pao2007}. 
 
 The training patterns are as follows:
 \begin{align}
@@ -272,7 +268,7 @@ The training objective is to minimize the overall predictive error means (SSE) b
 SSE = \sum_{i=p+m}^N(y_i-\hat{y}_i)
 \end{equation}
 
-\noindent where $\hat{y}_i$ is the output from the network. The number of input nodes corresponds to the number of lagged observations. Having too few or too many input nodes can affect the predictive ability of the neural network \cite{Pao2007}.
+\noindent where $\hat{y}_i$ is the prediction from the network. The number of input nodes corresponds to the number of lagged observations. Having too few or too many input nodes can affect the predictive ability of the neural network \cite{Pao2007}.
 
 \subsubsection{Box-Cox regressor}
 
@@ -289,7 +285,7 @@ The Box-Cox regression will transform the dependent variable as follows:
     y^{(\lambda)} = Ln(y)\; if\: \lambda=0
 \end{equation}
 
-and determine the optimal value of lambda by maximising the following log-likelihood function:
+\noindent and determine the optimal value of lambda by maximising the following log-likelihood function:
 
 \begin{equation}
     L^{(\lambda)}=-\frac{n}{2}Ln(\hat{\sigma}^2_{(\lambda)}+(\lambda - 1)\sum_{i=1}^nLn(y_i)
@@ -316,13 +312,13 @@ The goal of the Passive-Aggressive (PA) algorithm is to change the model as litt
 \subsection{Long-term Energy Market Model}
 
 
-In order to test the impact of the different residual distributions, we used the model developed by Kell \textit{et al}., ElecSim \cite{Kell,Kell2020}. ElecSim is an agent-based model which mimic the behaviour of decentralised electricity markets. In this paper, we parametrised the model with data of the United Kingdom in 2018. This enabled us to create a digital twin of the UK electricity market and project forward. The data used for this parametrisation included power plants in operation in 2018 and the funds available to the generation companies \cite{dukes_511, companies_house}.
+In order to test the impact of the different residual distributions, we used the ElecSim simulation developed by Kell \textit{et al}., ElecSim \cite{Kell,Kell2020}. ElecSim is an agent-based model which mimics the behaviour of decentralised electricity markets. In this paper, we parametrised the model with data of the United Kingdom in 2018. This enabled us to create a digital twin of the UK electricity market and project forward. The data used for this parametrisation included power plants in operation in 2018 and the funds available to the generation companies \cite{dukes_511, companies_house}.
 
 ElecSim is made up of six fundamental components: 1) power plant data; 2) scenario data; 3) the time-steps of the algorithm; 4) the power exchange; 5) the investment algorithm and 6) the generation companies (GenCos) as agents. ElecSim uses a subset of representative days of electricity demand, solar irradiance and wind speed to approximate a full year. In this context, representative days are a subset of days which, when scaled up, represent an entire year \cite{Kell2020}. We show how these components interact in Figure \ref{fig:model_details} \cite{Kell}. 
 
 
 
-The configuration file details the scenario which can be set by the user. This includes electricity demand, carbon price and fuel prices. The data sources parametrise the digital twin to a particular country, including information such as wind capacity and power plants in operation. Generation Companies own and invest in power plants. These power plants are then matched to electricity demand using a spot market.
+ElecSim uses a configuration file which details the scenario which can be set by the user. This includes electricity demand, carbon price and fuel prices. The data sources parametrise the digital twin to a particular country, including information such as wind capacity and power plants in operation. Generation Companies own and invest in power plants. These power plants are then matched to electricity demand using a spot market.
 
 
 
@@ -333,12 +329,12 @@ The configuration file details the scenario which can be set by the user. This i
 \end{figure}
 
 
-The market runs a merit-order dispatch model and bids are made by the power plant's short-run marginal cost (SRMC). Investment in power plants are based upon a net present value (NPV) calculation. NPV is able to evaluate and compare investments with cash flows spread over many years. This is shown in Equation \ref{eq:npv_eq}, where $t$ is the year of the cash flow, $i$ is the discount rate, $N$ is the total number of years, or lifetime of power plant, and $R_t$ is the net cash flow of the year $t$:
+The market runs a merit-order dispatch model and bids are made by the power plant's short-run marginal cost (SRMC). A merit-order dispatch model is one which dispatches the cheapest electricity generators first. Investment in power plants are based upon a net present value (NPV) calculation. NPV is able to evaluate and compare investments with cash flows spread over many years. This is shown in Equation \ref{eq:npv_eq}, where $t$ is the year of the cash flow, $i$ is the discount rate, $N$ is the total number of years, or lifetime of power plant, and $R_t$ is the net cash flow of the year $t$:
 \begin{equation} \label{eq:npv_eq}
 NPV(t, N) = \sum_{t=0}^{N}\frac{R_t}{(1+t)^t}.
 \end{equation}
 
-Each of the GenCos estimate the yearly income for each prospective power plant by running a merit-order dispatch electricity market ten years into the future. However, it is true that the expected cost of electricity ten years into the future is particularly challenging to predict. We, therefore, use a reference scenario projected by the UK Government Department for Business and Industrial Strategy (BEIS), and use the predicted costs of electricity calibrated by Kell \textit{et al} \cite{DBEIS2019, Kell2020}. The agents predict the future carbon price by using a linear regression model.
+Each of the Generator Companies(GenCos) estimate the yearly income for each prospective power plant by running a merit-order dispatch electricity market ten years into the future. However, it is true that the expected cost of electricity ten years into the future is particularly challenging to predict. We, therefore, use a reference scenario projected by the UK Government Department for Business and Industrial Strategy (BEIS), and use the predicted costs of electricity calibrated by Kell \textit{et al} \cite{Kell2020, DBEIS2019}. The agents predict the future carbon price by using a linear regression model.
 
 
  
@@ -351,11 +347,12 @@ Each of the GenCos estimate the yearly income for each prospective power plant b
 
 Similarly to the work by Kell \textit{et al.} \cite{Kell2018a}, we selected a number of calendar attributes from the following dataset \cite{gbnationalgridstatus_2019}. This dataset contained data between the years 2011-2018 for the United Kingdom. The calendar attributes used as predictors to the models were hour, month, day of the week, day of the month and year. These attributes allow us to take into account the periodicity of the data within each day, month and year.
 
-It is also the case that electricity demand on a public holiday which falls on a weekday falls is dissimilar to load behaviours of ordinary weekdays \cite{Kim2000}. We, therefore, passed a holiday variable to allow the model to account for this.
+It is also the case that electricity demand on a public holiday which falls on a weekday is dissimilar to load behaviours of ordinary weekdays \cite{Kim2000}. We, therefore, marked each holiday day as such to allow the model to account for this.
 
-As time-series demand data is correlated in the time-domain, we lagged the input demand data. This enabled us to take into account correlations on previous days, weeks and the previous month. Specifically, we used the previous 28 hours before the time step to be predicted for the previous 1st, 2nd, 7th and 30th day. We chose this as we believe that the previous two days were the most relevant to the day to be predicted, as well as the weekday of the previous week and the previous month. We could have increased the number of days provided to the algorithm. However, due to time and computational constraints, we used our previously described intuition for lagged data selection. Future work could be in selecting the optimum number of lagged inputs.
+As demand data is highly correlated with historical demand, we lagged the input demand data. This enabled us to take into account correlations on previous days, weeks and the previous month. Specifically, we used the previous 28 hours before the time step to be predicted for the previous 1st, 2nd, 7th and 30th day. We chose this as we believe that the previous two days were the most relevant to the day to be predicted, as well as the weekday of the previous week and the previous month. We chose the previous 28 hours to account for a full day, plus an additional 4 hours to account for the previous day's correlation with the day to be predicted. We could have increased the number of days provided to the algorithm. However, due to time and computational constraints, we used our previously described intuition for lagged data selection. Future work could be in selecting the optimum number of lagged inputs.
 
-In addition to this, we gave the data information with regards to six different seasons. These seasons were defined by the National Grid Short Term Operating Reserve (STOR) Market Information Report \cite{ESO2019}. Finally, to predict a full 24-hours ahead, we used 24 different models, 1 for each hour of the day. 
+In addition to this, we gave the data information with regards to six different seasons. These seasons were defined by the National Grid Short Term Operating Reserve (STOR) Market Information Report \cite{ESO2019}. These differ from the traditional four seasons by splitting autumn into two further seasons, and winter into three seasons. Finally, to predict a full 24-hours ahead, we used 24 different models, 1 for each hour of the day. 
+
 
 The data is standardized and normalized using min-max scaling between -1 and 1 before training and predicting with the model.
 
@@ -363,7 +360,7 @@ The data is standardized and normalized using min-max scaling between -1 and 1 b
 
 To find the optimum hyperparameters, cross-validation is used. As this time-series data were correlated in the time-domain, we took the first six years of data (2011-2017) for training and tested on the remaining year of data (2017-2018).
 
-Each machine learning algorithm has a different set of parameters to tune. To tune the parameters in this paper, we used a grid search method. Grid search is effectively a brute force approach that trials each combination of parameters at our choosing.
+Each machine learning algorithm has a different set of parameters to tune. To tune the parameters in this paper, we used a grid search method. Grid search is a brute force approach that trials each combination of parameters at our choosing, however, for our search space was small enough to make other approaches not worth it.
 
 Tables \ref{table:hyperparameter-tuning-offline} and \ref{table:hyperparameter-tuning-online} display each of the models and respective parameters that were used in the grid search. Table \ref{table:hyperparameter-tuning-offline} shows the offline machine learning methods, whereas Table \ref{table:hyperparameter-tuning-online} displays the online machine learning methods. Each of the parameters within the columns ``Values'' are trialled with every other parameter.
 
@@ -436,7 +433,7 @@ In this section, we detail the accuracy of the algorithms and statistical models
 
 Figure \ref{fig:beis_elecsim_historic_comparison} displays the mean absolute error of each of the offline statistical and machine learning models on a log scale. It can be seen that the different models have varying degrees of success. The least accurate models were linear regression, the multilayer perceptron (MLP) model and the Least Angle Regression (LARS). These all have mean absolute errors over 10,000MWh. This error would be prohibitively high in practice; the max tendered national grid reserve is 6,000MWh, while the average tendered national grid reserve is 2,000MWh \cite{ESO2019}.
 
-A number of models, however, perform well, with a low mean absolute error. These include the Lasso, gradient Boosting Regressor and K neighbours regressor. The best model, similarly to \cite{Kell2018a}, was the decision tree-based model, Extra Trees Regressor, with a mean absolute error of $1604$MWh. This level is well within the average national grid reserve of 2,000MWh.
+A number of models, however, perform well, with a low mean absolute error. These include the Lasso, gradient Boosting Regressor and K neighbours regressor. The best model, similar to \cite{Kell2018a}, was the decision tree-based model, Extra Trees Regressor, with a mean absolute error of $1,604$MWh. This level is well within the average national grid reserve of 2,000MWh.
 
 \begin{figure}
 \centering
@@ -453,7 +450,7 @@ A number of models, however, perform well, with a low mean absolute error. These
 %\label{fig:best_offline_learning_day_simulation}
 %\end{figure}
 
-Figure \ref{fig:best_offline_learning_day_distribution} displays the distribution of the best offline machine result (Extra Trees Regressor), as previously discussed. It can be seen that the max tendered national grid reserve falls well above the 5\% and 95\% percentiles. However, there are occasions where the errors are greater than the maximum tendered national grid reserve. In addition, the majority of the time, the model's predictions fall within the average available tendered national grid reserve.
+Figure \ref{fig:best_offline_learning_day_distribution} displays the distribution of the best offline machine result (Extra Trees Regressor). It can be seen that the max tendered national grid reserve falls well above the 5\% and 95\% percentiles. However, there are occasions where the errors are greater than the maximum tendered national grid reserve. In addition, the majority of the time, the model's predictions fall within the average available tendered national grid reserve.
 
 \begin{figure}
 \centering
