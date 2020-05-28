@@ -167,12 +167,12 @@ In this paper, we compare several machine learning and statistical techniques to
 
 We compare the impact of 16 different online and offline machine learning and statistical techniques to predict the electricity demand profile over the next 24 hours. Online learning methods can learn from novel data while maintaining what was learnt from previous data. Online learning is useful for non-stationary datasets, and time-series data where recalculation of a model would take a prohibitive amount of time. Offline learning methods, however, must be retrained every time new data is added. By training on data that has already been used for training, the computational load and time required increases.
 
-We trial different algorithms and split times of the year into seasons, weekdays, weekends and holidays. Examples of the algorithms used are: linear regression, lasso regression, random forests, support vector regression, multilayer neural network perceptron neural network, box-cox transformation linear regression and the passive aggressive model.
+We trial different algorithms and train different models for different times of the year. Specifically, we train different models for the different seasons. We also split weekdays and train both weekends and holidays together. This enables a model to become good at a specific subset of the data which share similar patterns, as opposed to having to generalise to all of the data. Examples of the algorithms used are: linear regression, lasso regression, random forests, support vector regression, multilayer neural network perceptron neural network, box-cox transformation linear regression and the passive aggressive model.
 
 %- A short description of the solution
 
 
-Using online and offline methods, we take the error distributions, or residuals, and fit a variety of distributions to these residuals. The distribution that best fits the respective residuals is then used and sampled from to adjust the demand in the ElecSim model. We then observe the differences in carbon emissions, and power plants invested in and utilised with each of the different statistical and machine learning methods to a base case.
+Using online and offline methods, we take the error distributions, or residuals, and fit a variety of distributions to these residuals. We choose the distribution with the lowest sum of squared estimate of errors (SSE). We fit over 80 different distributions, which include the johnson bounded distribution, the uniform distribution and the gamma distribution. The distribution that best fits the respective residuals is then used and sampled from to adjust the demand in the ElecSim model. We then observe the differences in carbon emissions, and power plants invested in and utilised with each of the different statistical and machine learning methods to a base case.
 
 
 
@@ -193,12 +193,21 @@ The contributions of this work are to trial a different online and offline learn
 
 %- Outline of the rest of the work
 
-In Section \ref{sec:lit-review} we review the literature. We introduce the model ElecSim, and the methods used in Section \ref{sec:material}. The Methods section is shown in Section \ref{sec:methods}, results in Section \ref{sec:results}. We discuss and conclude our work in Sections \ref{sec:discussion} and \ref{sec:conclusion} respectively.
+In Section \ref{sec:lit-review} we review the literature, including other uses of online learning algorithms and an application to electricity markets. We introduce the dynamics of the ElecSim simulation as well as the methods used in Section \ref{sec:material}. We demonstrate the methodology undertaken in Section \ref{sec:methods}. In Section \ref{sec:results} we demonstrate our results, followed by a discussion in Section \ref{sec:discussion}. We conclude our work in \ref{sec:conclusion}.
 
 \section{Literature Review}
 \label{sec:lit-review}
 
 Multiple papers have looked at demand-side forecasting \cite{Singh2012}. These include both artificial intelligence \cite{Kim2000, Tiong2008,Quilumba2014} and statistical techniques \cite{Huang2003,Nguyen2017}. To the best of our knowledge the impact of online learning has been discussed with less frequency. In addition to this, our research shows the impact of different algorithms on investments made and electricity sources contribution over a 17 year period. To achieve this, we use the long-term electricity market agent-based model, ElecSim.
+
+Multiple electricity demand forecasting studies have been undertaken for offline learning. Studies have been undertaken using both smart meter data, as well as with aggregated demand, like our paper. Smart meters are a type of meter installed in each house, which monitor electricity usage at small intervals, such as every 15 or 30 minutes.
+
+Fard \textit{et al.} propose a new hybrid forecasting method based on the wavelet transform, autoregressive integrated moving average (ARIMA) and artificial neural network (ANN). The ARIMA model is utilized to capture the linear component of the time series, with the residuals containing the non-linear components. The non-linear parts are decomposed using the discrete wavelet transform, which finds the sub-frequencies. These residuals are then used to train an ANN  to predict the future residuals. Finally, the ARIMA and ANNs outputs are summed. Their results show that this technique can improve the load forecasting results.
+
+Humeau \textit{et al.} compare MLPs, SVRs and linear regression at predicting smart meter data \cite{Humeau2013}. They aggregate different households and observe which models work the best at each aggregate level. They find that linear regression outperforms both MLP and SVR when forecasting individual households. However, after aggregating over 32 households, SVR outperforms linear regression.
+
+
+Quilumba \textit{et al.} also apply machine learning techniques to individual households electricity consumption by aggregation. To achieve this aggregation they use \textit{k}-means clustering to aggregate the households to improve their forecasting ability. The authors also use a neural network based model for forecasting, and show that the number of optimum clusters for forecasting is dependent on the data. With three clusters optimal for a particular dataset, and four for another.
 
 There have been several studies in diverse applications on the use of online machine learning to predict time-series data, however, to the best of our knoweldge there are limited examples where this is applied to electricity markets. Johansson \textit{et al}. apply online machine learning algorithms for heat demand forecasting \cite{Johansson2017}. They find that their demand predictions display robust behaviour within acceptable error margins. They find that artificial neural networks (ANNs) provide the best forecasting ability of the standard algorithms and can handle data outside of the training set.
 
@@ -260,7 +269,7 @@ y_{p+m+1} & =f(y_{p+1}, y_{p},\ldots,y_2)\\
 y_{N} & =f(y_{N-m},y_{N-m-1},\ldots,y_{N-m-p+1})
 \end{align}
 
-\noindent where $f$ is the function made up of weights and activation functions in the trained neural network.
+\noindent where $f_{W}(\cdot)$ represents the MLP network and $W$ are the weights. For brevity we omit $W$. 
 
 The $m$ testing patterns are 
 
@@ -520,9 +529,10 @@ Figure \ref{fig:bad_online_learning_day_distribution} displays the residuals for
 
 \subsection{Scenario Comparison}
 
-In this section we explore the effect of these residuals on investments made and the electricity generation mix.
+In this section we explore the effect of these residuals on investments made and the electricity generation mix.  
 
 \subsubsection{Mean Contributed Energy Generation}
+
 
 
 Figure \ref{fig:contributed_PV_mean_output} displays the mean photovoltaic (PV) contributed between 2018 and 2035 vs. mean absolute error of the various online regressor models displayed in Figure \ref{fig:online_model_mae_barplot}. A positive correlation can be seen with PV contributed and mean absolute error. This is similar for coal and nuclear output, shown in Figures \ref{fig:contributed_Coal_mean_output} and \ref{fig:contributed_Nuclear_mean_output} respectively. However, as shown by Figure \ref{fig:contributed_Offshore_mean_output.eps}, offshore wind reduces with mean absolute error. Figure \ref{fig:contributed_Recip_gas_mean_output} displays the mean reciprocal gas engine output vs mean absolute error between the same time period. Output for the reciprocal gas engine also increases with mean absolute error.
