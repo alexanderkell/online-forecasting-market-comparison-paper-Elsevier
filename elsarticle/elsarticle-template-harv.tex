@@ -50,6 +50,7 @@
 \usepackage{algorithm}
 \usepackage{algorithmicx}
 \usepackage{algpseudocode}
+\usepackage{adjustbox}
 
 \usepackage{subcaption}
 \usepackage{mwe}
@@ -159,29 +160,35 @@ To reduce reliance on peaker plants, it is helpful to know how much electricity 
 
 While various studies have looked at how to predict electricity demand at various time horizons with the highest accuracy \cite{Singh2012,Huang2003,Andersen2013}, the impact that differing methods have on a long-term electricity market have been studied to a lesser degree. 
 
-In this paper, we compare several machine learning and statistical techniques to forecast 24 hours ahead to simulate a day-ahead market. In addition to this, we use our long-term agent-based model, ElecSim \cite{Kell, Kell2020}, to simulate the impact of different forecasting methods on long-term investments, power plant usage and carbon emissions for the years 2018 to 2035 in the United Kingdom. 
+In this paper, we compare several machine learning and statistical techniques to predict the electricity demand profile over the next 24 hours. We chose to predict over the next 24 hours to simulate a day-ahead market, which is often seen in decentralized electricity markets. In addition to this, we use our long-term agent-based model, ElecSim \cite{Kell, Kell2020}, to simulate the impact of different forecasting methods on long-term investments, power plant usage and carbon emissions for the years 2018 to 2035 in the United Kingdom. 
 
 
 %- What is the innovation in this work
 
-We compare the impact of 16 different online and offline machine learning and statistical techniques. Online learning methods can learn from novel data while maintaining what was learnt from previous data. This type of statistical modelling is useful for non-stationary datasets, and time-series data where recalculation of a model would take a prohibitive amount of time. We trial different algorithms and split times of the year into seasons, weekdays, weekends and holidays. Examples of the algorithms used are: linear regression, lasso regression, random forests, support vector regression, multilayer neural network perceptron neural network, box-cox transformation linear regression and the passive aggressive model.
+We compare the impact of 16 different online and offline machine learning and statistical techniques to predict the electricity demand profile over the next 24 hours. Online learning methods can learn from novel data while maintaining what was learnt from previous data. Online learning is useful for non-stationary datasets, and time-series data where recalculation of a model would take a prohibitive amount of time. Offline learning methods, however, must be retrained every time new data is added. By training on data that has already been used for training, the computational load and time required increases.
+
+We trial different algorithms and split times of the year into seasons, weekdays, weekends and holidays. Examples of the algorithms used are: linear regression, lasso regression, random forests, support vector regression, multilayer neural network perceptron neural network, box-cox transformation linear regression and the passive aggressive model.
 
 %- A short description of the solution
 
 
-Using these methods, we take the error distributions, or residuals, and fit a variety of distributions. The distribution that best fits the respective residuals is then used and sampled from to adjust the demand in the ElecSim model. We then observe the differences in carbon emissions, and power plants invested in and utilised with each of the different statistical and machine learning methods to a base case.
+Using online and offline methods, we take the error distributions, or residuals, and fit a variety of distributions to these residuals. The distribution that best fits the respective residuals is then used and sampled from to adjust the demand in the ElecSim model. We then observe the differences in carbon emissions, and power plants invested in and utilised with each of the different statistical and machine learning methods to a base case.
 
 
 
 
 %- What are the key take-home messages
 
-We show that online learning has a significant impact on reducing the error for predicting electricity consumption a day ahead when compared to traditional offline learning techniques.
+We show that online learning has a significant impact on reducing the error for predicting electricity consumption a day ahead when compared to traditional offline learning techniques, such as multilayer perceptron artificial neural networks, linear regression, extra trees regression and support vector regression. For a full list see Table \ref{table:hyperparameter-tuning-offline}.
 
 We show that the forecasting algorithm has a non-negligible effect on carbon emissions and use of coal, onshore, photovoltaics, reciprocal gas engines and CCGT. Specifically, the amount of coal, photovoltaics, and reciprocal gas used from 2018 to 2035 was proportional to the median absolute error, while both onshore and offshore wind are inversely proportional to the median absolute error.
 
 Total investments in coal, offshore and photovoltaics are proportional to the median absolute error, while investments in CCGT, onshore and reciprocal gas engines inversely proportional.
 
+
+% Contributions of this work
+
+The contributions of this work are to trial a different online and offline learning models to forecast the electricity demand profile 24 hours ahead. We take the errors of these models and fit a number of different distributions, including the gamma, skew normal and uniform distributions. We select the distribution that has the lowest sum square error and sample from this distribution to perturb the demand by the error. We then simulate from 2018 to 2035, to see the effect that these errors have on the electricity market.
 
 
 %- Outline of the rest of the work
@@ -193,32 +200,33 @@ In Section \ref{sec:lit-review} we review the literature. We introduce the model
 
 Multiple papers have looked at demand-side forecasting \cite{Singh2012}. These include both artificial intelligence \cite{Kim2000, Tiong2008,Quilumba2014} and statistical techniques \cite{Huang2003,Nguyen2017}. To the best of our knowledge the impact of online learning has been discussed with less frequency. In addition to this, our research shows the impact of different algorithms on investments made and electricity sources contribution over a 17 year period. To achieve this, we use the long-term electricity market agent-based model, ElecSim.
 
-There have been several studies in diverse applications on the use of online machine learning to predict time-series data. Johansson \textit{et al}. apply online machine learning algorithms for heat demand forecasting \cite{Johansson2017}. They find that their demand predictions display robust behaviour within acceptable error margins. They find that artificial neural networks (ANNs) provide the best forecasting ability of the standard algorithms and can handle data outside of the training set.
+There have been several studies in diverse applications on the use of online machine learning to predict time-series data, however, to the best of our knoweldge there are limited examples where this is applied to electricity markets. Johansson \textit{et al}. apply online machine learning algorithms for heat demand forecasting \cite{Johansson2017}. They find that their demand predictions display robust behaviour within acceptable error margins. They find that artificial neural networks (ANNs) provide the best forecasting ability of the standard algorithms and can handle data outside of the training set.
 
 Baram \textit{et al.} combine an ensemble of active learners by developing an active-learning master algorithm \cite{Baram2003}. To achieve this, they propose a simple maximum entropy criterion that provides effective estimates in realistic settings. Their active-learning master algorithm is empirically shown to, in some cases, outperform the best algorithm in the ensemble on a range of classification problems.
 
-An extension of the FLORA algorithm is proposed by Schmitt \textit{et al} in \cite{Schmitt2008}. Their FLORA-MC enhances the FLORA algorithm for multi-classification and numerical input values. They use this algorithm for an ambient computing application. Ambient computing is where computing and communication merges into everyday life. They find that their model outperforms traditional offline learners by orders of magnitude.
+Schmitt \textit{et al} also extends on existing algorithms though an extension of the FLORA algorithm in \cite{Schmitt2008}. Their FLORA-MC enhances the FLORA algorithm for multi-classification and numerical input values. They use this algorithm for an ambient computing application. Ambient computing is where computing and communication merges into everyday life. They find that their model outperforms traditional offline learners by orders of magnitude.
 
-Pindoriya \textit{et al}. trial several different machine learning methods such an adaptive wavelet neural network (AWNN). They find that AWNN has good prediction properties when compared to other forecasting techniques such as wavelet-ARIMA, multi-layer perceptron (MLP) and radial basis function (RBF) neural networks as well as the fuzzy neural network (FNN).
+Similarly to us, Pindoriya \textit{et al}. trial several different machine learning methods such as adaptive wavelet neural network (AWNN). They find that AWNN has good prediction properties when compared to other forecasting techniques such as wavelet-ARIMA, multi-layer perceptron (MLP) and radial basis function (RBF) neural networks as well as the fuzzy neural network (FNN).
 
 
-Goncalves Da Silva \textit{et al}. show the effect of prediction accuracy on local electricity markets \cite{GoncalvesDaSilva2014}. To this end, they compare forecasting of groups of consumers in comparison to single individuals. They trial the use of the Seasonal-Naïve and Holt-Winters algorithms and look at the effect that the errors have on trading in an intra-day electricity market of consumers and prosumers. They found that with a photovoltaic penetration of 50\%, over 10\% of the total generation capacity was uncapitalised and roughly 10, 25 and 28\% of the total traded volume were unnecessary buys, demand imbalances and unnecessary sells respectively. This represents energy that the participant has no control.
+Goncalves Da Silva \textit{et al}. show the effect of prediction accuracy on local electricity markets \cite{GoncalvesDaSilva2014}. To this end, they compare forecasting of groups of consumers in comparison to single individuals. They trial the use of the Seasonal-Naïve and Holt-Winters algorithms and look at the effect that the errors have on trading in an intra-day electricity market of consumers and prosumers. They found that with a photovoltaic penetration of 50\%, over 10\% of the total generation capacity was uncapitalised and roughly 10, 25 and 28\% of the total traded volume were unnecessary buys, demand imbalances and unnecessary sells respectively. This represents energy that the participant has no control. Our work, however, focuses on a national electricity market, as opposed to a local market.
 
 
 
 \section{Material}
 \label{sec:material}
 
-%\subsection{Machine Learning}
-%
-%Machine learning is a methodology for finding and describing structural patterns in data \cite{Witten2011}. Typically machine learning algorithms are algorithms which are trained using data. These generate models which can make predictions or decisions with regards to classification of data \cite{Johansson2017}. Machine learning algorithms can be used for both static datasets as well as streaming data.
+\subsection{Machine Learning}
+
+Machine learning is a methodology for finding and describing structural patterns in data \cite{Witten2011}. Offline learning models must be trained at a single point in time. With non-stationary data where underlying distributions change, the model must be retrained over time. With online learning, the model is able to retrain at every time-point in time, without having to retrain the entire model. This makes these models good for time-series data which can exhibit non-stationary properties, such as electricity demand profiles.
+
 
 
 
 
 \subsection{Online learning}
 
-Online machine learning is a type of machine learning algorithms, that can be used on dynamic datasets, such as time-series data. In traditional machine learning algorithms, when new data is obtained, the historical and new data must be used to retrain the entire model with a new model. This can be costly both in terms of time and in computation power \cite{Li2016}. Online algorithms, therefore, avoids the repeated retraining of data and improves the learning efficiency \cite{Rong2009}.
+Online machine learning is a type of machine learning algorithms, that can be used on dynamic datasets, such as time-series data. In traditional machine learning algorithms, when new data is obtained, the historical and new data must be used to retrain the entire model with a new model. This can be costly both in terms of time and in computation power \cite{Li2016}. Online algorithms, therefore, avoids the repeated retraining of data and improves the learning efficiency \cite{Rong2009}. Online training can also adapt to situations where the underlying system you are predicting on is changing over time, or non-stationary.
 
 Examples of such algorithms are Passive Aggressive (PA) Regressor \cite{Gzik2014}, Linear Regression, Box-Cox Regressor \cite{Box1964}, K-Neighbors Regressor \cite{forgy65}, Softmax Regression, Multilayer perceptron regressor \cite{Hinton1989}. For our work, we trial the stated algorithms, in addition to a host of offline learning techniques. The offline techniques trialled were Lasso regression \cite{Tibshirani1996a}, ridge regression \cite{GeladiPaul1994Mrac},  Elastic Net \cite{Geostatistics2010}, Least Angle Regression \cite{Fike1988}, Extra Trees Regressor \cite{Fike1988}, Random Forest Regressor \cite{Breiman2001}, AdaBoost Regressor \cite{Freund1997}, Gradient Boosting Regressor \cite{316}, Support vector regression \cite{Cortes1995}, and online versions of Multilayer perceptron regressor, K-Neighbors regressor, linear regression.
 
@@ -263,14 +271,17 @@ y_{N+2} & =f(y_{N+2-m}, y_{N-m+1},\ldots,y_{N-m-p+3})\\
 y_{N+m} & =f(y_{N},y_{N-1},\ldots,y_{N-p+1})
 \end{align}
 
-The training objective is to minimize the overall predictive error means (SSE) by adjusting the connection weights. For this network structure the SSE can be written as:
+The training objective is to minimize the overall predictive mean sum of squared estimate of errors (SSE) by adjusting the connection weights. For this network structure the SSE can be written as:
 \begin{equation}
 SSE = \sum_{i=p+m}^N(y_i-\hat{y}_i)
 \end{equation}
 
 \noindent where $\hat{y}_i$ is the prediction from the network. The number of input nodes corresponds to the number of lagged observations. Having too few or too many input nodes can affect the predictive ability of the neural network \cite{Pao2007}.
 
+
 \subsubsection{Box-Cox regressor}
+
+Ordinary least square is a method for estimating the unknown parameters in a linear regression model. It estimates these unknown parameters by the principle of least squares. Specifically, it minimizes the sum of the squares of the differences between the observed variables and those predicted by the linear function.
 
 The ordinary least squares regression assumes a normal distribution of residuals. However, when this is not the case, the Box-Cox Regression may be useful \cite{Box1964}. It transforms the dependent variable using the Box-Cox Transformation function and employs maximum likelihood estimation to determine the optimal level of the power parameter lambda. The Box-Cox Regression requires that no dependent variable has any negative values.
 
@@ -329,7 +340,7 @@ ElecSim uses a configuration file which details the scenario which can be set by
 \end{figure}
 
 
-The market runs a merit-order dispatch model and bids are made by the power plant's short-run marginal cost (SRMC). A merit-order dispatch model is one which dispatches the cheapest electricity generators first. Investment in power plants are based upon a net present value (NPV) calculation. NPV is able to evaluate and compare investments with cash flows spread over many years. This is shown in Equation \ref{eq:npv_eq}, where $t$ is the year of the cash flow, $i$ is the discount rate, $N$ is the total number of years, or lifetime of power plant, and $R_t$ is the net cash flow of the year $t$:
+The market runs a merit-order dispatch model and bids are made by the power plant's short-run marginal cost (SRMC). A merit-order dispatch model is one which dispatches the cheapest electricity generators first. SRMC is the cost it takes to dispatch a single MWh of electricity and does not include capital costs. Investment in power plants are based upon a net present value (NPV) calculation. NPV is the difference between the present value of cash inflows and the present value of cash outflows over a period of time. This is shown in Equation \ref{eq:npv_eq}, where $t$ is the year of the cash flow, $i$ is the discount rate, $N$ is the total number of years, or lifetime of power plant, and $R_t$ is the net cash flow of the year $t$:
 \begin{equation} \label{eq:npv_eq}
 NPV(t, N) = \sum_{t=0}^{N}\frac{R_t}{(1+t)^t}.
 \end{equation}
@@ -345,13 +356,13 @@ Each of the Generator Companies(GenCos) estimate the yearly income for each pros
 
 \subsection{Data preparation}
 
-Similarly to the work by Kell \textit{et al.} \cite{Kell2018a}, we selected a number of calendar attributes from the following dataset \cite{gbnationalgridstatus_2019}. This dataset contained data between the years 2011-2018 for the United Kingdom. The calendar attributes used as predictors to the models were hour, month, day of the week, day of the month and year. These attributes allow us to take into account the periodicity of the data within each day, month and year.
+Similarly to the work by Kell \textit{et al.} \cite{Kell2018a}, we selected a number of calendar attributes and demand data from the following dataset \cite{gbnationalgridstatus_2019}. This dataset contained data between the years 2011-2018 for the United Kingdom. The calendar attributes used as predictors to the models were hour, month, day of the week, day of the month and year. These attributes allow us to take into account the periodicity of the data within each day, month and year.
 
 It is also the case that electricity demand on a public holiday which falls on a weekday is dissimilar to load behaviours of ordinary weekdays \cite{Kim2000}. We, therefore, marked each holiday day as such to allow the model to account for this.
 
 As demand data is highly correlated with historical demand, we lagged the input demand data. This enabled us to take into account correlations on previous days, weeks and the previous month. Specifically, we used the previous 28 hours before the time step to be predicted for the previous 1st, 2nd, 7th and 30th day. We chose this as we believe that the previous two days were the most relevant to the day to be predicted, as well as the weekday of the previous week and the previous month. We chose the previous 28 hours to account for a full day, plus an additional 4 hours to account for the previous day's correlation with the day to be predicted. We could have increased the number of days provided to the algorithm. However, due to time and computational constraints, we used our previously described intuition for lagged data selection. Future work could be in selecting the optimum number of lagged inputs.
 
-In addition to this, we gave the data information with regards to six different seasons. These seasons were defined by the National Grid Short Term Operating Reserve (STOR) Market Information Report \cite{ESO2019}. These differ from the traditional four seasons by splitting autumn into two further seasons, and winter into three seasons. Finally, to predict a full 24-hours ahead, we used 24 different models, 1 for each hour of the day. 
+In addition to this, we marked each of the days with their respective six seasons. These seasons were defined by the National Grid Short Term Operating Reserve (STOR) Market Information Report \cite{ESO2019}. These differ from the traditional four seasons by splitting autumn into two further seasons, and winter into three seasons. Finally, to predict a full 24-hours ahead, we used 24 different models, 1 for each hour of the day. 
 
 
 The data is standardized and normalized using min-max scaling between -1 and 1 before training and predicting with the model.
@@ -364,14 +375,17 @@ Each machine learning algorithm has a different set of parameters to tune. To tu
 
 Tables \ref{table:hyperparameter-tuning-offline} and \ref{table:hyperparameter-tuning-online} display each of the models and respective parameters that were used in the grid search. Table \ref{table:hyperparameter-tuning-offline} shows the offline machine learning methods, whereas Table \ref{table:hyperparameter-tuning-online} displays the online machine learning methods. Each of the parameters within the columns ``Values'' are trialled with every other parameter.
 
-Whilst there is room to increase the total number of parameters, due to the exponential nature of grid-search, we chose a smaller subset of hyperparameters to choose, and a larger number of regressor types.
+Whilst there is room to increase the total number of parameters, due to the exponential nature of grid-search, we chose a smaller subset of hyperparameters, and a larger number of regressor types.
 
 
 
 
 % Please add the following required packages to your document preamble:
 % \usepackage{booktabs}
+
 \begin{table*}[]
+\centering
+\begin{adjustbox}{angle=90}
 \begin{tabular}{@{}lllllll@{}}
 \toprule
 \textbf{Regressor Type} & \textbf{Parameters} & \textbf{Values}   & \textbf{Parameters} & \textbf{Values} & \textbf{Parameters} & \textbf{Values}       \\ \midrule
@@ -387,15 +401,20 @@ Support Vector          & Kernel              & {[}linear, rbf{]} & C           
 Multilayer Perceptron   & Activation function & {[}tanh, relu{]}  & hidden layer sizes  & {[}1, 50{]}     & Alpha               & {[}0.00005, 0.0005{]} \\
 K-Neighbours            & \# Neighbours       & {[}5, 20, 50{]}   &                     &                 &                     &                       \\ \bottomrule
 \end{tabular}
+\end{adjustbox}
 \caption{Hyperparameters for offline machine learning regression algorithms}
 \label{table:hyperparameter-tuning-offline}
+
 \end{table*}
+
 
 
 
 % Please add the following required packages to your document preamble:
 % \usepackage{booktabs}
 \begin{table*}[]
+\centering
+\begin{adjustbox}{angle=90}
 \begin{tabular}{@{}llp{2.5cm}lllp{1.6cm}@{}}
 \toprule
 \textbf{Regressor Type} & \textbf{Parameters} & \textbf{Values}                                  & \textbf{Parameters} & \textbf{Values}   & \textbf{Parameters} & \textbf{Values}        \\ \midrule
@@ -407,6 +426,7 @@ Multilayer Perceptron   & Hidden layer sizes  & {[}(10, 50, 100), (10),  (20), (
                     Passive Aggressive      & C                   & {[}0.1, 1, 2{]}                                  & Fit intercept?      & {[}True, False{]} & Max iterations      & {[}1, 10, 100, 1000{]} \\
 \bottomrule
 \end{tabular}
+\end{adjustbox}
 \caption{Hyperparameters for online machine learning regression algorithms}
 \label{table:hyperparameter-tuning-online}
 \end{table*}
@@ -471,11 +491,11 @@ It can be seen that the best performing model was the Box-Cox regressor, with a 
 \begin{figure}
 %\centering
 \includegraphics[width=\columnwidth,natwidth=1300,natheight=1300]{figures/results/online_model_mae_barplot.eps}
-\caption{Comparison of mean absolute errors (MAE) for different online regressor models (the same models with different hyperparameters, but identical MAEs were removed from this figure).}
+\caption{Comparison of mean absolute errors (MAE) for different online regressor models. MLP results for all parameters are shown in a single barchat due to the very similar MAEs for the differing hyperparameters.}
 \label{fig:online_model_mae_barplot}
 \end{figure}
 
-Figure \ref{fig:best_online_learning_day_distribution} displays the best online model. We can see a significant improvement over the best online model distribution, shown in Figure \ref{fig:best_offline_learning_day_distribution}. We remain within the max tendered national grid reserve for the vast majority of the time, and the average available tendered national grid reserve is close to the 5\% and 95\% percentiles.
+Figure \ref{fig:best_online_learning_day_distribution} displays the best online model. We can see a significant improvement over the best online model distribution, shown in Figure \ref{fig:best_offline_learning_day_distribution}. We remain within the max tendered national grid reserve for 98.9\% of the time, and the average available tendered national grid reserve is close to the 5\% and 95\% percentiles.
 
 
 
@@ -491,7 +511,7 @@ Figure \ref{fig:bad_online_learning_day_distribution} displays the residuals for
 \begin{figure}
 \centering
 \includegraphics[width=\columnwidth,natwidth=500,natheight=500]{figures/results/online_learning_dists-C-0.1-fit_intercept-true-max_iter-1000-shuffle-false-tol 0.001.eps}
-\caption{Online machine learning learning algorithm distribution. (Passive Aggressive Regressor (C=0.1, fit intercept = true, maximum iterations = 1000, shuffle = false, tolerance = 0.001), chosen as it was the worst result for the passive aggressive model.}
+\caption{Online machine learning algorithm distribution. (Passive Aggressive Regressor (C=0.1, fit intercept = true, maximum iterations = 1000, shuffle = false, tolerance = 0.001), chosen as it was the worst result for the passive aggressive model.}
 \label{fig:bad_online_learning_day_distribution}
 \end{figure}
 
