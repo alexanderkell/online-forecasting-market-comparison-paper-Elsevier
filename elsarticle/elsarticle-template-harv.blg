@@ -33,41 +33,42 @@ Warning--empty journal in Hong2014
 Warning--empty journal in Huang2003
 Warning--there's a number but no volume in Tiong2008
 Warning--empty journal in Quilumba2014
+Warning--empty publisher in Witten2011
 Warning--empty journal in 316
 Warning--there's a number but no volume in DBEIS2019
 Warning--empty year in gbnationalgridstatus_2019
 Warning--empty journal in ESO2019
 Warning--there's a number but no volume in ESO2019
-You've used 42 entries,
+You've used 43 entries,
             2952 wiz_defined-function locations,
-            986 strings with 14443 characters,
-and the built_in function-call counts, 12861 in all, are:
-= -- 1259
-> -- 444
+            991 strings with 14574 characters,
+and the built_in function-call counts, 13092 in all, are:
+= -- 1274
+> -- 454
 < -- 0
-+ -- 176
-- -- 134
-* -- 1073
-:= -- 1792
-add.period$ -- 63
-call.type$ -- 42
++ -- 180
+- -- 137
+* -- 1082
+:= -- 1820
+add.period$ -- 64
+call.type$ -- 43
 change.case$ -- 42
 chr.to.int$ -- 0
-cite$ -- 52
-duplicate$ -- 335
-empty$ -- 1374
-format.name$ -- 163
-if$ -- 3215
+cite$ -- 54
+duplicate$ -- 343
+empty$ -- 1408
+format.name$ -- 167
+if$ -- 3280
 int.to.chr$ -- 0
-int.to.str$ -- 42
-missing$ -- 41
-newline$ -- 160
-num.names$ -- 42
-pop$ -- 213
+int.to.str$ -- 43
+missing$ -- 43
+newline$ -- 163
+num.names$ -- 43
+pop$ -- 224
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 785
+skip$ -- 804
 stack$ -- 0
 substring$ -- 770
 swap$ -- 97
@@ -75,8 +76,8 @@ text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 10
-while$ -- 108
-width$ -- 44
-write$ -- 384
+warning$ -- 11
+while$ -- 109
+width$ -- 45
+write$ -- 391
 (There were 5 error messages)
