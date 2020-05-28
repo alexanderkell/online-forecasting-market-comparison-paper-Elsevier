@@ -28,7 +28,6 @@ Repeated entry---line 174 of file custombibtex.bib
  : @article{dukes_511
  :                   , title={Power stations in the United Kingdom, May 2019}, author={Department for Business Energy and Industrial Strategy}, year={2019}, journal={Digest of United Kingdom Energy Statistics (DUKES)}
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "Nazarko2005ARIMAApproach"
 Warning--empty pages in Kell2018a
 Warning--empty journal in Hong2014
 Warning--empty journal in Huang2003
@@ -41,7 +40,7 @@ Warning--empty journal in ESO2019
 Warning--there's a number but no volume in ESO2019
 You've used 42 entries,
             2952 wiz_defined-function locations,
-            988 strings with 14491 characters,
+            986 strings with 14443 characters,
 and the built_in function-call counts, 12861 in all, are:
 = -- 1259
 > -- 444
