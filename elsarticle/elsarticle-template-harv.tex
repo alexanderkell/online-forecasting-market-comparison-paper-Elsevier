@@ -305,25 +305,25 @@ Artificial Neural Networks are a model which can model non-linear relationships 
 
 %Typically, a dataset is split into three sections, the test set, training set and validation set. The training set is used to find the connection weights of the network, whilst the test set is used to determine the accuracy of the models. The validation set allows for an unbiased evaluation of the model whilst tuning the hyperparameters, and can avoid overfitting by stopping training if the error begins to increase.
 
-For a univariate time series forecasting problem, suppose we have N observations $y_1, y_2, \ldots, y_N$ in the training set, and $m$ observations in the test set, $y_{N+1}, y_{N+2}, \ldots, y_{N+m}$ in the test set and we are required to predict \textit{m} periods ahead \cite{Pao2007}. 
+For a univariate time series forecasting problem, suppose we have N observations $y_1, y_2, \ldots, y_N$ in the training set, and $m$ observations in the test set, $y_{N+1}, y_{N+2}, \ldots, y_{N+m}$. In the test set and we are required to predict \textit{m} periods ahead \cite{Pao2007}. 
 
 The training patterns are as follows:
 \begin{align}
-y_{p+m} & =f(y_p, y_{p-1},\ldots,y_1)\\
-y_{p+m+1} & =f(y_{p+1}, y_{p},\ldots,y_2)\\
+y_{p+m} & =f_{W}(y_p, y_{p-1},\ldots,y_1)\\
+y_{p+m+1} & =f_{W}(y_{p+1}, y_{p},\ldots,y_2)\\
 &\vdotswithin  \notag \\
-y_{N} & =f(y_{N-m},y_{N-m-1},\ldots,y_{N-m-p+1})
+y_{N} & =f_{W}(y_{N-m},y_{N-m-1},\ldots,y_{N-m-p+1})
 \end{align}
 
-\noindent where $f_{W}(\cdot)$ represents the MLP network and $W$ are the weights. For brevity we omit $W$. 
+\noindent where $f_{W}(\cdot)$ represents the MLP network and $W$ are the weights. For brevity we omit $W$. The training patterns use previous time series points, for example, $y_p, y_{p-1},\ldots,y_1$ as the time series is univariate. That is, we only have the time series in which we can draw inferences from. In addition, these time series points are correlated, and therefore provide informtion that can be used to predict the next time point.
 
 The $m$ testing patterns are 
 
 \begin{align}
-y_{N+1} & =f(y_{N+1-m}, y_{N-m},\ldots,y_{N-m-p+2})\\
-y_{N+2} & =f(y_{N+2-m}, y_{N-m+1},\ldots,y_{N-m-p+3})\\
+y_{N+1} & =f_{W}(y_{N+1-m}, y_{N-m},\ldots,y_{N-m-p+2})\\
+y_{N+2} & =f_{W}(y_{N+2-m}, y_{N-m+1},\ldots,y_{N-m-p+3})\\
 &\vdotswithin  \notag \\
-y_{N+m} & =f(y_{N},y_{N-1},\ldots,y_{N-p+1})
+y_{N+m} & =f_{W}(y_{N},y_{N-1},\ldots,y_{N-p+1})
 \end{align}
 
 The training objective is to minimize the overall predictive mean sum of squared estimate of errors (SSE) by adjusting the connection weights. For this network structure the SSE can be written as:
@@ -333,47 +333,48 @@ SSE = \sum_{i=p+m}^N(y_i-\hat{y}_i)
 
 \noindent where $\hat{y}_i$ is the prediction from the network. The number of input nodes corresponds to the number of lagged observations. Having too few or too many input nodes can affect the predictive ability of the neural network \cite{Pao2007}.
 
+It is also possible to vary the hyperparameter, the number of input units. Typically, various different configurations of units are trialled, with the best configuration being used in production. The weights $W$ in $f_W$ are trained using a process called backpropagation, which uses labelled data and gradient descent to update and optimise the weights.
 
 \subsubsection{Box-Cox regressor}
 
-Ordinary least square is a method for estimating the unknown parameters in a linear regression model. It estimates these unknown parameters by the principle of least squares. Specifically, it minimizes the sum of the squares of the differences between the observed variables and those predicted by the linear function.
+In this subsection we discuss the Box-Cox regressor. Ordinary least square is a method for estimating the unknown parameters in a linear regression model. It estimates these unknown parameters by the principle of least squares. Specifically, it minimizes the sum of the squares of the differences between the observed variables and those predicted by the linear function.
 
 The ordinary least squares regression assumes a normal distribution of residuals. However, when this is not the case, the Box-Cox Regression may be useful \cite{Box1964}. It transforms the dependent variable using the Box-Cox Transformation function and employs maximum likelihood estimation to determine the optimal level of the power parameter lambda. The Box-Cox Regression requires that no dependent variable has any negative values.
 
-Variable selection and ordinary least squares output dialogues are identical to that of linear regression. 
+%Variable selection and ordinary least squares output dialogues are identical to that of linear regression. 
 
-The Box-Cox regression will transform the dependent variable as follows:
-
-\begin{equation}
-    y^{(\lambda)} = \frac{y^{\lambda}-1}{\lambda}\:if\:\lambda\neq0
-\end{equation}
-\begin{equation}
-    y^{(\lambda)} = Ln(y)\; if\: \lambda=0
-\end{equation}
-
-\noindent and determine the optimal value of lambda by maximising the following log-likelihood function:
-
-\begin{equation}
-    L^{(\lambda)}=-\frac{n}{2}Ln(\hat{\sigma}^2_{(\lambda)}+(\lambda - 1)\sum_{i=1}^nLn(y_i)
-\end{equation}
-
-\noindent where $\hat{\sigma}^2_{(\lambda)}$ is the estimate of the least squares variance using the transformed y variable. 
+%The Box-Cox regression will transform the dependent variable as follows:
+%
+%\begin{equation}
+%    y^{(\lambda)} = \frac{y^{\lambda}-1}{\lambda}\:if\:\lambda\neq0
+%\end{equation}
+%\begin{equation}
+%    y^{(\lambda)} = Ln(y)\; if\: \lambda=0
+%\end{equation}
+%
+%\noindent Where $\lambda$ is the power parameter, and the data vectors are $yi=(y_1,\ldots,y_n)$. The optimal value of ($\lambda$) is determined by maximising the following log-likelihood function:
+%
+%\begin{equation}
+%    L^{(\lambda)}=-\frac{n}{2}Ln(\hat{\sigma}^2_{(\lambda)}+(\lambda - 1)\sum_{i=1}^nLn(y_i)
+%\end{equation}
+%
+%\noindent where $\hat{\sigma}^2_{(\lambda)}$ is the estimate of the least squares variance using the transformed y variable. 
 
 \subsubsection{Passive-Aggressive regressor}
 
-The goal of the Passive-Aggressive (PA) algorithm is to change the model as little as possible to correct for any mistakes and low-confidence predictions it encounters \cite{Gzik2014}. Specficially, with each example PA solves the following optimisation \cite{Ma2009}:
+The goal of the Passive-Aggressive (PA) algorithm is to change itself as little as possible to correct for any mistakes and low-confidence predictions it encounters \cite{Gzik2014}. Specficially, with each example PA solves the following optimisation \cite{Ma2009}:
 
 \begin{align}
     \boldsymbol{w}_{t+1}\leftarrow argmin \frac{1}{2}\left|\left|{\boldsymbol{w}_t-\boldsymbol{w}}\right|\right|^2 \\
     s.t. \; \; y_i(\boldsymbol{w}\cdot \boldsymbol{x}_t)\geq1.
 \end{align}
 
-\noindent Updates occur when the inner product does not exceed a fixed confidence margin - i.e., $y_i(\boldsymbol{w}\cdot \boldsymbol{x}_t)\geq1$. The closed-form update for all examples is as follows:
+\noindent Where $x_t$ is the input data and $y_i$ the output data, and $w_t$ are the weights for the PA algorithm. Updates occur when the inner product does not exceed a fixed confidence margin - i.e., $y_i(\boldsymbol{w}\cdot \boldsymbol{x}_t)\geq1$. The closed-form update for all examples is as follows:
 \begin{equation}
     \boldsymbol{w}_{t+1}\leftarrow \boldsymbol{w}_{t} + \alpha_t y_t \boldsymbol{x}_t
 \end{equation}
 
-\noindent where $\alpha_t=max\left\{\frac{1-y_t(\boldsymbol{w}_t\cdot\boldsymbol{x}_t)}{\left|\left|\boldsymbol{x}_t\right|\right|^2},0\right\}$. Full details of the derivation can be found in \cite{Gzik2014}.
+\noindent where $\alpha_t=max\left\{\frac{1-y_t(\boldsymbol{w}_t\cdot\boldsymbol{x}_t)}{\left|\left|\boldsymbol{x}_t\right|\right|^2},0\right\}$. $a_t$ is derived from a derivation process which uses the Lagrange multiplier. For full details of the derivation see \cite{Gzik2014}.
 
 \subsection{Long-term Energy Market Model}
 
