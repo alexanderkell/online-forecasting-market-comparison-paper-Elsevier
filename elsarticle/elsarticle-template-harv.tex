@@ -505,7 +505,11 @@ By perturbing the market by the residuals, we can observe what the effects are o
 
 In this section, we detail the accuracy of the algorithms and statistical models to predict 24 hours ahead for the day-ahead market. In addition to this, we display the impact of the errors on electricity generation investment and electricity mix from the years 2018 to 2035 using the agent-based model ElecSim.
 
+
+
 \subsection{Offline Machine Learning}
+
+To generate these results, we use a training set to train the data, and a test set to see how well each algorithm performs on the testing data. That is, how well can the algorithm predict data it is yet to see. In our case, the training data was data from 2011 to 2017, and the testing data was data from 2017 to 2018.
 
 Figure \ref{fig:beis_elecsim_historic_comparison} displays the mean absolute error of each of the offline statistical and machine learning models on a log scale. It can be seen that the different models have varying degrees of success. The least accurate models were linear regression, the multilayer perceptron (MLP) model and the Least Angle Regression (LARS). These all have mean absolute errors over 10,000MWh. This error would be prohibitively high in practice; the max tendered national grid reserve is 6,000MWh, while the average tendered national grid reserve is 2,000MWh \cite{ESO2019}.
 
@@ -576,11 +580,16 @@ Figure \ref{fig:bad_online_learning_day_distribution} displays the residuals for
 
 \subsection{Scenario Comparison}
 
-In this section we explore the effect of these residuals on investments made and the electricity generation mix.  
+In this section we explore the effect of these residuals on investments made and the electricity generation mix.  To generate these graphs, we perturbed the exogenous demand in ElecSim by sampling from the best fitting distributions for the respective residuals of each of the online methods. We did this for all of the online learning algorithms displayed in Figure \ref{fig:online_model_mae_barplot}. We let the simulation run for 17 years from 2018 to 2035. 
+
+Running this simulation enabled us to see the effect on carbon emissions on the electricity grid over a long time period. For instance, does underestimating electricity demand mean that peaker power plants, such as reciprocal gas engines, are over utilized, when other, less polluting power plants could be used?
+
+
 
 \subsubsection{Mean Contributed Energy Generation}
 
 
+In this section we display the mean electicity mix contributed by different electricity sources over the years 2018 to 2035. 
 
 Figure \ref{fig:contributed_PV_mean_output} displays the mean photovoltaic (PV) contributed between 2018 and 2035 vs. mean absolute error of the various online regressor models displayed in Figure \ref{fig:online_model_mae_barplot}. A positive correlation can be seen with PV contributed and mean absolute error. This is similar for coal and nuclear output, shown in Figures \ref{fig:contributed_Coal_mean_output} and \ref{fig:contributed_Nuclear_mean_output} respectively. However, as shown by Figure \ref{fig:contributed_Offshore_mean_output.eps}, offshore wind reduces with mean absolute error. Figure \ref{fig:contributed_Recip_gas_mean_output} displays the mean reciprocal gas engine output vs mean absolute error between the same time period. Output for the reciprocal gas engine also increases with mean absolute error.
 
@@ -753,7 +762,7 @@ CCGT and reciprocal gas engines may have decreased in capacity over this time, d
 
 
 
-Figure \ref{fig:Carbon_emitted_mean_output} shows an increase in relative mean carbon emitted. This could be due to the increased output of utility of the reciprocal gas engine, coal, and decrease in offshore output.
+Figure \ref{fig:Carbon_emitted_mean_output} shows an increase in relative mean carbon emitted with mean absolute error of the predictions residuals. The reason for an increase in realtive carbon emitted could be due to the increased output of utility of the reciprocal gas engine, coal, and decrease in offshore output. Reciprocal gas engines are peaker plants and, along with coal, can be dispatched. By being dispatched, the errors in predictions of demand can be filled. It is therefore recommended that by improving the demand prediction algorithms, significant gains can be made in reducing carbon emissions.
 
 
 
@@ -855,7 +864,11 @@ We then measured the errors and compared these to each model as well as the nati
 
 In addition to this, we took these errors, or residuals, and perturbed the electricity market of the agent-based model ElecSim. This enabled us to see the impact of different error distributions on the long-term electricity market, both in terms of investment and in terms of electricity mix.
 
-In future work, we would like to trial a different selection of algorithms and statistical models and trial different inputs to the models, for instance, by providing the model with two months worth of historical data.
+We observed that with an increase in prediction errors, we get a higher proportion of electricity generated by coal, offshore, nuclear, reciprocal gas engines and photovoltaics. This could be due to the fact that more peaker and dispatchable plants are required to fill in for unexpected demand. In addition, a higher proportion of IRES leads to a higher use of peaker power plants to fill in the gaps of intermittency of wind and solar irradiance. However, by reducing the mean absolute error, we are able to significantly reduce the amount of reciprocal gas engines and coal.
+
+In future work, we would like to trial a different selection of algorithms and statistical models and trial different inputs to the models, for instance, by providing the model with two months worth of historical data as dependent variables. Additionally, we would like to see the impact of predicting wind speed and solar irradiance, to see how these impact the overall investment patterns and electricity mix.
+
+
 
 \section{Funding Sources}
 
@@ -875,6 +888,7 @@ This work was supported by the Engineering and Physical Sciences Research Counci
 %% If you have bibdatabase file and want bibtex to generate the
 %% bibitems, please use
 %%
+\clearpage
   \bibliographystyle{elsarticle-num} 
   \bibliography{library,bib_custom,custombibtex}
 
