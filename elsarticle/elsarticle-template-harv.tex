@@ -264,7 +264,7 @@ Elastic net is a regularization regession that linearly combines the penalities 
 
 \subsubsection{Decision tree based algorithms}
 
-The decision tree is a model which 
+The decision tree is a model which goes from observations to output using simple decision rules inferred from data features.
 
 The AdaBoost training process selects only the features of a model known to improve the predictive power of the model. By doing this, the dimensionality of the model is reduced and can improve compute time. This can be used in conjunction with multiple different models. In our paper we utilized the decision tree based algorithm with AdaBoost.
 
@@ -276,6 +276,7 @@ Random Forests differ in one way from this bagging procedure. Namely, using a mo
 
 ExtraTrees adds one further step of randomization. ExtraTrees stands for extremel randomized trees. There are two main differences between ExtraTrees and Random Forests. Namely, each tree is traing using the whole learning sample (And not a bootstrap sample), and the top-down splitting in the tree learner is randomized. That is, instead of computing an optimal cut-point for each feature, a random cut-point is selected from a uniform distribution. The split that yields the highest score is then chosen to split the node. 
 
+Gradient boosting is also an ensemble model. Gradient boosting optimize a cost-function over functin space by iteratively choosing a function that points in the negative gradient descent direction, known as a gradient descent method.
 
 \subsubsection{Support vector regression}
 
