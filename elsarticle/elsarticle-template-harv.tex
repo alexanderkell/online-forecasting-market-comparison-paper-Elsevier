@@ -237,13 +237,58 @@ Machine learning is a methodology for finding and describing structural patterns
 
 Online machine learning is a type of machine learning algorithms, that can be used on dynamic datasets, such as time-series data. In traditional machine learning algorithms, when new data is obtained, the historical and new data must be used to retrain the entire model with a new model. This can be costly both in terms of time and in computation power \cite{Li2016}. Online algorithms, therefore, avoids the repeated retraining of data and improves the learning efficiency \cite{Rong2009}. Online training can also adapt to situations where the underlying system you are predicting on is changing over time, or non-stationary.
 
-Examples of such algorithms are Passive Aggressive (PA) Regressor \cite{Gzik2014}, Linear Regression, Box-Cox Regressor \cite{Box1964}, K-Neighbors Regressor \cite{forgy65}, Softmax Regression, Multilayer perceptron regressor \cite{Hinton1989}. For our work, we trial the stated algorithms, in addition to a host of offline learning techniques. The offline techniques trialled were Lasso regression \cite{Tibshirani1996a}, ridge regression \cite{GeladiPaul1994Mrac},  Elastic Net \cite{Geostatistics2010}, Least Angle Regression \cite{Fike1988}, Extra Trees Regressor \cite{Fike1988}, Random Forest Regressor \cite{Breiman2001}, AdaBoost Regressor \cite{Freund1997}, Gradient Boosting Regressor \cite{316}, Support vector regression \cite{Cortes1995}, and online versions of Multilayer perceptron regressor, K-Neighbors regressor, linear regression.
+Examples of such algorithms are Passive Aggressive (PA) Regressor \cite{Gzik2014}, Linear Regression, Box-Cox Regressor \cite{Box1964}, K-Neighbors Regressor \cite{forgy65}, Softmax Regression, Multilayer perceptron regressor \cite{Hinton1989}. For our work, we trial the stated algorithms, in addition to a host of offline learning techniques. The offline techniques trialled were Lasso regression \cite{Tibshirani1996a}, ridge regression \cite{GeladiPaul1994Mrac},  Elastic Net \cite{Geostatistics2010}, Least Angle Regression \cite{Fike1988}, Extra Trees Regressor \cite{Fike1988}, Random Forest Regressor \cite{Breiman2001}, AdaBoost Regressor \cite{Freund1997}, Gradient Boosting Regressor \cite{316} and Support vector regression \cite{Cortes1995}%, and online versions of Multilayer perceptron regressor, K-Neighbors regressor, linear regression.
 
 We trial the previously mentioned statistical and machine learning algorithms and vary the parameters using grid search and cross-validation in the python package, scikit learn \cite{scikit-learn}.
 
 \subsection{Algorithms}
 
-In this section, we give a brief outline of the most successful online learning algorithms in this work.
+In this section, we give a brief outline of the online learning algorithms in this work.
+
+
+\subsubsection{Linear regression models}
+
+
+Linear regression is a linear approach to modelling the relationship between a dependent variable and one or more independent variables. Linear regression models are often fitted using the least squares approach. The least squares approach minimizes the sum of the squares of the residuals. 
+
+Other methods for fitting linear regressions are by minimizing a penalized version of the least squares cost function, such as in ridge and lasso regression. Ridge regression is a useful approach for mitigating the problem of multicollinearity in linear regression. Multicollinearity is where one predictor variable can be linearly predicted from the others with a high degree of accuracy. This phemomena often occurs in models with a large number of parameters. Lasso is a linear regression technique which performs both variable selection and regularization. 
+
+Elastic net is a regularization regession that linearly combines the penalities of the lasso and ridge methods. Least Angle Regression (LARS) provides a mean of producing an estimate of which variables to include in a linear regressoin, as well as their coefficients.
+
+
+\subsubsection{Boosting methods}
+
+%AdaBoost Regressor, Gradient Boosting Regressor
+
+
+
+\subsubsection{Decision tree based algorithms}
+
+The decision tree is a model which 
+
+The AdaBoost training process selects only the features of a model known to improve the predictive power of the model. By doing this, the dimensionality of the model is reduced and can improve compute time. This can be used in conjunction with multiple different models. In our paper we utilized the decision tree based algorithm with AdaBoost.
+
+Random Forests are an ensemble learning method for classification and regression. Ensemble learning methods use multiple learning algortihms to obtain better predictive performance. They work by constructing multiple decision trees at training time, and outputing the predicted value that is the mode of the predictions of the individual trees.
+
+To ensure that the individual decision trees within a Random Forest are not correlated, bagging is used to sample from the data. Bagging is the process of randomly sampling with replacement of the training set and fitting the trees. This has the benefit of reducing variance of the model without increasing the bias. 
+
+Random Forests differ in one way from this bagging procedure. Namely, using a modified tree learning algorithm that selects, at each candidate split in the learning process, a random subset of the features, known as feature bagging. Feature bagging is undertaken due to the fact that some predictors with a high predictive ability may be selected many times by the individual trees, leading to a highly correlated Random Forest.
+
+ExtraTrees adds one further step of randomization. ExtraTrees stands for extremel randomized trees. There are two main differences between ExtraTrees and Random Forests. Namely, each tree is traing using the whole learning sample (And not a bootstrap sample), and the top-down splitting in the tree learner is randomized. That is, instead of computing an optimal cut-point for each feature, a random cut-point is selected from a uniform distribution. The split that yields the highest score is then chosen to split the node. 
+
+
+\subsubsection{Support vector regression}
+
+Support vector regression is an algorithm which finds a hyperplane and decision boundary to map an input domain to an output. The hyperplane is chosen by minimizing the error within a certain tolerance.
+
+\subsubsection{K-Neighbors Regressor}
+
+K-Neighbors regression is a non-parametric method used for regression. The input consists of the \textit{k} closest training examples in the feature space. The output is the average value of the \textit{k} nearest neighbours.
+
+
+
+
+
 
 \subsubsection{Multilayer perceptron}
 
@@ -466,7 +511,7 @@ A number of models, however, perform well, with a low mean absolute error. These
 
 \begin{figure}
 \centering
-\includegraphics[width=\columnwidth]{figures/results/offline_model_mae.eps}
+\includegraphics[width=\columnwidth,natwidth=500,natheight=500]{figures/results/offline_model_mae.eps}
 \caption{Offline models mean absolute error comparison, with 95\% confidence interval for 5 runs of each model.}
 \label{fig:beis_elecsim_historic_comparison}
 \end{figure}
