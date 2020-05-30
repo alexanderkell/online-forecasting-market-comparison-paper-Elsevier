@@ -41,7 +41,7 @@ Warning--empty journal in ESO2019
 Warning--there's a number but no volume in ESO2019
 You've used 44 entries,
             2952 wiz_defined-function locations,
-            997 strings with 14885 characters,
+            997 strings with 14886 characters,
 and the built_in function-call counts, 13361 in all, are:
 = -- 1299
 > -- 467
