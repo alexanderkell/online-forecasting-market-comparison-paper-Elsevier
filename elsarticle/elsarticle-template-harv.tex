@@ -250,9 +250,9 @@ In this Section, we give a brief outline of the online learning algorithms in th
 \subsubsection{Linear regression models}
 
 
-Linear regression is a linear approach to modelling the relationship between a dependent variable and one or more independent variables. Linear regression models are often fitted using the least squares approach. The least squares approach minimizes the sum of the squares of the residuals. 
+Linear regression is a linear approach to modelling the relationship between a dependent variable and one or more independent variables. Linear regressions can be used for both online and offline learning. In this work we used them for both online and offline learning. Linear regression models are often fitted using the least squares approach. The least squares approach minimizes the sum of the squares of the residuals. 
 
-Other methods for fitting linear regressions are by minimizing a penalized version of the least squares cost function, such as in ridge and lasso regression. Ridge regression is a useful approach for mitigating the problem of multicollinearity in linear regression. Multicollinearity is where one predictor variable can be linearly predicted from the others with a high degree of accuracy. This phenomena often occurs in models with a large number of parameters. Lasso is a linear regression technique which performs both variable selection and regularization. 
+Other methods for fitting linear regressions are by minimizing a penalized version of the least squares cost function, such as in ridge and lasso regression \cite{GeladiPaul1994Mrac, Tibshirani1996a}. Ridge regression is a useful approach for mitigating the problem of multicollinearity in linear regression. Multicollinearity is where one predictor variable can be linearly predicted from the others with a high degree of accuracy. This phenomena often occurs in models with a large number of parameters. Lasso is a linear regression technique which performs both variable selection and regularization. 
 
 Elastic net is a regularization regression that linearly combines the penalities of the lasso and ridge methods. Least Angle Regression (LARS) provides a mean of producing an estimate of which variables to include in a linear regression, as well as their coefficients.
 
@@ -265,30 +265,30 @@ Elastic net is a regularization regression that linearly combines the penalities
 
 \subsubsection{Decision tree based algorithms}
 
-The decision tree is a model which goes from observations to output using simple decision rules inferred from data features.
+The decision tree is a model which goes from observations to output using simple decision rules inferred from data features \cite{Quinlan}.
 
-The AdaBoost training process selects only the features of a model known to improve the predictive power of the model. By doing this, the dimensionality of the model is reduced and can improve compute time. This can be used in conjunction with multiple different models. In our paper, we utilized the decision tree based algorithm with AdaBoost.
+The AdaBoost training process selects only the features of a model known to improve the predictive power of the model \cite{Freund1997}. By doing this, the dimensionality of the model is reduced and can improve compute time. This can be used in conjunction with multiple different models. In our paper, we utilized the decision tree based algorithm with AdaBoost.
 
-Random Forests are an ensemble learning method for classification and regression. Ensemble learning methods use multiple learning algorithms to obtain better predictive performance. They work by constructing multiple decision trees at training time, and outputting the predicted value that is the mode of the predictions of the individual trees.
+Random Forests are an ensemble learning method for classification and regression \cite{Breiman2001}. Ensemble learning methods use multiple learning algorithms to obtain better predictive performance. They work by constructing multiple decision trees at training time, and outputting the predicted value that is the mode of the predictions of the individual trees.
 
 To ensure that the individual decision trees within a Random Forest are not correlated, bagging is used to sample from the data. Bagging is the process of randomly sampling with replacement of the training set and fitting the trees. This has the benefit of reducing the variance of the model without increasing the bias. 
 
 Random Forests differ in one way from this bagging procedure. Namely, using a modified tree learning algorithm that selects, at each candidate split in the learning process, a random subset of the features, known as feature bagging. Feature bagging is undertaken due to the fact that some predictors with a high predictive ability may be selected many times by the individual trees, leading to a highly correlated Random Forest.
 
-ExtraTrees adds one further step of randomization. ExtraTrees stands for extremely randomized trees. There are two main differences between ExtraTrees and Random Forests. Namely, each tree is trained using the whole learning sample (And not a bootstrap sample), and the top-down splitting in the tree learner is randomized. That is, instead of computing an optimal cut-point for each feature, a random cut-point is selected from a uniform distribution. The split that yields the highest score is then chosen to split the node. 
+ExtraTrees adds one further step of randomization \cite{Fike1988}. ExtraTrees stands for extremely randomized trees. There are two main differences between ExtraTrees and Random Forests. Namely, each tree is trained using the whole learning sample (And not a bootstrap sample), and the top-down splitting in the tree learner is randomized. That is, instead of computing an optimal cut-point for each feature, a random cut-point is selected from a uniform distribution. The split that yields the highest score is then chosen to split the node. 
 
 
 \subsubsection{Gradient Boosting}
 
-Gradient boosting is also an ensemble model. Gradient boosting optimize a cost-function over function space by iteratively choosing a function that points in the negative gradient descent direction, known as a gradient descent method.
+Gradient boosting is also an ensemble model \cite{316}. Gradient boosting optimize a cost-function over function space by iteratively choosing a function that points in the negative gradient descent direction, known as a gradient descent method.
 
 \subsubsection{Support vector regression}
 
-Support vector regression is an algorithm which finds a hyperplane and decision boundary to map an input domain to an output. The hyperplane is chosen by minimizing the error within a certain tolerance.
+Support vector regression is an algorithm which finds a hyperplane and decision boundary to map an input domain to an output \cite{Cortes1995}. The hyperplane is chosen by minimizing the error within a certain tolerance.
 
 \subsubsection{K-Neighbors Regressor}
 
-K-Neighbors regression is a non-parametric method used for regression. The input consists of a new data point and the algorithm finds the \textit{k} closest training examples in the feature space. The output is the average value of the \textit{k} nearest neighbours.
+K-Neighbors regression is a non-parametric method used for regression \cite{forgy65}. The input consists of a new data point and the algorithm finds the \textit{k} closest training examples in the feature space. The output is the average value of the \textit{k} nearest neighbours.
 
 
 
@@ -302,6 +302,7 @@ K-Neighbors regression is a non-parametric method used for regression. The input
     \label{fig:mlp}
 \end{figure}
 
+A neural network can be used in both offline and online cases. In this work we used them for both online and offline.
 
 Artificial Neural Networks are a model which can model non-linear relationships between input and output data \cite{Akaike1974}. A popular neural network is a feed-forward multilayer perceptron. Fig. \ref{fig:mlp} shows a three-layer feed-forward neural network with a single output unit, \textit{k} hidden units, $n$ input units. $w_{ij}$ is the connection weight from the $i^{th}$ input unit to the $j^{th}$ hidden unit,  and $T_j$ is the connecting weight from the $j^{th}$ hidden unit to the output unit \cite{Pao2007}. These weights transform the input variables in the first layer to the output variable in the final layer using the training data. 
 
@@ -336,6 +337,10 @@ SSE = \sum_{i=p+m}^N(y_i-\hat{y}_i)
 \noindent where $\hat{y}_i$ is the prediction from the network. The number of input nodes corresponds to the number of lagged observations. Having too few or too many input nodes can affect the predictive ability of the neural network \cite{Pao2007}.
 
 It is also possible to vary the hyperparameter, the number of input units. Typically, various different configurations of units are trialled, with the best configuration being used in production. The weights $W$ in $f_W$ are trained using a process called backpropagation, which uses labelled data and gradient descent to update and optimize the weights.
+
+\subsection{Online Algorithms}
+
+In this section we discuss the algorithms which were used exclusively for online learning in this work.
 
 \subsubsection{Box-Cox regressor}
 
@@ -860,7 +865,7 @@ Additionally, the impact on the broader electricity market has been shown to be 
 \section{Conclusion}
 \label{sec:conclusion}
 
-In this paper, we trialled 16 different machine learning and statistical models to predict electricity demand in the UK for the day-ahead market. Specifically, we used both online and offline algorithms to predict electricity demand 24 hours ahead. We compared the ability for linear regressions, lasso regression, random forests, support vector regression, multilayer perceptron, Box-Cox transformation and the passive aggressive regressor, amongst others. The Box-Cox as well as the passive aggressive regressors were used as online learning algorithms, the multilayer perceptron and linear regression were used as both, whereas the rest were used as offline learning algorithms.
+In this paper, we trialled 16 different machine learning and statistical models to predict electricity demand in the UK for the day-ahead market. Specifically, we used both online and offline algorithms to predict electricity demand 24 hours ahead. We compared the ability for the offline models: lasso regression, random forests, support vector regression, for both online and offline learning: linear regression, multilayer perceptron and for just online learning:s Box-Cox transformation and the passive aggressive regressor, amongst others. The Box-Cox as well as the passive aggressive regressors were used as online learning algorithms, the multilayer perceptron and linear regression were used as both, whereas the rest were used as offline learning algorithms.
 
 Next, we measured the errors and compared these to each model as well as the national grid reserve. We found that through the use of an online learning approach, we were able to significantly reduce error by 30\% on the best offline algorithm.  We were also able to reduce our errors to significantly below the national grid's mean and maximum tendered reserve.
 
