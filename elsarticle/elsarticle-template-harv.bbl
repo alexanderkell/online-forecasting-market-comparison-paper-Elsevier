@@ -285,6 +285,10 @@ F.~Pedregosa, G.~Varoquaux, A.~Gramfort, V.~Michel, B.~Thirion, O.~Grisel,
 \bibitem{creme}
 {Creme}, https://pypi.org/project/creme/ (2019).
 
+\bibitem{Quinlan}
+J.~R. Quinlan, C4.5: Programs for Machine Learning, Morgan Kaufmann Publishers
+  Inc., San Francisco, CA, USA, 1993.
+
 \bibitem{Akaike1974}
 H.~Akaike, {A New Look at the Statistical Model Identification}, IEEE
   Transactions on Automatic Control 19~(6) (1974) 716--723.
