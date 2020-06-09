@@ -107,6 +107,16 @@ H.~Nguyen, C.~K. Hansen,
   {\path{doi:10.1109/ICPHM.2017.7998331}}.
 \newline\urlprefix\url{http://ieeexplore.ieee.org/document/7998331/}
 
+\bibitem{Fard2014}
+A.~K. Fard, M.-R. Akbari-Zadeh,
+  \href{http://www.tandfonline.com/doi/abs/10.1080/0952813X.2013.813976}{{A
+  hybrid method based on wavelet, ANN and ARIMA model for short-term load
+  forecasting}}, Journal of Experimental {\&} Theoretical Artificial
+  Intelligence 26~(2) (2014) 167--182.
+\newblock \href {https://doi.org/10.1080/0952813X.2013.813976}
+  {\path{doi:10.1080/0952813X.2013.813976}}.
+\newline\urlprefix\url{http://www.tandfonline.com/doi/abs/10.1080/0952813X.2013.813976}
+
 \bibitem{Humeau2013}
 S.~Humeau, T.~K. Wijaya, M.~Vasirani, K.~Aberer, {Electricity load forecasting
   for residential customers: Exploiting aggregation and correlation between
