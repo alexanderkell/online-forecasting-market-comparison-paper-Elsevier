@@ -183,20 +183,6 @@ P.~{Goncalves Da Silva}, D.~Ilic, S.~Karnouskos, {The Impact of Smart Grid
 I.~H. Witten, E.~Frank, M.~a. Hall, {Data Mining: Practical Machine Learning
   Tools and Techniques}, 2011.
 
-\bibitem{Li2016}
-Y.~Li, P.~Guo, X.~Li, {Short-Term Load Forecasting Based on the Analysis of
-  User Electricity Behavior}, Algorithms 9~(4) (2016) 1--14.
-\newblock \href {https://doi.org/10.3390/a9040080}
-  {\path{doi:10.3390/a9040080}}.
-
-\bibitem{Rong2009}
-H.~J. Rong, G.~B. Huang, N.~Sundararajan, P.~Saratchandran, H.~J. Rong, {Online
-  Sequential Fuzzy Extreme Learning Machine for Function Approximation and
-  Classification Problems}, IEEE Transactions on Systems, Man, and Cybernetics,
-  Part B: Cybernetics 39~(4) (2009) 1067--1072.
-\newblock \href {https://doi.org/10.1109/TSMCB.2008.2010506}
-  {\path{doi:10.1109/TSMCB.2008.2010506}}.
-
 \bibitem{Gzik2014}
 K.~Crammer, O.~Dekel, J.~Keshet, S.~Shalev-Shwartz, Y.~Singer, {Online
   Passive-Aggressive Algorithms}, Journal of Machine Learning Research (2006).
