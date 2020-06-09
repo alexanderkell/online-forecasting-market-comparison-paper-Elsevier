@@ -107,15 +107,27 @@ H.~Nguyen, C.~K. Hansen,
   {\path{doi:10.1109/ICPHM.2017.7998331}}.
 \newline\urlprefix\url{http://ieeexplore.ieee.org/document/7998331/}
 
+\bibitem{Chen2004}
+B.-j. Chen, M.-w. Chang, C.-j. Lin, {Load Forecasting Using Support Vector
+  Machines : A Study on EUNITE Competition 2001}, IEEE Transactions on Power
+  Systems 19~(4) (2004) 1821--1830.
+
+\bibitem{Gross1987}
+G.~Gross, F.~Galiana, {Short-term load forecasting}, Proceedings of the IEEE
+  75~(12) (1987) 1558--1573.
+\newblock \href {https://doi.org/10.1109/PROC.1987.13927}
+  {\path{doi:10.1109/PROC.1987.13927}}.
+
+\bibitem{Ghofrani}
+M.~Ghofrani, M.~Hassanzadeh, M.~S. Fadali, {Smart Meter Based Short-Term Load
+  Forecasting for Residential Customers}  13--17.
+
 \bibitem{Fard2014}
-A.~K. Fard, M.-R. Akbari-Zadeh,
-  \href{http://www.tandfonline.com/doi/abs/10.1080/0952813X.2013.813976}{{A
-  hybrid method based on wavelet, ANN and ARIMA model for short-term load
-  forecasting}}, Journal of Experimental {\&} Theoretical Artificial
-  Intelligence 26~(2) (2014) 167--182.
+A.~K. Fard, M.-R. Akbari-Zadeh, {A hybrid method based on wavelet, ANN and
+  ARIMA model for short-term load forecasting}, Journal of Experimental {\&}
+  Theoretical Artificial Intelligence 26~(2) (2014) 167--182.
 \newblock \href {https://doi.org/10.1080/0952813X.2013.813976}
   {\path{doi:10.1080/0952813X.2013.813976}}.
-\newline\urlprefix\url{http://www.tandfonline.com/doi/abs/10.1080/0952813X.2013.813976}
 
 \bibitem{Humeau2013}
 S.~Humeau, T.~K. Wijaya, M.~Vasirani, K.~Aberer, {Electricity load forecasting
@@ -244,12 +256,19 @@ C.~Cortes, V.~Vapnik, {Support-Vector Networks}, Machine Learning 20~(3) (1995)
   {https://doi.org/10.1023/A:1022627411411}
   {\path{doi:10.1023/A:1022627411411}}.
 
+\bibitem{Kell2018}
+A.~Kell, A.~S. Mcgough, M.~Forshaw, {Segmenting Residential Smart Meter Data
+  for Short-Term Load Forecasting}, e-Energy Conference (2018) 91--96.
+
 \bibitem{scikit-learn}
 F.~Pedregosa, G.~Varoquaux, A.~Gramfort, V.~Michel, B.~Thirion, O.~Grisel,
   M.~Blondel, P.~Prettenhofer, R.~Weiss, V.~Dubourg, J.~Vanderplas, A.~Passos,
   D.~Cournapeau, M.~Brucher, M.~Perrot, E.~Duchesnay, Scikit-learn: Machine
   learning in {P}ython, Journal of Machine Learning Research 12 (2011)
   2825--2830.
+
+\bibitem{creme}
+{Creme}, https://pypi.org/project/creme/ (2019).
 
 \bibitem{Akaike1974}
 H.~Akaike, {A New Look at the Statistical Model Identification}, IEEE
