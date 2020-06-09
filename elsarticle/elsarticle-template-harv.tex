@@ -46,11 +46,12 @@
 \usepackage{xcolor}
 \usepackage{csvsimple,booktabs}
 \usepackage{graphicx}
-
+\usepackage{lscape}
 \usepackage{algorithm}
 \usepackage{algorithmicx}
 \usepackage{algpseudocode}
 \usepackage{adjustbox}
+\usepackage{rotating}
 
 \usepackage{subcaption}
 \usepackage{mwe}
@@ -436,13 +437,10 @@ Whilst there is room to increase the total number of parameters, due to the expo
 
 
 
-
-% Please add the following required packages to your document preamble:
-% \usepackage{booktabs}
-
-\begin{table*}[]
+%\begin{landscape}
+\begin{sidewaystable*}[p]
 \centering
-\begin{adjustbox}{angle=90}
+%\begin{adjustbox}{angle=90}
 \begin{tabular}{@{}lllllll@{}}
 \toprule
 \textbf{Regressor Type} & \textbf{Parameters} & \textbf{Values}   & \textbf{Parameters} & \textbf{Values} & \textbf{Parameters} & \textbf{Values}       \\ \midrule
@@ -457,21 +455,20 @@ Gradient Boosting       & \# Estimators       & {[}16, 32{]}      & learning rat
 Support Vector          & Kernel              & {[}linear, rbf{]} & C                   & {[}1, 10{]}     & Gamma               & {[}0.001, 0.0001{]}   \\
 Multilayer Perceptron   & Activation function & {[}tanh, relu{]}  & hidden layer sizes  & {[}1, 50{]}     & Alpha               & {[}0.00005, 0.0005{]} \\
 K-Neighbours            & \# Neighbours       & {[}5, 20, 50{]}   &                     &                 &                     &                       \\ \bottomrule
-\end{tabular}
-\end{adjustbox}
+\end{tabular}%
+%\end{adjustbox}
 \caption{Hyperparameters for offline machine learning regression algorithms}
 \label{table:hyperparameter-tuning-offline}
 
-\end{table*}
+%\end{sidewaystable}%
 
+%\quad
+\qquad
+\qquad
 
-
-
-% Please add the following required packages to your document preamble:
-% \usepackage{booktabs}
-\begin{table*}[]
+%\begin{sidewaystable}
 \centering
-\begin{adjustbox}{angle=90}
+%\begin{adjustbox}{angle=90}
 \begin{tabular}{@{}llp{2.5cm}lllp{1.6cm}@{}}
 \toprule
 \textbf{Regressor Type} & \textbf{Parameters} & \textbf{Values}                                  & \textbf{Parameters} & \textbf{Values}   & \textbf{Parameters} & \textbf{Values}        \\ \midrule
@@ -481,12 +478,12 @@ Multilayer Perceptron   & Hidden layer sizes  & {[}(10, 50, 100), (10),  (20), (
                     &                   &                     &                        \\ 
                     Passive Aggressive      & C                   & {[}0.1, 1, 2{]}                                  & Fit intercept?      & {[}True, False{]} & Max iterations      & {[}1, 10, 100, 1000{]} \\
 \bottomrule
-\end{tabular}
-\end{adjustbox}
+\end{tabular}%
+%\end{adjustbox}
 \caption{Hyperparameters for online machine learning regression algorithms}
 \label{table:hyperparameter-tuning-online}
-\end{table*}
-
+\end{sidewaystable*}%
+%\end{landscape}
 
 
 \subsection{Prediction Residuals in ElecSim}

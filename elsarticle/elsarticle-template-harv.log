@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.4.22)  9 JUN 2020 11:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.4.22)  9 JUN 2020 12:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -612,6 +612,8 @@ Package shellesc Info: Restricted shell escape enabled on input line 77.
 \c@csvrow=\count285
 \c@csvcol=\count286
 \csv@out=\write4
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 ) (/usr/local/texlive/2020/texmf-dist/tex/latex/algorithms/algorithm.sty
 Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating environment
  (/usr/local/texlive/2020/texmf-dist/tex/latex/float/float.sty
@@ -685,7 +687,14 @@ Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \sift@deathcycles=\count298
 \@vwid@loff=\dimen257
 \@vwid@roff=\dimen258
-)) (/usr/local/texlive/2020/texmf-dist/tex/latex/caption/subcaption.sty
+)) (/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/rotating.sty
+Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
+\c@r@tfl@t=\count299
+\rotFPtop=\skip76
+\rotFPbot=\skip77
+\rot@float@box=\box62
+\rot@mess@toks=\toks40
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2020/01/22 v1.3d Sub-captions (AR)
  (/usr/local/texlive/2020/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2020/01/03 v3.4h Customizing captions (AR)
@@ -701,12 +710,13 @@ Package caption3 Info: TeX engine: e-TeX on input line 61.
 \caption@hangindent=\dimen265
 Package caption Info: elsarticle document class detected.
 )
-\c@caption@flags=\count299
-\c@continuedfloat=\count300
+\c@caption@flags=\count300
+\c@continuedfloat=\count301
 Package caption Info: float package is loaded.
+Package caption Info: rotating package is loaded.
 )
-\c@subfigure=\count301
-\c@subtable=\count302
+\c@subfigure=\count302
+\c@subtable=\count303
 ) (/usr/local/texlive/2020/texmf-dist/tex/latex/mwe/mwe.sty
 Package: mwe 2018/03/30 v0.5 Package to support minimal working examples (MWE)
  (/usr/local/texlive/2020/texmf-dist/tex/latex/lipsum/lipsum.sty
@@ -718,58 +728,58 @@ Package: blindtext 2012/01/06 V2.0 blindtext-Package
  (/usr/local/texlive/2020/texmf-dist/tex/latex/tools/xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 )
-\c@blindtext=\count303
-\c@Blindtext=\count304
-\c@blind@countparstart=\count305
-\blind@countxx=\count306
-\blindtext@numBlindtext=\count307
-\blind@countyy=\count308
-\c@blindlist=\count309
-\c@blindlistlevel=\count310
-\c@blindlist@level=\count311
-\blind@listitem=\count312
-\c@blind@listcount=\count313
-\c@blind@levelcount=\count314
-\blind@mathformula=\count315
-\blind@Mathformula=\count316
-\c@blind@randomcount=\count317
-\c@blind@randommax=\count318
-\c@blind@pangramcount=\count319
-\c@blind@pangrammax=\count320
+\c@blindtext=\count304
+\c@Blindtext=\count305
+\c@blind@countparstart=\count306
+\blind@countxx=\count307
+\blindtext@numBlindtext=\count308
+\blind@countyy=\count309
+\c@blindlist=\count310
+\c@blindlistlevel=\count311
+\c@blindlist@level=\count312
+\blind@listitem=\count313
+\c@blind@listcount=\count314
+\c@blind@levelcount=\count315
+\blind@mathformula=\count316
+\blind@Mathformula=\count317
+\c@blind@randomcount=\count318
+\c@blind@randommax=\count319
+\c@blind@pangramcount=\count320
+\c@blind@pangrammax=\count321
 )) (./elsarticle-template-harv.aux)
 \openout1 = `elsarticle-template-harv.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 65.
-LaTeX Font Info:    Trying to load font information for OML+txmi on input line 65.
+LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 66.
+LaTeX Font Info:    Trying to load font information for OML+txmi on input line 66.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 65.
-LaTeX Font Info:    Trying to load font information for OMS+txsy on input line 65.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 66.
+LaTeX Font Info:    Trying to load font information for OMS+txsy on input line 66.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/txfonts/omstxsy.fd
 File: omstxsy.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 65.
-LaTeX Font Info:    Trying to load font information for OMX+txex on input line 65.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 66.
+LaTeX Font Info:    Trying to load font information for OMX+txex on input line 66.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/txfonts/omxtxex.fd
 File: omxtxex.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 65.
-LaTeX Font Info:    Trying to load font information for U+txexa on input line 65.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 66.
+LaTeX Font Info:    Trying to load font information for U+txexa on input line 66.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/txfonts/utxexa.fd
 File: utxexa.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Trying to load font information for OT1+txr on input line 65.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Trying to load font information for OT1+txr on input line 66.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/txfonts/ot1txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
 )
@@ -810,26 +820,26 @@ File: ot1txr.fd 2000/12/15 v3.1
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
-Package chemgreek Info: Activating mapping `default' on line 65.
+Package chemgreek Info: Activating mapping `default' on line 66.
 
 ABD: EveryShipout initializing macros
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <10> not available
-(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 100.
-LaTeX Font Info:    Trying to load font information for U+txmia on input line 144.
+(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 101.
+LaTeX Font Info:    Trying to load font information for U+txmia on input line 145.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/txfonts/utxmia.fd
 File: utxmia.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 144.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 145.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 144.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 145.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+txsyc on input line 144.
+LaTeX Font Info:    Trying to load font information for U+txsyc on input line 145.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/txfonts/utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
 )
@@ -844,7 +854,7 @@ Overfull \hbox (1.90001pt too wide) has occurred while \output is active
 
 
 ]
-Underfull \hbox (badness 1655) in paragraph at lines 184--185
+Underfull \hbox (badness 1655) in paragraph at lines 185--186
 \OT1/txr/m/n/10 on-shore, pho-to-voltaics, re-cip-ro-cal gas en-gines and
  []
 
@@ -852,44 +862,35 @@ Underfull \hbox (badness 1655) in paragraph at lines 184--185
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [2] [3] [4]
-Underfull \hbox (badness 1783) in paragraph at lines 277--278
+Underfull \hbox (badness 1783) in paragraph at lines 278--279
 []\OT1/txr/m/n/10 ExtraTrees adds one fur-ther step of ran-dom-iza-
  []
 
 File: figures/methods/Kell_eEnergy_Fig1.eps Graphic file (type eps)
 <figures/methods/Kell_eEnergy_Fig1.eps>
-Underfull \hbox (badness 2753) in paragraph at lines 309--310
+Underfull \hbox (badness 2753) in paragraph at lines 310--311
 \OT1/txr/m/n/10 sup-pose we have N ob-ser-va-tions $\OML/txmi/m/it/10 y[]; y[]; [] ; y[]$ \OT1/txr/m/n/10 in
  []
 
 [5]
 File: figures/methods/System_overview_large.png Graphic file (type eps)
  <figures/methods/System_overview_large.png>
-Overfull \hbox (2.638pt too wide) in paragraph at lines 394--395
+Overfull \hbox (2.638pt too wide) in paragraph at lines 395--396
 [][] 
  []
 
 [6]
-Underfull \hbox (badness 6893) in paragraph at lines 429--430
+Underfull \hbox (badness 6893) in paragraph at lines 430--431
 []\OT1/txr/m/n/10 To find the op-ti-mum hy-per-pa-ram-e-ters, cross-
  []
 
 [7]
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 443.
-
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 472.
-
-
-Underfull \hbox (badness 4805) in paragraph at lines 480--480
+Underfull \hbox (badness 4805) in paragraph at lines 477--477
 []\OT1/txr/m/n/10 [(10, 50, 100),
  []
 
 
-Underfull \hbox (badness 1226) in paragraph at lines 480--480
+Underfull \hbox (badness 1226) in paragraph at lines 477--477
 \OT1/txr/m/n/10 (10), (20), (50),
  []
 
@@ -898,14 +899,14 @@ File: figures/results/offline_model_mae.eps Graphic file (type eps)
 File: figures/results/ExtraTreesRegressor_distribution_plot.eps Graphic file (type eps)
  <figures/results/ExtraTreesRegressor_distribution_plot.eps>
 File: figures/results/online_model_mae_barplot.eps Graphic file (type eps)
- <figures/results/online_model_mae_barplot.eps> [8] [9] [10]
+ <figures/results/online_model_mae_barplot.eps> [8] [9]
 File: figures/results/online_learning_dists-power-0.1.eps Graphic file (type eps)
  <figures/results/online_learning_dists-power-0.1.eps>
 File: figures/results/online_learning_dists-C-0.1-fit_intercept-true-max_iter-1000-shuffle-false-tol 0.001.eps Graphic file (type eps)
  <figures/results/online_learning_dists-C-0.1-fit_intercept-true-max_iter-1000-shuffle-false-tol 0.001.eps>
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [11]
+ [10]
 File: figures/results/elecsim_results/results_2/contributed_PV_mean_output.eps Graphic file (type eps)
  <figures/results/elecsim_results/results_2/contributed_PV_mean_output.eps>
 File: figures/results/elecsim_results/results_2/contributed_Coal_mean_output.eps Graphic file (type eps)
@@ -934,7 +935,7 @@ File: figures/results/elecsim_results/results_2/total_PV_mean_output.eps Graphic
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[12]
+[11]
 File: figures/results/elecsim_results/results_2/total_Recip_gas_mean_output.eps Graphic file (type eps)
  <figures/results/elecsim_results/results_2/total_Recip_gas_mean_output.eps>
 File: figures/results/elecsim_results/results_2/Carbon_emitted_mean_output.eps Graphic file (type eps)
@@ -942,12 +943,12 @@ File: figures/results/elecsim_results/results_2/Carbon_emitted_mean_output.eps G
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[13] (./elsarticle-template-harv.bbl
+[12] (./elsarticle-template-harv.bbl
 Overfull \hbox (5.10028pt too wide) in paragraph at lines 15--22
 \OT1/txr/m/n/8 URL \OT1/cmtt/m/n/8 http://dx.doi.org/10.1016/j.procs.2014.05.450 
  []
 
-[14]
+[13]
 Underfull \hbox (badness 2351) in paragraph at lines 51--56
 \OT1/txr/m/n/8 A re-view, ICPCES 2012 - 2012 2nd In-ter-na-tional Con-
  []
@@ -1063,7 +1064,7 @@ Underfull \hbox (badness 1533) in paragraph at lines 252--258
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [15]
+ [14]
 Underfull \hbox (badness 2057) in paragraph at lines 274--280
 []\OT1/txr/m/n/8 H. Akaike, A New Look at the Sta-tis-ti-cal Model Iden-
  []
@@ -1078,16 +1079,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 274--280
 \OT1/txr/m/n/8 19 (6) (1974) 716--723.  arXiv:arXiv:1011.1669v3,
  []
 
-) [16
+) [15
 
-] (./elsarticle-template-harv.aux) ) 
+] (./elsarticle-template-harv.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 11037 strings out of 480609
- 192785 string characters out of 5903656
- 639356 words of memory out of 5000000
- 26695 multiletter control sequences out of 15000+600000
+ 11114 strings out of 480609
+ 193928 string characters out of 5903656
+ 640509 words of memory out of 5000000
+ 26766 multiletter control sequences out of 15000+600000
  558176 words of font info for 100 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,15n,100p,1231b,543s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on elsarticle-template-harv.dvi (16 pages, 89868 bytes).
+Output written on elsarticle-template-harv.dvi (15 pages, 89488 bytes).
