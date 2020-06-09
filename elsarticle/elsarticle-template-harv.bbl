@@ -80,6 +80,20 @@ A.~J.~M. Kell, M.~Forshaw, A.~S. McGough, {Long-Term Electricity Market Agent
   Eleventh ACM International Conference on Future Energy Systems (e-Energy'20)
   (2020).
 
+\bibitem{Ahmad2017}
+M.~W. Ahmad, M.~Mourshed, Y.~Rezgui,
+  \href{http://dx.doi.org/10.1016/j.enbuild.2017.04.038}{{Trees vs Neurons:
+  Comparison between random forest and ANN for high-resolution prediction of
+  building energy consumption}}, Energy and Buildings 147 (2017) 77--89.
+\newblock \href {https://doi.org/10.1016/j.enbuild.2017.04.038}
+  {\path{doi:10.1016/j.enbuild.2017.04.038}}.
+\newline\urlprefix\url{http://dx.doi.org/10.1016/j.enbuild.2017.04.038}
+
+\bibitem{Chen2004}
+B.-j. Chen, M.-w. Chang, C.-j. Lin, {Load Forecasting Using Support Vector
+  Machines : A Study on EUNITE Competition 2001}, IEEE Transactions on Power
+  Systems 19~(4) (2004) 1821--1830.
+
 \bibitem{Kim2000}
 K.-h. Kim, H.-s. Youn, S.~Member, Y.-c. Kang, {Short-term load forecasting for
   special days in anomalous load conditions using neural networks}, IEEE
@@ -106,11 +120,6 @@ H.~Nguyen, C.~K. Hansen,
   {https://doi.org/10.1109/ICPHM.2017.7998331}
   {\path{doi:10.1109/ICPHM.2017.7998331}}.
 \newline\urlprefix\url{http://ieeexplore.ieee.org/document/7998331/}
-
-\bibitem{Chen2004}
-B.-j. Chen, M.-w. Chang, C.-j. Lin, {Load Forecasting Using Support Vector
-  Machines : A Study on EUNITE Competition 2001}, IEEE Transactions on Power
-  Systems 19~(4) (2004) 1821--1830.
 
 \bibitem{Gross1987}
 G.~Gross, F.~Galiana, {Short-term load forecasting}, Proceedings of the IEEE
@@ -155,6 +164,12 @@ J.~Schmitt, M.~Hollick, C.~Roos, R.~Steinmetz, {Adapting the user context in
   Mobile Networks and Applications 13~(6) (2008) 583--598.
 \newblock \href {https://doi.org/10.1007/s11036-008-0095-8}
   {\path{doi:10.1007/s11036-008-0095-8}}.
+
+\bibitem{Widmer1996}
+G.~Widmer, {Learning in the presence of concept drift and hidden contexts},
+  Machine Learning 23~(1) (1996) 69--101.
+\newblock \href {https://doi.org/10.1007/bf00116900}
+  {\path{doi:10.1007/bf00116900}}.
 
 \bibitem{GoncalvesDaSilva2014}
 P.~{Goncalves Da Silva}, D.~Ilic, S.~Karnouskos, {The Impact of Smart Grid
