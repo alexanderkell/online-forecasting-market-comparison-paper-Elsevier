@@ -363,7 +363,7 @@ K-Neighbors regression is a non-parametric method used for regression \cite{forg
 
 \begin{figure}
 \centering
-    \includegraphics[width=0.4\textwidth]{figures/methods/Kell_eEnergy_Fig1.eps}
+    \includegraphics[width=0.4\textwidth]{Kell_eEnergy_Fig1.eps}
     \caption{A three layer feed forward neural network.}
     \label{fig:mlp}
 \end{figure}
@@ -463,7 +463,7 @@ ElecSim uses a configuration file which details the scenario which can be set by
 
 
 \begin{figure}
-    \includegraphics[width=0.48\textwidth,natwidth=610,natheight=400]{figures/methods/System_overview_large.png}
+    \includegraphics[width=0.48\textwidth,natwidth=610,natheight=400]{System_overview_large.png}
     \caption{System overview of ElecSim \cite{Kell}.}
     \label{fig:model_details}
 \end{figure}
@@ -586,9 +586,9 @@ A number of models, however, perform well, with a low mean absolute error. These
 
 
 
-\begin{figure}
+\begin{figure}[h]
 \centering
-\includegraphics[width=\columnwidth,natwidth=500,natheight=500]{figures/results/offline_model_mae.eps}
+\includegraphics[width=\columnwidth,natwidth=500,natheight=500]{offline_model_mae.eps}
 \caption{Offline models mean absolute error comparison, with 95\% confidence interval for 5 runs of each model.}
 \label{fig:beis_elecsim_historic_comparison}
 \end{figure}
@@ -605,7 +605,7 @@ Figure \ref{fig:best_offline_learning_day_distribution} displays the distributio
 
 \begin{figure}
 \centering
-\includegraphics[width=\columnwidth,natwidth=500,natheight=500]{figures/results/ExtraTreesRegressor_distribution_plot.eps}
+\includegraphics[width=\columnwidth,natwidth=500,natheight=500]{ExtraTreesRegressor_distribution_plot.eps}
 \caption{Best offline machine learning learning algorithm (Extra Trees Regressor) distribution.}
 \label{fig:best_offline_learning_day_distribution}
 \end{figure}
@@ -638,7 +638,7 @@ For a small deterioration in MAE it is possible to decrease the time it takes to
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=\columnwidth,natwidth=500,natheight=500]{figures/results/offline_fit_time_vs_mae_all_results.eps}
+\includegraphics[width=\columnwidth,natwidth=500,natheight=500]{offline_fit_time_vs_mae_all_results.eps}
 \caption{Time taken to train the offline models versus mean absolute error. Error bars display standard deviation between points.}
 \label{fig:offline_fit_time_vs_mae}
 \end{figure}
@@ -650,7 +650,7 @@ The scoring time also displays a large variation between model types. For instan
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=\columnwidth,natwidth=500,natheight=500]{figures/results/offline_score_time_vs_mae_all_results.eps}
+\includegraphics[width=\columnwidth,natwidth=500,natheight=500]{offline_score_time_vs_mae_all_results.eps}
 \caption{Time taken to score the offline models versus mean absolute error. Error bars display standard deviation between points.}
 \label{fig:offline_score_time_vs_mae}
 \end{figure}
@@ -667,7 +667,7 @@ The scoring time also displays a large variation between model types. For instan
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=\columnwidth,natwidth=1300,natheight=1300]{figures/results/online_model_mae_barplot.eps}
+\includegraphics[width=\columnwidth,natwidth=1300,natheight=1300]{online_model_mae_barplot.eps}
 \caption{Comparison of mean absolute errors (MAE) for different online regressor models. MLP results for all parameters are shown in a single barchat due to the very similar MAEs for the differing hyperparameters.}
 \label{fig:online_model_mae_barplot}
 \end{figure}
@@ -689,7 +689,7 @@ Figure \ref{fig:best_online_learning_day_distribution} displays the best online 
 
 \begin{figure}
 \centering
-\includegraphics[width=\columnwidth,natwidth=500,natheight=500]{figures/results/online_learning_dists-power-0.1.eps}
+\includegraphics[width=\columnwidth,natwidth=500,natheight=500]{online_learning_dists-power-0.1.eps}
 \caption{Best online model (Box-Cox Regressor) distribution.}
 \label{fig:best_online_learning_day_distribution}
 \end{figure}
@@ -698,7 +698,7 @@ Figure \ref{fig:bad_online_learning_day_distribution} displays the residuals for
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=\columnwidth,natwidth=500,natheight=500]{figures/results/online_learning_dists-C-0.1-fit_intercept-true-max_iter-1000-shuffle-false-tol 0.001.eps}
+\includegraphics[width=\columnwidth,natwidth=500,natheight=500]{online_learning_dists-passive.eps}
 \caption{Online machine learning algorithm distribution. (Passive Aggressive Regressor (C=0.1, fit intercept = true, maximum iterations = 1000, shuffle = false, tolerance = 0.001), chosen as it was the worst result for the passive aggressive model.}
 \label{fig:bad_online_learning_day_distribution}
 \end{figure}
@@ -709,7 +709,7 @@ Figure \ref{fig:both_actual_predicted} displays a comparison between the actual 
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=\columnwidth]{figures/results/both_actual_predicted.eps}
+\includegraphics[width=\columnwidth]{both_actual_predicted.eps}
 \caption{Best offline model compared to the best online model over a week period.}
 \label{fig:both_actual_predicted}
 \end{figure}
@@ -741,14 +741,14 @@ Photovoltaics may be used more with higher errors due to the times at which the 
 \centering
 \begin{subfigure}[b]{0.3\textwidth}
 %\centering
-\includegraphics[width=\columnwidth]{figures/results/elecsim_results/results_2/contributed_PV_mean_output}
+\includegraphics[width=\columnwidth]{contributed_PV_mean_output}
 \caption{Photovoltaic output.}
 \label{fig:contributed_PV_mean_output}
 \end{subfigure}
 \hfil
 \begin{subfigure}[b]{0.3\textwidth}  
 %\centering
-\includegraphics[width=\columnwidth]{figures/results/elecsim_results/results_2/contributed_Coal_mean_output.eps}
+\includegraphics[width=\columnwidth]{contributed_Coal_mean_output.eps}
 \caption{Coal output.}
 \label{fig:contributed_Coal_mean_output}
 \end{subfigure}
@@ -756,7 +756,7 @@ Photovoltaics may be used more with higher errors due to the times at which the 
 %\vskip\baselineskip
 \begin{subfigure}[b]{0.3\textwidth}   
 %\centering
-\includegraphics[width=\columnwidth]{figures/results/elecsim_results/results_2/contributed_Nuclear_mean_output.eps}
+\includegraphics[width=\columnwidth]{contributed_Nuclear_mean_output.eps}
 \caption{Nuclear output.}
 \label{fig:contributed_Nuclear_mean_output}
 \end{subfigure}
@@ -764,14 +764,14 @@ Photovoltaics may be used more with higher errors due to the times at which the 
 \medskip
 \begin{subfigure}[b]{0.3\textwidth}   
 %\centering
-\includegraphics[width=\columnwidth]{figures/results/elecsim_results/results_2/contributed_Offshore_mean_output.eps}
+\includegraphics[width=\columnwidth]{contributed_Offshore_mean_output.eps}
 \caption{Offshore output.}
 \label{fig:contributed_Offshore_mean_output.eps}
 \end{subfigure}
 \hfil
 \begin{subfigure}[b]{0.3\textwidth}   
 %\centering
-\includegraphics[width=1\columnwidth]{figures/results/elecsim_results/results_2/contributed_Recip_gas_mean_output.eps}
+\includegraphics[width=1\columnwidth]{contributed_Recip_gas_mean_output.eps}
 \caption{Reciprocal gas engine output.}
 \label{fig:contributed_Recip_gas_mean_output}
 \end{subfigure}
@@ -852,21 +852,21 @@ CCGT and reciprocal gas engines may have decreased in capacity over this time, d
 \centering
 \begin{subfigure}[b]{0.3\textwidth}
 %\centering
-\includegraphics[width=\columnwidth]{figures/results/elecsim_results/results_2/total_CCGT_mean_output.eps}
+\includegraphics[width=\columnwidth]{total_CCGT_mean_output.eps}
 \caption{Total CCGT.}
 \label{fig:total_CCGT_mean_output}
 \end{subfigure}
 \hfil
 \begin{subfigure}[b]{0.3\textwidth}  
 %\centering
-\includegraphics[width=\columnwidth]{figures/results/elecsim_results/results_2/total_Coal_mean_output.eps}
+\includegraphics[width=\columnwidth]{total_Coal_mean_output.eps}
 \caption{Total Coal.}
 \label{fig:total_Coal_mean_output}
 \end{subfigure}
 \hfil
 %\vskip\baselineskip
 \begin{subfigure}[b]{0.3\textwidth}   
-\includegraphics[width=\columnwidth]{figures/results/elecsim_results/results_2/total_Onshore_mean_output.eps}
+\includegraphics[width=\columnwidth]{total_Onshore_mean_output.eps}
 \caption{Total Onshore.}
 \label{fig:total_Onshore_mean_output}
 \end{subfigure}
@@ -874,13 +874,13 @@ CCGT and reciprocal gas engines may have decreased in capacity over this time, d
 \medskip
 \begin{subfigure}[b]{0.3\textwidth}   
 %\centering
-\includegraphics[width=\columnwidth]{figures/results/elecsim_results/results_2/total_Offshore_mean_output.eps}
+\includegraphics[width=\columnwidth]{total_Offshore_mean_output.eps}
 \caption{Total Offshore.}
 \label{fig:total_Offshore_mean_output}
 \end{subfigure}
 \hfil
 \begin{subfigure}[b]{0.3\textwidth}
-\includegraphics[width=\columnwidth]{figures/results/elecsim_results/results_2/total_Nuclear_mean_output.eps}
+\includegraphics[width=\columnwidth]{total_Nuclear_mean_output.eps}
 \caption{Total nuclear.}
 \label{fig:total_nuclear_mean_output}
 \end{subfigure}
@@ -888,7 +888,7 @@ CCGT and reciprocal gas engines may have decreased in capacity over this time, d
 \begin{subfigure}[b]{0.3\textwidth}  
 %\centering
 %\centering
-\includegraphics[width=\columnwidth]{figures/results/elecsim_results/results_2/total_PV_mean_output.eps}
+\includegraphics[width=\columnwidth]{total_PV_mean_output.eps}
 \caption{Total photovoltaics.}
 \label{fig:total_PV_mean_output}
 \end{subfigure}
@@ -907,7 +907,7 @@ Figure \ref{fig:Carbon_emitted_mean_output} shows an increase in relative mean c
 \centering
 %\vskip\baselineskip
 \begin{subfigure}[b]{0.33\textwidth}   
-\includegraphics[width=\columnwidth]{figures/results/elecsim_results/results_2/total_Recip_gas_mean_output.eps}
+\includegraphics[width=\columnwidth]{total_Recip_gas_mean_output.eps}
 \caption{Total Reciprocal gas engine.}
 \label{fig:total_Recip_gas_mean_output.eps}
 \end{subfigure}
@@ -915,7 +915,7 @@ Figure \ref{fig:Carbon_emitted_mean_output} shows an increase in relative mean c
 %\medskip
 \hfil
 \begin{subfigure}[b]{0.33\textwidth}   
-\includegraphics[width=\columnwidth]{figures/results/elecsim_results/results_2/Carbon_emitted_mean_output.eps}
+\includegraphics[width=\columnwidth]{Carbon_emitted_mean_output.eps}
 \caption{Mean carbon emitted.}
 \label{fig:Carbon_emitted_mean_output}
 \end{subfigure}

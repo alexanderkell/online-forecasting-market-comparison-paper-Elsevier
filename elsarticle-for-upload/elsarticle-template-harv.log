@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.4.22)  10 JUN 2020 18:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.4.22)  10 JUN 2020 19:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -869,15 +869,15 @@ Underfull \hbox (badness 2173) in paragraph at lines 334--335
  []
 
 [5]
-File: figures/methods/Kell_eEnergy_Fig1.eps Graphic file (type eps)
- <figures/methods/Kell_eEnergy_Fig1.eps>
+File: Kell_eEnergy_Fig1.eps Graphic file (type eps)
+ <Kell_eEnergy_Fig1.eps>
 Underfull \hbox (badness 2753) in paragraph at lines 377--378
 \OT1/txr/m/n/10 sup-pose we have N ob-ser-va-tions $\OML/txmi/m/it/10 y[]; y[]; [] ; y[]$ \OT1/txr/m/n/10 in
  []
 
 [6]
-File: figures/methods/System_overview_large.png Graphic file (type eps)
- <figures/methods/System_overview_large.png>
+File: System_overview_large.png Graphic file (type eps)
+ <System_overview_large.png>
 Overfull \hbox (2.638pt too wide) in paragraph at lines 466--467
 [][] 
  []
@@ -897,71 +897,71 @@ Underfull \hbox (badness 1226) in paragraph at lines 549--549
 \OT1/txr/m/n/10 (10), (20), (50),
  []
 
-File: figures/results/offline_model_mae.eps Graphic file (type eps)
-<figures/results/offline_model_mae.eps>
-File: figures/results/ExtraTreesRegressor_distribution_plot.eps Graphic file (type eps)
- <figures/results/ExtraTreesRegressor_distribution_plot.eps> [9] [10]
-File: figures/results/offline_fit_time_vs_mae_all_results.eps Graphic file (type eps)
- <figures/results/offline_fit_time_vs_mae_all_results.eps>
+File: offline_model_mae.eps Graphic file (type eps)
+<offline_model_mae.eps>
+File: ExtraTreesRegressor_distribution_plot.eps Graphic file (type eps)
+ <ExtraTreesRegressor_distribution_plot.eps> [9] [10]
+File: offline_fit_time_vs_mae_all_results.eps Graphic file (type eps)
+ <offline_fit_time_vs_mae_all_results.eps>
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-File: figures/results/offline_score_time_vs_mae_all_results.eps Graphic file (type eps)
-<figures/results/offline_score_time_vs_mae_all_results.eps>
+File: offline_score_time_vs_mae_all_results.eps Graphic file (type eps)
+<offline_score_time_vs_mae_all_results.eps>
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-File: figures/results/online_model_mae_barplot.eps Graphic file (type eps)
-<figures/results/online_model_mae_barplot.eps>
+File: online_model_mae_barplot.eps Graphic file (type eps)
+<online_model_mae_barplot.eps>
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [11]
-File: figures/results/online_learning_dists-power-0.1.eps Graphic file (type eps)
- <figures/results/online_learning_dists-power-0.1.eps>
-File: figures/results/online_learning_dists-C-0.1-fit_intercept-true-max_iter-1000-shuffle-false-tol 0.001.eps Graphic file (type eps)
- <figures/results/online_learning_dists-C-0.1-fit_intercept-true-max_iter-1000-shuffle-false-tol 0.001.eps>
+File: online_learning_dists-power-0.1.eps Graphic file (type eps)
+ <online_learning_dists-power-0.1.eps>
+File: online_learning_dists-passive.eps Graphic file (type eps)
+ <online_learning_dists-passive.eps>
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-File: figures/results/both_actual_predicted.eps Graphic file (type eps)
-<figures/results/both_actual_predicted.eps>
+File: both_actual_predicted.eps Graphic file (type eps)
+<both_actual_predicted.eps>
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [12]
-File: figures/results/elecsim_results/results_2/contributed_PV_mean_output.eps Graphic file (type eps)
- <figures/results/elecsim_results/results_2/contributed_PV_mean_output.eps>
-File: figures/results/elecsim_results/results_2/contributed_Coal_mean_output.eps Graphic file (type eps)
- <figures/results/elecsim_results/results_2/contributed_Coal_mean_output.eps>
-File: figures/results/elecsim_results/results_2/contributed_Nuclear_mean_output.eps Graphic file (type eps)
- <figures/results/elecsim_results/results_2/contributed_Nuclear_mean_output.eps>
-File: figures/results/elecsim_results/results_2/contributed_Offshore_mean_output.eps Graphic file (type eps)
- <figures/results/elecsim_results/results_2/contributed_Offshore_mean_output.eps>
-File: figures/results/elecsim_results/results_2/contributed_Recip_gas_mean_output.eps Graphic file (type eps)
- <figures/results/elecsim_results/results_2/contributed_Recip_gas_mean_output.eps>
+File: contributed_PV_mean_output.eps Graphic file (type eps)
+ <contributed_PV_mean_output.eps>
+File: contributed_Coal_mean_output.eps Graphic file (type eps)
+ <contributed_Coal_mean_output.eps>
+File: contributed_Nuclear_mean_output.eps Graphic file (type eps)
+ <contributed_Nuclear_mean_output.eps>
+File: contributed_Offshore_mean_output.eps Graphic file (type eps)
+ <contributed_Offshore_mean_output.eps>
+File: contributed_Recip_gas_mean_output.eps Graphic file (type eps)
+ <contributed_Recip_gas_mean_output.eps>
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-File: figures/results/elecsim_results/results_2/total_CCGT_mean_output.eps Graphic file (type eps)
-<figures/results/elecsim_results/results_2/total_CCGT_mean_output.eps>
-File: figures/results/elecsim_results/results_2/total_Coal_mean_output.eps Graphic file (type eps)
- <figures/results/elecsim_results/results_2/total_Coal_mean_output.eps>
-File: figures/results/elecsim_results/results_2/total_Onshore_mean_output.eps Graphic file (type eps)
- <figures/results/elecsim_results/results_2/total_Onshore_mean_output.eps>
-File: figures/results/elecsim_results/results_2/total_Offshore_mean_output.eps Graphic file (type eps)
- <figures/results/elecsim_results/results_2/total_Offshore_mean_output.eps>
-File: figures/results/elecsim_results/results_2/total_Nuclear_mean_output.eps Graphic file (type eps)
- <figures/results/elecsim_results/results_2/total_Nuclear_mean_output.eps>
-File: figures/results/elecsim_results/results_2/total_PV_mean_output.eps Graphic file (type eps)
- <figures/results/elecsim_results/results_2/total_PV_mean_output.eps>
+File: total_CCGT_mean_output.eps Graphic file (type eps)
+<total_CCGT_mean_output.eps>
+File: total_Coal_mean_output.eps Graphic file (type eps)
+ <total_Coal_mean_output.eps>
+File: total_Onshore_mean_output.eps Graphic file (type eps)
+ <total_Onshore_mean_output.eps>
+File: total_Offshore_mean_output.eps Graphic file (type eps)
+ <total_Offshore_mean_output.eps>
+File: total_Nuclear_mean_output.eps Graphic file (type eps)
+ <total_Nuclear_mean_output.eps>
+File: total_PV_mean_output.eps Graphic file (type eps)
+ <total_PV_mean_output.eps>
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-File: figures/results/elecsim_results/results_2/total_Recip_gas_mean_output.eps Graphic file (type eps)
-<figures/results/elecsim_results/results_2/total_Recip_gas_mean_output.eps>
-File: figures/results/elecsim_results/results_2/Carbon_emitted_mean_output.eps Graphic file (type eps)
- <figures/results/elecsim_results/results_2/Carbon_emitted_mean_output.eps> [13]
+File: total_Recip_gas_mean_output.eps Graphic file (type eps)
+<total_Recip_gas_mean_output.eps>
+File: Carbon_emitted_mean_output.eps Graphic file (type eps)
+ <Carbon_emitted_mean_output.eps> [13]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -1083,12 +1083,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 284--290
 
 ) [17] (./elsarticle-template-harv.aux) ) 
 Here is how much of TeX's memory you used:
- 11141 strings out of 480609
- 194717 string characters out of 5903656
- 640509 words of memory out of 5000000
+ 11137 strings out of 480609
+ 192418 string characters out of 5903656
+ 639509 words of memory out of 5000000
  26790 multiletter control sequences out of 15000+600000
  558176 words of font info for 100 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,15n,100p,1244b,543s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on elsarticle-template-harv.dvi (17 pages, 106772 bytes).
+Output written on elsarticle-template-harv.dvi (17 pages, 106008 bytes).

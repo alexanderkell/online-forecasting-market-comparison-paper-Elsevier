@@ -1,0 +1,78 @@
+This is BibTeX, Version 0.99d (TeX Live 2020)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: /Users/alexanderkell/Documents/PhD/Papers/7-day-ahead-forecasting-comparison/elsarticle/.texpadtmp/elsarticle-template-harv.aux
+The style file: ../elsarticle-num.bst
+Database file #1: ../library.bib
+Database file #2: ../bib_custom.bib
+Repeated entry---line 49 of file ../bib_custom.bib
+ : @article{forgy65
+ :                 ,
+I'm skipping whatever remains of this entry
+Database file #3: ../custombibtex.bib
+Warning--entry type for "gbnationalgridstatus_2019" isn't style-file defined
+--line 10 of file ../custombibtex.bib
+Repeated entry---line 91 of file ../custombibtex.bib
+ : @article{forgy65
+ :                 ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 130 of file ../custombibtex.bib
+ : @article{forgy65
+ :                 ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 168 of file ../custombibtex.bib
+ : @article{dukes_511
+ :                   , title={Power stations in the United Kingdom, May 2019}, author={Department for Business Energy and Industrial Strategy}, year={2019}, journal={Digest of United Kingdom Energy Statistics (DUKES)}
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "Nazarko2005ARIMAApproach"
+Warning--empty pages in Kell2018a
+Warning--empty journal in Hong2014
+Warning--there's a number but no volume in Tiong2008
+Warning--empty journal in Quilumba2014
+Warning--empty journal in Huang2003
+Warning--empty publisher in Witten2011
+Warning--empty journal in 316
+Warning--there's a number but no volume in DBEIS2019
+Warning--empty journal in ESO2019
+Warning--there's a number but no volume in ESO2019
+You've used 42 entries,
+            2952 wiz_defined-function locations,
+            987 strings with 14646 characters,
+and the built_in function-call counts, 12858 in all, are:
+= -- 1255
+> -- 444
+< -- 0
++ -- 176
+- -- 134
+* -- 1073
+:= -- 1784
+add.period$ -- 65
+call.type$ -- 42
+change.case$ -- 40
+chr.to.int$ -- 0
+cite$ -- 52
+duplicate$ -- 338
+empty$ -- 1382
+format.name$ -- 164
+if$ -- 3223
+int.to.chr$ -- 0
+int.to.str$ -- 42
+missing$ -- 42
+newline$ -- 163
+num.names$ -- 41
+pop$ -- 224
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 782
+stack$ -- 0
+substring$ -- 745
+swap$ -- 100
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 10
+while$ -- 105
+width$ -- 44
+write$ -- 387
+(There were 4 error messages)

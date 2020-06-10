@@ -1,0 +1,90 @@
+This is BibTeX, Version 0.99d (TeX Live 2020)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: /Users/alexanderkell/Documents/PhD/Papers/7-day-ahead-forecasting-comparison/elsarticle-for-upload/elsarticle-template-harv.aux
+The style file: elsarticle-num.bst
+Database file #1: library.bib
+Database file #2: bib_custom.bib
+Repeated entry---line 49 of file bib_custom.bib
+ : @article{forgy65
+ :                 ,
+I'm skipping whatever remains of this entry
+Database file #3: custombibtex.bib
+Warning--entry type for "gbnationalgridstatus_2019" isn't style-file defined
+--line 10 of file custombibtex.bib
+I was expecting a `,' or a `}'---line 13 of file custombibtex.bib
+ :  
+ :  url={https://www.gridwatch.templar.co.uk/},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 97 of file custombibtex.bib
+ : @article{forgy65
+ :                 ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 136 of file custombibtex.bib
+ : @article{forgy65
+ :                 ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 176 of file custombibtex.bib
+ : @article{dukes_511
+ :                   , title={Power stations in the United Kingdom, May 2019}, author={Department for Business Energy and Industrial Strategy}, year={2019}, journal={Digest of United Kingdom Energy Statistics (DUKES)}
+I'm skipping whatever remains of this entry
+Repeated entry---line 270 of file custombibtex.bib
+ : @article{scikit-learn
+ :                      ,
+I'm skipping whatever remains of this entry
+Warning--empty pages in Kell2018a
+Warning--empty journal in Hong2014
+Warning--empty journal in Huang2003
+Warning--there's a number but no volume in Tiong2008
+Warning--empty journal in Quilumba2014
+Warning--empty journal in Ghofrani
+Warning--empty year in Ghofrani
+Warning--empty publisher in Witten2011
+Warning--empty journal in 316
+Warning--empty author in creme
+Warning--there's a number but no volume in DBEIS2019
+Warning--empty year in gbnationalgridstatus_2019
+Warning--empty journal in ESO2019
+Warning--there's a number but no volume in ESO2019
+You've used 54 entries,
+            2952 wiz_defined-function locations,
+            1054 strings with 16171 characters,
+and the built_in function-call counts, 16016 in all, are:
+= -- 1560
+> -- 534
+< -- 0
++ -- 214
+- -- 160
+* -- 1285
+:= -- 2202
+add.period$ -- 78
+call.type$ -- 54
+change.case$ -- 52
+chr.to.int$ -- 0
+cite$ -- 68
+duplicate$ -- 422
+empty$ -- 1744
+format.name$ -- 198
+if$ -- 4033
+int.to.chr$ -- 0
+int.to.str$ -- 54
+missing$ -- 55
+newline$ -- 196
+num.names$ -- 53
+pop$ -- 288
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 1007
+stack$ -- 0
+substring$ -- 964
+swap$ -- 111
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 14
+while$ -- 135
+width$ -- 56
+write$ -- 478
+(There were 6 error messages)
