@@ -170,6 +170,10 @@ We compare the impact of 11 offline learning algorithms and 5 online learning al
 
 We trial different algorithms and train different models for different times of the year. Specifically, we train different models for the different seasons. We also split weekdays and train both weekends and holidays together. This is due to the fact that holidays and weekend exhibit similar load profiles due to the reduction in industry electricity use and increase in domestic. This enables a model to become good at a specific subset of the data which share similar patterns, as opposed to having to generalize to all of the data. Examples of the algorithms used are: linear regression, lasso regression, random forests, support vector regression, multilayer perceptron neural network, box-cox transformation linear regression and the passive aggressive model. 
 
+We expect a-priori that online algorithms will outperform the offline approach. This is due to the fact that the demand time-series is non-stationary, and thus changes sufficiently over time. In terms of the models, we believe that the machine learning algorithms, such as neural networks, support vector regression and random forests will outperform the statistical methods such as linear regression, lasso regression and box-cox transformation regression. We believe this due to the fact that machine learning has been shown to be able to learn more complex feature representations than statistical methods \cite{Singh2012}. In addition, our previous work has shown that random forests were able to outperform neural networks, support vector regression and long short term memory neural networks (LSTM) \cite{Kell2018}. 
+
+However, it must be noted, that it can be difficult to have an intuition, a-priori, about which model will work best, due to imperfect knowledge of the data and understanding of some of the black box models, such as neural ntworks.
+
 %- A short description of the solution
 
 

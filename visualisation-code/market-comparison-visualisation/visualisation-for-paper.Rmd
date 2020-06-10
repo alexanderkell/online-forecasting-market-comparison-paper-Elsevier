@@ -213,3 +213,24 @@ print(offline_rf_pred_actuals_plot)
 ggsave("plots/offline_rf_actual_predicted.eps", offline_rf_pred_actuals_plot, dpi=1000, width = 40, height = 20, units = "cm")
 ```
 
+
+```{r}
+offline_results = read.csv('/Users/alexanderkell/Documents/PhD/Projects/10-ELECSIM/run/market_forecasting_comparison/data/results/results/demand_initial_exploration-2020-02-24 05:18:05.717624+00:00.csv')
+
+head(offline_results)
+
+```
+```{r}
+offline_results$mean_test_mean_absolute_error = abs(offline_results$mean_test_neg_mean_absolute_error)
+offline_results$upper_mean_test_mean_absolute_error = offline_results$mean_test_mean_absolute_error + offline_results$std_test_neg_mean_absolute_error
+offline_results$lower_mean_test_mean_absolute_error = offline_results$mean_test_mean_absolute_error - offline_results$std_test_neg_mean_absolute_error
+
+offline_results$lower_mean_fit_time = offline_results$mean_fit_time - offline_results$std_fit_time
+offline_results$upper_mean_fit_time = offline_results$mean_fit_time + offline_results$std_fit_time
+
+p = ggplot(data = offline_results, aes(x=mean_test_mean_absolute_error, y=mean_fit_time, colour=estimator)) + geom_point(size=3.5) + geom_errorbarh(aes(xmin=upper_mean_test_mean_absolute_error, xmax=lower_mean_test_mean_absolute_error), width=0.2) + geom_errorbar(aes(ymax=upper_mean_fit_time, ymin=lower_mean_fit_time))+ theme(text = element_text(size=20), legend.position = "bottom", plot.margin=grid::unit(c(0,0,0,0), "mm")) + ylab("Fit Time (S)") + xlab("Mean Absolute Error (MAE)")+ theme_classic() 
+
+
+ggsave("plots/offline_fit_time_vs_mae.eps", p)
+```
+

@@ -80,6 +80,10 @@ A.~J.~M. Kell, M.~Forshaw, A.~S. McGough, {Long-Term Electricity Market Agent
   Eleventh ACM International Conference on Future Energy Systems (e-Energy'20)
   (2020).
 
+\bibitem{Kell2018}
+A.~Kell, A.~S. Mcgough, M.~Forshaw, {Segmenting Residential Smart Meter Data
+  for Short-Term Load Forecasting}, e-Energy Conference (2018) 91--96.
+
 \bibitem{Ahmad2017}
 M.~W. Ahmad, M.~Mourshed, Y.~Rezgui,
   \href{http://dx.doi.org/10.1016/j.enbuild.2017.04.038}{{Trees vs Neurons:
@@ -256,10 +260,6 @@ C.~Cortes, V.~Vapnik, {Support-Vector Networks}, Machine Learning 20~(3) (1995)
   {\path{arXiv:arXiv:1011.1669v3}}, \href
   {https://doi.org/10.1023/A:1022627411411}
   {\path{doi:10.1023/A:1022627411411}}.
-
-\bibitem{Kell2018}
-A.~Kell, A.~S. Mcgough, M.~Forshaw, {Segmenting Residential Smart Meter Data
-  for Short-Term Load Forecasting}, e-Energy Conference (2018) 91--96.
 
 \bibitem{scikit-learn}
 F.~Pedregosa, G.~Varoquaux, A.~Gramfort, V.~Michel, B.~Thirion, O.~Grisel,
