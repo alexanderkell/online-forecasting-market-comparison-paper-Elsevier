@@ -636,7 +636,7 @@ It can be seen from Figure \ref{fig:offline_fit_time_vs_mae} that the time to fi
 
 For a small deterioration in MAE it is possible to significantly decrease the time it takes to train the model. For example, by using the K-Nearest neighbours or support vector regression (SVR).
 
-\begin{figure}
+\begin{figure}[h]
 \centering
 \includegraphics[width=\columnwidth,natwidth=500,natheight=500]{figures/results/offline_fit_time_vs_mae_all_results.eps}
 \caption{Time taken to train the offline models versus mean absolute error. Error bars display standard deviation between points.}
@@ -648,7 +648,7 @@ The scoring time also displays a large variation between model types. For instan
 
 
 
-\begin{figure}
+\begin{figure}[h]
 \centering
 \includegraphics[width=\columnwidth,natwidth=500,natheight=500]{figures/results/offline_score_time_vs_mae_all_results.eps}
 \caption{Time taken to score the offline models versus mean absolute error. Error bars display standard deviation between points.}
@@ -665,8 +665,8 @@ The scoring time also displays a large variation between model types. For instan
 
 \subsection{Online Machine Learning}
 
-\begin{figure}[!htbp]
-%\centering
+\begin{figure}[h]
+\centering
 \includegraphics[width=\columnwidth,natwidth=1300,natheight=1300]{figures/results/online_model_mae_barplot.eps}
 \caption{Comparison of mean absolute errors (MAE) for different online regressor models. MLP results for all parameters are shown in a single barchat due to the very similar MAEs for the differing hyperparameters.}
 \label{fig:online_model_mae_barplot}
@@ -696,7 +696,7 @@ Figure \ref{fig:best_online_learning_day_distribution} displays the best online 
 
 Figure \ref{fig:bad_online_learning_day_distribution} displays the residuals for a model with poor predictive ability, the passive aggressive regressor. It displays a large period of time of prediction errors at -20,000MWh, and often falls outside of the national grid reserve. These results demonstrate the importance of trying a multitude of different models and parameters to improve prediction accuracy.
 
-\begin{figure}
+\begin{figure}[h]
 \centering
 \includegraphics[width=\columnwidth,natwidth=500,natheight=500]{figures/results/online_learning_dists-C-0.1-fit_intercept-true-max_iter-1000-shuffle-false-tol 0.001.eps}
 \caption{Online machine learning algorithm distribution. (Passive Aggressive Regressor (C=0.1, fit intercept = true, maximum iterations = 1000, shuffle = false, tolerance = 0.001), chosen as it was the worst result for the passive aggressive model.}
@@ -707,7 +707,7 @@ Figure \ref{fig:bad_online_learning_day_distribution} displays the residuals for
 Figure \ref{fig:both_actual_predicted} displays a comparison between the actual electricity consumption compared to the predictions. It can be seen that the Box-Cox model better predicts the actual electricity demand in most cases when compared to the best offline model, the Extra Trees regressor. The Extra Trees regressor often over estimates the demand, particularly during weekdays. Whilst the Box-Cox regressor more closely matches the actual results. During the weekend the Extra Trees regressor performs better, particularly on the Saturday. 
 
 
-\begin{figure}
+\begin{figure}[h]
 \centering
 \includegraphics[width=\columnwidth]{figures/results/both_actual_predicted.eps}
 \caption{Best offline model compared to the best online model over a week period.}
