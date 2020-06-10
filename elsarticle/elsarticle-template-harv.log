@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.4.22)  10 JUN 2020 12:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.4.22)  10 JUN 2020 12:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -946,12 +946,12 @@ File: figures/results/elecsim_results/results_2/Carbon_emitted_mean_output.eps G
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[13] [14] (./elsarticle-template-harv.bbl
+[13] [14] (./elsarticle-template-harv.bbl [15]
 Underfull \hbox (badness 2351) in paragraph at lines 47--52
 \OT1/txr/m/n/8 A re-view, ICPCES 2012 - 2012 2nd In-ter-na-tional Con-
  []
 
-[15]
+
 Underfull \hbox (badness 1178) in paragraph at lines 79--82
 []\OT1/txr/m/n/8 M. W. Ah-mad, M. Mour-shed, Y. Rezgui, Trees vs Neu-
  []
@@ -1025,6 +1025,9 @@ Underfull \hbox (badness 1533) in paragraph at lines 242--248
  []
 
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [16]
 Underfull \hbox (badness 3128) in paragraph at lines 270--274
 []\OT1/txr/m/n/8 H. Drucker, C. J. C. Burges, L. Kauf-man, A. Smola,
  []
@@ -1059,10 +1062,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 284--290
 \OT1/txr/m/n/8 19 (6) (1974) 716--723.  arXiv:arXiv:1011.1669v3,
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [16]) [17
+) [17
 
 ] (./elsarticle-template-harv.aux) ) 
 Here is how much of TeX's memory you used:
@@ -1074,4 +1074,4 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  62i,15n,100p,1242b,543s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on elsarticle-template-harv.dvi (17 pages, 102300 bytes).
+Output written on elsarticle-template-harv.dvi (17 pages, 103260 bytes).

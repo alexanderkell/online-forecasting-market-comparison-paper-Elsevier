@@ -957,6 +957,8 @@ However, contrary to our assumptions the online linear regression techniques out
 
 To the best of our knowledge, there is more work in the electricity demand forecasting literature using offline learning. This may be due to the additional complexity of running online algorithms, and smaller number of available models to run in an online fashion.
 
+In terms of compute power, finding the optimal input parameters, hyperparameters and models to use can be a large undertaking. This is due to the exponential growth of the number of choices that can be made. This can be an issue where accuracy is of importance, especially when the data changes over time, meaning it may be necessary to retest previous results. However, due to the financial and sustainability implications, we believe the compute time is worth the effort. There are also large implications if the model were to break in a certain point in time. We therefore recommend the reliance on multiple well performing models, as opposed to solely the best performing model at any one time. 
+
 Additionally, the impact on the broader electricity market has been shown to be significant. Principally, the investment behaviours of generation companies change as well as the dispatched electricity mix. The relative mean carbon emitted over this time period increases, due to an increase in the utilization of coal and reciprocal gas engines, at the expense of offshore wind.
 
 
