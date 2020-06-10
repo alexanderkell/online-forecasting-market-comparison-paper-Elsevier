@@ -242,7 +242,7 @@ Machine learning is a methodology for finding and describing structural patterns
 
 
 
-Examples of online learning algorithms are Passive Aggressive (PA) Regressor \cite{Gzik2014}, Linear Regression, Box-Cox Regressor \cite{Box1964}, K-Neighbors Regressor \cite{forgy65} and Multilayer perceptron regressor \cite{Hinton1989}. For our work, we trial the stated algorithms, in addition to a host of offline learning techniques. The offline techniques trialled were Lasso regression \cite{Tibshirani1996a}, ridge regression \cite{GeladiPaul1994Mrac},  Elastic Net \cite{Geostatistics2010}, Least Angle Regression \cite{Fike1988}, Extra Trees Regressor \cite{Fike1988}, Random Forest Regressor \cite{Breiman2001}, AdaBoost Regressor \cite{Freund1997}, Gradient Boosting Regressor \cite{316} and Support vector regression \cite{Cortes1995}. We chose the boosting and random forest techniques due to previous success of these algorithms when applied to electricity demand forecasting \cite{Kell2018}. We trialled the additional algorithms due to availability of these algorithms using the scikit-learn package and online learning package, Creme, in python \cite{scikit-learn,creme}. %, and online versions of Multilayer perceptron regressor, K-Neighbors regressor, linear regression.
+Examples of online learning algorithms are Passive Aggressive (PA) Regressor \cite{Gzik2014}, Linear Regression, Box-Cox Regressor \cite{Box1964}, K-Neighbors Regressor \cite{forgy65} and Multilayer perceptron regressor \cite{Hinton1989}. For our work, we trial the stated algorithms, in addition to a host of offline learning techniques. The offline techniques trialled were Lasso regression \cite{Tibshirani1996a}, ridge regression \cite{GeladiPaul1994Mrac},  Elastic Net \cite{Geostatistics2010}, Least Angle Regression \cite{Fike1988}, Extra Trees Regressor \cite{Fike1988}, Random Forest Regressor \cite{Breiman2001}, AdaBoost Regressor \cite{Freund1997}, Gradient Boosting Regressor \cite{316} and Support vector regression \cite{Drucker1997}. We chose the boosting and random forest techniques due to previous success of these algorithms when applied to electricity demand forecasting \cite{Kell2018}. We trialled the additional algorithms due to availability of these algorithms using the scikit-learn package and online learning package, Creme, in python \cite{scikit-learn,creme}. %, and online versions of Multilayer perceptron regressor, K-Neighbors regressor, linear regression.
 
 %We trial the previously mentioned statistical and machine learning algorithms and vary the parameters using grid search and cross-validation using scikit-learn \cite{scikit-learn}.
 
@@ -306,7 +306,7 @@ Beginning at the top of the tree, a split is made into two branches. This split 
 
 The AdaBoost training process selects only the features of a model known to improve the predictive power of the model \cite{Freund1997}. By doing this, the dimensionality of the model is reduced and can improve compute time. This can be used in conjunction with multiple different models. In our paper, we utilized the decision tree based algorithm with AdaBoost.
 
-Random Forests are an ensemble learning method for classification and regression \cite{Breiman2001}. Ensemble learning methods use multiple learning algorithms to obtain better predictive performance. They work by constructing multiple decision trees at training time, and outputting the predicted value that is the mode of the predictions of the individual trees.
+Random Forests are an ensemble learning method for classification and regression \cite{Breiman2001}. Ensemble learning methods use multiple learning algorithms to obtain better predictive performance. They work by constructing multiple decision trees at training time, and outputting the predicted value that is the mode of the predictions of the individual trees. 
 
 To ensure that the individual decision trees within a Random Forest are not correlated, bagging is used to sample from the data. Bagging is the process of randomly sampling with replacement of the training set and fitting the trees. This has the benefit of reducing the variance of the model without increasing the bias. 
 
@@ -322,6 +322,27 @@ Gradient boosting is also an ensemble model \cite{316}. Gradient boosting optimi
 \subsubsection{Support vector regression}
 
 Support vector regression is an algorithm which finds a hyperplane and decision boundary to map an input domain to an output \cite{Cortes1995}. The hyperplane is chosen by minimizing the error within a certain tolerance.
+
+Suppose we have the training set: $(x_1,y_1), \ldots,(x_i,y_i),\ldots,(x_n,y_n)$, where $x_i$ is the input, and $y_i$ is the output value of $x_i$. Support Vector Regression solves an optimization problem \cite{Shu2006,Chen2004}, under given parameters $C>0$ and $\varepsilon >0$, the form of support vector regression is \cite{Drucker1997}: 
+
+\begin{equation}
+\min_{\omega,b,\xi,\xi^{*}}\frac{1}{2}\omega^T\omega+C\sum_{i=1}^{n}(\xi_i+\xi_i^*)
+\end{equation}
+
+\noindent subject to
+\begin{align}
+\begin{multlined}
+\label{svr:constrains}
+y_i-(\omega^T\phi(x_i)+b)\leq\varepsilon+\xi_i^{*},\\
+(\omega^T\phi(x_i)+b)-y_i\leq\varepsilon+\xi_i,\\
+\xi_i,\xi^*_i\geq0,i=1,\ldots,n
+\end{multlined}
+\end{align}
+
+\noindent $x_i$ is mapped to a higher dimensional space using the function $\phi$. The $\varepsilon$-insensitive tube $(\omega^T\phi(x_i)+b)-y_i\leq\varepsilon$ is a range in which errors are permitted. $\xi_i$ and $\xi^*_i$ are slack variables which allow errors for data points which fall outside of $\varepsilon$. This enables the optimisation to take into account the fact that data does not always fall within the $\varepsilon$ range \cite{Smola2004}.
+
+The constant $C>0$ determines the trade-off between the flatness of the support vector function. $\omega$ is the model fit by the SVR. The parameters which control regression quality are the cost of error $C$, the width of the tube $\varepsilon$, and the mapping function $\phi$ \cite{Shu2006,Chen2004}. 
+
 
 \subsubsection{K-Neighbors Regressor}
 
