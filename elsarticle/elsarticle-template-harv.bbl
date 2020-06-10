@@ -249,13 +249,13 @@ Y.~Freund, R.~E. Schapire, {A Decision-Theoretic Generalization of On-Line
 J.~H. Friedman, {Greedy Function Approximation: A Gradient Boosting Machine}
   (316) 400.
 
-\bibitem{Cortes1995}
-C.~Cortes, V.~Vapnik, {Support-Vector Networks}, Machine Learning 20~(3) (1995)
-  273--297.
-\newblock \href {http://arxiv.org/abs/arXiv:1011.1669v3}
-  {\path{arXiv:arXiv:1011.1669v3}}, \href
-  {https://doi.org/10.1023/A:1022627411411}
-  {\path{doi:10.1023/A:1022627411411}}.
+\bibitem{Drucker1997}
+H.~Drucker, C.~J.~C. Burges, L.~Kaufman, A.~Smola, V.~Vapnik,
+  \href{http://papers.nips.cc/paper/1238-support-vector-regression-machines.pdf}{{Support
+  vector regression machines}}, Advances in Neural Information Processing
+  Dystems 1 (1997) 155--161.
+\newblock \href {https://doi.org/10.1.1.10.4845} {\path{doi:10.1.1.10.4845}}.
+\newline\urlprefix\url{http://papers.nips.cc/paper/1238-support-vector-regression-machines.pdf}
 
 \bibitem{Kell2018}
 A.~Kell, A.~S. Mcgough, M.~Forshaw, {Segmenting Residential Smart Meter Data
@@ -274,6 +274,28 @@ F.~Pedregosa, G.~Varoquaux, A.~Gramfort, V.~Michel, B.~Thirion, O.~Grisel,
 \bibitem{Quinlan}
 J.~R. Quinlan, C4.5: Programs for Machine Learning, Morgan Kaufmann Publishers
   Inc., San Francisco, CA, USA, 1993.
+
+\bibitem{Cortes1995}
+C.~Cortes, V.~Vapnik, {Support-Vector Networks}, Machine Learning 20~(3) (1995)
+  273--297.
+\newblock \href {http://arxiv.org/abs/arXiv:1011.1669v3}
+  {\path{arXiv:arXiv:1011.1669v3}}, \href
+  {https://doi.org/10.1023/A:1022627411411}
+  {\path{doi:10.1023/A:1022627411411}}.
+
+\bibitem{Shu2006}
+F.~Shu, C.~Luonan, {Short-term load forecasting based on an adaptive hybrid
+  method}, Power Systems, IEEE Transactions on 21~(1) (2006) 392--401.
+\newblock \href {https://doi.org/10.1109/TPWRS.2005.860944}
+  {\path{doi:10.1109/TPWRS.2005.860944}}.
+
+\bibitem{Smola2004}
+A.~J. Smola, B.~Sch{\"{o}}lkopf, {A tutorial on support vector regression},
+  Statistics and Computing 14~(3) (2004) 199--222.
+\newblock \href {http://arxiv.org/abs/arXiv:1011.1669v3}
+  {\path{arXiv:arXiv:1011.1669v3}}, \href
+  {https://doi.org/10.1023/B:STCO.0000035301.49549.88}
+  {\path{doi:10.1023/B:STCO.0000035301.49549.88}}.
 
 \bibitem{Akaike1974}
 H.~Akaike, {A New Look at the Statistical Model Identification}, IEEE
