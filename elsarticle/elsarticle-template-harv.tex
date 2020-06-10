@@ -614,20 +614,49 @@ Figure \ref{fig:best_offline_learning_day_distribution} displays the distributio
 Figure \ref{fig:offline_fit_time_vs_mae} displays the amount of time it takes to train each of the models with respect to the mean absolute error. The error bars display the standard deviation between cross-validation runs. It can be seen that the models that take the longest to train are the su
 
 
+%\begin{figure}
+%\centering
+%\includegraphics[width=\columnwidth,natwidth=500,natheight=500]{figures/results/offline_fit_time_vs_mae.eps}
+%\caption{Time taken to train the offline models versus mean absolute error. Error bars display standard deviation between points.}
+%\label{fig:offline_fit_time_vs_mae}
+%\end{figure}
+%
+%
+%\begin{figure}
+%\centering
+%\includegraphics[width=\columnwidth,natwidth=500,natheight=500]{figures/results/offline_score_time_vs_mae.eps}
+%\caption{Time taken to score the offline models versus mean absolute error. Error bars display standard deviation between points.}
+%\label{fig:offline_score_time_vs_mae}
+%\end{figure}
+
+
+Figures \ref{fig:offline_fit_time_vs_mae} and \ref{fig:offline_score_time_vs_mae} display the time taken to train the model and time taken to sample from the model versus the absolute error respectively for the offline algorithms. Multiple fits are trialled for each parameter type for each model. The error bars indicate the results of multiple cross-validations.
+
+It can be seen from Figure \ref{fig:offline_fit_time_vs_mae} that the time to fit varies significantly between algorithms and parameter choices. The multilayer perceptron consistently takes a long time to fit, when compared to the other algorithms and performs relatively poorly in terms of MAE. There are many models, such a the random forest regressor, and extra trees regressors which perform well, however take a long time to fit, especially when compared to the K-Nearest neighbours.
+
+For a small deterioration in MAE it is possible to significantly decrease the time it takes to train the model. For example, by using the K-Nearest neighbours or support vector regression (SVR).
+
 \begin{figure}
 \centering
-\includegraphics[width=\columnwidth,natwidth=500,natheight=500]{figures/results/offline_fit_time_vs_mae.eps}
+\includegraphics[width=\columnwidth,natwidth=500,natheight=500]{figures/results/offline_fit_time_vs_mae_all_results.eps}
 \caption{Time taken to train the offline models versus mean absolute error. Error bars display standard deviation between points.}
 \label{fig:offline_fit_time_vs_mae}
 \end{figure}
 
 
+The scoring time also displays a large variation between model types. For instance, the MLP regressor takes a shorter time to sample predictions from when compared to the K-Neighbors algorithm and support vector regression. It is possible to have a cluster of algorithms with low sample times and low mean absolute errors. However, often a trade off is required, with a fast prediction time requiring a longer training time and vice-versa. 
+
+
+
 \begin{figure}
 \centering
-\includegraphics[width=\columnwidth,natwidth=500,natheight=500]{figures/results/offline_score_time_vs_mae.eps}
+\includegraphics[width=\columnwidth,natwidth=500,natheight=500]{figures/results/offline_score_time_vs_mae_all_results.eps}
 \caption{Time taken to score the offline models versus mean absolute error. Error bars display standard deviation between points.}
 \label{fig:offline_score_time_vs_mae}
 \end{figure}
+
+
+
 
 
 
@@ -675,6 +704,15 @@ Figure \ref{fig:bad_online_learning_day_distribution} displays the residuals for
 \end{figure}
 
 
+Figure \ref{fig:both_actual_predicted} displays a comparison between the actual electricity consumption compared to the predictions. It can be seen that the Box-Cox model better predicts the actual electricity demand in most cases when compared to the best offline model, the Extra Trees regressor. The Extra Trees regressor often over estimates the demand, particularly during weekdays. Whilst the Box-Cox regressor more closely matches the actual results. During the weekend the Extra Trees regressor performs better, particularly on the Saturday. 
+
+
+\begin{figure}
+\centering
+\includegraphics[width=\columnwidth]{figures/results/both_actual_predicted.eps}
+\caption{Best offline model compared to the best online model over a week period.}
+\label{fig:both_actual_predicted}
+\end{figure}
 
 
 \subsection{Scenario Comparison}
@@ -958,6 +996,8 @@ However, contrary to our assumptions the online linear regression techniques out
 To the best of our knowledge, there is more work in the electricity demand forecasting literature using offline learning. This may be due to the additional complexity of running online algorithms, and a smaller number of available models to run in an online fashion.
 
 In terms of compute power, finding the optimal input parameters, hyperparameters and models to use can be a large undertaking. This is due to the exponential growth of the number of choices that can be made. This can be an issue where accuracy is of importance, especially when the data changes over time, meaning it may be necessary to retest previous results. However, due to the financial and sustainability implications, we believe the trade off between compute time and accuracy is balanced towards compute time. There are also large implications if the model were to break in a certain point in time. We therefore recommend the reliance on multiple well performing models, as opposed to solely the best performing model at any one time. 
+
+For training time and prediction time, there is often a trade off between training and predicting. For instance, the k-nearest neighbours is fast to train, but slow to sample from. Therefore stakeholders must make a decision based upon accuracy, speed of training and sampling. 
 
 Additionally, the impact on the broader electricity market has been shown to be significant. Principally, the investment behaviours of generation companies change as well as the dispatched electricity mix. The relative mean carbon emitted over this time period increases, due to an increase in the utilization of coal and reciprocal gas engines, at the expense of offshore wind.
 
