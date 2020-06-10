@@ -13,12 +13,8 @@ C.~Lu, H.~T. Wu, S.~Vemuri, {Neural network based short term load forecasting},
 
 \bibitem{Mahmood2014}
 A.~Mahmood, M.~N. Ullah, S.~Razzaq, A.~Basit, U.~Mustafa, M.~Naeem, N.~Javaid,
-  \href{http://dx.doi.org/10.1016/j.procs.2014.05.450}{{A new scheme for demand
-  side management in future smart grid networks}}, Procedia Computer Science 32
-  (2014) 477--484.
-\newblock \href {https://doi.org/10.1016/j.procs.2014.05.450}
-  {\path{doi:10.1016/j.procs.2014.05.450}}.
-\newline\urlprefix\url{http://dx.doi.org/10.1016/j.procs.2014.05.450}
+  {A new scheme for demand side management in future smart grid networks},
+  Procedia Computer Science 32 (2014) 477--484.
 
 \bibitem{Kell2018a}
 A.~Kell, A.~McGough, M.~Forshaw, {Segmenting residential smart meter data for
@@ -59,14 +55,9 @@ S.-j. Huang, S.~Member, K.-r. Shih, {Short-Term Load Forecasting Via ARMA Model
   Identification Including Non-Gaussian} 18~(2) (2003) 673--679.
 
 \bibitem{Andersen2013}
-F.~M. Andersen, H.~V. Larsen, T.~K. Boomsma,
-  \href{http://dx.doi.org/10.1016/j.enconman.2013.01.018}{{Long-term
-  forecasting of hourly electricity load: Identification of consumption
-  profiles and segmentation of customers}}, Energy Conversion and Management 68
-  (2013) 244--252.
-\newblock \href {https://doi.org/10.1016/j.enconman.2013.01.018}
-  {\path{doi:10.1016/j.enconman.2013.01.018}}.
-\newline\urlprefix\url{http://dx.doi.org/10.1016/j.enconman.2013.01.018}
+F.~M. Andersen, H.~V. Larsen, T.~K. Boomsma, {Long-term forecasting of hourly
+  electricity load: Identification of consumption profiles and segmentation of
+  customers}, Energy Conversion and Management 68 (2013) 244--252.
 
 \bibitem{Kell}
 A.~Kell, M.~Forshaw, A.~S. Mcgough, {ElecSim : Monte-Carlo Open-Source
@@ -85,13 +76,9 @@ A.~Kell, A.~S. Mcgough, M.~Forshaw, {Segmenting Residential Smart Meter Data
   for Short-Term Load Forecasting}, e-Energy Conference (2018) 91--96.
 
 \bibitem{Ahmad2017}
-M.~W. Ahmad, M.~Mourshed, Y.~Rezgui,
-  \href{http://dx.doi.org/10.1016/j.enbuild.2017.04.038}{{Trees vs Neurons:
-  Comparison between random forest and ANN for high-resolution prediction of
-  building energy consumption}}, Energy and Buildings 147 (2017) 77--89.
-\newblock \href {https://doi.org/10.1016/j.enbuild.2017.04.038}
-  {\path{doi:10.1016/j.enbuild.2017.04.038}}.
-\newline\urlprefix\url{http://dx.doi.org/10.1016/j.enbuild.2017.04.038}
+M.~W. Ahmad, M.~Mourshed, Y.~Rezgui, {Trees vs Neurons: Comparison between
+  random forest and ANN for high-resolution prediction of building energy
+  consumption}, Energy and Buildings 147 (2017) 77--89.
 
 \bibitem{Chen2004}
 B.-j. Chen, M.-w. Chang, C.-j. Lin, {Load Forecasting Using Support Vector
@@ -152,10 +139,8 @@ S.~Humeau, T.~K. Wijaya, M.~Vasirani, K.~Aberer, {Electricity load forecasting
 
 \bibitem{Johansson2017}
 C.~Johansson, M.~Bergkvist, D.~Geysen, O.~D. Somer, N.~Lavesson, D.~Vanhoudt,
-  \href{http://dx.doi.org/10.1016/j.egypro.2017.05.068}{{Operational Demand
-  Forecasting in District Heating Systems Using Ensembles of Online Machine
-  Learning Algorithms}}, Energy Procedia 116 (2017) 208--216.
-\newline\urlprefix\url{http://dx.doi.org/10.1016/j.egypro.2017.05.068}
+  {Operational Demand Forecasting in District Heating Systems Using Ensembles
+  of Online Machine Learning Algorithms}, Energy Procedia 116 (2017) 208--216.
 
 \bibitem{Baram2003}
 Y.~Baram, R.~El-Yaniv, K.~Luz, {Online Choice of Active Learning Algorithms},
@@ -282,12 +267,10 @@ F.~Shu, C.~Luonan, {Short-term load forecasting based on an adaptive hybrid
   {\path{doi:10.1109/TPWRS.2005.860944}}.
 
 \bibitem{Drucker1997}
-H.~Drucker, C.~J.~C. Burges, L.~Kaufman, A.~Smola, V.~Vapnik,
-  \href{http://papers.nips.cc/paper/1238-support-vector-regression-machines.pdf}{{Support
-  vector regression machines}}, Advances in Neural Information Processing
-  Dystems 1 (1997) 155--161.
+H.~Drucker, C.~J.~C. Burges, L.~Kaufman, A.~Smola, V.~Vapnik, {Support vector
+  regression machines}, Advances in Neural Information Processing Systems 1
+  (1997) 155--161.
 \newblock \href {https://doi.org/10.1.1.10.4845} {\path{doi:10.1.1.10.4845}}.
-\newline\urlprefix\url{http://papers.nips.cc/paper/1238-support-vector-regression-machines.pdf}
 
 \bibitem{Smola2004}
 A.~J. Smola, B.~Sch{\"{o}}lkopf, {A tutorial on support vector regression},
