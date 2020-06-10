@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.4.22)  10 JUN 2020 14:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.4.22)  10 JUN 2020 15:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1089,6 +1089,6 @@ Here is how much of TeX's memory you used:
  26790 multiletter control sequences out of 15000+600000
  558176 words of font info for 100 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,15n,100p,1242b,543s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,15n,100p,1244b,543s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on elsarticle-template-harv.dvi (17 pages, 106612 bytes).
+Output written on elsarticle-template-harv.dvi (17 pages, 106680 bytes).
