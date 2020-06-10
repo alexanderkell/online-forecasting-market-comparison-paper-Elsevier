@@ -271,10 +271,6 @@ F.~Pedregosa, G.~Varoquaux, A.~Gramfort, V.~Michel, B.~Thirion, O.~Grisel,
 \bibitem{creme}
 {Creme}, https://pypi.org/project/creme/ (2019).
 
-\bibitem{Quinlan}
-J.~R. Quinlan, C4.5: Programs for Machine Learning, Morgan Kaufmann Publishers
-  Inc., San Francisco, CA, USA, 1993.
-
 \bibitem{Cortes1995}
 C.~Cortes, V.~Vapnik, {Support-Vector Networks}, Machine Learning 20~(3) (1995)
   273--297.
@@ -282,6 +278,10 @@ C.~Cortes, V.~Vapnik, {Support-Vector Networks}, Machine Learning 20~(3) (1995)
   {\path{arXiv:arXiv:1011.1669v3}}, \href
   {https://doi.org/10.1023/A:1022627411411}
   {\path{doi:10.1023/A:1022627411411}}.
+
+\bibitem{Quinlan}
+J.~R. Quinlan, C4.5: Programs for Machine Learning, Morgan Kaufmann Publishers
+  Inc., San Francisco, CA, USA, 1993.
 
 \bibitem{Shu2006}
 F.~Shu, C.~Luonan, {Short-term load forecasting based on an adaptive hybrid
