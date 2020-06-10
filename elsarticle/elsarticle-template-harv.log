@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.4.22)  10 JUN 2020 07:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.4.22)  10 JUN 2020 07:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -859,76 +859,58 @@ Underfull \hbox (badness 1655) in paragraph at lines 185--186
  []
 
 
-Overfull \hbox (12.04007pt too wide) in paragraph at lines 197--199
-[]\OT1/txr/m/n/10 >>>>>>> f2ba0c196bee56411501b317cec6a179bb4ef89a
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2] [3] [4]
+Underfull \hbox (badness 10000) in paragraph at lines 330--331
+[]\OT1/txr/m/n/10 Suppose we have the train-ing set:
  []
 
 
-Underfull \hbox (badness 1558) in paragraph at lines 197--199
-\OT1/txr/m/n/10 on-line and of-fline learn-ing mod-els to fore-cast the
+Underfull \hbox (badness 2173) in paragraph at lines 330--331
+\OT1/txr/m/n/10 (\OML/txmi/m/it/10 x[]; y[]\OT1/txr/m/n/10 )\OML/txmi/m/it/10 ; [] ; \OT1/txr/m/n/10 (\OML/txmi/m/it/10 x[]; y[]\OT1/txr/m/n/10 )\OML/txmi/m/it/10 ; [] ; \OT1/txr/m/n/10 (\OML/txmi/m/it/10 x[]; y[]\OT1/txr/m/n/10 )$, where $\OML/txmi/m/it/10 x[]$ \OT1/txr/m/n/10 is the in-
  []
 
-[2]
-Overfull \hbox (12.04007pt too wide) in paragraph at lines 217--219
-[]\OT1/txr/m/n/10 >>>>>>> f2ba0c196bee56411501b317cec6a179bb4ef89a
- []
-
-[3]
-Overfull \hbox (12.04007pt too wide) in paragraph at lines 238--239
-[]\OT1/txr/m/n/10 >>>>>>> f2ba0c196bee56411501b317cec6a179bb4ef89a 
- []
-
-[4] [5]
-Underfull \hbox (badness 10000) in paragraph at lines 377--379
-[]\OT1/txr/m/n/10 ======= >>>>>>>
- []
-
+[5]
 File: figures/methods/Kell_eEnergy_Fig1.eps Graphic file (type eps)
-<figures/methods/Kell_eEnergy_Fig1.eps>
-Underfull \hbox (badness 2753) in paragraph at lines 401--402
+ <figures/methods/Kell_eEnergy_Fig1.eps>
+Underfull \hbox (badness 2753) in paragraph at lines 373--374
 \OT1/txr/m/n/10 sup-pose we have N ob-ser-va-tions $\OML/txmi/m/it/10 y[]; y[]; [] ; y[]$ \OT1/txr/m/n/10 in
  []
 
-[6] [7]
-Overfull \hbox (12.04007pt too wide) in paragraph at lines 492--494
-[]\OT1/txr/m/n/10 >>>>>>> f2ba0c196bee56411501b317cec6a179bb4ef89a
- []
-
+[6]
 File: figures/methods/System_overview_large.png Graphic file (type eps)
-<figures/methods/System_overview_large.png>
-Overfull \hbox (2.638pt too wide) in paragraph at lines 498--499
+ <figures/methods/System_overview_large.png>
+Overfull \hbox (2.638pt too wide) in paragraph at lines 462--463
 [][] 
  []
 
-[8]
-Underfull \hbox (badness 6893) in paragraph at lines 533--534
+[7]
+Underfull \hbox (badness 6893) in paragraph at lines 497--498
 []\OT1/txr/m/n/10 To find the op-ti-mum hy-per-pa-ram-e-ters, cross-
  []
 
 
-Underfull \hbox (badness 4805) in paragraph at lines 581--581
+Underfull \hbox (badness 4805) in paragraph at lines 545--545
 []\OT1/txr/m/n/10 [(10, 50, 100),
  []
 
 
-Underfull \hbox (badness 1226) in paragraph at lines 581--581
+Underfull \hbox (badness 1226) in paragraph at lines 545--545
 \OT1/txr/m/n/10 (10), (20), (50),
  []
 
-[9] [10]
+[8] [9]
 File: figures/results/offline_model_mae.eps Graphic file (type eps)
  <figures/results/offline_model_mae.eps>
 File: figures/results/ExtraTreesRegressor_distribution_plot.eps Graphic file (type eps)
  <figures/results/ExtraTreesRegressor_distribution_plot.eps>
 File: figures/results/online_model_mae_barplot.eps Graphic file (type eps)
- <figures/results/online_model_mae_barplot.eps> [11]
+ <figures/results/online_model_mae_barplot.eps> [10]
 File: figures/results/online_learning_dists-power-0.1.eps Graphic file (type eps)
  <figures/results/online_learning_dists-power-0.1.eps>
 File: figures/results/online_learning_dists-C-0.1-fit_intercept-true-max_iter-1000-shuffle-false-tol 0.001.eps Graphic file (type eps)
- <figures/results/online_learning_dists-C-0.1-fit_intercept-true-max_iter-1000-shuffle-false-tol 0.001.eps>
-Underfull \vbox (badness 2435) has occurred while \output is active []
-
- [12]
+ <figures/results/online_learning_dists-C-0.1-fit_intercept-true-max_iter-1000-shuffle-false-tol 0.001.eps> [11]
 File: figures/results/elecsim_results/results_2/contributed_PV_mean_output.eps Graphic file (type eps)
  <figures/results/elecsim_results/results_2/contributed_PV_mean_output.eps>
 File: figures/results/elecsim_results/results_2/contributed_Coal_mean_output.eps Graphic file (type eps)
@@ -964,10 +946,10 @@ File: figures/results/elecsim_results/results_2/Carbon_emitted_mean_output.eps G
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[13]
+[12]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [14] (./elsarticle-template-harv.bbl
+ [13] (./elsarticle-template-harv.bbl
 Overfull \hbox (5.10028pt too wide) in paragraph at lines 15--22
 \OT1/txr/m/n/8 URL \OT1/cmtt/m/n/8 http://dx.doi.org/10.1016/j.procs.2014.05.450 
  []
@@ -1002,7 +984,7 @@ Overfull \hbox (17.85046pt too wide) in paragraph at lines 62--70
 \OT1/txr/m/n/8 URL \OT1/cmtt/m/n/8 http://dx.doi.org/10.1016/j.enconman.2013.01.018 
  []
 
-
+[14]
 Underfull \hbox (badness 1178) in paragraph at lines 84--91
 []\OT1/txr/m/n/8 M. W. Ah-mad, M. Mour-shed, Y. Rezgui, Trees vs Neu-
  []
@@ -1063,12 +1045,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 135--140
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [15]
 Overfull \hbox (9.35034pt too wide) in paragraph at lines 150--155
 \OT1/txr/m/n/8 URL \OT1/cmtt/m/n/8 http://dx.doi.org/10.1016/j.egypro.2017.05.068 
  []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \hbox (badness 1348) in paragraph at lines 175--181
@@ -1096,29 +1078,29 @@ Underfull \hbox (badness 1163) in paragraph at lines 234--240
  []
 
 
-Underfull \hbox (badness 5147) in paragraph at lines 253--259
+Underfull \hbox (badness 1533) in paragraph at lines 253--259
+[]\OT1/txr/m/n/8 C. Cortes, V. Vap-nik, Support-Vector Net-works, Ma-chine
+ []
+
+
+Underfull \hbox (badness 5147) in paragraph at lines 285--291
 \OT1/txr/m/n/8 Sup-port vec-tor re-gres-sion ma-chines, Ad-vances in Neu-
  []
 
 
-Underfull \hbox (badness 5274) in paragraph at lines 253--259
+Underfull \hbox (badness 5274) in paragraph at lines 285--291
 \OT1/txr/m/n/8 ral In-for-ma-tion Pro-cess-ing Dys-tems 1 (1997) 155--161.
  []
 
 
-Overfull \hbox (115.60187pt too wide) in paragraph at lines 253--259
+Overfull \hbox (115.60187pt too wide) in paragraph at lines 285--291
 \OT1/txr/m/n/8 URL \OT1/cmtt/m/n/8 http://papers.nips.cc/paper/1238-support-vector-regression-machines.pdf 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-Underfull \hbox (badness 1533) in paragraph at lines 275--281
-[]\OT1/txr/m/n/8 C. Cortes, V. Vap-nik, Support-Vector Net-works, Ma-chine
- []
-
-
+ [15]
 Underfull \hbox (badness 10000) in paragraph at lines 293--299
 []\OT1/txr/m/n/8 A. J. Smola, B. Sch[]olkopf, A tu-to-rial on sup-
  []
@@ -1148,14 +1130,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 301--307
 \OT1/txr/m/n/8 19 (6) (1974) 716--723.  arXiv:arXiv:1011.1669v3,
  []
 
-) [16] (./elsarticle-template-harv.aux) ) 
+) [16
+
+] (./elsarticle-template-harv.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
  11128 strings out of 480609
  194165 string characters out of 5903656
- 641509 words of memory out of 5000000
+ 640509 words of memory out of 5000000
  26780 multiletter control sequences out of 15000+600000
  558176 words of font info for 100 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,15n,100p,1243b,543s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,15n,100p,1242b,543s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on elsarticle-template-harv.dvi (16 pages, 102560 bytes).
+Output written on elsarticle-template-harv.dvi (16 pages, 98012 bytes).
