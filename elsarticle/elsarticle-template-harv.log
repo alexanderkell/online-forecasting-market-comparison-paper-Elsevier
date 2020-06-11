@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.4.22)  10 JUN 2020 18:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.4.22)  11 JUN 2020 16:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -901,18 +901,15 @@ File: figures/results/offline_model_mae.eps Graphic file (type eps)
 <figures/results/offline_model_mae.eps>
 File: figures/results/ExtraTreesRegressor_distribution_plot.eps Graphic file (type eps)
  <figures/results/ExtraTreesRegressor_distribution_plot.eps> [9] [10]
-File: figures/results/offline_fit_time_vs_mae_all_results.eps Graphic file (type eps)
- <figures/results/offline_fit_time_vs_mae_all_results.eps>
+File: figures/results/offline_fit_time_vs_mae_all_results_opaque.eps Graphic file (type eps)
+ <figures/results/offline_fit_time_vs_mae_all_results_opaque.eps>
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-File: figures/results/offline_score_time_vs_mae_all_results.eps Graphic file (type eps)
-<figures/results/offline_score_time_vs_mae_all_results.eps>
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+File: figures/results/offline_score_time_vs_mae_all_results_opaque.eps Graphic file (type eps)
+<figures/results/offline_score_time_vs_mae_all_results_opaque.eps>
 File: figures/results/online_model_mae_barplot.eps Graphic file (type eps)
-<figures/results/online_model_mae_barplot.eps>
+ <figures/results/online_model_mae_barplot.eps>
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -961,11 +958,11 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 File: figures/results/elecsim_results/results_2/total_Recip_gas_mean_output.eps Graphic file (type eps)
 <figures/results/elecsim_results/results_2/total_Recip_gas_mean_output.eps>
 File: figures/results/elecsim_results/results_2/Carbon_emitted_mean_output.eps Graphic file (type eps)
- <figures/results/elecsim_results/results_2/Carbon_emitted_mean_output.eps> [13]
+ <figures/results/elecsim_results/results_2/Carbon_emitted_mean_output.eps>
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[14] [15] (./elsarticle-template-harv.bbl
+[13] [14] [15] (./elsarticle-template-harv.bbl
 Underfull \hbox (badness 2351) in paragraph at lines 47--52
 \OT1/txr/m/n/8 A re-view, ICPCES 2012 - 2012 2nd In-ter-na-tional Con-
  []
@@ -1011,14 +1008,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 126--131
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [16]
 Underfull \hbox (badness 1348) in paragraph at lines 164--170
 []\OT1/txr/m/n/8 P. Goncalves Da Silva, D. Ilic, S. Karnouskos, The Im-
  []
 
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [16]
 Underfull \hbox (badness 1314) in paragraph at lines 190--194
 \OT1/txr/m/n/8 In-tel-li-gence 40 (1-3) (1989) 185--234.  doi:10.1016/0004-
  []
@@ -1042,9 +1039,6 @@ Underfull \hbox (badness 1163) in paragraph at lines 223--229
 Underfull \hbox (badness 1533) in paragraph at lines 242--248
 []\OT1/txr/m/n/8 C. Cortes, V. Vap-nik, Support-Vector Net-works, Ma-chine
  []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \hbox (badness 3128) in paragraph at lines 270--274
@@ -1081,14 +1075,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 284--290
 \OT1/txr/m/n/8 19 (6) (1974) 716--723.  arXiv:arXiv:1011.1669v3,
  []
 
-) [17] (./elsarticle-template-harv.aux) ) 
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+) [17] (./elsarticle-template-harv.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 11141 strings out of 480609
- 194717 string characters out of 5903656
+ 11143 strings out of 480609
+ 194911 string characters out of 5903656
  640509 words of memory out of 5000000
- 26790 multiletter control sequences out of 15000+600000
+ 26792 multiletter control sequences out of 15000+600000
  558176 words of font info for 100 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,15n,100p,1244b,543s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on elsarticle-template-harv.dvi (17 pages, 106772 bytes).
+Output written on elsarticle-template-harv.dvi (17 pages, 106784 bytes).

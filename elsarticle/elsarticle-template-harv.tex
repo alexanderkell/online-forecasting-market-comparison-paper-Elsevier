@@ -636,9 +636,16 @@ It can be seen from Figure \ref{fig:offline_fit_time_vs_mae} that the time to fi
 
 For a small deterioration in MAE it is possible to decrease the time it takes to train the model significantly. For example, by using the K-Nearest neighbours or support vector regression (SVR).
 
+%\begin{figure}[h]
+%\centering
+%\includegraphics[width=\columnwidth,natwidth=500,natheight=500]{figures/results/offline_fit_time_vs_mae_all_results.eps}
+%\caption{Time taken to train the offline models versus mean absolute error. Error bars display standard deviation between points.}
+%\label{fig:offline_fit_time_vs_mae}
+%\end{figure}
+
 \begin{figure}[h]
 \centering
-\includegraphics[width=\columnwidth,natwidth=500,natheight=500]{figures/results/offline_fit_time_vs_mae_all_results.eps}
+\includegraphics[width=\columnwidth]{figures/results/offline_fit_time_vs_mae_all_results_opaque.eps}
 \caption{Time taken to train the offline models versus mean absolute error. Error bars display standard deviation between points.}
 \label{fig:offline_fit_time_vs_mae}
 \end{figure}
@@ -650,7 +657,7 @@ The scoring time also displays a large variation between model types. For instan
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=\columnwidth,natwidth=500,natheight=500]{figures/results/offline_score_time_vs_mae_all_results.eps}
+\includegraphics[width=\columnwidth]{figures/results/offline_score_time_vs_mae_all_results_opaque.eps}
 \caption{Time taken to score the offline models versus mean absolute error. Error bars display standard deviation between points.}
 \label{fig:offline_score_time_vs_mae}
 \end{figure}
