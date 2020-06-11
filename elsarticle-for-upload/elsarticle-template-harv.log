@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.4.22)  10 JUN 2020 19:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.4.22)  10 JUN 2020 20:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -917,8 +917,8 @@ File: online_model_mae_barplot.eps Graphic file (type eps)
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [11]
-File: online_learning_dists-power-0.1.eps Graphic file (type eps)
- <online_learning_dists-power-0.1.eps>
+File: online_learning_dists-power-01.eps Graphic file (type eps)
+ <online_learning_dists-power-01.eps>
 File: online_learning_dists-passive.eps Graphic file (type eps)
  <online_learning_dists-passive.eps>
 
@@ -1084,7 +1084,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 284--290
 ) [17] (./elsarticle-template-harv.aux) ) 
 Here is how much of TeX's memory you used:
  11137 strings out of 480609
- 192418 string characters out of 5903656
+ 192415 string characters out of 5903656
  639509 words of memory out of 5000000
  26790 multiletter control sequences out of 15000+600000
  558176 words of font info for 100 fonts, out of 8000000 for 9000

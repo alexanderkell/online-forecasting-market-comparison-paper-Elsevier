@@ -463,7 +463,7 @@ ElecSim uses a configuration file which details the scenario which can be set by
 
 
 \begin{figure}
-    \includegraphics[width=0.48\textwidth,natwidth=610,natheight=400]{System_overview_large.png}
+    \includegraphics[width=0.48\textwidth]{System_overview_large.png}
     \caption{System overview of ElecSim \cite{Kell}.}
     \label{fig:model_details}
 \end{figure}
@@ -588,24 +588,18 @@ A number of models, however, perform well, with a low mean absolute error. These
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=\columnwidth,natwidth=500,natheight=500]{offline_model_mae.eps}
+\includegraphics[width=\columnwidth]{offline_model_mae.eps}
 \caption{Offline models mean absolute error comparison, with 95\% confidence interval for 5 runs of each model.}
 \label{fig:beis_elecsim_historic_comparison}
 \end{figure}
 
 
-%\begin{figure}
-%\centering
-%\includegraphics[width=\columnwidth]{figures/results/offline_rf_actual_predicted.eps}
-%\caption{Best offline machine learning learning algorithm (Extra Trees Regressor) predictions versus actuals for a week in June 2018.}
-%\label{fig:best_offline_learning_day_simulation}
-%\end{figure}
 
 Figure \ref{fig:best_offline_learning_day_distribution} displays the distribution of the best offline machine result (Extra Trees Regressor). It can be seen that the max tendered national grid reserve falls well above the 5\% and 95\% percentiles. However, there are occasions where the errors are greater than the maximum tendered national grid reserve. In addition, the majority of the time, the model's predictions fall within the average available tendered national grid reserve.
 
 \begin{figure}
 \centering
-\includegraphics[width=\columnwidth,natwidth=500,natheight=500]{ExtraTreesRegressor_distribution_plot.eps}
+\includegraphics[width=\columnwidth]{ExtraTreesRegressor_distribution_plot.eps}
 \caption{Best offline machine learning learning algorithm (Extra Trees Regressor) distribution.}
 \label{fig:best_offline_learning_day_distribution}
 \end{figure}
@@ -614,20 +608,7 @@ Figure \ref{fig:best_offline_learning_day_distribution} displays the distributio
 Figure \ref{fig:offline_fit_time_vs_mae} displays the amount of time it takes to train each of the models with respect to the mean absolute error. The error bars display the standard deviation between cross-validation runs. It can be seen that the models that take the longest to train are the su
 
 
-%\begin{figure}
-%\centering
-%\includegraphics[width=\columnwidth,natwidth=500,natheight=500]{figures/results/offline_fit_time_vs_mae.eps}
-%\caption{Time taken to train the offline models versus mean absolute error. Error bars display standard deviation between points.}
-%\label{fig:offline_fit_time_vs_mae}
-%\end{figure}
-%
-%
-%\begin{figure}
-%\centering
-%\includegraphics[width=\columnwidth,natwidth=500,natheight=500]{figures/results/offline_score_time_vs_mae.eps}
-%\caption{Time taken to score the offline models versus mean absolute error. Error bars display standard deviation between points.}
-%\label{fig:offline_score_time_vs_mae}
-%\end{figure}
+
 
 
 Figures \ref{fig:offline_fit_time_vs_mae} and \ref{fig:offline_score_time_vs_mae} display the time taken to train the model and time taken to sample from the model versus the absolute error respectively for the offline algorithms. Multiple fits are trialled for each parameter type for each model. The error bars indicate the results of multiple cross-validations.
@@ -638,7 +619,7 @@ For a small deterioration in MAE it is possible to decrease the time it takes to
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=\columnwidth,natwidth=500,natheight=500]{offline_fit_time_vs_mae_all_results.eps}
+\includegraphics[width=\columnwidth]{offline_fit_time_vs_mae_all_results.eps}
 \caption{Time taken to train the offline models versus mean absolute error. Error bars display standard deviation between points.}
 \label{fig:offline_fit_time_vs_mae}
 \end{figure}
@@ -650,7 +631,7 @@ The scoring time also displays a large variation between model types. For instan
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=\columnwidth,natwidth=500,natheight=500]{offline_score_time_vs_mae_all_results.eps}
+\includegraphics[width=\columnwidth]{offline_score_time_vs_mae_all_results.eps}
 \caption{Time taken to score the offline models versus mean absolute error. Error bars display standard deviation between points.}
 \label{fig:offline_score_time_vs_mae}
 \end{figure}
@@ -667,7 +648,7 @@ The scoring time also displays a large variation between model types. For instan
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=\columnwidth,natwidth=1300,natheight=1300]{online_model_mae_barplot.eps}
+\includegraphics[width=\columnwidth]{online_model_mae_barplot.eps}
 \caption{Comparison of mean absolute errors (MAE) for different online regressor models. MLP results for all parameters are shown in a single barchat due to the very similar MAEs for the differing hyperparameters.}
 \label{fig:online_model_mae_barplot}
 \end{figure}
@@ -689,7 +670,7 @@ Figure \ref{fig:best_online_learning_day_distribution} displays the best online 
 
 \begin{figure}
 \centering
-\includegraphics[width=\columnwidth,natwidth=500,natheight=500]{online_learning_dists-power-0.1.eps}
+\includegraphics[width=\columnwidth]{online_learning_dists-power-01.eps}
 \caption{Best online model (Box-Cox Regressor) distribution.}
 \label{fig:best_online_learning_day_distribution}
 \end{figure}
@@ -698,7 +679,7 @@ Figure \ref{fig:bad_online_learning_day_distribution} displays the residuals for
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=\columnwidth,natwidth=500,natheight=500]{online_learning_dists-passive.eps}
+\includegraphics[width=\columnwidth]{online_learning_dists-passive.eps}
 \caption{Online machine learning algorithm distribution. (Passive Aggressive Regressor (C=0.1, fit intercept = true, maximum iterations = 1000, shuffle = false, tolerance = 0.001), chosen as it was the worst result for the passive aggressive model.}
 \label{fig:bad_online_learning_day_distribution}
 \end{figure}
@@ -781,52 +762,6 @@ Photovoltaics may be used more with higher errors due to the times at which the 
     
     
 
-%\begin{subfigure}
-%%\centering
-%\includegraphics[width=0.3\textwidth]{figures/results/elecsim_results/contributed_Recip_gas_mean_output.eps}
-%\caption{Mean reciprocal gas engine output vs. mean absolute error from 2018 to 2035 in ElecSim.}
-%\label{fig:contributed_Recip_gas_mean_output}
-%\end{subfigure}
-    
-%
-%
-%\begin{figure}
-%\centering
-%\includegraphics[width=\columnwidth]{figures/results/elecsim_results/contributed_Coal_mean_output.eps}
-%\caption{Mean coal output vs. mean absolute error from 2018 to 2035 in ElecSim.}
-%\label{fig:contributed_Coal_mean_output}
-%\end{figure}
-%
-%
-%\begin{figure}
-%\centering
-%\includegraphics[width=\columnwidth]{figures/results/elecsim_results/contributed_Nuclear_mean_output.eps}
-%\caption{Mean nuclear output vs. mean absolute error from 2018 to 2035 in ElecSim.}
-%\label{fig:contributed_Nuclear_mean_output}
-%\end{figure}
-%
-%
-%\begin{figure}
-%\centering
-%\includegraphics[width=\columnwidth]{figures/results/elecsim_results/contributed_Offshore_mean_output.eps}
-%\caption{Mean offshore output vs. mean absolute error from 2018 to 2035 in ElecSim.}
-%\label{fig:contributed_Offshore_mean_output.eps}
-%\end{figure}
-
-%\begin{figure}
-%\centering
-%\includegraphics[width=\columnwidth]{figures/results/elecsim_results/contributed_Onshore_mean_output.eps}
-%\caption{Mean onshore output vs. mean absolute error from 2018 to 2035 in ElecSim.}
-%\label{fig:contributed_Onshore_mean_output.eps}
-%\end{figure}
-
-
-%\begin{figure}
-%\centering
-%\includegraphics[width=\columnwidth]{figures/results/elecsim_results/contributed_PV_mean_output}
-%\caption{Mean photovoltaic output vs. mean absolute error from 2018 to 2035 in ElecSim.}
-%\label{fig:contributed_PV_mean_output}
-%\end{figure}
 
 
 
@@ -926,57 +861,6 @@ Figure \ref{fig:Carbon_emitted_mean_output} shows an increase in relative mean c
 
 
 
-
-
-%\begin{figure}
-%\centering
-%\includegraphics[width=\columnwidth]{figures/results/elecsim_results/total_CCGT_mean_output.eps}
-%\caption{Total CCGT invested in vs. mean absolute error from 2018 to 2035 in ElecSim.}
-%\label{fig:total_CCGT_mean_output}
-%\end{figure}
-%
-%
-%\begin{figure}
-%\centering
-%\includegraphics[width=\columnwidth]{figures/results/elecsim_results/total_Coal_mean_output.eps}
-%\caption{Total Coal invested in vs. mean absolute error from 2018 to 2035 in ElecSim.}
-%\label{fig:total_Coal_mean_output}
-%\end{figure}
-%
-%
-%
-%\begin{figure}
-%\centering
-%\includegraphics[width=\columnwidth]{figures/results/elecsim_results/total_Offshore_mean_output.eps}
-%\caption{Total Offshore invested in vs. mean absolute error from 2018 to 2035 in ElecSim.}
-%\label{fig:total_Offshore_mean_output}
-%\end{figure}
-
-
-
-
-
-%\begin{figure}
-%\centering
-%\includegraphics[width=\columnwidth]{figures/results/elecsim_results/total_Onshore_mean_output.eps}
-%\caption{Total Onshore invested in vs. mean absolute error from 2018 to 2035 in ElecSim.}
-%\label{fig:total_Onshore_mean_output}
-%\end{figure}
-
-
-%\begin{figure}
-%\centering
-%\includegraphics[width=\columnwidth]{figures/results/elecsim_results/total_PV_mean_output.eps}
-%\caption{Total photovoltaics invested in vs. mean absolute error from 2018 to 2035 in ElecSim.}
-%\label{fig:total_PV_mean_output}
-%\end{figure}
-
-%\begin{figure}
-%\centering
-%\includegraphics[width=\columnwidth]{figures/results/elecsim_results/total_Recip_gas_mean_output.eps}
-%\caption{Total Reciprocal gas engine invested in vs. mean absolute error from 2018 to 2035 in ElecSim.}
-%\label{fig:total_Recip_gas_mean_output.eps}
-%\end{figure}
 
 
 %- Include residuals and MAE,MAPE,MASE etc\\
