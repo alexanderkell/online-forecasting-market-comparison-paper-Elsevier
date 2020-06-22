@@ -168,9 +168,11 @@ In this paper, we compare several machine learning and statistical techniques to
 
 %- What is the innovation in this work
 
-We compare the impact of 11 offline learning algorithms and five online learning algorithms to predict the electricity demand profile over the next 24 hours. Online learning methods can learn from novel data while maintaining what was learnt from previous data. Online learning is useful for non-stationary datasets, and time-series data where recalculation of a model would take a prohibitive amount of time. Offline learning methods, however, must be retrained every time new data is added. Online approaches are constantly updated and do not require significant pauses while the offline training is being re-run. % By training on data that has already been used for training, the computational load and time required increases.
+%We compare the impact of 11 offline learning algorithms and five online learning algorithms to predict the electricity demand profile over the next 24 hours.
 
-We trial different algorithms and train different models for different times of the year. Specifically, we train different models for the different seasons. We also split weekdays and train both weekends and holidays together. This is due to the fact that holidays and weekend exhibit similar load profiles due to the reduction in industry electricity use and an increase in domestic. This enables a model to become good at a specific subset of the data which share similar patterns, as opposed to having to generalize to all of the data. Examples of the algorithms used are: linear regression, lasso regression, random forests, support vector regression, multilayer perceptron neural network, box-cox transformation linear regression and the passive aggressive model. 
+As part of our work, we utilize online learning methods to improve the accuracy of our predictions. Online learning methods can learn from novel data while maintaining what was learnt from previous data. Online learning is useful for non-stationary datasets, and time-series data where recalculation of a model would take a prohibitive amount of time. Offline learning methods, however, must be retrained every time new data is added. Online approaches are constantly updated and do not require significant pauses while the offline training is being re-run. % By training on data that has already been used for training, the computational load and time required increases.
+
+We trial different algorithms and train different models for different times of the year. Specifically, we train different models for the different seasons. We also split weekdays and train both weekends and holidays together. This is due to the fact that holidays and weekend exhibit similar load profiles due to the reduction in industry electricity use and an increase in domestic. This enables a model to become good at a specific subset of the data which share similar patterns, as opposed to having to generalize to all of the data. Examples of the algorithms used are linear regression, lasso regression, random forests, support vector regression, multilayer perceptron neural network, box-cox transformation linear regression and the passive aggressive model. 
 
 We expect a-priori that online algorithms will outperform the offline approach. This is due to the fact that the demand time-series is non-stationary, and thus changes sufficiently over time. In terms of the models, we presume that the machine learning algorithms, such as neural networks, support vector regression and random forests will outperform the statistical methods such as linear regression, lasso regression and box-cox transformation regression. We expect this due to the fact that machine learning has been shown to be able to learn more complex feature representations than statistical methods \cite{Singh2012}. In addition, our previous work has shown that the random forest was able to outperform neural networks, support vector regression and long short term memory neural networks (LSTM) \cite{Kell2018}. 
 
@@ -225,7 +227,7 @@ Fard \textit{et al.} propose a new hybrid forecasting method based on the wavele
 Humeau \textit{et al.} compare MLPs, SVRs and linear regression at predicting smart meter data \cite{Humeau2013}. They aggregate different households and observe which models work the best at each aggregate level. They find that linear regression outperforms both MLP and SVR when forecasting individual households. However, after aggregating over 32 households, SVR outperforms linear regression.
 
 
-Quilumba \textit{et al.} also apply machine learning techniques to individual households electricity consumption by aggregation \cite{Fard2014}. To achieve this aggregation, they use \textit{k}-means clustering to aggregate the households to improve their forecasting ability. The authors also use a neural network based model for forecasting, and show that the number of optimum clusters for forecasting is dependent on the data, with three clusters optimal for a particular dataset, and four for another.
+Quilumba \textit{et al.} also apply machine learning techniques to individual households' electricity consumption by aggregation \cite{Fard2014}. To achieve this aggregation, they use \textit{k}-means clustering to aggregate the households to improve their forecasting ability. The authors also use a neural network based model for forecasting, and show that the number of optimum clusters for forecasting is dependent on the data, with three clusters optimal for a particular dataset, and four for another.
 
 In our previous work we evaluate the performance of ANNs, random forests, support vector regression and long short-term memory neural networks \cite{Kell2018a}. We utilize smart meter data, and cluster by household using the k-means clustering algorithm to aggregate groups of demand. We find that through this clustering we are able to reduce the error, with the random forest performing the best.
 
@@ -379,7 +381,7 @@ K-Neighbors regression is a non-parametric method used for regression \cite{forg
 \begin{figure}
 \centering
     \includegraphics[width=0.4\textwidth]{figures/methods/Kell_eEnergy_Fig1.eps}
-    \caption{A three layer feed forward neural network.}
+    \caption{A three-layer feed forward neural network.}
     \label{fig:mlp}
 \end{figure}
 
@@ -659,7 +661,7 @@ Figure \ref{fig:best_offline_learning_day_distribution} displays the distributio
 
 Figures \ref{fig:offline_fit_time_vs_mae} and \ref{fig:offline_score_time_vs_mae} display the time taken to train the model and time taken to sample from the model versus the absolute error respectively for the offline algorithms. Multiple fits are trialled for each parameter type for each model. The error bars indicate the results of multiple cross-validations.
 
-It can be seen from Figure \ref{fig:offline_fit_time_vs_mae} that the time to fit varies significantly between algorithms and parameter choices. The multilayer perceptron consistently takes a long time to fit, when compared to the other algorithms and performs relatively poorly in terms of MAE. There are many models, such a the random forest regressor, and extra trees regressors which perform well, however, take a long time to fit, especially when compared to the K-Nearest neighbours.
+It can be seen from Figure \ref{fig:offline_fit_time_vs_mae} that the time to fit varies significantly between algorithms and parameter choices. The multilayer perceptron consistently takes a long time to fit, when compared to the other algorithms and performs relatively poorly in terms of MAE. There are many models, such as the random forest regressor, and extra trees regressors which perform well, however, take a long time to fit, especially when compared to the K-Nearest neighbours.
 
 For a small deterioration in MAE it is possible to decrease the time it takes to train the model significantly. For example, by using the K-Nearest neighbours or support vector regression (SVR).
 
@@ -702,7 +704,7 @@ The scoring time, displayed in Figure \ref{fig:offline_score_time_vs_mae}, also 
 \begin{figure}[h]
 \centering
 \includegraphics[width=\columnwidth,natwidth=1300,natheight=750]{figures/results/online_model_mae_barplot.eps}
-\caption{Comparison of mean absolute errors (MAE) for different online regressor models. MLP results for all parameters are shown in a single barchat due to the very similar MAEs for the differing hyperparameters.}
+\caption{Comparison of mean absolute errors (MAE) for different online regressor models. MLP results for all parameters are shown in a single barchart due to the very similar MAEs for the differing hyperparameters.}
 \label{fig:online_model_mae_barplot}
 \end{figure}
 
@@ -721,9 +723,9 @@ Figure \ref{fig:best_online_learning_day_distribution} displays the best online 
 
 
 
-\begin{figure}
+\begin{figure}[h]
 \centering
-\includegraphics[width=\columnwidth,natwidth=500,natheight=500]{figures/results/online_learning_dists-power-0.1.eps}
+\includegraphics[width=\columnwidth,natwidth=500,natheight=485]{figures/results/online_learning_dists-power-0.1.eps}
 \caption{Best online model (Box-Cox Regressor) distribution.}
 \label{fig:best_online_learning_day_distribution}
 \end{figure}
@@ -744,7 +746,7 @@ Figure \ref{fig:both_actual_predicted} displays a comparison between the actual 
 \begin{figure}[h]
 \centering
 \includegraphics[width=\columnwidth]{figures/results/both_actual_predicted.eps}
-\caption{Best offline model compared to the best online model over a week period.}
+\caption{Best offline model compared to the best online model over a one week period.}
 \label{fig:both_actual_predicted}
 \end{figure}
 

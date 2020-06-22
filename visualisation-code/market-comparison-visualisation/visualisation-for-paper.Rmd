@@ -7,8 +7,8 @@ output: html_notebook
 
 ```{r}
 library("ggplot2")
+library("plyr")
 library("dplyr")
-# library("plyr")
 library(tidyr)
 ```
 
@@ -292,9 +292,11 @@ offline_results_long$lower_mean_test_mean_absolute_error = offline_results_long$
 offline_results_long$lower_mean_fit_time = offline_results_long$mean_fit_time - offline_results_long$std_fit_time
 offline_results_long$upper_mean_fit_time = offline_results_long$mean_fit_time + offline_results_long$std_fit_time
 
+offline_results_long = rename(offline_results_long, c("Estimator"="estimator"))
+
 opacity = 0.1
 
-p = ggplot(data = offline_results_long, aes(x=mean_test_mean_absolute_error, y=mean_fit_time, colour=estimator)) + geom_point(size=2, alpha=0.6) + geom_errorbarh(aes(xmin=upper_mean_test_mean_absolute_error, xmax=lower_mean_test_mean_absolute_error), alpha=opacity) + geom_errorbar(aes(ymax=upper_mean_fit_time, ymin=lower_mean_fit_time), alpha=opacity)+ theme_classic()+ theme(text = element_text(size=22.5), legend.position = "bottom", plot.margin=grid::unit(c(0,0,0,0), "mm")) + ylab("Fit Time log10(S)") + xlab("Mean Absolute Error log10(MAE)")  + scale_x_continuous(trans='log10') + scale_y_continuous(trans='log10')
+p = ggplot(data = offline_results_long, aes(x=mean_test_mean_absolute_error, y=mean_fit_time, colour=Estimator)) + geom_point(size=2, alpha=0.6) + geom_errorbarh(aes(xmin=upper_mean_test_mean_absolute_error, xmax=lower_mean_test_mean_absolute_error), alpha=opacity) + geom_errorbar(aes(ymax=upper_mean_fit_time, ymin=lower_mean_fit_time), alpha=opacity)+ theme_classic() + theme(text = element_text(size=27), legend.position = "bottom", plot.margin=grid::unit(c(0,0,0,0), "mm")) + ylab("Fit Time log10(S)") + xlab("Mean Absolute Error log10(MAE)")  + scale_x_continuous(trans='log10') + scale_y_continuous(trans='log10') +guides(color=guide_legend(nrow=4,byrow=TRUE))
 
 print(p)
 
@@ -313,7 +315,8 @@ offline_results_long$upper_mean_score_time = offline_results_long$mean_score_tim
 
 opacity = 0.1
 
-p = ggplot(data = offline_results_long, aes(x=mean_test_mean_absolute_error, y=mean_score_time, colour=estimator)) + geom_point(size=2, alpha=0.6) + geom_errorbarh(aes(xmin=upper_mean_test_mean_absolute_error, xmax=lower_mean_test_mean_absolute_error), alpha=opacity) + geom_errorbar(aes(ymax=upper_mean_score_time, ymin=lower_mean_score_time), alpha=opacity)+ theme_classic()+ theme(text = element_text(size=22.5), legend.position = "bottom", plot.margin=grid::unit(c(0,0,0,0), "mm")) + ylab("Score Time log10(S)") + xlab("Mean Absolute Error log10(MAE)")  + scale_x_continuous(trans='log10') + scale_y_continuous(trans='log10')
+p = ggplot(data = offline_results_long, aes(x=mean_test_mean_absolute_error, y=mean_score_time, colour=Estimator)) + geom_point(size=2, alpha=0.6) + geom_errorbarh(aes(xmin=upper_mean_test_mean_absolute_error, xmax=lower_mean_test_mean_absolute_error), alpha=opacity) + geom_errorbar(aes(ymax=upper_mean_score_time, ymin=lower_mean_score_time), alpha=opacity)+ theme_classic()+ theme(text = element_text(size=27), legend.position = "bottom", plot.margin=grid::unit(c(0,0,0,0), "mm")) + ylab("Score Time log10(S)") + xlab("Mean Absolute Error log10(MAE)")  + scale_x_continuous(trans='log10') + scale_y_continuous(trans='log10')+guides(color=guide_legend(nrow=4,byrow=TRUE))
+
 
 print(p)
 
@@ -344,11 +347,60 @@ training_mae_testing$name = as.numeric(training_mae_testing$name)
 ```
 
 ```{r}
+detach(package:plyr)
+
+training_mae_testing_mean = training_mae_testing %>% dplyr::group_by(name, Parameters) %>% mutate(mae_mean = mean(mae), training_mean = mean(training_time))
+
+training_mae_testing_mean_std = training_mae_testing_mean %>% dplyr::group_by(name) %>% mutate(mae_std = sd(mae), training_sd = sd(training_time), mae_sd = sd(mae), training_upper = training_time+ training_sd, training_lower = training_time- training_sd, mae_upper = mae+mae_sd, mae_lower = mae-mae_sd)
+
+
 
 ```
 
 ```{r}
-ggplot(training_mae_testing_mean) + geom_point(aes(x=mae_mean, y=mean_training, color=Parameters), alpha=0.2) +  scale_x_continuous(trans='log10') + scale_y_continuous(trans='log10') + geom_errorbar(aes(x=mae, y=training_time, color=Parameters), stat = "summary", fun.data = "mean_sdl", fun.args = list(mult = 1))
+training_mae_testing_mean_std = training_mae_testing_mean_std %>% mutate(Parameters = gsub('\\{"C": 0.1, "fit_intercept": true, "max_iter": 1, "shuffle": false, "tol": 0.001\\}',"(PA): C = 0.1, fit_intercept = true", Parameters)) %>% mutate(Parameters = gsub('\\{"C": 0.1, "fit_intercept": false, "max_iter": 1, "shuffle": false, "tol": 0.001\\}',"(PA): C = 0.1, fit_intercept = false", Parameters)) %>% mutate(Parameters = gsub('\\{"C": 1, "fit_intercept": false, "max_iter": 1, "shuffle": false, "tol": 0.001\\}',"(PA): C = 1, fit_intercept = false", Parameters)) %>% mutate(Parameters = gsub('\\{"C": 1, "fit_intercept": true, "max_iter": 1, "shuffle": false, "tol": 0.001\\}',"(PA): C = 1, fit_intercept = true", Parameters)) %>% mutate(Parameters = gsub('\\{"C": 2, "fit_intercept": false, "max_iter": 1, "shuffle": false, "tol": 0.001\\}',"(PA): C = 2, fit_intercept = false", Parameters)) %>% mutate(Parameters = gsub('\\{"C": 2, "fit_intercept": true, "max_iter": 1, "shuffle": false, "tol": 0.001\\}',"(PA): C = 2, fit_intercept = true", Parameters)) %>% mutate(Parameters = gsub('\\{\"C\": 0.1, \"fit_intercept\": true, \"max_iter\": 1000, \"shuffle\": false, \"tol\": 0.001\\}',"(PA): C = 0.1, fit_intercept = true", Parameters)) %>% mutate(Parameters = gsub('\\{"C": 2, "fit_intercept": true, "max_iter": 1, "shuffle": false, "tol": 0.001\\}',"(PA): C = 2, fit_intercept = true", Parameters)) %>% mutate(Parameters = gsub('\\{\"C\": 0.1, \"fit_intercept\": true, \"max_iter\": 1000, \"shuffle\": false, \"tol\": 0.001\\}',"(PA): C = 0.1, fit_intercept = true", Parameters))
+
+
+unique(training_mae_testing_mean_std$Parameters)
+
+```
+
+```{r}
+training_mae_testing_mean_names = training_mae_testing_mean_std %>% 
+  mutate(Parameters = gsub("\\{\\}", "Linear Regression", Parameters)) %>% 
+  mutate(Parameters = gsub("\\{", "", Parameters)) %>% 
+  mutate(Parameters = gsub("\\}", "", Parameters))%>% 
+  mutate(Parameters = gsub('"', "", Parameters))%>% 
+  mutate(Parameters = gsub(':', " =", Parameters))%>% 
+  mutate(Parameters = gsub(', max_iter = 1, shuffle = false, tol = 0.001', "", Parameters))%>% 
+  mutate(Parameters = gsub(', max_iter = 1000, shuffle = false, tol = 0.001', "", Parameters)) %>%
+  mutate(Parameters = gsub(", learning_rate = adaptive, solver = adam", "", Parameters))%>%
+  mutate(Parameters = gsub("C", "(PA) C", Parameters))%>%
+  mutate(Parameters = gsub("hidden_", "(MLP) hidden_", Parameters))%>%
+  mutate(Parameters = gsub("power", "(Box Cox) power", Parameters))%>%
+  mutate(Parameters = gsub("power", "(Box Cox) power", Parameters)) %>% rename(c("Model" = "Parameters"))
+
+unique(training_mae_testing_mean_names$Model)
+```
+
+```{r}
+online_results = ggplot(training_mae_testing_mean_names, aes(x=mae, y=training_time, color=Model)) + geom_point(alpha=0.5) + theme_classic()+ theme(text = element_text(size=22.5), plot.margin=grid::unit(c(0,0,0,0), "mm"),legend.position = "bottom") + ylab("Training Time log10(S)") + xlab("Mean Absolute Error log10(MAE)")  + scale_x_continuous(trans='log10') + scale_y_continuous(trans='log10') + guides(color=guide_legend(nrow = 4))
+
+ggsave("/Users/alexanderkell/Documents/PhD/Projects/10-ELECSIM/run/market_forecasting_comparison/notebooks/figures//online_training_time_vs_mae_all_results_opaque.pdf", online_results, dpi=1000, width = 30, height = 20, units = "cm")
+```
+
+
+```{r}
+online_results = ggplot(training_mae_testing_mean_names, aes(x=mae, y=testing_time, color=Model)) + geom_point(alpha=0.5) + theme_classic()+ theme(text = element_text(size=22.5), plot.margin=grid::unit(c(0,0,0,0), "mm"),legend.position = "bottom") + ylab("Score Time log10(S)") + xlab("Mean Absolute Error log10(MAE)")  + scale_x_continuous(trans='log10') + scale_y_continuous(trans='log10') + guides(color=guide_legend(nrow = 4))
+print(online_results)
+
+ggsave("/Users/alexanderkell/Documents/PhD/Projects/10-ELECSIM/run/market_forecasting_comparison/notebooks/figures/online_testing_time_vs_mae_all_results_opaque.pdf", online_results, dpi=1000, width = 30, height = 20, units = "cm")
+
+```
+
+
+```{r}
+ggplot(training_mae_testing_mean_std, aes(x=mae_mean, y=training_mean, color=Parameters)) + geom_point(alpha=0.2) #+ geom_errorbar(aes(ymin=training_lower, ymax=training_upper)) + geom_errorbarh(aes(xmin=mae_lower, xmax=mae_upper))+ theme_classic()+ theme(text = element_text(size=22.5), legend.position = "bottom", plot.margin=grid::unit(c(0,0,0,0), "mm")) + ylab("Score Time log10(S)") + xlab("Mean Absolute Error log10(MAE)")  #+ scale_x_continuous(trans='log10') + scale_y_continuous(trans='log10')
 
 ```
 

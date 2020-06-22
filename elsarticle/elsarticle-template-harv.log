@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.4.22)  22 JUN 2020 15:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.4.22)  22 JUN 2020 16:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -853,54 +853,54 @@ Overfull \hbox (1.90001pt too wide) has occurred while \output is active
 [1
 
 
-] [2]
-Underfull \hbox (badness 1292) in paragraph at lines 191--192
+]
+Underfull \hbox (badness 1292) in paragraph at lines 193--194
 \OT1/txr/m/n/10 negligible im-pact on car-bon emis-sions and use of
  []
 
-[3]
+[2] [3]
 Underfull \vbox (badness 2698) has occurred while \output is active []
 
  [4] [5]
-Underfull \hbox (badness 10000) in paragraph at lines 349--350
+Underfull \hbox (badness 10000) in paragraph at lines 351--352
 []\OT1/txr/m/n/10 Suppose we have the train-ing set:
  []
 
 
-Underfull \hbox (badness 2173) in paragraph at lines 349--350
+Underfull \hbox (badness 2173) in paragraph at lines 351--352
 \OT1/txr/m/n/10 (\OML/txmi/m/it/10 x[]; y[]\OT1/txr/m/n/10 )\OML/txmi/m/it/10 ; [] ; \OT1/txr/m/n/10 (\OML/txmi/m/it/10 x[]; y[]\OT1/txr/m/n/10 )\OML/txmi/m/it/10 ; [] ; \OT1/txr/m/n/10 (\OML/txmi/m/it/10 x[]; y[]\OT1/txr/m/n/10 )$, where $\OML/txmi/m/it/10 x[]$ \OT1/txr/m/n/10 is the in-
  []
 
 File: figures/methods/Kell_eEnergy_Fig1.eps Graphic file (type eps)
 <figures/methods/Kell_eEnergy_Fig1.eps>
-Underfull \hbox (badness 2753) in paragraph at lines 392--393
+Underfull \hbox (badness 2753) in paragraph at lines 394--395
 \OT1/txr/m/n/10 sup-pose we have N ob-ser-va-tions $\OML/txmi/m/it/10 y[]; y[]; [] ; y[]$ \OT1/txr/m/n/10 in
  []
 
 [6] [7]
 File: figures/methods/System_overview_large.png Graphic file (type eps)
  <figures/methods/System_overview_large.png>
-Overfull \hbox (2.638pt too wide) in paragraph at lines 487--488
+Overfull \hbox (2.638pt too wide) in paragraph at lines 489--490
 [][] 
  []
 
 [8]
-Underfull \hbox (badness 6893) in paragraph at lines 522--523
+Underfull \hbox (badness 6893) in paragraph at lines 524--525
 []\OT1/txr/m/n/10 To find the op-ti-mum hy-per-pa-ram-e-ters, cross-
  []
 
 
-Underfull \hbox (badness 4805) in paragraph at lines 576--576
+Underfull \hbox (badness 4805) in paragraph at lines 578--578
 []\OT1/txr/m/n/10 [(10, 50, 100),
  []
 
 
-Underfull \hbox (badness 1226) in paragraph at lines 576--576
+Underfull \hbox (badness 1226) in paragraph at lines 578--578
 \OT1/txr/m/n/10 (10), (20), (50),
  []
 
 
-Underfull \hbox (badness 1102) in paragraph at lines 612--613
+Underfull \hbox (badness 1102) in paragraph at lines 614--615
 \OT1/txr/m/n/10 ab-so-lute er-ror. These in-clude the Lasso, gra-di-ent
  []
 
@@ -924,8 +924,11 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [11]
 File: figures/results/online_learning_dists-power-0.1.eps Graphic file (type eps)
  <figures/results/online_learning_dists-power-0.1.eps>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 File: figures/results/online_learning_dists-C-0.1-fit_intercept-true-max_iter-1000-shuffle-false-tol 0.001.eps Graphic file (type eps)
- <figures/results/online_learning_dists-C-0.1-fit_intercept-true-max_iter-1000-shuffle-false-tol 0.001.eps>
+<figures/results/online_learning_dists-C-0.1-fit_intercept-true-max_iter-1000-shuffle-false-tol 0.001.eps>
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -944,10 +947,7 @@ File: figures/results/online_training_time_vs_mae_all_results_opaque.eps Graphic
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [12]
+[12]
 File: figures/results/elecsim_results/results_2/contributed_PV_mean_output.eps Graphic file (type eps)
  <figures/results/elecsim_results/results_2/contributed_PV_mean_output.eps>
 File: figures/results/elecsim_results/results_2/contributed_Coal_mean_output.eps Graphic file (type eps)
@@ -1033,12 +1033,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 126--131
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 Underfull \hbox (badness 1348) in paragraph at lines 164--170
 []\OT1/txr/m/n/8 P. Goncalves Da Silva, D. Ilic, S. Karnouskos, The Im-
  []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \hbox (badness 1314) in paragraph at lines 190--194
@@ -1105,11 +1105,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [17]) [18
 
-] (./elsarticle-template-harv.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+] (./elsarticle-template-harv.aux) ) 
 Here is how much of TeX's memory you used:
  11153 strings out of 480609
  195478 string characters out of 5903656
@@ -1119,4 +1115,4 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  62i,15n,100p,1256b,544s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on elsarticle-template-harv.dvi (18 pages, 110532 bytes).
+Output written on elsarticle-template-harv.dvi (18 pages, 110468 bytes).
