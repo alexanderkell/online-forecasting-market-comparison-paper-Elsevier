@@ -1,0 +1,322 @@
+\begin{thebibliography}{10}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \def\href#1#2{#2} \def\path#1{#1}\fi
+
+\bibitem{Lu1993}
+C.~Lu, H.~T. Wu, S.~Vemuri, {Neural network based short term load forecasting},
+  IEEE Transactions on Power Systems 8~(1) (1993) 336--342.
+\newblock \href {https://doi.org/10.1080/02533839.1995.9677697}
+  {\path{doi:10.1080/02533839.1995.9677697}}.
+
+\bibitem{Mahmood2014}
+A.~Mahmood, M.~N. Ullah, S.~Razzaq, A.~Basit, U.~Mustafa, M.~Naeem, N.~Javaid,
+  {A new scheme for demand side management in future smart grid networks},
+  Procedia Computer Science 32 (2014) 477--484.
+
+\bibitem{Kell2018a}
+A.~Kell, A.~McGough, M.~Forshaw, {Segmenting residential smart meter data for
+  short-Term load forecasting}, in: e-Energy 2018 - Proceedings of the 9th ACM
+  International Conference on Future Energy Systems, 2018.
+
+\bibitem{Hong2014}
+T.~Hong, J.~Wilson, J.~Xie, A.~Member, {Long Term Probabilistic Load
+  Forecasting and Normalization With Hourly Information} 5~(1) (2014) 456--462.
+
+\bibitem{Al-Musaylh2018}
+M.~Al-Musaylh, R.~Deo, J.~Adamowski, Y.~Li,
+  \href{https://doi.org/10.1016/j.aei.2017.11.002}{{Short-term electricity
+  demand forecasting with MARS, SVR and ARIMA models using aggregated demand
+  data in Queensland, Australia}}, Advanced Engineering Informatics
+  35~(November 2017) (2018) 1--16.
+\newblock \href {https://doi.org/10.1016/j.aei.2017.11.002}
+  {\path{doi:10.1016/j.aei.2017.11.002}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.aei.2017.11.002}
+
+\bibitem{Vrablecova2017}
+P.~Vrablecov{\'{a}}, A.~{Bou Ezzeddine}, V.~Rozinajov{\'{a}},
+  S.~{\v{S}}{\'{a}}rik, A.~K. Sangaiah, {Smart grid load forecasting using
+  online support vector regression}, Computers {\&} Electrical Engineering 0
+  (2017) 1--16.
+\newblock \href {https://doi.org/10.1016/j.compeleceng.2017.07.006}
+  {\path{doi:10.1016/j.compeleceng.2017.07.006}}.
+
+\bibitem{Singh2012}
+A.~K. Singh, Ibraheem, S.~Khatoon, M.~Muazzam, D.~K. Chaturvedi, {Load
+  forecasting techniques and methodologies: A review}, ICPCES 2012 - 2012 2nd
+  International Conference on Power, Control and Embedded Systems (2012).
+\newblock \href {https://doi.org/10.1109/ICPCES.2012.6508132}
+  {\path{doi:10.1109/ICPCES.2012.6508132}}.
+
+\bibitem{Huang2003}
+S.-j. Huang, S.~Member, K.-r. Shih, {Short-Term Load Forecasting Via ARMA Model
+  Identification Including Non-Gaussian} 18~(2) (2003) 673--679.
+
+\bibitem{Andersen2013}
+F.~M. Andersen, H.~V. Larsen, T.~K. Boomsma, {Long-term forecasting of hourly
+  electricity load: Identification of consumption profiles and segmentation of
+  customers}, Energy Conversion and Management 68 (2013) 244--252.
+
+\bibitem{Kell}
+A.~Kell, M.~Forshaw, A.~S. Mcgough, {ElecSim : Monte-Carlo Open-Source
+  Agent-Based Model to Inform Policy for Long-Term Electricity Planning}, The
+  Tenth ACM International Conference on Future Energy Systems (ACM e-Energy)
+  (2019) 556--565.
+
+\bibitem{Kell2020}
+A.~J.~M. Kell, M.~Forshaw, A.~S. McGough, {Long-Term Electricity Market Agent
+  Based Model Validation using Genetic Algorithm based Optimization}, The
+  Eleventh ACM International Conference on Future Energy Systems (e-Energy'20)
+  (2020).
+
+\bibitem{Kell2018}
+A.~Kell, A.~S. Mcgough, M.~Forshaw, {Segmenting Residential Smart Meter Data
+  for Short-Term Load Forecasting}, e-Energy Conference (2018) 91--96.
+
+\bibitem{Ahmad2017}
+M.~W. Ahmad, M.~Mourshed, Y.~Rezgui, {Trees vs Neurons: Comparison between
+  random forest and ANN for high-resolution prediction of building energy
+  consumption}, Energy and Buildings 147 (2017) 77--89.
+
+\bibitem{Chen2004}
+B.-j. Chen, M.-w. Chang, C.-j. Lin, {Load Forecasting Using Support Vector
+  Machines : A Study on EUNITE Competition 2001}, IEEE Transactions on Power
+  Systems 19~(4) (2004) 1821--1830.
+
+\bibitem{Kim2000}
+K.-h. Kim, H.-s. Youn, S.~Member, Y.-c. Kang, {Short-term load forecasting for
+  special days in anomalous load conditions using neural networks}, IEEE
+  Transactions on Power Systems 15~(2) (2000) 559--565.
+\newblock \href {https://doi.org/10.1109/59.867141}
+  {\path{doi:10.1109/59.867141}}.
+
+\bibitem{Tiong2008}
+J.~Nagi, S.~K. Yap, S.~K. Tiong, S.~K. Ahmed, {Electrical Power Load
+  Forecasting using Hybrid Self-Organizing Maps and Support Vector Machines},
+  The 2nd International Power Engineering optimization Conference
+  (PEOCO)~(June) (2008) 51 -- 56.
+
+\bibitem{Quilumba2014}
+F.~L. Quilumba, W.-j. Lee, H.~Huang, D.~Y. Wang, S.~Member, R.~L. Szabados,
+  {Using Smart Meter Data to Improve the Accuracy of Intraday Load Forecasting
+  Considering Customer Behavior Similarities} (2014) 1--8.
+
+\bibitem{Nguyen2017}
+H.~Nguyen, C.~K. Hansen,
+  \href{http://ieeexplore.ieee.org/document/7998331/}{{Short-term electricity
+  load forecasting with Time Series Analysis}}, 2017 IEEE International
+  Conference on Prognostics and Health Management (ICPHM) (2017) 214--221\href
+  {https://doi.org/10.1109/ICPHM.2017.7998331}
+  {\path{doi:10.1109/ICPHM.2017.7998331}}.
+\newline\urlprefix\url{http://ieeexplore.ieee.org/document/7998331/}
+
+\bibitem{Gross1987}
+G.~Gross, F.~Galiana, {Short-term load forecasting}, Proceedings of the IEEE
+  75~(12) (1987) 1558--1573.
+\newblock \href {https://doi.org/10.1109/PROC.1987.13927}
+  {\path{doi:10.1109/PROC.1987.13927}}.
+
+\bibitem{Ghofrani}
+M.~Ghofrani, M.~Hassanzadeh, M.~S. Fadali, {Smart Meter Based Short-Term Load
+  Forecasting for Residential Customers}  13--17.
+
+\bibitem{Fard2014}
+A.~K. Fard, M.-R. Akbari-Zadeh, {A hybrid method based on wavelet, ANN and
+  ARIMA model for short-term load forecasting}, Journal of Experimental {\&}
+  Theoretical Artificial Intelligence 26~(2) (2014) 167--182.
+\newblock \href {https://doi.org/10.1080/0952813X.2013.813976}
+  {\path{doi:10.1080/0952813X.2013.813976}}.
+
+\bibitem{Humeau2013}
+S.~Humeau, T.~K. Wijaya, M.~Vasirani, K.~Aberer, {Electricity load forecasting
+  for residential customers: Exploiting aggregation and correlation between
+  households}, 2013 Sustainable Internet and ICT for Sustainability, SustainIT
+  2013 (2013).
+\newblock \href {https://doi.org/10.1109/SustainIT.2013.6685208}
+  {\path{doi:10.1109/SustainIT.2013.6685208}}.
+
+\bibitem{Johansson2017}
+C.~Johansson, M.~Bergkvist, D.~Geysen, O.~D. Somer, N.~Lavesson, D.~Vanhoudt,
+  {Operational Demand Forecasting in District Heating Systems Using Ensembles
+  of Online Machine Learning Algorithms}, Energy Procedia 116 (2017) 208--216.
+
+\bibitem{Baram2003}
+Y.~Baram, R.~El-Yaniv, K.~Luz, {Online Choice of Active Learning Algorithms},
+  Proceedings, Twentieth International Conference on Machine Learning 1 (2003)
+  19--26.
+
+\bibitem{Schmitt2008}
+J.~Schmitt, M.~Hollick, C.~Roos, R.~Steinmetz, {Adapting the user context in
+  realtime: Tailoring online machine learning algorithms to ambient computing},
+  Mobile Networks and Applications 13~(6) (2008) 583--598.
+\newblock \href {https://doi.org/10.1007/s11036-008-0095-8}
+  {\path{doi:10.1007/s11036-008-0095-8}}.
+
+\bibitem{Widmer1996}
+G.~Widmer, {Learning in the presence of concept drift and hidden contexts},
+  Machine Learning 23~(1) (1996) 69--101.
+\newblock \href {https://doi.org/10.1007/bf00116900}
+  {\path{doi:10.1007/bf00116900}}.
+
+\bibitem{GoncalvesDaSilva2014}
+P.~{Goncalves Da Silva}, D.~Ilic, S.~Karnouskos, {The Impact of Smart Grid
+  Prosumer Grouping on Forecasting Accuracy and Its Benefits for Local
+  Electricity Market Trading}, IEEE Transactions on Smart Grid 5~(1) (2014)
+  402--410.
+\newblock \href {https://doi.org/10.1109/TSG.2013.2278868}
+  {\path{doi:10.1109/TSG.2013.2278868}}.
+
+\bibitem{Witten2011}
+I.~H. Witten, E.~Frank, M.~a. Hall, {Data Mining: Practical Machine Learning
+  Tools and Techniques}, 2011.
+
+\bibitem{Gzik2014}
+K.~Crammer, O.~Dekel, J.~Keshet, S.~Shalev-Shwartz, Y.~Singer, {Online
+  Passive-Aggressive Algorithms}, Journal of Machine Learning Research (2006).
+\newblock \href {https://doi.org/10.1201/b15810-63}
+  {\path{doi:10.1201/b15810-63}}.
+
+\bibitem{Box1964}
+G.~E.~P. Box, D.~Cox, {An Analysis of Transformations}, Journal, Source
+  Statistical, Royal Series, Society 26~(2) (1964) 211--252.
+
+\bibitem{forgy65}
+E.~Forgy, Cluster analysis of multivariate data: Efficiency versus
+  interpretability of classification, Biometrics 21~(3) (1965) 768--769.
+
+\bibitem{Hinton1989}
+G.~E. Hinton, {Connectionist learning procedures}, Artificial Intelligence
+  40~(1-3) (1989) 185--234.
+\newblock \href {https://doi.org/10.1016/0004-3702(89)90049-0}
+  {\path{doi:10.1016/0004-3702(89)90049-0}}.
+
+\bibitem{Tibshirani1996a}
+R.~Tibshirani, {Regression Shrinkage and Selection Via the Lasso}, Journal of
+  the Royal Statistical Society: Series B (Methodological) 58~(1) (1996)
+  267--288.
+\newblock \href {https://doi.org/10.1111/j.2517-6161.1996.tb02080.x}
+  {\path{doi:10.1111/j.2517-6161.1996.tb02080.x}}.
+
+\bibitem{GeladiPaul1994Mrac}
+P.~Geladi, Measurement, regression and calibration, philip brown, oxford
+  statistical science series. vol. 12, oxford science publications, oxford,
+  1993, no of pages: 224. price: £27.50. isbn 0 19-852245-2, Journal of
+  chemometrics 8~(5) (1994) 371--372.
+
+\bibitem{Geostatistics2010}
+J.~Friedman, T.~Hastie, R.~Tibshirani, {Regularization Paths for Generalized
+  Linear Models via Coordinate Descent}, Journal of Statistical Software 33~(1)
+  (2010) 1--22.
+\newblock \href {http://arxiv.org/abs/0908.3817} {\path{arXiv:0908.3817}},
+  \href {https://doi.org/10.1016/j.expneurol.2008.01.011}
+  {\path{doi:10.1016/j.expneurol.2008.01.011}}.
+
+\bibitem{Fike1988}
+B.~Efron, T.~Hastie, I.~Johnstone, R.~Tibshirani, {Least angle regression}, The
+  Annals of Statistics 32~(2) (1988) 440--444.
+\newblock \href {https://doi.org/10.1109/glocom.1988.25879}
+  {\path{doi:10.1109/glocom.1988.25879}}.
+
+\bibitem{Breiman2001}
+L.~Breiman, {Random forests}, Machine Learning 45~(1) (2001) 5--32.
+\newblock \href
+  {http://arxiv.org/abs//dx.doi.org/10.1023{\%}2FA{\%}3A1010933404324}
+  {\path{arXiv:/dx.doi.org/10.1023{\%}2FA{\%}3A1010933404324}}, \href
+  {https://doi.org/10.1023/A:1010933404324}
+  {\path{doi:10.1023/A:1010933404324}}.
+
+\bibitem{Freund1997}
+Y.~Freund, R.~E. Schapire, {A Decision-Theoretic Generalization of On-Line
+  Learning and an Application to Boosting}, Journal of Computer and System
+  Sciences 55~(1) (1997) 119--139.
+\newblock \href {https://doi.org/10.1006/jcss.1997.1504}
+  {\path{doi:10.1006/jcss.1997.1504}}.
+
+\bibitem{316}
+J.~H. Friedman, {Greedy Function Approximation: A Gradient Boosting Machine}
+  (316) 400.
+
+\bibitem{Cortes1995}
+C.~Cortes, V.~Vapnik, {Support-Vector Networks}, Machine Learning 20~(3) (1995)
+  273--297.
+\newblock \href {http://arxiv.org/abs/arXiv:1011.1669v3}
+  {\path{arXiv:arXiv:1011.1669v3}}, \href
+  {https://doi.org/10.1023/A:1022627411411}
+  {\path{doi:10.1023/A:1022627411411}}.
+
+\bibitem{scikit-learn}
+F.~Pedregosa, G.~Varoquaux, A.~Gramfort, V.~Michel, B.~Thirion, O.~Grisel,
+  M.~Blondel, P.~Prettenhofer, R.~Weiss, V.~Dubourg, J.~Vanderplas, A.~Passos,
+  D.~Cournapeau, M.~Brucher, M.~Perrot, E.~Duchesnay, Scikit-learn: Machine
+  learning in {P}ython, Journal of Machine Learning Research 12 (2011)
+  2825--2830.
+
+\bibitem{creme}
+{Creme}, https://pypi.org/project/creme/ (2019).
+
+\bibitem{Quinlan}
+J.~R. Quinlan, C4.5: Programs for Machine Learning, Morgan Kaufmann Publishers
+  Inc., San Francisco, CA, USA, 1993.
+
+\bibitem{Shu2006}
+F.~Shu, C.~Luonan, {Short-term load forecasting based on an adaptive hybrid
+  method}, Power Systems, IEEE Transactions on 21~(1) (2006) 392--401.
+\newblock \href {https://doi.org/10.1109/TPWRS.2005.860944}
+  {\path{doi:10.1109/TPWRS.2005.860944}}.
+
+\bibitem{Drucker1997}
+H.~Drucker, C.~J.~C. Burges, L.~Kaufman, A.~Smola, V.~Vapnik, {Support vector
+  regression machines}, Advances in Neural Information Processing Systems 1
+  (1997) 155--161.
+\newblock \href {https://doi.org/10.1.1.10.4845} {\path{doi:10.1.1.10.4845}}.
+
+\bibitem{Smola2004}
+A.~J. Smola, B.~Sch{\"{o}}lkopf, {A tutorial on support vector regression},
+  Statistics and Computing 14~(3) (2004) 199--222.
+\newblock \href {http://arxiv.org/abs/arXiv:1011.1669v3}
+  {\path{arXiv:arXiv:1011.1669v3}}, \href
+  {https://doi.org/10.1023/B:STCO.0000035301.49549.88}
+  {\path{doi:10.1023/B:STCO.0000035301.49549.88}}.
+
+\bibitem{Akaike1974}
+H.~Akaike, {A New Look at the Statistical Model Identification}, IEEE
+  Transactions on Automatic Control 19~(6) (1974) 716--723.
+\newblock \href {http://arxiv.org/abs/arXiv:1011.1669v3}
+  {\path{arXiv:arXiv:1011.1669v3}}, \href
+  {https://doi.org/10.1109/TAC.1974.1100705}
+  {\path{doi:10.1109/TAC.1974.1100705}}.
+
+\bibitem{Pao2007}
+H.-T. Pao, {Forecasting electricity market pricing using artificial neural
+  networks}, Energy Conversion and Management 48~(3) (2007) 907--912.
+\newblock \href {https://doi.org/10.1016/j.enconman.2006.08.016}
+  {\path{doi:10.1016/j.enconman.2006.08.016}}.
+
+\bibitem{Ma2009}
+J.~Ma, L.~K. Saul, S.~Savage, G.~M. Voelker, {Identifying suspicious URLs: An
+  application of large-scale online learning}, Proceedings of the 26th
+  International Conference On Machine Learning, ICML 2009 (2009) 681--688.
+
+\bibitem{dukes_511}
+{Department for Business and Industrial Strategy, UK Government}, Power
+  stations in the united kingdom, may 2019, Digest of United Kingdom Energy
+  Statistics (DUKES) (2019).
+
+\bibitem{companies_house}
+{Department for Business, Energy \& Industrial Strategy}, Companies house -
+  gov.uk, UK Government (2019).
+
+\bibitem{DBEIS2019}
+{Department for Business Energy {\&} Industrial Strategy}, {Updated energy and
+  emissions projections 2018}, The Energy White Paper~(April) (2019).
+
+\bibitem{gbnationalgridstatus_2019}
+{Elexon portal and Sheffield University}, G.b. national grid status,
+  https://www.gridwatch.templar.co.uk/.
+
+\bibitem{ESO2019}
+{National Grid}, {STOR Market Information Report}~(October) (2019) 0--11.
+
+\end{thebibliography}
