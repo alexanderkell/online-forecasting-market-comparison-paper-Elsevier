@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.22)  22 JUN 2020 18:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.22)  24 JUN 2020 12:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -902,20 +902,30 @@ Underfull \hbox (badness 2753) in paragraph at lines 392--393
  []
 
 [6 <./Kell_eEnergy_Fig1-eps-converted-to.pdf>]
-<System_overview_large.png, id=44, 876.27374pt x 568.1225pt>
-File: System_overview_large.png Graphic file (type png)
-<use System_overview_large.png>
-Package pdftex.def Info: System_overview_large.png  used on input line 487.
-(pdftex.def)             Requested size: 205.92114pt x 133.50012pt.
- [7]
+
+LaTeX Warning: File `figures/methedology/System_overview_large.png' not found on input line 487.
+
+
+./elsarticle-template-harv.tex:487: Package pdftex.def Error: File `figures/methedology/System_overview_large.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.487 ...es/methedology/System_overview_large.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[7]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [8]
 Underfull \hbox (badness 6893) in paragraph at lines 522--523
 []\OT1/txr/m/n/10 To find the op-ti-mum hy-per-pa-ram-e-ters, cross-
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [8 <./System_overview_large.png>]
 Underfull \hbox (badness 4805) in paragraph at lines 576--576
 []\OT1/txr/m/n/10 [(10, 50, 100),
  []
@@ -939,12 +949,14 @@ Package epstopdf Info: Source file: <offline_model_mae.eps>
 (epstopdf)             Command: <repstopdf --outfile=offline_model_mae-eps-converted-to.pdf offline_model_mae.eps>
 (epstopdf)             \includegraphics on input line 618.
 Package epstopdf Info: Output file is already uptodate.
-<offline_model_mae-eps-converted-to.pdf, id=55, 464.73625pt x 268.00125pt>
+<offline_model_mae-eps-converted-to.pdf, id=53, 464.73625pt x 268.00125pt>
 File: offline_model_mae-eps-converted-to.pdf Graphic file (type pdf)
 <use offline_model_mae-eps-converted-to.pdf>
 Package pdftex.def Info: offline_model_mae-eps-converted-to.pdf  used on input line 618.
 (pdftex.def)             Requested size: 222.0pt x 128.02164pt.
-[9 <./offline_model_mae-eps-converted-to.pdf>] [10]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 Package epstopdf Info: Source file: <ExtraTreesRegressor_distribution_plot.eps>
 (epstopdf)                    date: 2020-05-29 14:39:32
 (epstopdf)                    size: 38537 bytes
@@ -954,11 +966,15 @@ Package epstopdf Info: Source file: <ExtraTreesRegressor_distribution_plot.eps>
 (epstopdf)             Command: <repstopdf --outfile=ExtraTreesRegressor_distribution_plot-eps-converted-to.pdf ExtraTreesRegressor_distribution_plot.eps>
 (epstopdf)             \includegraphics on input line 635.
 Package epstopdf Info: Output file is already uptodate.
-<ExtraTreesRegressor_distribution_plot-eps-converted-to.pdf, id=106, 458.71375pt x 396.48125pt>
+<ExtraTreesRegressor_distribution_plot-eps-converted-to.pdf, id=54, 458.71375pt x 396.48125pt>
 File: ExtraTreesRegressor_distribution_plot-eps-converted-to.pdf Graphic file (type pdf)
 <use ExtraTreesRegressor_distribution_plot-eps-converted-to.pdf>
 Package pdftex.def Info: ExtraTreesRegressor_distribution_plot-eps-converted-to.pdf  used on input line 635.
 (pdftex.def)             Requested size: 199.79865pt x 172.69179pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[9] [10]
 Package epstopdf Info: Source file: <offline_fit_time_vs_mae_all_results_opaque.eps>
 (epstopdf)                    date: 2020-06-22 16:06:53
 (epstopdf)                    size: 382348 bytes
@@ -968,7 +984,7 @@ Package epstopdf Info: Source file: <offline_fit_time_vs_mae_all_results_opaque.
 (epstopdf)             Command: <repstopdf --outfile=offline_fit_time_vs_mae_all_results_opaque-eps-converted-to.pdf offline_fit_time_vs_mae_all_results_opaque.eps>
 (epstopdf)             \includegraphics on input line 675.
 Package epstopdf Info: Output file is already uptodate.
-<offline_fit_time_vs_mae_all_results_opaque-eps-converted-to.pdf, id=107, 855.195pt x 570.13pt>
+<offline_fit_time_vs_mae_all_results_opaque-eps-converted-to.pdf, id=61, 855.195pt x 570.13pt>
 File: offline_fit_time_vs_mae_all_results_opaque-eps-converted-to.pdf Graphic file (type pdf)
 <use offline_fit_time_vs_mae_all_results_opaque-eps-converted-to.pdf>
 Package pdftex.def Info: offline_fit_time_vs_mae_all_results_opaque-eps-converted-to.pdf  used on input line 675.
@@ -986,7 +1002,7 @@ Package epstopdf Info: Source file: <offline_score_time_vs_mae_all_results_opaqu
 (epstopdf)             Command: <repstopdf --outfile=offline_score_time_vs_mae_all_results_opaque-eps-converted-to.pdf offline_score_time_vs_mae_all_results_opaque.eps>
 (epstopdf)             \includegraphics on input line 687.
 Package epstopdf Info: Output file is already uptodate.
-<offline_score_time_vs_mae_all_results_opaque-eps-converted-to.pdf, id=108, 855.195pt x 570.13pt>
+<offline_score_time_vs_mae_all_results_opaque-eps-converted-to.pdf, id=62, 855.195pt x 570.13pt>
 File: offline_score_time_vs_mae_all_results_opaque-eps-converted-to.pdf Graphic file (type pdf)
 <use offline_score_time_vs_mae_all_results_opaque-eps-converted-to.pdf>
 Package pdftex.def Info: offline_score_time_vs_mae_all_results_opaque-eps-converted-to.pdf  used on input line 687.
@@ -1000,7 +1016,7 @@ Package epstopdf Info: Source file: <online_model_mae_barplot.eps>
 (epstopdf)             Command: <repstopdf --outfile=online_model_mae_barplot-eps-converted-to.pdf online_model_mae_barplot.eps>
 (epstopdf)             \includegraphics on input line 704.
 Package epstopdf Info: Output file is already uptodate.
-<online_model_mae_barplot-eps-converted-to.pdf, id=109, 1336.995pt x 758.835pt>
+<online_model_mae_barplot-eps-converted-to.pdf, id=63, 1336.995pt x 758.835pt>
 File: online_model_mae_barplot-eps-converted-to.pdf Graphic file (type pdf)
 <use online_model_mae_barplot-eps-converted-to.pdf>
 Package pdftex.def Info: online_model_mae_barplot-eps-converted-to.pdf  used on input line 704.
@@ -1008,7 +1024,7 @@ Package pdftex.def Info: online_model_mae_barplot-eps-converted-to.pdf  used on 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[11 <./ExtraTreesRegressor_distribution_plot-eps-converted-to.pdf> <./offline_fit_time_vs_mae_all_results_opaque-eps-converted-to.pdf> <./offline_score_time_vs_mae_all_results_opaque-eps-converted-to.pdf>]
+[11 <./offline_model_mae-eps-converted-to.pdf> <./ExtraTreesRegressor_distribution_plot-eps-converted-to.pdf> <./offline_fit_time_vs_mae_all_results_opaque-eps-converted-to.pdf> <./offline_score_time_vs_mae_all_results_opaque-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <online_learning_dists-power-01.eps>
 (epstopdf)                    date: 2020-05-28 13:39:19
 (epstopdf)                    size: 41779 bytes
@@ -1018,7 +1034,7 @@ Package epstopdf Info: Source file: <online_learning_dists-power-01.eps>
 (epstopdf)             Command: <repstopdf --outfile=online_learning_dists-power-01-eps-converted-to.pdf online_learning_dists-power-01.eps>
 (epstopdf)             \includegraphics on input line 726.
 Package epstopdf Info: Output file is already uptodate.
-<online_learning_dists-power-01-eps-converted-to.pdf, id=175, 458.71375pt x 396.48125pt>
+<online_learning_dists-power-01-eps-converted-to.pdf, id=173, 458.71375pt x 396.48125pt>
 File: online_learning_dists-power-01-eps-converted-to.pdf Graphic file (type pdf)
 <use online_learning_dists-power-01-eps-converted-to.pdf>
 Package pdftex.def Info: online_learning_dists-power-01-eps-converted-to.pdf  used on input line 726.
@@ -1032,7 +1048,7 @@ Package epstopdf Info: Source file: <online_learning_dists-passive.eps>
 (epstopdf)             Command: <repstopdf --outfile=online_learning_dists-passive-eps-converted-to.pdf online_learning_dists-passive.eps>
 (epstopdf)             \includegraphics on input line 735.
 Package epstopdf Info: Output file is already uptodate.
-<online_learning_dists-passive-eps-converted-to.pdf, id=176, 458.71375pt x 396.48125pt>
+<online_learning_dists-passive-eps-converted-to.pdf, id=174, 458.71375pt x 396.48125pt>
 File: online_learning_dists-passive-eps-converted-to.pdf Graphic file (type pdf)
 <use online_learning_dists-passive-eps-converted-to.pdf>
 Package pdftex.def Info: online_learning_dists-passive-eps-converted-to.pdf  used on input line 735.
@@ -1046,7 +1062,7 @@ Package epstopdf Info: Source file: <both_actual_predicted.eps>
 (epstopdf)             Command: <repstopdf --outfile=both_actual_predicted-eps-converted-to.pdf both_actual_predicted.eps>
 (epstopdf)             \includegraphics on input line 746.
 Package epstopdf Info: Output file is already uptodate.
-<both_actual_predicted-eps-converted-to.pdf, id=177, 1138.2525pt x 569.12625pt>
+<both_actual_predicted-eps-converted-to.pdf, id=175, 1138.2525pt x 569.12625pt>
 File: both_actual_predicted-eps-converted-to.pdf Graphic file (type pdf)
 <use both_actual_predicted-eps-converted-to.pdf>
 Package pdftex.def Info: both_actual_predicted-eps-converted-to.pdf  used on input line 746.
@@ -1061,7 +1077,7 @@ Package epstopdf Info: Source file: <online_testing_time_vs_mae_all_results_opaq
 (epstopdf)             Command: <repstopdf --outfile=online_testing_time_vs_mae_all_results_opaque-eps-converted-to.pdf online_testing_time_vs_mae_all_results_opaque.eps>
 (epstopdf)             \includegraphics on input line 764.
 Package epstopdf Info: Output file is already uptodate.
-<online_testing_time_vs_mae_all_results_opaque-eps-converted-to.pdf, id=322, 855.195pt x 570.13pt>
+<online_testing_time_vs_mae_all_results_opaque-eps-converted-to.pdf, id=320, 855.195pt x 570.13pt>
 File: online_testing_time_vs_mae_all_results_opaque-eps-converted-to.pdf Graphic file (type pdf)
 <use online_testing_time_vs_mae_all_results_opaque-eps-converted-to.pdf>
 Package pdftex.def Info: online_testing_time_vs_mae_all_results_opaque-eps-converted-to.pdf  used on input line 764.
@@ -1075,7 +1091,7 @@ Package epstopdf Info: Source file: <online_training_time_vs_mae_all_results_opa
 (epstopdf)             Command: <repstopdf --outfile=online_training_time_vs_mae_all_results_opaque-eps-converted-to.pdf online_training_time_vs_mae_all_results_opaque.eps>
 (epstopdf)             \includegraphics on input line 771.
 Package epstopdf Info: Output file is already uptodate.
-<online_training_time_vs_mae_all_results_opaque-eps-converted-to.pdf, id=323, 855.195pt x 570.13pt>
+<online_training_time_vs_mae_all_results_opaque-eps-converted-to.pdf, id=321, 855.195pt x 570.13pt>
 File: online_training_time_vs_mae_all_results_opaque-eps-converted-to.pdf Graphic file (type pdf)
 <use online_training_time_vs_mae_all_results_opaque-eps-converted-to.pdf>
 Package pdftex.def Info: online_training_time_vs_mae_all_results_opaque-eps-converted-to.pdf  used on input line 771.
@@ -1089,7 +1105,7 @@ Package epstopdf Info: Source file: <contributed_PV_mean_output.eps>
 (epstopdf)             Command: <repstopdf --outfile=contributed_PV_mean_output-eps-converted-to.pdf contributed_PV_mean_output.eps>
 (epstopdf)             \includegraphics on input line 798.
 Package epstopdf Info: Output file is already uptodate.
-<contributed_PV_mean_output-eps-converted-to.pdf, id=324, 433.62pt x 289.08pt>
+<contributed_PV_mean_output-eps-converted-to.pdf, id=322, 433.62pt x 289.08pt>
 File: contributed_PV_mean_output-eps-converted-to.pdf Graphic file (type pdf)
 <use contributed_PV_mean_output-eps-converted-to.pdf>
 Package pdftex.def Info: contributed_PV_mean_output-eps-converted-to.pdf  used on input line 798.
@@ -1103,7 +1119,7 @@ Package epstopdf Info: Source file: <contributed_Coal_mean_output.eps>
 (epstopdf)             Command: <repstopdf --outfile=contributed_Coal_mean_output-eps-converted-to.pdf contributed_Coal_mean_output.eps>
 (epstopdf)             \includegraphics on input line 805.
 Package epstopdf Info: Output file is already uptodate.
-<contributed_Coal_mean_output-eps-converted-to.pdf, id=325, 433.62pt x 289.08pt>
+<contributed_Coal_mean_output-eps-converted-to.pdf, id=323, 433.62pt x 289.08pt>
 File: contributed_Coal_mean_output-eps-converted-to.pdf Graphic file (type pdf)
 <use contributed_Coal_mean_output-eps-converted-to.pdf>
 Package pdftex.def Info: contributed_Coal_mean_output-eps-converted-to.pdf  used on input line 805.
@@ -1117,7 +1133,7 @@ Package epstopdf Info: Source file: <contributed_Nuclear_mean_output.eps>
 (epstopdf)             Command: <repstopdf --outfile=contributed_Nuclear_mean_output-eps-converted-to.pdf contributed_Nuclear_mean_output.eps>
 (epstopdf)             \includegraphics on input line 813.
 Package epstopdf Info: Output file is already uptodate.
-<contributed_Nuclear_mean_output-eps-converted-to.pdf, id=326, 433.62pt x 289.08pt>
+<contributed_Nuclear_mean_output-eps-converted-to.pdf, id=324, 433.62pt x 289.08pt>
 File: contributed_Nuclear_mean_output-eps-converted-to.pdf Graphic file (type pdf)
 <use contributed_Nuclear_mean_output-eps-converted-to.pdf>
 Package pdftex.def Info: contributed_Nuclear_mean_output-eps-converted-to.pdf  used on input line 813.
@@ -1131,7 +1147,7 @@ Package epstopdf Info: Source file: <contributed_Offshore_mean_output.eps>
 (epstopdf)             Command: <repstopdf --outfile=contributed_Offshore_mean_output-eps-converted-to.pdf contributed_Offshore_mean_output.eps>
 (epstopdf)             \includegraphics on input line 821.
 Package epstopdf Info: Output file is already uptodate.
-<contributed_Offshore_mean_output-eps-converted-to.pdf, id=327, 433.62pt x 289.08pt>
+<contributed_Offshore_mean_output-eps-converted-to.pdf, id=325, 433.62pt x 289.08pt>
 File: contributed_Offshore_mean_output-eps-converted-to.pdf Graphic file (type pdf)
 <use contributed_Offshore_mean_output-eps-converted-to.pdf>
 Package pdftex.def Info: contributed_Offshore_mean_output-eps-converted-to.pdf  used on input line 821.
@@ -1145,7 +1161,7 @@ Package epstopdf Info: Source file: <contributed_Recip_gas_mean_output.eps>
 (epstopdf)             Command: <repstopdf --outfile=contributed_Recip_gas_mean_output-eps-converted-to.pdf contributed_Recip_gas_mean_output.eps>
 (epstopdf)             \includegraphics on input line 828.
 Package epstopdf Info: Output file is already uptodate.
-<contributed_Recip_gas_mean_output-eps-converted-to.pdf, id=328, 433.62pt x 289.08pt>
+<contributed_Recip_gas_mean_output-eps-converted-to.pdf, id=326, 433.62pt x 289.08pt>
 File: contributed_Recip_gas_mean_output-eps-converted-to.pdf Graphic file (type pdf)
 <use contributed_Recip_gas_mean_output-eps-converted-to.pdf>
 Package pdftex.def Info: contributed_Recip_gas_mean_output-eps-converted-to.pdf  used on input line 828.
@@ -1164,7 +1180,7 @@ Package epstopdf Info: Source file: <total_CCGT_mean_output.eps>
 (epstopdf)             Command: <repstopdf --outfile=total_CCGT_mean_output-eps-converted-to.pdf total_CCGT_mean_output.eps>
 (epstopdf)             \includegraphics on input line 921.
 Package epstopdf Info: Output file is already uptodate.
-<total_CCGT_mean_output-eps-converted-to.pdf, id=345, 433.62pt x 289.08pt>
+<total_CCGT_mean_output-eps-converted-to.pdf, id=343, 433.62pt x 289.08pt>
 File: total_CCGT_mean_output-eps-converted-to.pdf Graphic file (type pdf)
 <use total_CCGT_mean_output-eps-converted-to.pdf>
 Package pdftex.def Info: total_CCGT_mean_output-eps-converted-to.pdf  used on input line 921.
@@ -1178,7 +1194,7 @@ Package epstopdf Info: Source file: <total_Coal_mean_output.eps>
 (epstopdf)             Command: <repstopdf --outfile=total_Coal_mean_output-eps-converted-to.pdf total_Coal_mean_output.eps>
 (epstopdf)             \includegraphics on input line 928.
 Package epstopdf Info: Output file is already uptodate.
-<total_Coal_mean_output-eps-converted-to.pdf, id=346, 433.62pt x 289.08pt>
+<total_Coal_mean_output-eps-converted-to.pdf, id=344, 433.62pt x 289.08pt>
 File: total_Coal_mean_output-eps-converted-to.pdf Graphic file (type pdf)
 <use total_Coal_mean_output-eps-converted-to.pdf>
 Package pdftex.def Info: total_Coal_mean_output-eps-converted-to.pdf  used on input line 928.
@@ -1192,7 +1208,7 @@ Package epstopdf Info: Source file: <total_Onshore_mean_output.eps>
 (epstopdf)             Command: <repstopdf --outfile=total_Onshore_mean_output-eps-converted-to.pdf total_Onshore_mean_output.eps>
 (epstopdf)             \includegraphics on input line 935.
 Package epstopdf Info: Output file is already uptodate.
-<total_Onshore_mean_output-eps-converted-to.pdf, id=347, 433.62pt x 289.08pt>
+<total_Onshore_mean_output-eps-converted-to.pdf, id=345, 433.62pt x 289.08pt>
 File: total_Onshore_mean_output-eps-converted-to.pdf Graphic file (type pdf)
 <use total_Onshore_mean_output-eps-converted-to.pdf>
 Package pdftex.def Info: total_Onshore_mean_output-eps-converted-to.pdf  used on input line 935.
@@ -1206,7 +1222,7 @@ Package epstopdf Info: Source file: <total_Offshore_mean_output.eps>
 (epstopdf)             Command: <repstopdf --outfile=total_Offshore_mean_output-eps-converted-to.pdf total_Offshore_mean_output.eps>
 (epstopdf)             \includegraphics on input line 943.
 Package epstopdf Info: Output file is already uptodate.
-<total_Offshore_mean_output-eps-converted-to.pdf, id=348, 433.62pt x 289.08pt>
+<total_Offshore_mean_output-eps-converted-to.pdf, id=346, 433.62pt x 289.08pt>
 File: total_Offshore_mean_output-eps-converted-to.pdf Graphic file (type pdf)
 <use total_Offshore_mean_output-eps-converted-to.pdf>
 Package pdftex.def Info: total_Offshore_mean_output-eps-converted-to.pdf  used on input line 943.
@@ -1220,7 +1236,7 @@ Package epstopdf Info: Source file: <total_Nuclear_mean_output.eps>
 (epstopdf)             Command: <repstopdf --outfile=total_Nuclear_mean_output-eps-converted-to.pdf total_Nuclear_mean_output.eps>
 (epstopdf)             \includegraphics on input line 949.
 Package epstopdf Info: Output file is already uptodate.
-<total_Nuclear_mean_output-eps-converted-to.pdf, id=349, 433.62pt x 289.08pt>
+<total_Nuclear_mean_output-eps-converted-to.pdf, id=347, 433.62pt x 289.08pt>
 File: total_Nuclear_mean_output-eps-converted-to.pdf Graphic file (type pdf)
 <use total_Nuclear_mean_output-eps-converted-to.pdf>
 Package pdftex.def Info: total_Nuclear_mean_output-eps-converted-to.pdf  used on input line 949.
@@ -1234,7 +1250,7 @@ Package epstopdf Info: Source file: <total_PV_mean_output.eps>
 (epstopdf)             Command: <repstopdf --outfile=total_PV_mean_output-eps-converted-to.pdf total_PV_mean_output.eps>
 (epstopdf)             \includegraphics on input line 957.
 Package epstopdf Info: Output file is already uptodate.
-<total_PV_mean_output-eps-converted-to.pdf, id=350, 433.62pt x 289.08pt>
+<total_PV_mean_output-eps-converted-to.pdf, id=348, 433.62pt x 289.08pt>
 File: total_PV_mean_output-eps-converted-to.pdf Graphic file (type pdf)
 <use total_PV_mean_output-eps-converted-to.pdf>
 Package pdftex.def Info: total_PV_mean_output-eps-converted-to.pdf  used on input line 957.
@@ -1252,7 +1268,7 @@ Package epstopdf Info: Source file: <total_Recip_gas_mean_output.eps>
 (epstopdf)             Command: <repstopdf --outfile=total_Recip_gas_mean_output-eps-converted-to.pdf total_Recip_gas_mean_output.eps>
 (epstopdf)             \includegraphics on input line 976.
 Package epstopdf Info: Output file is already uptodate.
-<total_Recip_gas_mean_output-eps-converted-to.pdf, id=351, 433.62pt x 289.08pt>
+<total_Recip_gas_mean_output-eps-converted-to.pdf, id=349, 433.62pt x 289.08pt>
 File: total_Recip_gas_mean_output-eps-converted-to.pdf Graphic file (type pdf)
 <use total_Recip_gas_mean_output-eps-converted-to.pdf>
 Package pdftex.def Info: total_Recip_gas_mean_output-eps-converted-to.pdf  used on input line 976.
@@ -1266,7 +1282,7 @@ Package epstopdf Info: Source file: <Carbon_emitted_mean_output.eps>
 (epstopdf)             Command: <repstopdf --outfile=Carbon_emitted_mean_output-eps-converted-to.pdf Carbon_emitted_mean_output.eps>
 (epstopdf)             \includegraphics on input line 984.
 Package epstopdf Info: Output file is already uptodate.
-<Carbon_emitted_mean_output-eps-converted-to.pdf, id=352, 433.62pt x 289.08pt>
+<Carbon_emitted_mean_output-eps-converted-to.pdf, id=350, 433.62pt x 289.08pt>
 File: Carbon_emitted_mean_output-eps-converted-to.pdf Graphic file (type pdf)
 <use Carbon_emitted_mean_output-eps-converted-to.pdf>
 Package pdftex.def Info: Carbon_emitted_mean_output-eps-converted-to.pdf  used on input line 984.
@@ -1275,7 +1291,7 @@ Package pdftex.def Info: Carbon_emitted_mean_output-eps-converted-to.pdf  used o
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1874) has occurred while \output is active []
 
  [14 <./contributed_PV_mean_output-eps-converted-to.pdf> <./contributed_Coal_mean_output-eps-converted-to.pdf> <./contributed_Nuclear_mean_output-eps-converted-to.pdf> <./contributed_Offshore_mean_output-eps-converted-to.pdf> <./contributed_Recip_gas_mean_output-eps-converted-to.pdf>]
 Underfull \vbox (badness 2582) has occurred while \output is active []
@@ -1398,18 +1414,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 284--290
 
 ) [17] (./elsarticle-template-harv.aux) ) 
 Here is how much of TeX's memory you used:
- 11665 strings out of 480608
- 203723 string characters out of 5903630
- 639990 words of memory out of 5000000
- 27269 multiletter control sequences out of 15000+600000
- 571867 words of font info for 121 fonts, out of 8000000 for 9000
+ 11680 strings out of 480608
+ 204406 string characters out of 5903630
+ 640990 words of memory out of 5000000
+ 27280 multiletter control sequences out of 15000+600000
+ 572035 words of font info for 122 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,15n,100p,1256b,548s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/txfonts/rtxi.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on elsarticle-template-harv.pdf (17 pages, 2317543 bytes).
+{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/txfonts/rtxi.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on elsarticle-template-harv.pdf (17 pages, 2249614 bytes).
 PDF statistics:
- 439 PDF objects out of 1000 (max. 8388607)
- 157 compressed objects within 2 object streams
+ 440 PDF objects out of 1000 (max. 8388607)
+ 159 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 126 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 121 words of extra memory for PDF output out of 10000 (max. 10000000)
 
