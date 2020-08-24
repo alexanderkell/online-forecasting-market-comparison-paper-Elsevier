@@ -41,7 +41,7 @@
 \usepackage{amsthm}
 \usepackage{amsmath}
 \usepackage{mathtools}
- \usepackage{booktabs}
+\usepackage{booktabs}
 \usepackage{mhchem}
 \usepackage{xcolor}
 \usepackage{csvsimple,booktabs}
@@ -52,6 +52,7 @@
 \usepackage{algpseudocode}
 \usepackage{adjustbox}
 \usepackage{rotating}
+
 
 \usepackage{subcaption}
 \usepackage{mwe}
@@ -176,7 +177,7 @@ We trial different algorithms and train different models for different times of 
 
 We expect a-priori that online algorithms will outperform the offline approach. This is due to the fact that the demand time-series is non-stationary, and thus changes sufficiently over time. In terms of the models, we presume that the machine learning algorithms, such as neural networks, support vector regression and random forests will outperform the statistical methods such as linear regression, lasso regression and box-cox transformation regression. We expect this due to the fact that machine learning has been shown to be able to learn more complex feature representations than statistical methods \cite{Singh2012}. In addition, our previous work has shown that the random forest was able to outperform neural networks, support vector regression and long short term memory neural networks (LSTM) \cite{Kell2018}. 
 
-However, it should be noted, that such a-priori intuiton, is no substitute for analytical evidence and can (and has) been shown to be wrong in the past, due to imperfect knowledge of the data and understanding of some of the black box models, such as neural networks.
+However, it should be noted, that such a-priori intuition, is no substitute for analytical evidence and can (and has) been shown to be wrong in the past, due to imperfect knowledge of the data and understanding of some of the black box models, such as neural networks.
 
 %- A short description of the solution
 
@@ -611,7 +612,39 @@ To generate these results, we use a training set to train the data, and a test s
 
 Figure \ref{fig:beis_elecsim_historic_comparison} displays the mean absolute error of each of the offline statistical and machine learning models on a log scale. It can be seen that the different models have varying degrees of success. The least accurate models were linear regression, the multilayer perceptron (MLP) model and the Least Angle Regression (LARS). These all have mean absolute errors over 10,000MWh. This error would be prohibitively high in practice; the max tendered national grid reserve is 6,000MWh, while the average tendered national grid reserve is 2,000MWh \cite{ESO2019}.
 
+
+
 A number of models perform well, with a low mean absolute error. These include the Lasso, gradient Boosting Regressor and K-neighbours regressor. The best model, similar to \cite{Kell2018a}, was the decision tree-based model, Extra Trees Regressor, with a mean absolute error of $1,604$MWh. This level is well within the average national grid reserve of 2,000MWh.
+
+Table \ref{table:offline_ml_metrics} displays different metrics for measuring the accuracy of the offline machine learning techniques. These include Mean Squared Error (MSE), Root Mean Squared Error (RMSE), Mean Absolute Error (MAE) and the Mean R-Squared. The results largely compliment each other. With high error values in one metric correlating to high error metrics in others for each of the estimators.
+
+
+
+\begin{table*}[]
+\footnotesize
+	\begin{tabular}{@{}lllllll@{}}
+		\toprule
+		Estimator                 & Mean Fit Time & Mean Score Time & Mean MSE    & Mean RMSE & Mean MAE & Mean R-Squared \\ \midrule
+		LinearRegression          & 57            & 4.84            & 9444808.95  & 3073.24   & 2249.34  & 0.81           \\
+		Lasso                     & 787.97        & 3.13            & 9446957.22  & 3073.59   & 2249.55  & 0.81           \\
+		Ridge                     & 26.99         & 5.03            & 9444701.58  & 3073.22   & 2252.23  & 0.81           \\
+		ElasticNet                & 54.49         & 6.13            & 31139231.96 & 5580.25   & 4628.64  & 0.36           \\
+		llars                     & 46.85         & 8               & 10164815.45 & 3188.23   & 2333.31  & 0.79           \\
+		ExtraTreesRegressor       & 9321.52       & 58.06           & 5562579.53  & 2358.51   & 1605     & 0.89           \\
+		RandomForestRegressor     & 16567.46      & 13.99           & 5882618.89  & 2425.41   & 1646.29  & 0.88           \\
+		AdaBoostRegressor         & 8897.55       & 26.9            & 18551963.36 & 4307.2    & 3544.49  & 0.62           \\
+		GradientBoostingRegressor & 6417.62       & 8.16            & 6744402.87  & 2597      & 1833.62  & 0.86           \\
+		SVR                       & 19170.82      & 5221.66         & 51217167.5  & 7156.62   & 5926.75  & -0.05          \\
+		KNeighborsRegressor       & 118.89        & 15215.87        & 10107201.23 & 3179.18   & 2246.6   & 0.79           \\ \bottomrule
+	\end{tabular}
+\caption{Different metrics for offline machine learning results.}
+\label{table:offline_ml_metrics}
+\end{table*}
+
+
+
+
+
 
 
 
@@ -718,6 +751,29 @@ Figure \ref{fig:online_model_mae_barplot} displays the comparison of mean absolu
 It can be seen that the best performing model was the Box-Cox regressor, with an MAE of 1100. This is an improvement of over 30\% on the best offline model. The other models perform less well. However, it can be seen that the linear regression model improves significantly for the online case when compared to the offline case. The passive aggressive (PA) model improve significantly with the varying parameters, and the MLP performs poorly in all cases.
 
 
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+\begin{table*}[]
+	\footnotesize
+	\begin{tabular}{p{6.5cm}lllll@{}}
+		\toprule
+		Estimator                                                                          & Mean Fit Time & Mean Score Time & Mean MSE     & Mean RMSE & Mean MAE \\ \midrule
+		(PA) C = 0.1, fit intercept = false, max iter = 1, shuffle = false, tol = 0.001    & 173.47        & 24.72           & 103015609.55 & 9497.47   & 5888.4   \\
+		(PA) C = 0.1, fit intercept = false, max iter = 1000, shuffle = false, tol = 0.001 & 173.52        & 24.63           & 103015609.55 & 9497.47   & 5888.4   \\
+		(PA) C = 0.1, fit intercept = true, max iter = 1, shuffle = false, tol = 0.001     & 168.66        & 24.07           & 63201775.28  & 7430.63   & 4605.94  \\
+		(PA) C = 0.1, fit intercept = true, max iter = 1000, shuffle = false, tol = 0.001  & 166.48        & 23.86           & 63201775.28  & 7430.63   & 4605.94  \\
+		(PA) C = 2, fit intercept = false, max iter = 1, shuffle = false, tol = 0.001      & 165.23        & 23.75           & 7451087.49   & 2723.25   & 1927.33  \\
+		(PA) C = 2, fit intercept = false, max iter = 1000, shuffle = false, tol = 0.001   & 165.72        & 23.85           & 7451087.49   & 2723.25   & 1927.33  \\
+		Linear Regression                                                                  & 174.91        & 24.65           & 7223163.14   & 2681.2    & 1907.59  \\
+		(PA) C = 2, fit intercept = true, max iter = 1000, shuffle = false, tol = 0.001    & 174.33        & 24.63           & 7223163.14   & 2681.2    & 1907.59  \\
+		hidden layer sizes = 10, learning rate = adaptive                                  & 71.36         & 6.58            & 9612351.37   & 3076.77   & 2221.48  \\
+		(Box Cox) power = 0.1                                                              & 38.61         & 4.88            & 2921934.52   & 1703.79   & 1214.95  \\\bottomrule
+	\end{tabular}
+\end{table*}
+
+
+
+
 
 Figure \ref{fig:best_online_learning_day_distribution} displays the best online model. We can see a significant improvement over the best online model distribution, shown in Figure \ref{fig:best_offline_learning_day_distribution}. We remain within the max tendered national grid reserve for 98.9\% of the time, and the average available tendered national grid reserve is close to the 5\% and 95\% percentiles.
 
@@ -734,7 +790,7 @@ Figure \ref{fig:bad_online_learning_day_distribution} displays the residuals for
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=\columnwidth,natwidth=500,natheight=300]{figures/results/online_learning_dists-C-0.1-fit_intercept-true-max_iter-1000-shuffle-false-tol 0.001.eps}
+\includegraphics[width=\columnwidth,natwidth=500,natheight=400]{figures/results/online_learning_dists-C-0.1-fit_intercept-true-max_iter-1000-shuffle-false-tol 0.001.eps}
 \caption{Online machine learning algorithm distribution. (Passive Aggressive Regressor (C=0.1, fit intercept = true, maximum iterations = 1000, shuffle = false, tolerance = 0.001), chosen as it was the worst result for the passive aggressive model.}
 \label{fig:bad_online_learning_day_distribution}
 \end{figure}

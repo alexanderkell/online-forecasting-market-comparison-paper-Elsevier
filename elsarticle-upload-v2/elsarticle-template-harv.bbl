@@ -26,14 +26,10 @@ T.~Hong, J.~Wilson, J.~Xie, A.~Member, {Long Term Probabilistic Load
   Forecasting and Normalization With Hourly Information} 5~(1) (2014) 456--462.
 
 \bibitem{Al-Musaylh2018}
-M.~Al-Musaylh, R.~Deo, J.~Adamowski, Y.~Li,
-  \href{https://doi.org/10.1016/j.aei.2017.11.002}{{Short-term electricity
-  demand forecasting with MARS, SVR and ARIMA models using aggregated demand
-  data in Queensland, Australia}}, Advanced Engineering Informatics
-  35~(November 2017) (2018) 1--16.
-\newblock \href {https://doi.org/10.1016/j.aei.2017.11.002}
-  {\path{doi:10.1016/j.aei.2017.11.002}}.
-\newline\urlprefix\url{https://doi.org/10.1016/j.aei.2017.11.002}
+M.~Al-Musaylh, R.~Deo, J.~Adamowski, Y.~Li, {Short-term electricity demand
+  forecasting with MARS, SVR and ARIMA models using aggregated demand data in
+  Queensland, Australia}, Advanced Engineering Informatics 35~(November 2017)
+  (2018) 1--16.
 
 \bibitem{Vrablecova2017}
 P.~Vrablecov{\'{a}}, A.~{Bou Ezzeddine}, V.~Rozinajov{\'{a}},
@@ -47,8 +43,6 @@ P.~Vrablecov{\'{a}}, A.~{Bou Ezzeddine}, V.~Rozinajov{\'{a}},
 A.~K. Singh, Ibraheem, S.~Khatoon, M.~Muazzam, D.~K. Chaturvedi, {Load
   forecasting techniques and methodologies: A review}, ICPCES 2012 - 2012 2nd
   International Conference on Power, Control and Embedded Systems (2012).
-\newblock \href {https://doi.org/10.1109/ICPCES.2012.6508132}
-  {\path{doi:10.1109/ICPCES.2012.6508132}}.
 
 \bibitem{Huang2003}
 S.-j. Huang, S.~Member, K.-r. Shih, {Short-Term Load Forecasting Via ARMA Model

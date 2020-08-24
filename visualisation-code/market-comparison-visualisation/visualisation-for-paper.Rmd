@@ -207,7 +207,8 @@ online_bc_actual_predicted_wide = reshape(online_bc_actual_predicted, idvar = "h
                                                                                                                                                                                   
                                                                                                                             both_long = cbind(online_bc_actual_predicted_wide, select(offline_rf_actual_predicted_wide, `Extra Trees`)) %>% melt(id.vars='hour', measure.vars=c('Actuals', 'Box-Cox', 'Extra Trees'))
 
-                                                                                                                            both_pred_actuals_plot = ggplot(both_long) + geom_line(aes(x=hour, colour=variable, y=value), size=2) + theme_classic() + coord_cartesian(clip = 'off') + theme(text = element_text(size=40), plot.margin=grid::unit(c(0,0,0,0), "mm")) + ylab("Demand (MW)") + xlab("Hour of Week") +
+both_long = rename(both_long, c("Variable"="variable"))
+                                                                                                                            both_pred_actuals_plot = ggplot(both_long) + geom_line(aes(x=hour, colour=Variable, y=value), size=2) + theme_classic() + coord_cartesian(clip = 'off') + theme(text = element_text(size=40), plot.margin=grid::unit(c(0,0,0,0), "mm")) + ylab("Demand (MW)") + xlab("Hour of Week") +
   scale_y_continuous(expand = c(0.1,0.1))
 print(both_pred_actuals_plot)
 ggsave("plots/both_actual_predicted.eps", both_pred_actuals_plot, dpi=1000, width = 40, height = 20, units = "cm")

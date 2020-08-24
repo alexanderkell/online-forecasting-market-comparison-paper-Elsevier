@@ -48,37 +48,37 @@ Warning--empty journal in ESO2019
 Warning--there's a number but no volume in ESO2019
 You've used 54 entries,
             2952 wiz_defined-function locations,
-            1054 strings with 16169 characters,
-and the built_in function-call counts, 16016 in all, are:
-= -- 1560
+            1051 strings with 16076 characters,
+and the built_in function-call counts, 15925 in all, are:
+= -- 1546
 > -- 534
 < -- 0
 + -- 214
 - -- 160
-* -- 1285
-:= -- 2202
-add.period$ -- 78
+* -- 1267
+:= -- 2191
+add.period$ -- 76
 call.type$ -- 54
 change.case$ -- 52
 chr.to.int$ -- 0
 cite$ -- 68
-duplicate$ -- 422
-empty$ -- 1744
+duplicate$ -- 420
+empty$ -- 1736
 format.name$ -- 198
-if$ -- 4033
+if$ -- 4011
 int.to.chr$ -- 0
 int.to.str$ -- 54
 missing$ -- 55
-newline$ -- 196
+newline$ -- 193
 num.names$ -- 53
-pop$ -- 288
+pop$ -- 289
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1007
+skip$ -- 1005
 stack$ -- 0
 substring$ -- 964
-swap$ -- 111
+swap$ -- 106
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
@@ -86,5 +86,5 @@ type$ -- 0
 warning$ -- 14
 while$ -- 135
 width$ -- 56
-write$ -- 478
+write$ -- 473
 (There were 6 error messages)
