@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.4.22)  1 SEP 2020 12:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.4.22)  1 SEP 2020 13:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -908,34 +908,53 @@ LaTeX Warning: No positions in optional float specifier.
 File: figures/results/offline_model_mae.eps Graphic file (type eps)
 <figures/results/offline_model_mae.eps>
 File: figures/results/ExtraTreesRegressor_distribution_plot.eps Graphic file (type eps)
- <figures/results/ExtraTreesRegressor_distribution_plot.eps> [11]
-File: figures/results/offline_fit_time_vs_mae_all_results_opaque.eps Graphic file (type eps)
- <figures/results/offline_fit_time_vs_mae_all_results_opaque.eps>
-File: figures/results/offline_score_time_vs_mae_all_results_opaque.eps Graphic file (type eps)
- <figures/results/offline_score_time_vs_mae_all_results_opaque.eps>
-File: figures/results/online_model_mae_barplot.eps Graphic file (type eps)
- <figures/results/online_model_mae_barplot.eps>
+ <figures/results/ExtraTreesRegressor_distribution_plot.eps>
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[12]
+[11]
+File: figures/results/offline_fit_time_vs_mae_all_results_opaque.eps Graphic file (type eps)
+ <figures/results/offline_fit_time_vs_mae_all_results_opaque.eps>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: figures/results/offline_score_time_vs_mae_all_results_opaque.eps Graphic file (type eps)
+<figures/results/offline_score_time_vs_mae_all_results_opaque.eps>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: figures/results/online_model_mae_barplot.eps Graphic file (type eps)
+<figures/results/online_model_mae_barplot.eps>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 765.
+               Default added (so using `tbp') on input line 788.
 
 
-Overfull \hbox (13.69499pt too wide) in paragraph at lines 767--781
+Overfull \hbox (12.96005pt too wide) in paragraph at lines 789--800
 [][] 
  []
 
+[12]
 File: figures/results/online_learning_dists-power-0.1.eps Graphic file (type eps)
-<figures/results/online_learning_dists-power-0.1.eps>
+ <figures/results/online_learning_dists-power-0.1.eps>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 File: figures/results/online_learning_dists-C-0.1-fit_intercept-true-max_iter-1000-shuffle-false-tol 0.001.eps Graphic file (type eps)
- <figures/results/online_learning_dists-C-0.1-fit_intercept-true-max_iter-1000-shuffle-false-tol 0.001.eps>
+<figures/results/online_learning_dists-C-0.1-fit_intercept-true-max_iter-1000-shuffle-false-tol 0.001.eps>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 File: figures/results/both_actual_predicted.eps Graphic file (type eps)
- <figures/results/both_actual_predicted.eps> [13]
+<figures/results/both_actual_predicted.eps>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 File: figures/results/online_testing_time_vs_mae_all_results_opaque.eps Graphic file (type eps)
- <figures/results/online_testing_time_vs_mae_all_results_opaque.eps>
+<figures/results/online_testing_time_vs_mae_all_results_opaque.eps>
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -944,8 +963,12 @@ File: figures/results/online_training_time_vs_mae_all_results_opaque.eps Graphic
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [13]
 File: figures/results/elecsim_results/results_2/contributed_PV_mean_output.eps Graphic file (type eps)
-<figures/results/elecsim_results/results_2/contributed_PV_mean_output.eps>
+ <figures/results/elecsim_results/results_2/contributed_PV_mean_output.eps>
 File: figures/results/elecsim_results/results_2/contributed_Coal_mean_output.eps Graphic file (type eps)
  <figures/results/elecsim_results/results_2/contributed_Coal_mean_output.eps>
 File: figures/results/elecsim_results/results_2/contributed_Nuclear_mean_output.eps Graphic file (type eps)
@@ -985,7 +1008,10 @@ File: figures/results/sensitivity_analysis.pdf Graphic file (type eps)
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[15] [16] [17] (./elsarticle-template-harv.bbl
+
+Underfull \vbox (badness 6001) has occurred while \output is active []
+
+ [15] [16] [17] (./elsarticle-template-harv.bbl
 Underfull \hbox (badness 2351) in paragraph at lines 47--52
 \OT1/txr/m/n/8 A re-view, ICPCES 2012 - 2012 2nd In-ter-na-tional Con-
  []
@@ -1001,6 +1027,9 @@ Overfull \hbox (0.85022pt too wide) in paragraph at lines 107--114
  []
 
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [18]
 Underfull \hbox (badness 2961) in paragraph at lines 116--120
 []\OT1/txr/m/n/8 G. Gross, F. Galiana, Short-term load fore-cast-ing, Pro-
  []
@@ -1031,9 +1060,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 126--131
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [18]
 Underfull \hbox (badness 1348) in paragraph at lines 164--170
 []\OT1/txr/m/n/8 P. Goncalves Da Silva, D. Ilic, S. Karnouskos, The Im-
  []
@@ -1059,12 +1085,12 @@ Underfull \hbox (badness 1163) in paragraph at lines 223--229
  []
 
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 Underfull \hbox (badness 1533) in paragraph at lines 242--248
 []\OT1/txr/m/n/8 C. Cortes, V. Vap-nik, Support-Vector Net-works, Ma-chine
  []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \hbox (badness 3128) in paragraph at lines 270--274
@@ -1101,18 +1127,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 284--290
 \OT1/txr/m/n/8 19 (6) (1974) 716--723.  arXiv:arXiv:1011.1669v3,
  []
 
-) [19] (./elsarticle-template-harv.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+) [19] (./elsarticle-template-harv.aux) ) 
 Here is how much of TeX's memory you used:
- 11158 strings out of 480609
- 195634 string characters out of 5903656
- 641509 words of memory out of 5000000
- 26804 multiletter control sequences out of 15000+600000
+ 11159 strings out of 480609
+ 195659 string characters out of 5903656
+ 640509 words of memory out of 5000000
+ 26805 multiletter control sequences out of 15000+600000
  558176 words of font info for 100 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,15n,100p,1256b,544s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on elsarticle-template-harv.dvi (19 pages, 121168 bytes).
+Output written on elsarticle-template-harv.dvi (19 pages, 121832 bytes).
