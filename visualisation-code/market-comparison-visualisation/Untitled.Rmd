@@ -1,0 +1,44 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+
+```{r sensitivity-analysis}
+library(tidyverse)
+library(reshape2)
+```
+
+
+```{r}
+mean_results = read_csv("/Users/alexanderkell/Documents/PhD/Projects/10-ELECSIM/run/market_forecasting_comparison/data/results/sensitivity_analysis/mean_results.csv")
+head(mean_results)
+```
+
+```{r}
+mean_results_long = melt(mean_results, id=c("params"))
+mean_results_long$params = mean_results_long$params*1000
+```
+
+```{r}
+mean_res_long_edited = filter(mean_results_long, grepl("contributed",variable))
+mean_res_long_edited
+mean_res_long_edited$variable <- gsub('contributed_', '', mean_res_long_edited$variable)
+
+
+sensitivity_analysis_plot = ggplot(data=mean_res_long_edited, aes(x=params, color=variable, y=value)) + geom_line() + geom_smooth()+ theme_classic()+ theme(text = element_text(size=27)) + xlab("Standard deviation (MW)") + ylab("Mean Contributed Energy (MWh)")
+
+ggsave("plots/sensitivity_analysis.eps", sensitivity_analysis_plot, dpi=1000, width = 30, height = 20, units = "cm")
+
+```
+
+```{r}
+mean_res_long_edited = filter(mean_results_long, grepl("total",variable))
+mean_res_long_edited = filter(mean_res_long_edited, !grepl("wealth",variable))
+mean_res_long_edited
+mean_res_long_edited$variable <- gsub('total_', '', mean_res_long_edited$variable)
+
+
+ggplot(data=mean_res_long_edited, aes(x=params, color=variable, y=value)) + geom_line() + geom_smooth()+ theme_classic()+ theme(text = element_text(size=27)) + xlab("Standard deviation (MW)") + ylab("Total Invested in Energy (MWh)")
+
+```

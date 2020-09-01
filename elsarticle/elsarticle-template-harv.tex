@@ -1079,6 +1079,27 @@ Figure \ref{fig:Carbon_emitted_mean_output} shows an increase in relative mean c
 
 
 
+\subsubsection{Sensitivity Analysis}
+
+In this Section we run a sensitivity analysis to visualise the effects of different errors on the average electricity mix over the 2018 to 2035 time period. To conduct this sensitivity analysis, we used a normal distribution with a mean of 0 and modified the standard deviation between 1,000 and 20,000, in increments of 1,000. We selected the normal distribution due to its observation in nature, and its symmetric properties. We chose to increase the standard deviation until 20,000 due to it being 33\% larger than the errors shown in the previous subsection. This gave us a larger error than had previously been explored.
+
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\columnwidth,natwidth=800]{figures/results/sensitivity_analysis.pdf}
+\caption{Sensitivity analysis of changing demand prediction error using a normal distribution and varying the standard deviation vs. mean contributed energy per type between 2018 and 2035.}
+\label{fig:sensitivity-analysis}
+\end{figure}
+
+Figure \ref{fig:sensitivity-analysis} displays the results of this sensitivity analysis. At all standard deviations, photovoltaics displays the highest contributed energy, CCGT the second most and Nuclear the third most. Coal, onshore and the others contribute a smaller amount of energy than the top three.
+
+Whilst photovoltaics remains high throughout, it reduces up until a standard deviation of 14,000MW, after which it begins to increase. This reduction up until 14,000MW may be due to the fact that the predicted demand changes so quickly, that photovoltaics are unable to be reliably dispatched on the day-ahead market to meet this changing predicted demand. Nuclear is, however, able to fill the demand that photovoltaics can not, due to its dispatchable nature.
+
+After a standard deviation of 14,000MW, photovoltaics increases, whilst nuclear decreases. This may be due to the large positive error predictions, which photovoltaics believes it is able to be dispatched on and displaces the more expensive nuclear energy technology.
+
+
+
 
 %\begin{figure}
 %\centering
