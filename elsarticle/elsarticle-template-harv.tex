@@ -167,6 +167,8 @@ Various studies have looked at predicting electricity demand at various horizons
 In this paper, we compare several machine learning and statistical techniques to predict the energy demand for each hour over the next 24-hour horizon. We chose to predict over the next 24 hours to simulate a day-ahead market, which is often seen in decentralized electricity markets. However, our approach could be utilized for differing time horizons. In addition to this, we use our long-term agent-based model, ElecSim \cite{Kell, Kell2020}, to simulate the impact of different forecasting methods on long-term investments, power plant usage and carbon emissions for the years 2018 through 2035 in the United Kingdom. Our approach, however, is generalizable to any country through parametrization of the ElecSim model.
 
 
+Within energy modelling, different methodologies are undertaken to understand how an energy system may develop. In this paper we used an agent-based model, however, other approaches include econometric and optimization based models. Optimization based models develop scenarios into the future by finding a cost-optimal solution. Optimisation models, however, rely on perfect information of the future, assume that there is a central planner within an energy market and are solved in a normative manner. That is, how a problem should be solved under a specific scenario. Agent-based models on the other hand can assume imperfect generation from many generation companies and allows a scenario to develop. In this work, we used an agent-based model as we believe that these types of models can more closely match real-life in decentralised electricity markets. 
+
 %- What is the innovation in this work
 
 %We compare the impact of 11 offline learning algorithms and five online learning algorithms to predict the electricity demand profile over the next 24 hours.
@@ -202,8 +204,8 @@ Total investments in coal, offshore and photovoltaics are proportional to the me
 The contributions of this work are:
 
 \begin{enumerate}
-  \item The evaluation of different online and offline learning models to forecast the electricity demand profile 24 hours ahead.
-  \item Evaluation of poor predictive ability on the long-term electricity market in the UK through the perturbation of demand in the ElecSim simulation.
+  \item The evaluation of different online and offline learning models to forecast the electricity demand profile 24 hours ahead. This work extends previous work by utilizing a vast array of different online and offline techniques.
+  \item Evaluation of poor predictive ability on the long-term electricity market in the UK through the perturbation of demand in the novel ElecSim simulation. There remains a gap in the literature of the long-term impact of poor electricity demand predictions on the electricity market.
 \end{enumerate}
 
 
@@ -500,7 +502,7 @@ NPV(t, N) = \sum_{t=0}^{N}\frac{R_t}{(1+t)^t}.
 
 Each of the Generator Companies (GenCos) estimate the yearly income for each prospective power plant by running a merit-order dispatch electricity market simulation ten years into the future. However, it is true that the expected cost of electricity ten years into the future is particularly challenging to predict. We, therefore, use a reference scenario projected by the UK Government Department for Business and Industrial Strategy (BEIS), and use the predicted costs of electricity calibrated by Kell \textit{et al} \cite{Kell2020, DBEIS2019}. The agents predict the future carbon price by using a linear regression model.
 
-
+More concretely, the GenCos make investments by comparing the expected profitability of each of the power plants over their respective lifetime. They invest in the power plant which they deem to be the most profitable. A major uncertainty in power plant investment is the price of electricity whilst the power plant is in operation. This is often a 25 year period. This is where the predicted costs of electricity calibrated in \cite{Kell2020} is used.
  
 \section{Methods}
 \label{sec:methods}
@@ -587,6 +589,12 @@ Multilayer Perceptron   & Hidden layer sizes  & {[}(10, 50, 100), (10),  (20), (
 \end{sidewaystable*}%
 %\end{landscape}
 
+\subsubsection{Implementation methodology}
+
+The implementation slightly differs between online and offline learning. In offline learning, batch processing occurs. That is, all the data from 2011 to 2017 is used to train the algorithm. Once each of the algorithms had been trained, the algorithms are used to predict the electricity demand from 2017 to 2018. For hyper-parameter tuning cross-validation is used. Specifically, the training data is randomly split ten times to select the best hyper-parameters. This allowed for an unbiased assessment of the data.  
+
+For online learning a similar process is undertaken. That is, the models are trained in a batched approach using data from 2011 to 2017. Between the year 2017 and 2018, the next time-step is predicted and the error recorded between actual value and the predicted value. Next, the model is updated using the actual value, and the next value predicted again.
+
 
 \subsection{Prediction Residuals in ElecSim}
 
@@ -596,6 +604,7 @@ Once each of the prediction residual distributions are fit with a sensible close
 
 By perturbing the market by the residuals, we can observe what the effects are of incorrect predictions of demand in an electricity market using the long-term electricity market model, ElecSim. We are able to understand the differences that prediction residuals have on long-term investment decisions as well as generators utilized.
 
+ElecSim has previously been validated in \cite{Kell2020}. In this work, we validated our model between the years 2013 and 2018, and recorded the difference between observed electricity mix to predicted electricity mix. We found that we were able to predict each different electricity source better than the naive approach. The naive approach, in this case, was predicting the electricity mix at the last known point in 2013. However, we were able to better predict coal, solar and wind by achieving a mean absolute scaled error (MASE) of ${\sim}$0.4 for these. CCGT and nuclear on the other hand had slightly worse results, achieving a MASE of ${\sim}$0.7.
 
 
 
@@ -751,6 +760,8 @@ Figure \ref{fig:online_model_mae_barplot} displays the comparison of mean absolu
 It can be seen that the best performing model was the Box-Cox regressor, with an MAE of 1100. This is an improvement of over 30\% on the best offline model. The other models perform less well. However, it can be seen that the linear regression model improves significantly for the online case when compared to the offline case. The passive aggressive (PA) model improve significantly with the varying parameters, and the MLP performs poorly in all cases.
 
 
+Table \ref{table:online_ml_metrics} displays the metrics for each of the online methods. This includes the mean MSE, mean RMSE and mean MAE. Again, the metrics largely correlate with each other.
+
 % Please add the following required packages to your document preamble:
 % \usepackage{booktabs}
 \begin{table*}[]
@@ -766,9 +777,11 @@ It can be seen that the best performing model was the Box-Cox regressor, with an
 		(PA) C = 2, fit intercept = false, max iter = 1000, shuffle = false, tol = 0.001   & 165.72        & 23.85           & 7451087.49   & 2723.25   & 1927.33  \\
 		Linear Regression                                                                  & 174.91        & 24.65           & 7223163.14   & 2681.2    & 1907.59  \\
 		(PA) C = 2, fit intercept = true, max iter = 1000, shuffle = false, tol = 0.001    & 174.33        & 24.63           & 7223163.14   & 2681.2    & 1907.59  \\
-		hidden layer sizes = 10, learning rate = adaptive                                  & 71.36         & 6.58            & 9612351.37   & 3076.77   & 2221.48  \\
+		(MLP) hidden layer sizes = 10, learning rate = adaptive                                  & 71.36         & 6.58            & 9612351.37   & 3076.77   & 2221.48  \\
 		(Box Cox) power = 0.1                                                              & 38.61         & 4.88            & 2921934.52   & 1703.79   & 1214.95  \\\bottomrule
 	\end{tabular}
+	\caption{Different metrics for online machine learning results.}
+	\label{table:online_ml_metrics}
 \end{table*}
 
 
@@ -1144,7 +1157,11 @@ In terms of computing power, finding the optimal input parameters, hyperparamete
 
 For training time and prediction time, there is often a trade-off between training and predicting. For instance, the k-nearest neighbours is fast to train, but slow to sample from. Therefore stakeholders must make a decision based upon accuracy, speed of training and sampling. 
 
-Additionally, the impact on the broader electricity market has been shown to be significant. Principally, the investment behaviours of generation companies change as well as the dispatched electricity mix. The relative mean carbon emitted over this time period increases, due to an increase in the utilization of coal and reciprocal gas engines, at the expense of offshore wind.
+The amount of time taken to test and cross-validate the models increases exponentially with the number of models and hyper-parameters trialled. It is, therefore, suggested that cloud computing is used to train the models. This would enable the trialling of many different models and hyper-parameters within a reasonable time limit for this time-sensitive application. However, once the models have been trained and are used for making predictions the predictions can be made within a two minutes in the worst case. For the application of predicting 24-hours ahead, this falls within a reasonable time.
+
+The impact on the broader electricity market has been shown to be significant. Principally, the investment behaviours of generation companies change as well as the dispatched electricity mix. The relative mean carbon emitted over this time period increases, due to an increase in the utilization of coal and reciprocal gas engines, at the expense of offshore wind.
+
+
 
 
 \section{Conclusion}
