@@ -51,7 +51,8 @@
 \usepackage{algorithmicx}
 \usepackage{algpseudocode}
 \usepackage{adjustbox}
-\usepackage{rotating}
+%\usepackage{rotating}
+\usepackage[counterclockwise, figuresleft]{rotating}
 
 
 \usepackage{subcaption}
@@ -164,7 +165,7 @@ To reduce reliance on peaker plants, it is helpful to know how much electricity 
 
 Various studies have looked at predicting electricity demand at various horizons \cite{Singh2012,Huang2003,Andersen2013}. However, the impact of poor demand predictions on the long-term electricity mix has been studied to a lesser degree.
 
-In this paper, we compare several machine learning and statistical techniques to predict the energy demand for each hour over the next 24-hour horizon. We chose to predict over the next 24 hours to simulate a day-ahead market, which is often seen in decentralized electricity markets. However, our approach could be utilized for differing time horizons. In addition to this, we use our long-term agent-based model, ElecSim \cite{Kell, Kell2020}, to simulate the impact of different forecasting methods on long-term investments, power plant usage and carbon emissions for the years 2018 through 2035 in the United Kingdom. Our approach, however, is generalizable to any country through parametrization of the ElecSim model.
+In this paper, we compare several machine learning and statistical techniques to predict the energy demand for each hour over the next 24-hour horizon. We chose to predict over the next 24 hours to simulate a day-ahead market, which is often seen in decentralized electricity markets. However, our approach could be utilized for differing time horizons. In addition to this, we use our long-term agent-based model, ElecSim \cite{Kell, Kell2020}, to simulate the impact of different forecasting methods on long-term investments, power plant usage and carbon emissions between 2018 and 2035 in the United Kingdom. Our approach, however, is generalizable to any country through parametrization of the ElecSim model.
 
 
 Within energy modelling, different methodologies are undertaken to understand how an energy system may develop. In this paper we used an agent-based model, however, other approaches include econometric and optimization based models. Optimization based models develop scenarios into the future by finding a cost-optimal solution. Optimisation models, however, rely on perfect information of the future, assume that there is a central planner within an energy market and are solved in a normative manner. That is, how a problem should be solved under a specific scenario. Agent-based models on the other hand can assume imperfect generation from many generation companies and allows a scenario to develop. In this work, we used an agent-based model as we believe that these types of models can more closely match real-life in decentralised electricity markets. 
@@ -232,7 +233,7 @@ Humeau \textit{et al.} compare MLPs, SVRs and linear regression at predicting sm
 
 Quilumba \textit{et al.} also apply machine learning techniques to individual households' electricity consumption by aggregation \cite{Fard2014}. To achieve this aggregation, they use \textit{k}-means clustering to aggregate the households to improve their forecasting ability. The authors also use a neural network based model for forecasting, and show that the number of optimum clusters for forecasting is dependent on the data, with three clusters optimal for a particular dataset, and four for another.
 
-In our previous work we evaluate the performance of ANNs, random forests, support vector regression and long short-term memory neural networks \cite{Kell2018a}. We utilize smart meter data, and cluster by household using the k-means clustering algorithm to aggregate groups of demand. We find that through this clustering we are able to reduce the error, with the random forest performing the best.
+In our previous work we evaluate the performance of ANNs, random forests, support vector regression and long short-term memory neural networks \cite{Kell2018a}. We utilize smart meter data, and cluster by household using the k-means clustering algorithm to aggregate groups of demand. Through this clustering we are able to reduce the error, with the random forest performing the best.
 
 \subsection{Online learning}
 
@@ -343,11 +344,13 @@ Random Forests differ in one way from this bagging procedure. Namely, using a mo
 ExtraTrees adds one further step of randomization \cite{Fike1988}. ExtraTrees stands for extremely randomized trees. There are two main differences between ExtraTrees and Random Forests. Namely, each tree is trained using the whole learning sample (And not a bootstrap sample), and the top-down splitting in the tree learner is randomized. That is, instead of computing an optimal cut-point for each feature, a random cut-point is selected from a uniform distribution. The split that yields the highest score is then chosen to split the node. 
 
 
-\subsection{Gradient Boosting}
+%\subsection{Gradient Boosting}
+\noindent{\textit{Gradient Boosting}}
 
 Gradient boosting is also an ensemble model \cite{316}. Gradient boosting optimizes a cost-function over function space by iteratively choosing a function that points in the negative gradient descent direction, known as a gradient descent method.
 
-\subsection{Support vector regression}
+%\subsection{Support vector regression}
+\noindent{\textit{Support vector regression}}
 
 Support vector regression is an algorithm which finds a hyperplane and decision boundary to map an input domain to an output \cite{Cortes1995}. The hyperplane is chosen by minimizing the error within a certain tolerance.
 
@@ -372,13 +375,14 @@ y_i-(\omega^T\phi(x_i)+b)\leq\varepsilon+\xi_i^{*},\\
 The constant $C>0$ determines the trade-off between the flatness of the support vector function. $\omega$ is the model fit by the SVR. The parameters which control regression quality are the cost of error $C$, the width of the tube $\varepsilon$, and the mapping function $\phi$ \cite{Shu2006,Chen2004}. 
 
 
-\subsection{K-Neighbors Regressor}
+%\subsection{K-Neighbors Regressor}
+\noindent{\textit{K-Neighbors Regressor}}
 
 K-Neighbors regression is a non-parametric method used for regression \cite{forgy65}. The input consists of a new data point, and the algorithm finds the \textit{k} closest training examples in the feature space. The output is the average value of the \textit{k} nearest neighbours.
 
 
 
-\subsection{Multilayer perceptron}
+\noindent{\textit{Multilayer perceptron}}
 
 
 \begin{figure}
@@ -426,9 +430,11 @@ It is also possible to vary the hyperparameter, the number of input units. Typic
 
 \subsection{Online Algorithms}
 
+
 In this Section we discuss the algorithms which were used exclusively for online learning in this work.
 
-\subsection{Box-Cox regressor}
+%\subsection{Box-Cox regressor}
+\noindent{\textit{Box-Cox regressor}}
 
 In this subsection, we discuss the Box-Cox regressor. Ordinary least square is a method for estimating the unknown parameters in a linear regression model. It estimates these unknown parameters by the principle of least squares. Specifically, it minimizes the sum of the squares of the differences between the observed variables and those predicted by the linear function.
 
@@ -453,12 +459,13 @@ The ordinary least squares regression assumes a normal distribution of residuals
 %
 %\noindent where $\hat{\sigma}^2_{(\lambda)}$ is the estimate of the least squares variance using the transformed y variable. 
 
-\subsection{Passive-Aggressive regressor}
+%\subsection{Passive-Aggressive regressor}
+\noindent{\textit{Passive-Aggressive regressor}}
 
 The goal of the Passive-Aggressive (PA) algorithm is to change itself as little as possible to correct for any mistakes and low-confidence predictions it encounters \cite{Gzik2014}. Specifically, with each example PA solves the following optimisation \cite{Ma2009}:
 
 \begin{align}
-    \boldsymbol{w}_{t+1}\leftarrow argmin \frac{1}{2}\left|\left|{\boldsymbol{w}_t-\boldsymbol{w}}\right|\right|^2 \\
+    \boldsymbol{w}_{t+1}\leftarrow argmin \frac{1}{2}\left|\left|{\boldsymbol{w}_t-\boldsymbol{w}}\right|\right|^2 
     s.t. \; \; y_i(\boldsymbol{w}\cdot \boldsymbol{x}_t)\geq1.
 \end{align}
 
@@ -473,12 +480,12 @@ The goal of the Passive-Aggressive (PA) algorithm is to change itself as little 
 \alpha_t=max\left\{\frac{1-y_t(\boldsymbol{w}_t\cdot\boldsymbol{x}_t)}{\left|\left|\boldsymbol{x}_t\right|\right|^2},0\right\}. 	
 \end{equation}
 
-\noindent $a_t$ is derived from a derivation process which uses the Lagrange multiplier. For full details of the derivation see \cite{Gzik2014}.
+\noindent $a_t$ is derived from a derivation process which uses the Lagrange multiplier \cite{Gzik2014}.
 
 \subsection{Long-term Energy Market Model}
 
 
-In order to test the impact of the different residual distributions, we used the ElecSim simulation developed by Kell \textit{et al}., ElecSim \cite{Kell,Kell2020}. ElecSim is an agent-based model which mimics the behaviour of decentralized electricity markets. In this paper, we parametrized the model with data of the United Kingdom in 2018. This enabled us to create a digital twin of the UK electricity market and project forward. The data used for this parametrization included power plants in operation in 2018 and the funds available to the generation companies \cite{dukes_511, companies_house}.
+In order to test the impact of the different residual distributions, we used the ElecSim simulation \cite{Kell,Kell2020}. ElecSim is an agent-based model which mimics the behaviour of decentralized electricity markets. In this paper, we parametrized the model with data of the United Kingdom in 2018. This enabled us to create a digital twin of the UK electricity market and project forward. The data used for this parametrization included power plants in operation in 2018 and the funds available to the generation companies \cite{dukes_511, companies_house}.
 
 ElecSim is made up of six components: 1) power plant data; 2) scenario data; 3) the time-steps of the algorithm; 4) the power exchange; 5) the investment algorithm and 6) the generation companies (GenCos) as agents. ElecSim uses a subset of representative days of electricity demand, solar irradiance and wind speed to approximate a full year. In this context, representative days are a subset of days which, when scaled up, represent an entire year \cite{Kell2020}. We show how these components interact in Figure \ref{fig:model_details} \cite{Kell}. Namely, electricity demand is matched with the supply provided by power plants through the use of a spot market. Generator companies invest in power plants based upon information provided by the data sources and expectation of the data provided by the configuration file. 
 
@@ -513,9 +520,9 @@ More concretely, the GenCos make investments by comparing the expected profitabi
 
 Similarly to our previous work in \cite{Kell2018a}, we selected a number of calendar attributes and demand data from the GB National Grid Status dataset provided by the electricity market settlement company Elexon, and the University of Sheffield \cite{gbnationalgridstatus_2019}. This dataset contained data between the years 2011-2018 for the United Kingdom. The calendar attributes used as predictors to the models were hour, month, day of the week, day of the month and year. These attributes allow us to account for the periodicity of the data within each day, month and year.
 
-It is also the case that electricity demand on a public holiday which falls on a weekday is dissimilar to load behaviours of ordinary weekdays \cite{Kim2000}. We, therefore, marked each holiday day to allow the model to account for this.
+It is also the case that electricity demand on a public holiday which falls on a weekday is dissimilar to load behaviours of ordinary weekdays \cite{Kim2000}. We marked each holiday day to allow the model to account for this.
 
-As demand data is highly correlated with historical demand, we lagged the input demand data. In this context, the lagged data is where we provide data of previous time steps at the input. For example, for predicting $t+1$, we use $n$ inputs: $t,t-1,t-2,\ldots,t-n$. This enabled us to take into account correlations on previous days, weeks and the previous month. Specifically, we used the previous 28 hours before the time step to be predicted for the previous 1st, 2nd, 7th and 30th day. We chose this as we believe that the previous two days were the most relevant to the day to be predicted, as well as the weekday of the previous week and the previous month. We chose the previous 28 hours to account for a full day, plus an additional 4 hours to account for the previous day's correlation with the day to be predicted. We could have increased the number of days provided to the algorithm. However, due to time and computational constraints, we used our previously described intuition for lagged data selection. The number of lagged inputs to trial increases exponentially with each additional day added, therefore making the problem intractable when also trialling such a high number of algorithms and hyperparameters. 
+As demand data is highly correlated with historical demand, we lagged the input demand data. In this context, the lagged data is where we provide data of previous time steps at the input. For example, for predicting $t+1$, we use $n$ inputs: $t,t-1,t-2,\ldots,t-n$. This enabled us to take into account correlations on previous days, weeks and the previous month. Specifically, we used the previous 28 hours before the time step to be predicted for the previous 1st, 2nd, 7th and 30th day. We chose this as we believe that the previous two days were the most relevant to the day to be predicted, as well as the weekday of the previous week and the previous month. We chose the previous 28 hours to account for a full day, plus an additional 4 hours to account for the previous day's correlation with the day to be predicted. We could have increased the number of days provided to the algorithm. However, due to time and computational constraints, we used our previously described intuition for lagged data selection. The number of lagged inputs to trial increases exponentially with each additional day added making the problem intractable when also trialling such a high number of algorithms and hyperparameters. 
 
 In addition to this, we marked each of the days with their respective seven seasons. These seasons were defined by the National Grid Short Term Operating Reserve (STOR) Market Information Report \cite{ESO2019}. These differ from the traditional four seasons by splitting autumn into two further seasons, and winter into three seasons. Finally, to predict a full 24-hours ahead, we used 24 different models, 1 for each hour of the day. 
 
@@ -535,19 +542,15 @@ Whilst there is room to increase the total number of parameters, due to the expo
 
 
 %\begin{landscape}
-\begin{sidewaystable*}[p]
+\begin{sidewaystable}
 \centering
+\footnotesize
 %\begin{adjustbox}{angle=90}
 \begin{tabular}{@{}lllllll@{}}
 \toprule
 \textbf{Regressor Type} & \textbf{Parameters} & \textbf{Values}   & \textbf{Parameters} & \textbf{Values} & \textbf{Parameters} & \textbf{Values}       \\ \midrule
-Linear                  & N/A                 & N/A               &                     &                 &                     &                       \\
-Lasso                   & N/A                 & N/A               &                     &                 &                     &                       \\
-Elastic Net             & N/A                 & N/A               &                     &                 &                     &                       \\
-Least-Angle             & N/A                 & N/A               &                     &                 &                     &                       \\
-Extra Trees             & \# Estimators       & {[}16, 32{]}      &                     &                 &                     &                       \\
-Random Forest           & \# Estimators       & {[}16, 32{]}      &                     &                 &                     &                       \\
-AdaBoost                & \# Estimators       & {[}16, 32{]}      &                     &                 &                     &                       \\
+Linear, Lasso, Elastic Net, Least-Angle                  & N/A                 & N/A               &                     &                 &                     &                       \\
+Extra Trees, Random Forest, AdaBoost             & \# Estimators       & {[}16, 32{]}      &                     &                 &                     &                       \\
 Gradient Boosting       & \# Estimators       & {[}16, 32{]}      & learning rate       & {[}0.8, 1.0{]}  &                     &                       \\
 Support Vector          & Kernel              & {[}linear, rbf{]} & C                   & {[}1, 10{]}     & Gamma               & {[}0.001, 0.0001{]}   \\
 Multilayer Perceptron   & Activation function & {[}tanh, relu{]}  & hidden layer sizes  & {[}1, 50{]}     & Alpha               & {[}0.00005, 0.0005{]} \\
@@ -564,16 +567,16 @@ K-Neighbours            & \# Neighbours       & {[}5, 20, 50{]}   &             
 \qquad
 \qquad
 \qquad
-\qquad
-\qquad
-\qquad
-\qquad
-\qquad
+%\qquad
+%\qquad
+%\qquad
+%\qquad
+%\qquad
 
 %\begin{sidewaystable}
 \centering
 %\begin{adjustbox}{angle=90}
-\begin{tabular}{@{}llp{2.5cm}lllp{1.6cm}@{}}
+\begin{tabular}{@{}llp{3cm}lllp{1.6cm}@{}}
 \toprule
 \textbf{Regressor Type} & \textbf{Parameters} & \textbf{Values}                                  & \textbf{Parameters} & \textbf{Values}   & \textbf{Parameters} & \textbf{Values}        \\ \midrule
 Linear                  & N/A                 & N/A                                              &                     &                   &                     &                        \\
@@ -586,7 +589,7 @@ Multilayer Perceptron   & Hidden layer sizes  & {[}(10, 50, 100), (10),  (20), (
 %\end{adjustbox}
 \caption{Hyperparameters for online machine learning regression algorithms}
 \label{table:hyperparameter-tuning-online}
-\end{sidewaystable*}%
+\end{sidewaystable}%
 %\end{landscape}
 
 \subsubsection{Implementation methodology}
@@ -598,7 +601,7 @@ For online learning a similar process is undertaken. That is, the models are tra
 
 \subsection{Prediction Residuals in ElecSim}
 
-Each of the previously mentioned models trialled will have a certain degree of errors. Prediction residuals are the difference between the estimated and actual values. We collect the prediction residuals to form a distribution for each of the models. We then trial 80 different closed-form distributions to see which of the distributions best fits the residuals from each of the models. These 80 distributions were chosen due to their implementation in scikit-learn \cite{scikit-learn}.
+Each of the models trialled will have a certain degree of errors. Prediction residuals are the difference between the estimated and actual values. We collect the prediction residuals to form a distribution for each of the models. We then trial 80 different closed-form distributions to see which of the distributions best fits the residuals from each of the models. These 80 distributions were chosen due to their implementation in scikit-learn \cite{scikit-learn}.
 
 Once each of the prediction residual distributions are fit with a sensible closed-form distribution, we sample from this new distribution and perturb the demand for the electricity market at each time step within ElecSim.
 
@@ -619,7 +622,7 @@ In this Section, we detail the accuracy of the algorithms and statistical models
 
 To generate these results, we use a training set to train the data, and a test set to see how well each algorithm performs on the testing data. That is, how well the algorithm can predict data it is yet to see. In our case, the training data was from 2011 to 2017, and the testing data was from 2017 to 2018.
 
-Figure \ref{fig:beis_elecsim_historic_comparison} displays the mean absolute error of each of the offline statistical and machine learning models on a log scale. It can be seen that the different models have varying degrees of success. The least accurate models were linear regression, the multilayer perceptron (MLP) model and the Least Angle Regression (LARS). These all have mean absolute errors over 10,000MWh. This error would be prohibitively high in practice; the max tendered national grid reserve is 6,000MWh, while the average tendered national grid reserve is 2,000MWh \cite{ESO2019}.
+Figure \ref{fig:beis_elecsim_historic_comparison} displays the mean absolute error of each of the offline statistical and machine learning models on a log scale. It can be seen that the different models have varying degrees of success. The least accurate models were linear regression, the multilayer perceptron (MLP) model and the Least Angle Regression (LARS), each with mean absolute errors over 10,000MWh. This error would be prohibitively high in practice; the max tendered national grid reserve is 6,000MWh, while the average tendered national grid reserve is 2,000MWh \cite{ESO2019}.
 
 
 
@@ -786,6 +789,8 @@ Table \ref{table:online_ml_metrics} displays the metrics for each of the online 
 % Please add the following required packages to your document preamble:
 % \usepackage{booktabs}
 \begin{table*}[]
+\centering
+\footnotesize
 \begin{tabular}{@{}llllll@{}}
 \toprule
 Estimator                                                                          & Mean Fit Time & Mean Score Time & Mean MSE     & Mean RMSE & Mean MAE \\ \midrule
@@ -923,14 +928,14 @@ Running this simulation enabled us to see the effect on carbon emissions on the 
 
 \begin{figure*}[h]
 \includegraphics[width=\columnwidth,natwidth=700,natheight=485]{figures/results/contributed_total_plot.pdf}
-\label{fig:pv_coal_nuclear_offshore_outputs}
 \caption{Mean outputs of various technologies vs. mean absolute error from 2018 to 2035 in ElecSim.}
+\label{fig:pv_coal_nuclear_offshore_outputs}
 \end{figure*}
 
 
 In this Section we display the mean electricity mix contributed by different electricity sources over the years 2018 to 2035. 
 
-Figure \ref{fig:contributed_PV_mean_output} displays the mean photovoltaic (PV) contributed between 2018 and 2035 vs. mean absolute error of the various online regressor models displayed in Figure \ref{fig:online_model_mae_barplot}. A positive correlation can be seen with PV contributed and mean absolute error. This is similar for coal and nuclear output, shown in Figures \ref{fig:contributed_Coal_mean_output} and \ref{fig:contributed_Nuclear_mean_output} respectively. However, as shown by Figure \ref{fig:contributed_Offshore_mean_output.eps}, offshore wind reduces with mean absolute error. Figure \ref{fig:contributed_Recip_gas_mean_output} displays the mean reciprocal gas engine output vs mean absolute error between the same time period. Output for the reciprocal gas engine also increases with mean absolute error.
+Figure \ref{fig:pv_coal_nuclear_offshore_outputs} displays the mean photovoltaic (PV) contributed between 2018 and 2035 vs. mean absolute error of the various online regressor models displayed in Figure \ref{fig:online_model_mae_barplot}. A positive correlation can be seen with PV contributed and mean absolute error. This is similar for coal and nuclear output. However, it can be seen that offshore wind reduces with mean absolute error. Output for the reciprocal gas engine also increases with mean absolute error.
 
 The reciprocal gas engine was expected to increase with times of high error. This is because, traditionally, reciprocal gas engines are peaker power plants. Peaker power plants provide power at times of peak demand, which cannot be covered by other plants due to them being at their maximum capacity level or out of service. It may also be the case, that with higher proportions of intermittent technologies, there is a larger need for these peaker power plants to fill in for times where there is a deficit in wind speed and solar irradiance.
 
@@ -1002,7 +1007,7 @@ Photovoltaics may be used more with higher errors due to the times at which the 
 
 In this Section, we detail the difference in total technologies invested in over the time period between 2018 to 2035, as predicted by ElecSim.
 
-CCGT, onshore, and reciprocal gas engines are invested in less over the time period, as shown by Figures \ref{fig:total_CCGT_mean_output}, \ref{fig:total_Offshore_mean_output}, \ref{fig:total_Recip_gas_mean_output.eps} respectively. While coal, offshore, nuclear and photovoltaics all exhibit increasing investments.
+CCGT, onshore, and reciprocal gas engines are invested in less over the time period, as shown in Figure \ref{fig:ccgt_coal_onshore_offshore_totals}. While coal, offshore, nuclear and photovoltaics all exhibit increasing investments.
 
 It is hypothesized that coal and nuclear increase in investment due to their dispatchable nature. While onshore, non-dispatchable by nature, become a less attractive investment when compared to the other technologies.
 
@@ -1060,8 +1065,8 @@ CCGT and reciprocal gas engines may have decreased in capacity over this time, d
 
 \begin{figure*}[h]
 \includegraphics[width=\columnwidth,natwidth=700,natheight=300]{figures/results/total_total_plot.pdf}
-\label{fig:ccgt_coal_onshore_offshore_totals}
 \caption{Total technologies invested in vs. mean absolute error from 2018 to 2035 in ElecSim.}
+\label{fig:ccgt_coal_onshore_offshore_totals}
 \end{figure*}
 
 
@@ -1092,11 +1097,11 @@ Figure \ref{fig:Carbon_emitted_mean_output} shows an increase in relative mean c
 %\caption{Mean carbon emissions between 2018 and 2035.}
 %\end{figure}
 
-\begin{figure}[h]
+\begin{figure}
 \centering
-\includegraphics[width=0.8\columnwidth]{figures/results/elecsim_results/results_2/Carbon_emitted_mean_output.eps}
+\includegraphics[width=0.7\columnwidth]{figures/results/elecsim_results/results_2/Carbon_emitted_mean_output.eps}
 \caption{Mean carbon emissions between 2018 and 2035.}
-\label{fig:online_train_vs_mae}
+\label{fig:Carbon_emitted_mean_output}
 \end{figure}
 
 
@@ -1138,12 +1143,12 @@ In this Section we run a sensitivity analysis to visualise the effects of differ
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=\columnwidth,natwidth=800, natheight=600]{figures/results/sensitivity_analysis.pdf}
+\includegraphics[width=0.8\columnwidth,natwidth=800, natheight=550]{figures/results/sensitivity_analysis.pdf}
 \caption{Sensitivity analysis of changing demand prediction error using a normal distribution and varying the standard deviation vs. mean contributed energy per type between 2018 and 2035.}
 \label{fig:sensitivity-analysis}
 \end{figure}
 
-Figure \ref{fig:sensitivity-analysis} displays the results of this sensitivity analysis. At all standard deviations, photovoltaics displays the highest contributed energy, CCGT the second most and Nuclear the third most. Coal, onshore and the others contribute a smaller amount of energy than the top three.
+Figure \ref{fig:sensitivity-analysis} displays the results of this sensitivity analysis. At all standard deviations, photovoltaics displays the highest contributed energy, CCGT the second most and Nuclear the third most. Coal, onshore and the others contribute less energy than the top three.
 
 Whilst photovoltaics remains high throughout, it reduces up until a standard deviation of 14,000MW, after which it begins to increase. This reduction up until 14,000MW may be due to the fact that the predicted demand changes so quickly, that photovoltaics are unable to be reliably dispatched on the day-ahead market to meet this changing predicted demand. Nuclear is, however, able to fill the demand that photovoltaics can not, due to its dispatchable nature.
 
@@ -1211,7 +1216,7 @@ We measured the errors and compared these to each model as well as the national 
 
 In addition to this, we took these errors, or residuals, and perturbed the electricity market of the agent-based model ElecSim. This enabled us to see the impact of different error distributions on the long-term electricity market, both in terms of investment and in terms of the electricity mix.
 
-We observed that with an increase in prediction errors, we get a higher proportion of electricity generated by coal, offshore, nuclear, reciprocal gas engines and photovoltaics. This could be due to the fact that more peaker and dispatchable plants are required to fill in for unexpected demand. In addition, a higher proportion of intermittent renewable energy sources leads to a higher use of peaker power plants to fill in the gaps of intermittency of wind and solar irradiance. However, by reducing the mean absolute error, we are able to significantly reduce the amount of reciprocal gas engines and coal usage.
+We observed that with an increase in prediction errors, we get a higher proportion of electricity generated by coal, offshore, nuclear, reciprocal gas engines and photovoltaics. This could be due to the fact that more peaker and dispatchable plants are required to fill in for unexpected demand. In addition, a higher proportion of intermittent renewable energy sources leads to a higher use of peaker power plants to fill in the gaps of intermittency of wind and solar irradiance. However, by reducing the mean absolute error, we are able to reduce the amount of reciprocal gas engine and coal usage.
 
 In future work, we would like to trial a different selection of algorithms and statistical models and trial different inputs to the models, for instance, by providing the model with two months worth of historical data as dependent variables. Additionally, we would like to see the impact of predicting wind speed and solar irradiance to see how these impact the overall investment patterns and electricity mix. 
 

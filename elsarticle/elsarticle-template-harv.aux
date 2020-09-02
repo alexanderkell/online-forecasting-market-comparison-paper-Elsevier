@@ -66,15 +66,11 @@
 \citation{forgy65}
 \citation{Akaike1974}
 \citation{Pao2007}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Gradient Boosting}{6}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.6}Support vector regression}{6}\protected@file@percent }
+\citation{Pao2007}
+\newlabel{svr:constrains}{{6}{6}}
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces A three-layer feed forward neural network.\relax }}{6}\protected@file@percent }
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{fig:mlp}{{1}{6}}
-\newlabel{svr:constrains}{{6}{6}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.7}K-Neighbors Regressor}{6}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.8}Multilayer perceptron}{6}\protected@file@percent }
-\citation{Pao2007}
 \citation{Pao2007}
 \citation{Box1964}
 \citation{Gzik2014}
@@ -82,11 +78,10 @@
 \citation{Gzik2014}
 \citation{Kell,Kell2020}
 \citation{dukes_511,companies_house}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.9}Online Algorithms}{7}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.10}Box-Cox regressor}{7}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.11}Passive-Aggressive regressor}{7}\protected@file@percent }
 \citation{Kell2020}
 \citation{Kell}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Online Algorithms}{7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6}Long-term Energy Market Model}{7}\protected@file@percent }
 \citation{Kell}
 \citation{Kell}
 \citation{Kell2020,DBEIS2019}
@@ -96,69 +91,68 @@
 \citation{Kim2000}
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces System overview of ElecSim \cite  {Kell}.\relax }}{8}\protected@file@percent }
 \newlabel{fig:model_details}{{2}{8}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.12}Long-term Energy Market Model}{8}\protected@file@percent }
-\newlabel{eq:npv_eq}{{18}{8}}
+\newlabel{eq:npv_eq}{{17}{8}}
 \@writefile{toc}{\contentsline {section}{\numberline {4}Methods}{8}\protected@file@percent }
 \newlabel{sec:methods}{{4}{8}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Data preparation}{8}\protected@file@percent }
 \citation{ESO2019}
 \citation{scikit-learn}
+\citation{Kell2020}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Algorithm Tuning}{9}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.1}Implementation methodology}{9}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Prediction Residuals in ElecSim}{9}\protected@file@percent }
+\citation{ESO2019}
+\citation{Kell2018a}
 \newlabel{RF1}{10}
 \@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Hyperparameters for offline machine learning regression algorithms\relax }}{10}\protected@file@percent }
 \newlabel{table:hyperparameter-tuning-offline}{{1}{10}}
 \@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Hyperparameters for online machine learning regression algorithms\relax }}{10}\protected@file@percent }
 \newlabel{table:hyperparameter-tuning-online}{{2}{10}}
-\citation{Kell2020}
-\citation{ESO2019}
-\citation{Kell2018a}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Results}{11}\protected@file@percent }
-\newlabel{sec:results}{{5}{11}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Offline Machine Learning}{11}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5}Results}{10}\protected@file@percent }
+\newlabel{sec:results}{{5}{10}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Offline Machine Learning}{10}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Offline models mean absolute error comparison, with 95\% confidence interval for 5 runs of each model.\relax }}{11}\protected@file@percent }
 \newlabel{fig:beis_elecsim_historic_comparison}{{3}{11}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Best offline machine learning algorithm (Extra Trees Regressor) distribution.\relax }}{11}\protected@file@percent }
+\newlabel{fig:best_offline_learning_day_distribution}{{4}{11}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Time taken to train the offline models versus mean absolute error. Error bars display standard deviation between points.\relax }}{11}\protected@file@percent }
+\newlabel{fig:offline_fit_time_vs_mae}{{5}{11}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Time taken to score the offline models versus mean absolute error. Error bars display standard deviation between points.\relax }}{11}\protected@file@percent }
+\newlabel{fig:offline_score_time_vs_mae}{{6}{11}}
 \@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Different metrics for offline machine learning results.\relax }}{12}\protected@file@percent }
 \newlabel{table:offline_ml_metrics}{{3}{12}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Best offline machine learning algorithm (Extra Trees Regressor) distribution.\relax }}{12}\protected@file@percent }
-\newlabel{fig:best_offline_learning_day_distribution}{{4}{12}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Online Machine Learning}{12}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Time taken to train the offline models versus mean absolute error. Error bars display standard deviation between points.\relax }}{12}\protected@file@percent }
-\newlabel{fig:offline_fit_time_vs_mae}{{5}{12}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Comparison of mean absolute errors (MAE) for different online regressor models. MLP results for all parameters are shown in a single barchart due to the very similar MAEs for the differing hyperparameters.\relax }}{12}\protected@file@percent }
+\newlabel{fig:online_model_mae_barplot}{{7}{12}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Best online model (Box-Cox Regressor) distribution.\relax }}{12}\protected@file@percent }
+\newlabel{fig:best_online_learning_day_distribution}{{8}{12}}
 \@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Different metrics for online machine learning results.\relax }}{13}\protected@file@percent }
 \newlabel{table:online_ml_metrics}{{4}{13}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Time taken to score the offline models versus mean absolute error. Error bars display standard deviation between points.\relax }}{13}\protected@file@percent }
-\newlabel{fig:offline_score_time_vs_mae}{{6}{13}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Comparison of mean absolute errors (MAE) for different online regressor models. MLP results for all parameters are shown in a single barchart due to the very similar MAEs for the differing hyperparameters.\relax }}{13}\protected@file@percent }
-\newlabel{fig:online_model_mae_barplot}{{7}{13}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Best online model (Box-Cox Regressor) distribution.\relax }}{14}\protected@file@percent }
-\newlabel{fig:best_online_learning_day_distribution}{{8}{14}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Online machine learning algorithm distribution. (Passive Aggressive Regressor (C=0.1, fit intercept = true, maximum iterations = 1000, shuffle = false, tolerance = 0.001), chosen as it was the worst result for the passive aggressive model.\relax }}{13}\protected@file@percent }
+\newlabel{fig:bad_online_learning_day_distribution}{{9}{13}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Best offline model compared to the best online model over a one week period.\relax }}{13}\protected@file@percent }
+\newlabel{fig:both_actual_predicted}{{10}{13}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Time taken to test the online models versus mean absolute error.\relax }}{13}\protected@file@percent }
+\newlabel{fig:online_test_vs_mae}{{11}{13}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Time taken to train the online models versus mean absolute error.\relax }}{14}\protected@file@percent }
+\newlabel{fig:online_train_vs_mae}{{12}{14}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Scenario Comparison}{14}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.1}Mean Contributed Energy Generation}{14}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Online machine learning algorithm distribution. (Passive Aggressive Regressor (C=0.1, fit intercept = true, maximum iterations = 1000, shuffle = false, tolerance = 0.001), chosen as it was the worst result for the passive aggressive model.\relax }}{14}\protected@file@percent }
-\newlabel{fig:bad_online_learning_day_distribution}{{9}{14}}
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Best offline model compared to the best online model over a one week period.\relax }}{14}\protected@file@percent }
-\newlabel{fig:both_actual_predicted}{{10}{14}}
-\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Time taken to test the online models versus mean absolute error.\relax }}{15}\protected@file@percent }
-\newlabel{fig:online_test_vs_mae}{{11}{15}}
-\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Time taken to train the online models versus mean absolute error.\relax }}{15}\protected@file@percent }
-\newlabel{fig:online_train_vs_mae}{{12}{15}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.2}Total Energy Generation}{15}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.3}Sensitivity Analysis}{15}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.2}Total Energy Generation}{14}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.3}Sensitivity Analysis}{14}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Mean outputs of various technologies vs. mean absolute error from 2018 to 2035 in ElecSim.\relax }}{15}\protected@file@percent }
+\newlabel{fig:pv_coal_nuclear_offshore_outputs}{{13}{15}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Total technologies invested in vs. mean absolute error from 2018 to 2035 in ElecSim.\relax }}{15}\protected@file@percent }
+\newlabel{fig:ccgt_coal_onshore_offshore_totals}{{14}{15}}
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Mean carbon emissions between 2018 and 2035.\relax }}{15}\protected@file@percent }
+\newlabel{fig:Carbon_emitted_mean_output}{{15}{15}}
+\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces Sensitivity analysis of changing demand prediction error using a normal distribution and varying the standard deviation vs. mean contributed energy per type between 2018 and 2035.\relax }}{15}\protected@file@percent }
+\newlabel{fig:sensitivity-analysis}{{16}{15}}
 \citation{Kell2018}
-\newlabel{fig:pv_coal_nuclear_offshore_outputs}{{\caption@xref {fig:pv_coal_nuclear_offshore_outputs}{ on input line 926}}{16}}
-\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Mean outputs of various technologies vs. mean absolute error from 2018 to 2035 in ElecSim.\relax }}{16}\protected@file@percent }
-\newlabel{fig:ccgt_coal_onshore_offshore_totals}{{\caption@xref {fig:ccgt_coal_onshore_offshore_totals}{ on input line 1063}}{16}}
-\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Total technologies invested in vs. mean absolute error from 2018 to 2035 in ElecSim.\relax }}{16}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Mean carbon emissions between 2018 and 2035.\relax }}{16}\protected@file@percent }
-\newlabel{fig:online_train_vs_mae}{{15}{16}}
 \@writefile{toc}{\contentsline {section}{\numberline {6}Discussion}{16}\protected@file@percent }
 \newlabel{sec:discussion}{{6}{16}}
-\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces Sensitivity analysis of changing demand prediction error using a normal distribution and varying the standard deviation vs. mean contributed energy per type between 2018 and 2035.\relax }}{16}\protected@file@percent }
-\newlabel{fig:sensitivity-analysis}{{16}{16}}
-\@writefile{toc}{\contentsline {section}{\numberline {7}Conclusion}{17}\protected@file@percent }
-\newlabel{sec:conclusion}{{7}{17}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Conclusion}{16}\protected@file@percent }
+\newlabel{sec:conclusion}{{7}{16}}
 \bibstyle{elsarticle-num}
 \bibdata{library,bib_custom,custombibtex}
 \bibcite{Lu1993}{{1}{}{{}}{{}}}
@@ -183,6 +177,7 @@
 \bibcite{Ghofrani}{{20}{}{{}}{{}}}
 \bibcite{Fard2014}{{21}{}{{}}{{}}}
 \bibcite{Humeau2013}{{22}{}{{}}{{}}}
+\@writefile{toc}{\contentsline {section}{\numberline {8}Funding Sources}{17}\protected@file@percent }
 \bibcite{Johansson2017}{{23}{}{{}}{{}}}
 \bibcite{Baram2003}{{24}{}{{}}{{}}}
 \bibcite{Schmitt2008}{{25}{}{{}}{{}}}
@@ -190,7 +185,6 @@
 \bibcite{GoncalvesDaSilva2014}{{27}{}{{}}{{}}}
 \bibcite{Witten2011}{{28}{}{{}}{{}}}
 \bibcite{Gzik2014}{{29}{}{{}}{{}}}
-\@writefile{toc}{\contentsline {section}{\numberline {8}Funding Sources}{18}\protected@file@percent }
 \bibcite{Box1964}{{30}{}{{}}{{}}}
 \bibcite{forgy65}{{31}{}{{}}{{}}}
 \bibcite{Hinton1989}{{32}{}{{}}{{}}}
