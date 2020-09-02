@@ -11,11 +11,6 @@ C.~Lu, H.~T. Wu, S.~Vemuri, {Neural network based short term load forecasting},
 \newblock \href {https://doi.org/10.1080/02533839.1995.9677697}
   {\path{doi:10.1080/02533839.1995.9677697}}.
 
-\bibitem{Mahmood2014}
-A.~Mahmood, M.~N. Ullah, S.~Razzaq, A.~Basit, U.~Mustafa, M.~Naeem, N.~Javaid,
-  {A new scheme for demand side management in future smart grid networks},
-  Procedia Computer Science 32 (2014) 477--484.
-
 \bibitem{Kell2018a}
 A.~Kell, A.~McGough, M.~Forshaw, {Segmenting residential smart meter data for
   short-Term load forecasting}, in: e-Energy 2018 - Proceedings of the 9th ACM
@@ -161,10 +156,6 @@ P.~{Goncalves Da Silva}, D.~Ilic, S.~Karnouskos, {The Impact of Smart Grid
   402--410.
 \newblock \href {https://doi.org/10.1109/TSG.2013.2278868}
   {\path{doi:10.1109/TSG.2013.2278868}}.
-
-\bibitem{Witten2011}
-I.~H. Witten, E.~Frank, M.~a. Hall, {Data Mining: Practical Machine Learning
-  Tools and Techniques}, 2011.
 
 \bibitem{Gzik2014}
 K.~Crammer, O.~Dekel, J.~Keshet, S.~Shalev-Shwartz, Y.~Singer, {Online
