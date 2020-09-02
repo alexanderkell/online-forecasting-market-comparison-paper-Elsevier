@@ -41,7 +41,7 @@
 \usepackage{amsthm}
 \usepackage{amsmath}
 \usepackage{mathtools}
-\usepackage{booktabs}
+ \usepackage{booktabs}
 \usepackage{mhchem}
 \usepackage{xcolor}
 \usepackage{csvsimple,booktabs}
@@ -52,7 +52,6 @@
 \usepackage{algpseudocode}
 \usepackage{adjustbox}
 \usepackage{rotating}
-
 
 \usepackage{subcaption}
 \usepackage{mwe}
@@ -107,7 +106,7 @@ Electricity supply must be matched with demand at all times. This helps reduce t
 
 % Methodology
 
-In this paper, we investigate the impact of 11 offline learning and five online learning algorithms to predict the electricity demand profile over the next 24 hours. We achieve this through integration within the long-term agent-based model, ElecSim. These algorithms include multilayer perceptron neural networks, support vector regression and linear regression. Through the prediction of electricity demand profile over the next 24 hours, we can simulate the predictions made for a day-ahead market. Once we have made these predictions, we sample from the residual distributions and perturb the electricity market demand using the simulation, ElecSim. This enables us to understand the impact of errors on the long-term dynamics of a decentralized electricity market.
+In this paper, we investigate the impact of 11 offline learning and five online learning algorithms to predict the electricity demand profile over the next 24 hours. We achieve this through integration within the long-term agent-based model, ElecSim. These algorithms include multilayer perceptron neural networks, support vector regression and linear regression. By predicting the electricity demand profile over the next 24 hours, we can simulate the predictions made for a day-ahead market. Once we have made these predictions, we sample from the residual distributions and perturb the electricity market demand using the simulation, ElecSim. This enables us to understand the impact of errors on the long-term dynamics of a decentralized electricity market.
  
 
 % Results  
@@ -151,9 +150,9 @@ Long-Term Energy Modelling \sep Online learning \sep Machine learning \sep Marke
 \section{Introduction}
 \label{sec:intro}
 
-The integration of higher proportions of intermittent renewable energy sources (IRES) in the electricity grid will mean that the forecasting of electricity demand will become increasingly important and challenging. Examples of IRES are solar panels and wind turbines. These fluctuate in terms of power output based on localized wind speed and solar irradiance. However, as supply must meet demand at all times and the fact that IRES are less predictable than dispatchable energy sources such as coal and combined-cycle gas turbines (CCGTs) this means extra attention must be made in predicting future demand if we wish to keep, or better reduce, the current frequency of blackouts \cite{Lu1993}. A dispatchable source is one that can be turned on and off by human control and therefore, able to adjust output just in time, at a moment convenient for the grid.
+The integration of higher proportions of intermittent renewable energy sources (IRES) in the electricity grid will mean that the forecasting of electricity demand will become increasingly important and challenging. Examples of IRES are solar panels and wind turbines, which fluctuate in terms of power output based on localized wind speed and solar irradiance. However, as supply must meet demand at all times and the fact that IRES are less predictable than dispatchable energy sources such as coal and combined-cycle gas turbines (CCGTs) this means extra attention must be made in predicting future demand if we wish to keep, or better reduce, the current frequency of blackouts \cite{Lu1993}. A dispatchable source is one that can be turned on and off by human control and therefore, able to adjust output just in time, at a moment convenient for the grid.
 
-Typically, peaker plants, such as reciprocal gas engines, are used to fill fluctuations in demand that had not been previously planned for. Specifically, peaker plants meet the peaks in demand where other cheaper options are at full capacity. These peaker plants are typically expensive to run and have higher greenhouse gas emissions than their non-peaker counterparts \cite{Mahmood2014}. Whilst peaker plants are also dispatchable plants, not all dispatchable plants are peaker plants. For example coal, which is a dispatchable plant, is run as a base load plant, due to its inability to deal with the fluctuating conditions required of a peaker plant.
+Typically, peaker plants, such as reciprocal gas engines, are used to fill fluctuations in demand, that had not been previously planned for. Specifically, peaker plants meet the peaks in demand where other cheaper options are at full capacity. These peaker plants are typically expensive to run and have higher greenhouse gas emissions than their non-peaker counterparts \cite{Mahmood2014}. Whilst peaker plants are also dispatchable plants, not all dispatchable plants are peaker plants. For example coal, which is a dispatchable plant, is run as a base load plant, due to its inability to deal with the fluctuating conditions required of a peaker plant.
 
 To reduce reliance on peaker plants, it is helpful to know how much electricity demand there will be in the future so that more efficient plants can be used to meet this expected demand. This is so that these more efficient plants can be brought up to speed at a time suitable to match the demand. Forecasting a day into the future is especially useful in decentralized electricity markets which have day-ahead markets. Decentralized electricity markets are ones where electricity is provided by multiple generation companies, as opposed to a centralized source, such as a government. To aid in this prediction, machine learning and statistical techniques have been used to accurately predict demand based on several different factors and data sources \cite{Kell2018a}, such as weather \cite{Hong2014}, day of the week \cite{Al-Musaylh2018} and holidays \cite{Vrablecova2017}. 
 
@@ -167,8 +166,6 @@ Various studies have looked at predicting electricity demand at various horizons
 In this paper, we compare several machine learning and statistical techniques to predict the energy demand for each hour over the next 24-hour horizon. We chose to predict over the next 24 hours to simulate a day-ahead market, which is often seen in decentralized electricity markets. However, our approach could be utilized for differing time horizons. In addition to this, we use our long-term agent-based model, ElecSim \cite{Kell, Kell2020}, to simulate the impact of different forecasting methods on long-term investments, power plant usage and carbon emissions for the years 2018 through 2035 in the United Kingdom. Our approach, however, is generalizable to any country through parametrization of the ElecSim model.
 
 
-Within energy modelling, different methodologies are undertaken to understand how an energy system may develop. In this paper we used an agent-based model, however, other approaches include econometric and optimization based models. Optimization based models develop scenarios into the future by finding a cost-optimal solution. Optimisation models, however, rely on perfect information of the future, assume that there is a central planner within an energy market and are solved in a normative manner. That is, how a problem should be solved under a specific scenario. Agent-based models on the other hand can assume imperfect generation from many generation companies and allows a scenario to develop. In this work, we used an agent-based model as we believe that these types of models can more closely match real-life in decentralised electricity markets. 
-
 %- What is the innovation in this work
 
 %We compare the impact of 11 offline learning algorithms and five online learning algorithms to predict the electricity demand profile over the next 24 hours.
@@ -179,7 +176,7 @@ We trial different algorithms and train different models for different times of 
 
 We expect a-priori that online algorithms will outperform the offline approach. This is due to the fact that the demand time-series is non-stationary, and thus changes sufficiently over time. In terms of the models, we presume that the machine learning algorithms, such as neural networks, support vector regression and random forests will outperform the statistical methods such as linear regression, lasso regression and box-cox transformation regression. We expect this due to the fact that machine learning has been shown to be able to learn more complex feature representations than statistical methods \cite{Singh2012}. In addition, our previous work has shown that the random forest was able to outperform neural networks, support vector regression and long short term memory neural networks (LSTM) \cite{Kell2018}. 
 
-It should be noted, that such a-priori intuition, is no substitute for analytical evidence and can (and has) been shown to be wrong in the past, due to imperfect knowledge of the data and understanding of some of the black box models, such as neural networks.
+However, it should be noted, that such a-priori intuiton, is no substitute for analytical evidence and can (and has) been shown to be wrong in the past, due to imperfect knowledge of the data and understanding of some of the black box models, such as neural networks.
 
 %- A short description of the solution
 
@@ -204,8 +201,8 @@ Total investments in coal, offshore and photovoltaics are proportional to the me
 The contributions of this work are:
 
 \begin{enumerate}
-  \item The evaluation of different online and offline learning models to forecast the electricity demand profile 24 hours ahead. This work extends previous work by utilizing a vast array of different online and offline techniques.
-  \item Evaluation of poor predictive ability on the long-term electricity market in the UK through the perturbation of demand in the novel ElecSim simulation. There remains a gap in the literature of the long-term impact of poor electricity demand predictions on the electricity market.
+  \item The evaluation of different online and offline learning models to forecast the electricity demand profile 24 hours ahead.
+  \item Evaluation of poor predictive ability on the long-term electricity market in the UK through the perturbation of demand in the ElecSim simulation.
 \end{enumerate}
 
 
@@ -258,7 +255,7 @@ Goncalves Da Silva \textit{et al}. show the effect of prediction accuracy on loc
 
 \subsection{Machine Learning}
 
-Machine learning is a methodology for finding and describing structural patterns in data \cite{Witten2011}. Offline learning models are trained with the data availalable at a single point in time. With non-stationary data, where underlying distributions change, the model must be retrained at periodic intervals, determined by how quickly the model goes out of step with the true data. With online learning, the model is able to retrain every time a new data point becomes available, without having to retrain the entire model. This makes these models good for time-series data which exhibit moderate to significant non-stationary properties, such as electricity demand profiles.
+Machine learning is a methodology for finding and describing structural patterns in data \cite{Witten2011}. Offline learning models are trained with the data availalable at a single point in time. With non-stationary data where underlying distributions change, the model must be retrained at periodic intervals, determined by how quickly the model goes out of step with the true data. With online learning, the model is able to retrain every time a new data point becomes available, without having to retrain the entire model. This makes these models good for time-series data which exhibit moderate to significant non-stationary properties, such as electricity demand profiles.
 
 
 
@@ -480,7 +477,7 @@ The goal of the Passive-Aggressive (PA) algorithm is to change itself as little 
 
 In order to test the impact of the different residual distributions, we used the ElecSim simulation developed by Kell \textit{et al}., ElecSim \cite{Kell,Kell2020}. ElecSim is an agent-based model which mimics the behaviour of decentralized electricity markets. In this paper, we parametrized the model with data of the United Kingdom in 2018. This enabled us to create a digital twin of the UK electricity market and project forward. The data used for this parametrization included power plants in operation in 2018 and the funds available to the generation companies \cite{dukes_511, companies_house}.
 
-ElecSim is made up of six components: 1) power plant data; 2) scenario data; 3) the time-steps of the algorithm; 4) the power exchange; 5) the investment algorithm and 6) the generation companies (GenCos) as agents. ElecSim uses a subset of representative days of electricity demand, solar irradiance and wind speed to approximate a full year. In this context, representative days are a subset of days which, when scaled up, represent an entire year \cite{Kell2020}. We show how these components interact in Figure \ref{fig:model_details} \cite{Kell}. Namely, electricity demand is matched with the supply provided by power plants through the use of a spot market. Generator companies invest in power plants based upon information provided by the data sources and expectation of the data provided by the configuration file. 
+ElecSim is made up of six fundamental components: 1) power plant data; 2) scenario data; 3) the time-steps of the algorithm; 4) the power exchange; 5) the investment algorithm and 6) the generation companies (GenCos) as agents. ElecSim uses a subset of representative days of electricity demand, solar irradiance and wind speed to approximate a full year. In this context, representative days are a subset of days which, when scaled up, represent an entire year \cite{Kell2020}. We show how these components interact in Figure \ref{fig:model_details} \cite{Kell}. Namely, electricity demand is matched with the supply provided by power plants through the use of a spot market. Generator companies invest in power plants based upon information provided by the data sources and expectation of the data provided by the configuration file. 
 
 
 
@@ -502,7 +499,7 @@ NPV(t, N) = \sum_{t=0}^{N}\frac{R_t}{(1+t)^t}.
 
 Each of the Generator Companies (GenCos) estimate the yearly income for each prospective power plant by running a merit-order dispatch electricity market simulation ten years into the future. However, it is true that the expected cost of electricity ten years into the future is particularly challenging to predict. We, therefore, use a reference scenario projected by the UK Government Department for Business and Industrial Strategy (BEIS), and use the predicted costs of electricity calibrated by Kell \textit{et al} \cite{Kell2020, DBEIS2019}. The agents predict the future carbon price by using a linear regression model.
 
-More concretely, the GenCos make investments by comparing the expected profitability of each of the power plants over their respective lifetime. They invest in the power plant which they deem to be the most profitable. A major uncertainty in power plant investment is the price of electricity whilst the power plant is in operation. This is often a 25 year period. This is where the predicted costs of electricity calibrated in \cite{Kell2020} is used.
+
  
 \section{Methods}
 \label{sec:methods}
@@ -589,12 +586,6 @@ Multilayer Perceptron   & Hidden layer sizes  & {[}(10, 50, 100), (10),  (20), (
 \end{sidewaystable*}%
 %\end{landscape}
 
-\subsubsection{Implementation methodology}
-
-The implementation slightly differs between online and offline learning. In offline learning, batch processing occurs. That is, all the data from 2011 to 2017 is used to train the algorithm. Once each of the algorithms had been trained, the algorithms are used to predict the electricity demand from 2017 to 2018. For hyper-parameter tuning cross-validation is used. Specifically, the training data is randomly split ten times to select the best hyper-parameters. This allowed for an unbiased assessment of the data.  
-
-For online learning a similar process is undertaken. That is, the models are trained in a batched approach using data from 2011 to 2017. Between the year 2017 and 2018, the next time-step is predicted and the error recorded between actual value and the predicted value. Next, the model is updated using the actual value, and the next value predicted again.
-
 
 \subsection{Prediction Residuals in ElecSim}
 
@@ -604,7 +595,6 @@ Once each of the prediction residual distributions are fit with a sensible close
 
 By perturbing the market by the residuals, we can observe what the effects are of incorrect predictions of demand in an electricity market using the long-term electricity market model, ElecSim. We are able to understand the differences that prediction residuals have on long-term investment decisions as well as generators utilized.
 
-ElecSim has previously been validated in \cite{Kell2020}. In this work, we validated our model between the years 2013 and 2018, and recorded the difference between observed electricity mix to predicted electricity mix. We found that we were able to predict each different electricity source better than the naive approach. The naive approach, in this case, was predicting the electricity mix at the last known point in 2013. However, we were able to better predict coal, solar and wind by achieving a mean absolute scaled error (MASE) of ${\sim}$0.4 for these. CCGT and nuclear on the other hand had slightly worse results, achieving a MASE of ${\sim}$0.7.
 
 
 
@@ -621,39 +611,7 @@ To generate these results, we use a training set to train the data, and a test s
 
 Figure \ref{fig:beis_elecsim_historic_comparison} displays the mean absolute error of each of the offline statistical and machine learning models on a log scale. It can be seen that the different models have varying degrees of success. The least accurate models were linear regression, the multilayer perceptron (MLP) model and the Least Angle Regression (LARS). These all have mean absolute errors over 10,000MWh. This error would be prohibitively high in practice; the max tendered national grid reserve is 6,000MWh, while the average tendered national grid reserve is 2,000MWh \cite{ESO2019}.
 
-
-
 A number of models perform well, with a low mean absolute error. These include the Lasso, gradient Boosting Regressor and K-neighbours regressor. The best model, similar to \cite{Kell2018a}, was the decision tree-based model, Extra Trees Regressor, with a mean absolute error of $1,604$MWh. This level is well within the average national grid reserve of 2,000MWh.
-
-Table \ref{table:offline_ml_metrics} displays different metrics for measuring the accuracy of the offline machine learning techniques. These include Mean Squared Error (MSE), Root Mean Squared Error (RMSE), Mean Absolute Error (MAE) and the Mean R-Squared. The results largely compliment each other. With high error values in one metric correlating to high error metrics in others for each of the estimators.
-
-
-
-\begin{table*}[]
-\footnotesize
-	\begin{tabular}{@{}lllllll@{}}
-		\toprule
-		Estimator                 & Mean Fit Time & Mean Score Time & Mean MSE    & Mean RMSE & Mean MAE & Mean R-Squared \\ \midrule
-		LinearRegression          & 57            & 4.84            & 9444808.95  & 3073.24   & 2249.34  & 0.81           \\
-		Lasso                     & 787.97        & 3.13            & 9446957.22  & 3073.59   & 2249.55  & 0.81           \\
-		Ridge                     & 26.99         & 5.03            & 9444701.58  & 3073.22   & 2252.23  & 0.81           \\
-		ElasticNet                & 54.49         & 6.13            & 31139231.96 & 5580.25   & 4628.64  & 0.36           \\
-		llars                     & 46.85         & 8               & 10164815.45 & 3188.23   & 2333.31  & 0.79           \\
-		ExtraTreesRegressor       & 9321.52       & 58.06           & 5562579.53  & 2358.51   & 1605     & 0.89           \\
-		RandomForestRegressor     & 16567.46      & 13.99           & 5882618.89  & 2425.41   & 1646.29  & 0.88           \\
-		AdaBoostRegressor         & 8897.55       & 26.9            & 18551963.36 & 4307.2    & 3544.49  & 0.62           \\
-		GradientBoostingRegressor & 6417.62       & 8.16            & 6744402.87  & 2597      & 1833.62  & 0.86           \\
-		SVR                       & 19170.82      & 5221.66         & 51217167.5  & 7156.62   & 5926.75  & -0.05          \\
-		KNeighborsRegressor       & 118.89        & 15215.87        & 10107201.23 & 3179.18   & 2246.6   & 0.79           \\ \bottomrule
-	\end{tabular}
-\caption{Different metrics for offline machine learning results.}
-\label{table:offline_ml_metrics}
-\end{table*}
-
-
-
-
-
 
 
 
@@ -760,49 +718,6 @@ Figure \ref{fig:online_model_mae_barplot} displays the comparison of mean absolu
 It can be seen that the best performing model was the Box-Cox regressor, with an MAE of 1100. This is an improvement of over 30\% on the best offline model. The other models perform less well. However, it can be seen that the linear regression model improves significantly for the online case when compared to the offline case. The passive aggressive (PA) model improve significantly with the varying parameters, and the MLP performs poorly in all cases.
 
 
-Table \ref{table:online_ml_metrics} displays the metrics for each of the online methods. This includes the mean MSE, mean RMSE and mean MAE. Again, the metrics largely correlate with each other.
-
-%% Please add the following required packages to your document preamble:
-%% \usepackage{booktabs}
-%\begin{table*}[]
-%	\footnotesize
-%	\begin{tabular}{p{6.5cm}lllll@{}}
-%		\toprule
-%		Estimator                                                                          & Mean Fit Time & Mean Score Time & Mean MSE     & Mean RMSE & Mean MAE \\ \midrule
-%		
-%		(PA) C = 0.1, fit intercept = false & 173.52        & 24.63           & 103015609.55 & 9497.47   & 5888.4   \\
-%		(PA) C = 0.1, fit intercept = true     & 168.66        & 24.07           & 63201775.28  & 7430.63   & 4605.94  \\
-%		(PA) C = 2, fit intercept = false      & 165.23        & 23.75           & 7451087.49   & 2723.25   & 1927.33  \\
-%		(PA) C = 2, fit intercept = true    & 174.33        & 24.63           & 7223163.14   & 2681.2    & 1907.59  \\
-%		Linear Regression                                                                  & 174.91        & 24.65           & 7223163.14   & 2681.2    & 1907.59  \\
-%		(MLP) hidden layer sizes = 10, learning rate = adaptive                                  & 71.36         & 6.58            & 9612351.37   & 3076.77   & 2221.48  \\
-%		(Box Cox) power = 0.1                                                              & 38.61         & 4.88            & 2921934.52   & 1703.79   & 1214.95  \\\bottomrule
-%	\end{tabular}
-%	\caption{Different metrics for online machine learning results.}
-%	\label{table:online_ml_metrics}
-%\end{table*}
-
-
-% Please add the following required packages to your document preamble:
-% \usepackage{booktabs}
-\begin{table*}[]
-\begin{tabular}{@{}llllll@{}}
-\toprule
-Estimator                                                                          & Mean Fit Time & Mean Score Time & Mean MSE     & Mean RMSE & Mean MAE \\ \midrule
-(PA) C = 0.1, fit intercept = false & 173.52        & 24.63           & 103015609.55 & 9497.47   & 5888.4   \\
-(PA) C = 0.1, fit intercept = true     & 168.66        & 24.07           & 63201775.28  & 7430.63   & 4605.94  \\
-(PA) C = 2, fit intercept = false      & 165.23        & 23.75           & 7451087.49   & 2723.25   & 1927.33  \\
-(PA) C = 2, fit intercept = true       & 174.91        & 24.65           & 7223163.14   & 2681.2    & 1907.59  \\
-(MLP) (all parameter variations)                                                     & 71.36         & 6.58            & 9612351.37   & 3076.77   & 2221.48  \\
-(Box Cox) power = 0.1                                                              & 38.61         & 4.88            & 2921934.52   & 1703.79   & 1214.95  \\
-Linear Regression                                                                  & 38.61         & 4.85            & 5629651.14   & 2368.3    & 1785.02  \\ \bottomrule
-\end{tabular}
-	\caption{Different metrics for online machine learning results.}
-	\label{table:online_ml_metrics}
-\end{table*}
-
-
-
 
 Figure \ref{fig:best_online_learning_day_distribution} displays the best online model. We can see a significant improvement over the best online model distribution, shown in Figure \ref{fig:best_offline_learning_day_distribution}. We remain within the max tendered national grid reserve for 98.9\% of the time, and the average available tendered national grid reserve is close to the 5\% and 95\% percentiles.
 
@@ -819,7 +734,7 @@ Figure \ref{fig:bad_online_learning_day_distribution} displays the residuals for
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=\columnwidth,natwidth=500,natheight=400]{figures/results/online_learning_dists-C-0.1-fit_intercept-true-max_iter-1000-shuffle-false-tol 0.001.eps}
+\includegraphics[width=\columnwidth,natwidth=500,natheight=300]{figures/results/online_learning_dists-C-0.1-fit_intercept-true-max_iter-1000-shuffle-false-tol 0.001.eps}
 \caption{Online machine learning algorithm distribution. (Passive Aggressive Regressor (C=0.1, fit intercept = true, maximum iterations = 1000, shuffle = false, tolerance = 0.001), chosen as it was the worst result for the passive aggressive model.}
 \label{fig:bad_online_learning_day_distribution}
 \end{figure}
@@ -878,55 +793,47 @@ Running this simulation enabled us to see the effect on carbon emissions on the 
 \subsubsection{Mean Contributed Energy Generation}
 
 
-%\begin{figure*}[h!]
+\begin{figure*}[h!]
+\centering
+\begin{subfigure}[b]{0.3\textwidth}
 %\centering
-%\begin{subfigure}[b]{0.3\textwidth}
-%%\centering
-%\includegraphics[width=\columnwidth]{figures/results/elecsim_results/results_2/contributed_PV_mean_output}
-%\caption{Photovoltaic output.}
-%\label{fig:contributed_PV_mean_output}
-%\end{subfigure}
-%\hfil
-%\begin{subfigure}[b]{0.3\textwidth}  
-%%\centering
-%\includegraphics[width=\columnwidth]{figures/results/elecsim_results/results_2/contributed_Coal_mean_output.eps}
-%\caption{Coal output.}
-%\label{fig:contributed_Coal_mean_output}
-%\end{subfigure}
-%\hfil
-%%\vskip\baselineskip
-%\begin{subfigure}[b]{0.3\textwidth}   
-%%\centering
-%\includegraphics[width=\columnwidth]{figures/results/elecsim_results/results_2/contributed_Nuclear_mean_output.eps}
-%\caption{Nuclear output.}
-%\label{fig:contributed_Nuclear_mean_output}
-%\end{subfigure}
-%%\quad
-%\medskip
-%\begin{subfigure}[b]{0.3\textwidth}   
-%%\centering
-%\includegraphics[width=\columnwidth]{figures/results/elecsim_results/results_2/contributed_Offshore_mean_output.eps}
-%\caption{Offshore output.}
-%\label{fig:contributed_Offshore_mean_output.eps}
-%\end{subfigure}
-%\hfil
-%\begin{subfigure}[b]{0.3\textwidth}   
-%%\centering
-%\includegraphics[width=1\columnwidth]{figures/results/elecsim_results/results_2/contributed_Recip_gas_mean_output.eps}
-%\caption{Reciprocal gas engine output.}
-%\label{fig:contributed_Recip_gas_mean_output}
-%\end{subfigure}
-%\label{fig:pv_coal_nuclear_offshore_outputs}
-%\caption{Mean outputs of various technologies vs. mean absolute error from 2018 to 2035 in ElecSim.}
-%\end{figure*}
-
-
-\begin{figure*}[h]
-\includegraphics[width=\columnwidth,natwidth=700,natheight=485]{figures/results/contributed_total_plot.pdf}
+\includegraphics[width=\columnwidth]{figures/results/elecsim_results/results_2/contributed_PV_mean_output}
+\caption{Photovoltaic output.}
+\label{fig:contributed_PV_mean_output}
+\end{subfigure}
+\hfil
+\begin{subfigure}[b]{0.3\textwidth}  
+%\centering
+\includegraphics[width=\columnwidth]{figures/results/elecsim_results/results_2/contributed_Coal_mean_output.eps}
+\caption{Coal output.}
+\label{fig:contributed_Coal_mean_output}
+\end{subfigure}
+\hfil
+%\vskip\baselineskip
+\begin{subfigure}[b]{0.3\textwidth}   
+%\centering
+\includegraphics[width=\columnwidth]{figures/results/elecsim_results/results_2/contributed_Nuclear_mean_output.eps}
+\caption{Nuclear output.}
+\label{fig:contributed_Nuclear_mean_output}
+\end{subfigure}
+%\quad
+\medskip
+\begin{subfigure}[b]{0.3\textwidth}   
+%\centering
+\includegraphics[width=\columnwidth]{figures/results/elecsim_results/results_2/contributed_Offshore_mean_output.eps}
+\caption{Offshore output.}
+\label{fig:contributed_Offshore_mean_output.eps}
+\end{subfigure}
+\hfil
+\begin{subfigure}[b]{0.3\textwidth}   
+%\centering
+\includegraphics[width=1\columnwidth]{figures/results/elecsim_results/results_2/contributed_Recip_gas_mean_output.eps}
+\caption{Reciprocal gas engine output.}
+\label{fig:contributed_Recip_gas_mean_output}
+\end{subfigure}
 \label{fig:pv_coal_nuclear_offshore_outputs}
 \caption{Mean outputs of various technologies vs. mean absolute error from 2018 to 2035 in ElecSim.}
 \end{figure*}
-
 
 In this Section we display the mean electricity mix contributed by different electricity sources over the years 2018 to 2035. 
 
@@ -1009,61 +916,53 @@ It is hypothesized that coal and nuclear increase in investment due to their dis
 CCGT and reciprocal gas engines may have decreased in capacity over this time, due to the increase in coal. This could be because of the large consistent errors in prediction accuracy that meant that reciprocal gas engines were perceived to be less valuable.
 
 
-%\begin{figure*}[h!]
+\begin{figure*}[h!]
+\centering
+\begin{subfigure}[b]{0.3\textwidth}
 %\centering
-%\begin{subfigure}[b]{0.3\textwidth}
-%%\centering
-%\includegraphics[width=\columnwidth]{figures/results/elecsim_results/results_2/total_CCGT_mean_output.eps}
-%\caption{Total CCGT.}
-%\label{fig:total_CCGT_mean_output}
-%\end{subfigure}
-%\hfil
-%\begin{subfigure}[b]{0.3\textwidth}  
-%%\centering
-%\includegraphics[width=\columnwidth]{figures/results/elecsim_results/results_2/total_Coal_mean_output.eps}
-%\caption{Total Coal.}
-%\label{fig:total_Coal_mean_output}
-%\end{subfigure}
-%\hfil
-%%\vskip\baselineskip
-%\begin{subfigure}[b]{0.3\textwidth}   
-%\includegraphics[width=\columnwidth]{figures/results/elecsim_results/results_2/total_Onshore_mean_output.eps}
-%\caption{Total Onshore.}
-%\label{fig:total_Onshore_mean_output}
-%\end{subfigure}
-%%\quad
-%\medskip
-%\begin{subfigure}[b]{0.3\textwidth}   
-%%\centering
-%\includegraphics[width=\columnwidth]{figures/results/elecsim_results/results_2/total_Offshore_mean_output.eps}
-%\caption{Total Offshore.}
-%\label{fig:total_Offshore_mean_output}
-%\end{subfigure}
-%\hfil
-%\begin{subfigure}[b]{0.3\textwidth}
-%\includegraphics[width=\columnwidth]{figures/results/elecsim_results/results_2/total_Nuclear_mean_output.eps}
-%\caption{Total nuclear.}
-%\label{fig:total_nuclear_mean_output}
-%\end{subfigure}
-%\hfil
-%\begin{subfigure}[b]{0.3\textwidth}  
-%%\centering
-%%\centering
-%\includegraphics[width=\columnwidth]{figures/results/elecsim_results/results_2/total_PV_mean_output.eps}
-%\caption{Total photovoltaics.}
-%\label{fig:total_PV_mean_output}
-%\end{subfigure}
-%\label{fig:ccgt_coal_onshore_offshore_totals}
-%\caption{Total technologies invested in vs. mean absolute error from 2018 to 2035 in ElecSim.}
-%\end{figure*}
-
-
-\begin{figure*}[h]
-\includegraphics[width=\columnwidth,natwidth=700,natheight=300]{figures/results/total_total_plot.pdf}
+\includegraphics[width=\columnwidth]{figures/results/elecsim_results/results_2/total_CCGT_mean_output.eps}
+\caption{Total CCGT.}
+\label{fig:total_CCGT_mean_output}
+\end{subfigure}
+\hfil
+\begin{subfigure}[b]{0.3\textwidth}  
+%\centering
+\includegraphics[width=\columnwidth]{figures/results/elecsim_results/results_2/total_Coal_mean_output.eps}
+\caption{Total Coal.}
+\label{fig:total_Coal_mean_output}
+\end{subfigure}
+\hfil
+%\vskip\baselineskip
+\begin{subfigure}[b]{0.3\textwidth}   
+\includegraphics[width=\columnwidth]{figures/results/elecsim_results/results_2/total_Onshore_mean_output.eps}
+\caption{Total Onshore.}
+\label{fig:total_Onshore_mean_output}
+\end{subfigure}
+%\quad
+\medskip
+\begin{subfigure}[b]{0.3\textwidth}   
+%\centering
+\includegraphics[width=\columnwidth]{figures/results/elecsim_results/results_2/total_Offshore_mean_output.eps}
+\caption{Total Offshore.}
+\label{fig:total_Offshore_mean_output}
+\end{subfigure}
+\hfil
+\begin{subfigure}[b]{0.3\textwidth}
+\includegraphics[width=\columnwidth]{figures/results/elecsim_results/results_2/total_Nuclear_mean_output.eps}
+\caption{Total nuclear.}
+\label{fig:total_nuclear_mean_output}
+\end{subfigure}
+\hfil
+\begin{subfigure}[b]{0.3\textwidth}  
+%\centering
+%\centering
+\includegraphics[width=\columnwidth]{figures/results/elecsim_results/results_2/total_PV_mean_output.eps}
+\caption{Total photovoltaics.}
+\label{fig:total_PV_mean_output}
+\end{subfigure}
 \label{fig:ccgt_coal_onshore_offshore_totals}
 \caption{Total technologies invested in vs. mean absolute error from 2018 to 2035 in ElecSim.}
 \end{figure*}
-
 
 
 
@@ -1072,32 +971,26 @@ Figure \ref{fig:Carbon_emitted_mean_output} shows an increase in relative mean c
 
 
 
-%\begin{figure}[h!]
-%\centering
-%%\vskip\baselineskip
-%\begin{subfigure}[b]{0.33\textwidth}   
-%\includegraphics[width=\columnwidth]{figures/results/elecsim_results/results_2/total_Recip_gas_mean_output.eps}
-%\caption{Total Reciprocal gas engine.}
-%\label{fig:total_Recip_gas_mean_output.eps}
-%\end{subfigure}
-%%\quad
-%%\medskip
-%\hfil
-%\begin{subfigure}[b]{0.33\textwidth}   
-%\includegraphics[width=\columnwidth]{figures/results/elecsim_results/results_2/Carbon_emitted_mean_output.eps}
-%\caption{Mean carbon emitted.}
-%\label{fig:Carbon_emitted_mean_output}
-%\end{subfigure}
-%\label{fig:nuclear_pv_carbon_totals}
-%\caption{Mean carbon emissions between 2018 and 2035.}
-%\end{figure}
-
-\begin{figure}[h]
+\begin{figure}[h!]
 \centering
-\includegraphics[width=0.8\columnwidth]{figures/results/elecsim_results/results_2/Carbon_emitted_mean_output.eps}
-\caption{Mean carbon emissions between 2018 and 2035.}
-\label{fig:online_train_vs_mae}
+%\vskip\baselineskip
+\begin{subfigure}[b]{0.33\textwidth}   
+\includegraphics[width=\columnwidth]{figures/results/elecsim_results/results_2/total_Recip_gas_mean_output.eps}
+\caption{Total Reciprocal gas engine.}
+\label{fig:total_Recip_gas_mean_output.eps}
+\end{subfigure}
+%\quad
+%\medskip
+\hfil
+\begin{subfigure}[b]{0.33\textwidth}   
+\includegraphics[width=\columnwidth]{figures/results/elecsim_results/results_2/Carbon_emitted_mean_output.eps}
+\caption{Mean carbon emitted.}
+\label{fig:Carbon_emitted_mean_output}
+\end{subfigure}
+\label{fig:nuclear_pv_carbon_totals}
+\caption{a) Investments in reciprocal gas engine technologies vs. mean absolute error from 2018 to 2035 in ElecSim and d) mean carbon emissions between 2018 and 2035.}
 \end{figure}
+
 
 
 
@@ -1127,27 +1020,6 @@ Figure \ref{fig:Carbon_emitted_mean_output} shows an increase in relative mean c
 %\label{fig:total_Offshore_mean_output}
 %\end{figure}
 
-
-
-
-\subsubsection{Sensitivity Analysis}
-
-In this Section we run a sensitivity analysis to visualise the effects of different errors on the average electricity mix over the 2018 to 2035 time period. To conduct this sensitivity analysis, we used a normal distribution with a mean of 0 and modified the standard deviation between 1,000 and 20,000, in increments of 1,000. We selected the normal distribution due to its observation in nature, and its symmetric properties. We chose to increase the standard deviation until 20,000 due to it being 33\% larger than the errors shown in the previous subsection. This gave us a larger error than had previously been explored.
-
-
-
-\begin{figure}[h]
-\centering
-\includegraphics[width=\columnwidth,natwidth=800, natheight=600]{figures/results/sensitivity_analysis.pdf}
-\caption{Sensitivity analysis of changing demand prediction error using a normal distribution and varying the standard deviation vs. mean contributed energy per type between 2018 and 2035.}
-\label{fig:sensitivity-analysis}
-\end{figure}
-
-Figure \ref{fig:sensitivity-analysis} displays the results of this sensitivity analysis. At all standard deviations, photovoltaics displays the highest contributed energy, CCGT the second most and Nuclear the third most. Coal, onshore and the others contribute a smaller amount of energy than the top three.
-
-Whilst photovoltaics remains high throughout, it reduces up until a standard deviation of 14,000MW, after which it begins to increase. This reduction up until 14,000MW may be due to the fact that the predicted demand changes so quickly, that photovoltaics are unable to be reliably dispatched on the day-ahead market to meet this changing predicted demand. Nuclear is, however, able to fill the demand that photovoltaics can not, due to its dispatchable nature.
-
-After a standard deviation of 14,000MW, photovoltaics increases, whilst nuclear decreases. This may be due to the large positive error predictions, which photovoltaics believes it is able to be dispatched on and displaces the more expensive nuclear energy technology.
 
 
 
@@ -1195,11 +1067,7 @@ In terms of computing power, finding the optimal input parameters, hyperparamete
 
 For training time and prediction time, there is often a trade-off between training and predicting. For instance, the k-nearest neighbours is fast to train, but slow to sample from. Therefore stakeholders must make a decision based upon accuracy, speed of training and sampling. 
 
-The amount of time taken to test and cross-validate the models increases exponentially with the number of models and hyper-parameters trialled. It is, therefore, suggested that cloud computing is used to train the models. This would enable the trialling of many different models and hyper-parameters within a reasonable time limit for this time-sensitive application. However, once the models have been trained and are used for making predictions the predictions can be made within a two minutes in the worst case. For the application of predicting 24-hours ahead, this falls within a reasonable time.
-
-The impact on the broader electricity market has been shown to be significant. Principally, the investment behaviours of generation companies change as well as the dispatched electricity mix. The relative mean carbon emitted over this time period increases, due to an increase in the utilization of coal and reciprocal gas engines, at the expense of offshore wind.
-
-
+Additionally, the impact on the broader electricity market has been shown to be significant. Principally, the investment behaviours of generation companies change as well as the dispatched electricity mix. The relative mean carbon emitted over this time period increases, due to an increase in the utilization of coal and reciprocal gas engines, at the expense of offshore wind.
 
 
 \section{Conclusion}

@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.4.22)  2 SEP 2020 11:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.4.22)  1 SEP 2020 14:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**elsarticle-template-harv.tex
-(./elsarticle-template-harv.tex
+**diff_file.tex
+(./diff_file.tex
 LaTeX2e <2020-02-02> patch level 5
 L3 programming layer <2020-03-06> (/usr/local/texlive/2020/texmf-dist/tex/latex/elsarticle/elsarticle.cls
 Document Class: elsarticle 2019/02/25, 3.2: Elsevier Ltd
@@ -63,7 +63,7 @@ File: dvips.def 2017/06/20 v3.1d Graphics/color driver for dvips
 \@enLab=\toks17
 \@sep=\skip49
 \@@sep=\skip50
- (./elsarticle-template-harv.spl) (/usr/local/texlive/2020/texmf-dist/tex/latex/natbib/natbib.sty
+ (./diff_file.spl) (/usr/local/texlive/2020/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip51
 \bibsep=\skip52
@@ -71,7 +71,7 @@ LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count181
 )
 \splwrite=\write3
-\openout3 = `elsarticle-template-harv.spl'.
+\openout3 = `diff_file.spl'.
 
  (/usr/local/texlive/2020/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
@@ -746,45 +746,91 @@ Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 \c@blind@randommax=\count319
 \c@blind@pangramcount=\count320
 \c@blind@pangrammax=\count321
-)) (./elsarticle-template-harv.aux
-
-LaTeX Warning: Label `fig:online_train_vs_mae' multiply defined.
-
+)) (/usr/local/texlive/2020/texmf-dist/tex/generic/ulem/ulem.sty
+\UL@box=\box63
+\UL@hyphenbox=\box64
+\UL@skip=\skip78
+\UL@hook=\toks41
+\UL@height=\dimen266
+\UL@pe=\count322
+\UL@pixel=\dimen267
+\ULC@box=\box65
+Package: ulem 2019/11/18
+\ULdepth=\dimen268
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/oberdiek/settobox.sty
+Package: settobox 2016/05/16 v1.5 Assign box dimensions to length registers (HO)
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
 )
-\openout1 = `elsarticle-template-harv.aux'.
+\DIFdelgraphicsbox=\box66
+\DIFdelgraphicswidth=\skip79
+\DIFdelgraphicsheight=\skip80
+LaTeX Info: Redefining \DIFaddbegin on input line 120.
+LaTeX Info: Redefining \DIFaddend on input line 121.
+LaTeX Info: Redefining \DIFdelbegin on input line 122.
+LaTeX Info: Redefining \DIFdelend on input line 123.
+LaTeX Info: Redefining \DIFaddbeginFL on input line 128.
+LaTeX Info: Redefining \DIFaddendFL on input line 129.
+LaTeX Info: Redefining \DIFdelbeginFL on input line 130.
+LaTeX Info: Redefining \DIFdelendFL on input line 131.
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count323
+\lst@gtempboxa=\box67
+\lst@token=\toks42
+\lst@length=\count324
+\lst@currlwidth=\dimen269
+\lst@column=\count325
+\lst@pos=\count326
+\lst@lostspace=\dimen270
+\lst@width=\dimen271
+\lst@newlines=\count327
+\lst@lineno=\count328
+\lst@maxwidth=\dimen272
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count329
+\lst@skipnumbers=\count330
+\lst@framebox=\box68
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2020/03/24 1.8d listings configuration
+))
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
+ (./diff_file.aux)
+\openout1 = `diff_file.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 67.
-LaTeX Font Info:    Trying to load font information for OML+txmi on input line 67.
+LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 150.
+LaTeX Font Info:    Trying to load font information for OML+txmi on input line 150.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 67.
-LaTeX Font Info:    Trying to load font information for OMS+txsy on input line 67.
+LaTeX Font Info:    ... okay on input line 150.
+LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 150.
+LaTeX Font Info:    Trying to load font information for OMS+txsy on input line 150.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/txfonts/omstxsy.fd
 File: omstxsy.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 67.
-LaTeX Font Info:    Trying to load font information for OMX+txex on input line 67.
+LaTeX Font Info:    ... okay on input line 150.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 150.
+LaTeX Font Info:    ... okay on input line 150.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 150.
+LaTeX Font Info:    ... okay on input line 150.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 150.
+LaTeX Font Info:    ... okay on input line 150.
+LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 150.
+LaTeX Font Info:    Trying to load font information for OMX+txex on input line 150.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/txfonts/omxtxex.fd
 File: omxtxex.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 67.
-LaTeX Font Info:    Trying to load font information for U+txexa on input line 67.
+LaTeX Font Info:    ... okay on input line 150.
+LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 150.
+LaTeX Font Info:    Trying to load font information for U+txexa on input line 150.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/txfonts/utxexa.fd
 File: utxexa.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Trying to load font information for OT1+txr on input line 67.
- (/usr/local/texlive/2020/texmf-dist/tex/latex/txfonts/ot1txr.fd
+LaTeX Font Info:    ... okay on input line 150.
+LaTeX Font Info:    Trying to load font information for OT1+txr on input line 150.
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/txfonts/ot1txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
 )
 *geometry* driver: auto-detecting
@@ -824,26 +870,28 @@ File: ot1txr.fd 2000/12/15 v3.1
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
-Package chemgreek Info: Activating mapping `default' on line 67.
+Package chemgreek Info: Activating mapping `default' on line 150.
 
 ABD: EveryShipout initializing macros
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
+\c@lstlisting=\count331
 LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <10> not available
-(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 102.
-LaTeX Font Info:    Trying to load font information for U+txmia on input line 146.
+(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 185.
+LaTeX Font Info:    Trying to load font information for U+txmia on input line 229.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/txfonts/utxmia.fd
 File: utxmia.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 146.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 229.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 146.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 229.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+txsyc on input line 146.
+LaTeX Font Info:    Trying to load font information for U+txsyc on input line 229.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/txfonts/utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
 )
@@ -858,56 +906,71 @@ Overfull \hbox (1.90001pt too wide) has occurred while \output is active
 
 
 ] [2]
-Underfull \hbox (badness 1292) in paragraph at lines 196--197
+Underfull \hbox (badness 1292) in paragraph at lines 280--281
 \OT1/txr/m/n/10 negligible im-pact on car-bon emis-sions and use of
  []
 
 [3] [4] [5]
-Underfull \hbox (badness 10000) in paragraph at lines 354--355
+Underfull \hbox (badness 10000) in paragraph at lines 438--439
 []\OT1/txr/m/n/10 Suppose we have the train-ing set:
  []
 
 
-Underfull \hbox (badness 2173) in paragraph at lines 354--355
+Underfull \hbox (badness 2173) in paragraph at lines 438--439
 \OT1/txr/m/n/10 (\OML/txmi/m/it/10 x[]; y[]\OT1/txr/m/n/10 )\OML/txmi/m/it/10 ; [] ; \OT1/txr/m/n/10 (\OML/txmi/m/it/10 x[]; y[]\OT1/txr/m/n/10 )\OML/txmi/m/it/10 ; [] ; \OT1/txr/m/n/10 (\OML/txmi/m/it/10 x[]; y[]\OT1/txr/m/n/10 )$, where $\OML/txmi/m/it/10 x[]$ \OT1/txr/m/n/10 is the in-
  []
 
 File: figures/methods/Kell_eEnergy_Fig1.eps Graphic file (type eps)
 <figures/methods/Kell_eEnergy_Fig1.eps> [6]
-Underfull \hbox (badness 2753) in paragraph at lines 397--398
+Underfull \hbox (badness 2753) in paragraph at lines 481--482
 \OT1/txr/m/n/10 sup-pose we have N ob-ser-va-tions $\OML/txmi/m/it/10 y[]; y[]; [] ; y[]$ \OT1/txr/m/n/10 in
  []
 
 [7]
 File: figures/methods/System_overview_large.png Graphic file (type eps)
  <figures/methods/System_overview_large.png>
-Overfull \hbox (2.638pt too wide) in paragraph at lines 492--493
+Overfull \hbox (2.638pt too wide) in paragraph at lines 576--577
 [][] 
  []
 
+
+Underfull \hbox (badness 1242) in paragraph at lines 592--593
+|   []   |   []   |   []   |   []   |   []   |   []   |   []
+ []
+
 [8]
-Underfull \hbox (badness 6893) in paragraph at lines 527--528
+Underfull \hbox (badness 6893) in paragraph at lines 614--615
 []\OT1/txr/m/n/10 To find the op-ti-mum hy-per-pa-ram-e-ters, cross-
  []
 
 
-Underfull \hbox (badness 4805) in paragraph at lines 581--581
+Underfull \hbox (badness 4805) in paragraph at lines 668--668
 []\OT1/txr/m/n/10 [(10, 50, 100),
  []
 
 
-Underfull \hbox (badness 1226) in paragraph at lines 581--581
+Underfull \hbox (badness 1226) in paragraph at lines 668--668
 \OT1/txr/m/n/10 (10), (20), (50),
  []
 
+
+Underfull \hbox (badness 3482) in paragraph at lines 682--683
+|   []   |   []   |   []   |   []   |   []   |   []   |   []
+ []
+
 [9] [10]
-Underfull \hbox (badness 1102) in paragraph at lines 626--627
+Underfull \hbox (badness 1102) in paragraph at lines 718--719
 \OT1/txr/m/n/10 ab-so-lute er-ror. These in-clude the Lasso, gra-di-ent
  []
 
 
+Underfull \hbox (badness 2961) in paragraph at lines 721--722
+|   []   |   []   |   []   |   []   |   []   |   []   |   []
+ []
+
+
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 632.
+               Default added (so using `tbp') on input line 725.
 
 File: figures/results/offline_model_mae.eps Graphic file (type eps)
 <figures/results/offline_model_mae.eps>
@@ -933,22 +996,29 @@ File: figures/results/online_model_mae_barplot.eps Graphic file (type eps)
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12]
+
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 788.
+               Default added (so using `tbp') on input line 882.
 
 
-Overfull \hbox (12.96005pt too wide) in paragraph at lines 789--800
+Overfull \hbox (27.96005pt too wide) in paragraph at lines 883--894
 [][] 
  []
 
-[12]
 File: figures/results/online_learning_dists-power-0.1.eps Graphic file (type eps)
- <figures/results/online_learning_dists-power-0.1.eps>
+<figures/results/online_learning_dists-power-0.1.eps>
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 File: figures/results/online_learning_dists-C-0.1-fit_intercept-true-max_iter-1000-shuffle-false-tol 0.001.eps Graphic file (type eps)
 <figures/results/online_learning_dists-C-0.1-fit_intercept-true-max_iter-1000-shuffle-false-tol 0.001.eps>
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 918--919
+ [][][] 
+ []
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -968,66 +1038,103 @@ File: figures/results/online_training_time_vs_mae_all_results_opaque.eps Graphic
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 4378) has occurred while \output is active []
 
  [13]
-File: figures/results/contributed_total_plot.pdf Graphic file (type eps)
- <figures/results/contributed_total_plot.pdf>
+File: figures/results/elecsim_results/results_2/contributed_PV_mean_output.eps Graphic file (type eps)
+ <figures/results/elecsim_results/results_2/contributed_PV_mean_output.eps>
+File: figures/results/elecsim_results/results_2/contributed_Coal_mean_output.eps Graphic file (type eps)
+ <figures/results/elecsim_results/results_2/contributed_Coal_mean_output.eps>
+File: figures/results/elecsim_results/results_2/contributed_Nuclear_mean_output.eps Graphic file (type eps)
+ <figures/results/elecsim_results/results_2/contributed_Nuclear_mean_output.eps>
+File: figures/results/elecsim_results/results_2/contributed_Offshore_mean_output.eps Graphic file (type eps)
+ <figures/results/elecsim_results/results_2/contributed_Offshore_mean_output.eps>
+File: figures/results/elecsim_results/results_2/contributed_Recip_gas_mean_output.eps Graphic file (type eps)
+ <figures/results/elecsim_results/results_2/contributed_Recip_gas_mean_output.eps>
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: Reference `fig:contributed_PV_mean_output' on page 14 undefined on input line 933.
-
-
-LaTeX Warning: Reference `fig:contributed_Coal_mean_output' on page 14 undefined on input line 933.
-
-
-LaTeX Warning: Reference `fig:contributed_Nuclear_mean_output' on page 14 undefined on input line 933.
-
-
-LaTeX Warning: Reference `fig:contributed_Offshore_mean_output.eps' on page 14 undefined on input line 933.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-LaTeX Warning: Reference `fig:contributed_Recip_gas_mean_output' on page 14 undefined on input line 933.
+Underfull \vbox (badness 7030) has occurred while \output is active []
 
-[14]
+ [14]
+File: figures/results/elecsim_results/results_2/total_CCGT_mean_output.eps Graphic file (type eps)
+ <figures/results/elecsim_results/results_2/total_CCGT_mean_output.eps>
+File: figures/results/elecsim_results/results_2/total_Coal_mean_output.eps Graphic file (type eps)
+ <figures/results/elecsim_results/results_2/total_Coal_mean_output.eps>
+File: figures/results/elecsim_results/results_2/total_Onshore_mean_output.eps Graphic file (type eps)
+ <figures/results/elecsim_results/results_2/total_Onshore_mean_output.eps>
+File: figures/results/elecsim_results/results_2/total_Offshore_mean_output.eps Graphic file (type eps)
+ <figures/results/elecsim_results/results_2/total_Offshore_mean_output.eps>
+File: figures/results/elecsim_results/results_2/total_Nuclear_mean_output.eps Graphic file (type eps)
+ <figures/results/elecsim_results/results_2/total_Nuclear_mean_output.eps>
+File: figures/results/elecsim_results/results_2/total_PV_mean_output.eps Graphic file (type eps)
+ <figures/results/elecsim_results/results_2/total_PV_mean_output.eps>
 
-LaTeX Warning: Reference `fig:total_CCGT_mean_output' on page 15 undefined on input line 1005.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-LaTeX Warning: Reference `fig:total_Offshore_mean_output' on page 15 undefined on input line 1005.
-
-
-LaTeX Warning: Reference `fig:total_Recip_gas_mean_output.eps' on page 15 undefined on input line 1005.
-
-File: figures/results/total_total_plot.pdf Graphic file (type eps)
-<figures/results/total_total_plot.pdf>
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: Reference `fig:Carbon_emitted_mean_output' on page 15 undefined on input line 1071.
-
+File: figures/results/elecsim_results/results_2/total_Recip_gas_mean_output.eps Graphic file (type eps)
+<figures/results/elecsim_results/results_2/total_Recip_gas_mean_output.eps>
 File: figures/results/elecsim_results/results_2/Carbon_emitted_mean_output.eps Graphic file (type eps)
-<figures/results/elecsim_results/results_2/Carbon_emitted_mean_output.eps>
+ <figures/results/elecsim_results/results_2/Carbon_emitted_mean_output.eps>
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 1394) in paragraph at lines 1210--1211
+[]|   []   |   []   |   []   |   []   |   []   |   []   |   []   |   []   |   []
+ []
 
 File: figures/results/sensitivity_analysis.pdf Graphic file (type eps)
 <figures/results/sensitivity_analysis.pdf>
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 1216--1217
+ [][][] 
+ []
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[15]
-Underfull \vbox (badness 4378) has occurred while \output is active []
 
- [16] [17] (./elsarticle-template-harv.bbl
+Underfull \hbox (badness 1137) in paragraph at lines 1222--1223
+[]|   []   |   []   |   []   |   []   |   []   |   []   |   []   |   []
+ []
+
+
+Underfull \hbox (badness 1173) in paragraph at lines 1225--1226
+[]|   []   |   []   |   []   |   []   |   []   |   []
+ []
+
+
+Underfull \hbox (badness 1210) in paragraph at lines 1225--1226
+|   []   |   []   |   []   |   []   |   []   |   []   |   []   |   []
+ []
+
+
+Underfull \hbox (badness 3557) in paragraph at lines 1225--1226
+|   []   |   []   |   []   |   []   |   []   |   []   |   []
+ []
+
+
+Underfull \hbox (badness 1412) in paragraph at lines 1225--1226
+|   []   |   []   |   []   |   []   |   []   |   []   |   []   |   []   |   []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1228--1229
+[]|   []   |   []   |   []   |   []   |   []   |   []
+ []
+
+
+Underfull \hbox (badness 5756) in paragraph at lines 1228--1229
+|   []   |   []   |   []   |   []   |   []
+ []
+
+[15] [16] [17] (./diff_file.bbl
 Underfull \hbox (badness 2351) in paragraph at lines 47--52
 \OT1/txr/m/n/8 A re-view, ICPCES 2012 - 2012 2nd In-ter-na-tional Con-
  []
 
-
+[18]
 Underfull \hbox (badness 1178) in paragraph at lines 79--82
 []\OT1/txr/m/n/8 M. W. Ah-mad, M. Mour-shed, Y. Rezgui, Trees vs Neu-
  []
@@ -1075,7 +1182,7 @@ Underfull \hbox (badness 1348) in paragraph at lines 164--170
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [18]
+
 Underfull \hbox (badness 1314) in paragraph at lines 190--194
 \OT1/txr/m/n/8 In-tel-li-gence 40 (1-3) (1989) 185--234.  doi:10.1016/0004-
  []
@@ -1138,21 +1245,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 284--290
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-) [19] (./elsarticle-template-harv.aux)
+ [19]) [20
 
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+] (./diff_file.aux) ) 
 Here is how much of TeX's memory you used:
- 11092 strings out of 480609
- 191917 string characters out of 5903656
- 641509 words of memory out of 5000000
- 26748 multiletter control sequences out of 15000+600000
- 558176 words of font info for 100 fonts, out of 8000000 for 9000
+ 12669 strings out of 480609
+ 216852 string characters out of 5903656
+ 671479 words of memory out of 5000000
+ 28290 multiletter control sequences out of 15000+600000
+ 558282 words of font info for 101 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,15n,100p,1256b,434s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,15n,100p,1241b,547s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on elsarticle-template-harv.dvi (19 pages, 119168 bytes).
+Output written on diff_file.dvi (20 pages, 194480 bytes).
