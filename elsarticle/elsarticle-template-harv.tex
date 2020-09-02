@@ -484,16 +484,17 @@ The goal of the Passive-Aggressive (PA) algorithm is to change itself as little 
 
 In order to test the impact of the different residual distributions, we used the ElecSim simulation \cite{Kell,Kell2020}. ElecSim is an agent-based model which mimics the behaviour of decentralized electricity markets. In this paper, we parametrized the model with data of the United Kingdom in 2018. This enabled us to create a digital twin of the UK electricity market and project forward. The data used for this parametrization included power plants in operation in 2018 and the funds available to the GenCos \cite{dukes_511, companies_house}.
 
-ElecSim is made up of six components: 1) power plant data; 2) scenario data; 3) the time-steps of the algorithm; 4) the power exchange; 5) the investment algorithm and 6) the GenCos (GenCos) as agents. ElecSim uses a subset of representative days of electricity demand, solar irradiance and wind speed to approximate a full year. In this context, representative days are a subset of days which, when scaled up, represent an entire year \cite{Kell2020}. We show how these components interact in Figure \ref{fig:model_details} \cite{Kell}. Namely, electricity demand is matched with the supply provided by power plants through the use of a spot market. Generator companies invest in power plants based upon information provided by the data sources and expectation of the data provided by the configuration file. 
+ElecSim is made up of six components: 1) power plant data; 2) scenario data; 3) the time-steps of the algorithm; 4) the power exchange; 5) the investment algorithm and 6) the GenCos as agents. ElecSim uses a subset of representative days of electricity demand, solar irradiance and wind speed to approximate a full year. Representative days are a subset of days which, when scaled up, represent an entire year \cite{Kell2020}. We show how these components interact in Figure \ref{fig:model_details} \cite{Kell}. Namely, electricity demand is matched with the supply provided by power plants through the use of a spot market. Generator companies invest in power plants based upon information provided by the data sources and expectation of the data provided by the configuration file. 
 
 
 
-ElecSim uses a configuration file which details the scenario which can be set by the user. This includes electricity demand, carbon price and fuel prices. The data sources parametrize the ElecSim simulation to make a digital twin of a particular country, including information such as wind capacity and power plants in operation. GenCos own and invest in power plants. These power plants are then matched to electricity demand using a spot market.
+ElecSim uses a configuration file which details the scenario which can be set by the user. This includes electricity demand, carbon price and fuel prices. The data sources parametrize the ElecSim simulation to a particular country, including information such as wind capacity and power plants in operation. A spot market then matches electricity demand with supply.
 
 
 
 \begin{figure}
-    \includegraphics[width=0.48\textwidth,natwidth=610,natheight=400]{figures/methods/System_overview_large.png}
+\centering
+    \includegraphics[width=0.4\textwidth,natwidth=610,natheight=400]{figures/methods/System_overview_large.png}
     \caption{System overview of ElecSim \cite{Kell}.}
     \label{fig:model_details}
 \end{figure}
@@ -503,7 +504,6 @@ The market runs a merit-order dispatch model, and bids are made by the power pla
 \begin{equation} \label{eq:npv_eq}
 NPV(t, N) = \sum_{t=0}^{N}\frac{R_t}{(1+t)^t}.
 \end{equation}
-
 Each of the Generator Companies (GenCos) estimate the yearly income for each prospective power plant by running a merit-order dispatch electricity market simulation ten years into the future. However, it is true that the expected cost of electricity ten years into the future is particularly challenging to predict. We, therefore, use a reference scenario projected by the UK Government Department for Business and Industrial Strategy (BEIS), and use the predicted costs of electricity calibrated by Kell \textit{et al} \cite{Kell2020, DBEIS2019}. The agents predict the future carbon price by using a linear regression model.
 
 More concretely, the GenCos make investments by comparing the expected profitability of each of the power plants over their respective lifetime. They invest in the power plant which they deem to be the most profitable. A major uncertainty in power plant investment is the price of electricity whilst the power plant is in operation. This is often a 25 year period. This is where the predicted costs of electricity calibrated in \cite{Kell2020} is used.
@@ -513,20 +513,22 @@ More concretely, the GenCos make investments by comparing the expected profitabi
 
 %In this Section, we present the methodology for the approach taken in this paper. The work here was run on a MacBook Pro with a 2.3GHz 8-Core Intel Core i9 processor, with 32GB 2667 MHz DDR4 RAM.
 
-\subsection{Data preparation}
+%\subsection{Data preparation}
+\noindent{\textit{Data Preparation}}
 
 Similarly to our previous work in \cite{Kell2018a}, we selected a number of calendar attributes and demand data from the GB National Grid Status dataset provided by the electricity market settlement company Elexon, and the University of Sheffield \cite{gbnationalgridstatus_2019}. This dataset contained data between the years 2011-2018 for the United Kingdom. The calendar attributes used as predictors to the models were hour, month, day of the week, day of the month and year. These attributes allow us to account for the periodicity of the data within each day, month and year.
 
 It is also the case that electricity demand on a public holiday which falls on a weekday is dissimilar to load behaviours of ordinary weekdays \cite{Kim2000}. We marked each holiday day to allow the model to account for this.
 
-As demand data is highly correlated with historical demand, we lagged the input demand data. In this context, the lagged data is where we provide data of previous time steps at the input. For example, for predicting $t+1$, we use $n$ inputs: $t,t-1,t-2,\ldots,t-n$. This enabled us to take into account correlations on previous days, weeks and the previous month. Specifically, we used the previous 28 hours before the time step to be predicted for the previous 1st, 2nd, 7th and 30th day. We chose this as we believe that the previous two days were the most relevant to the day to be predicted, as well as the weekday of the previous week and the previous month. We chose the previous 28 hours to account for a full day, plus an additional 4 hours to account for the previous day's correlation with the day to be predicted. We could have increased the number of days provided to the algorithm. However, due to time and computational constraints, we used our previously described intuition for lagged data selection. The number of lagged inputs to trial increases exponentially with each additional day added making the problem intractable when also trialling such a high number of algorithms and hyperparameters. 
+As demand data is highly correlated with historical demand, we lagged the input demand data. In this context, the lagged data is where we provide data of previous time steps at the input. For example, for predicting $t+1$, we use $n$ inputs: $t,t-1,t-2,\ldots,t-n$. This enabled us to take into account correlations on previous days, weeks and the previous month. Specifically, we used the previous 28 hours before the time step to be predicted for the previous 1st, 2nd, 7th and 30th day. We chose this as we believe that the previous two days were the most relevant to the day to be predicted, as well as the weekday of the previous week and the previous month. We chose the previous 28 hours to account for a full day, plus an additional 4 hours to account for the previous day's correlation with the day to be predicted. We could have increased the number of days provided to the algorithm. However, due to time and computational constraints, we used our previously described intuition for lagged data selection. %The number of lagged inputs to trial increases exponentially with each additional day added making the problem intractable when also trialling such a high number of algorithms and hyperparameters. 
 
 In addition to this, we marked each of the days with their respective seven seasons. These seasons were defined by the National Grid Short Term Operating Reserve (STOR) Market Information Report \cite{ESO2019}. These differ from the traditional four seasons by splitting autumn into two further seasons, and winter into three seasons. Finally, to predict a full 24-hours ahead, we used 24 different models, 1 for each hour of the day. 
 
 
 The data is standardized and normalized using min-max scaling between -1 and 1 before training and predicting with the model. This is due to the fact that the inputs such as day of the week, hour of day are significantly smaller than that of demand. Therefore, the demand will influence the result more due to its larger value. However, this does not necessarily mean that demand has greater predictive power.
 
-\subsection{Algorithm Tuning}
+%\subsection{Algorithm Tuning}
+\noindent{\textit{Algorithm Tuning}}
 
 To find the optimum hyperparameters, cross-validation is used. As this time-series data were correlated in the time-domain, we took the first six years of data (2011-2017) for training and tested on the remaining year of data (2017-2018).
 
@@ -589,20 +591,22 @@ Multilayer Perceptron   & Hidden layer sizes  & {[}(10, 50, 100), (10),  (20), (
 \end{sidewaystable}%
 %\end{landscape}
 
-\subsubsection{Implementation methodology}
+%\subsubsection{Implementation methodology}
+\noindent{\textit{Implementation methodology}}
 
 The implementation slightly differs between online and offline learning. In offline learning, batch processing occurs. That is, all the data from 2011 to 2017 is used to train the algorithm. Once each of the algorithms had been trained, the algorithms are used to predict the electricity demand from 2017 to 2018. For hyper-parameter tuning cross-validation is used. Specifically, the training data is randomly split ten times to select the best hyper-parameters. This allowed for an unbiased assessment of the data.  
 
 For online learning a similar process is undertaken. That is, the models are trained in a batched approach using data from 2011 to 2017. Between the year 2017 and 2018, the next time-step is predicted and the error recorded between actual value and the predicted value. Next, the model is updated using the actual value, and the next value predicted again.
 
 
-\subsection{Prediction Residuals in ElecSim}
+%\subsection{Prediction Residuals in ElecSim}
+\noindent{\textit{Prediction Residuals in ElecSim}}
 
-Each of the models trialled will have a certain degree of errors. Prediction residuals are the difference between the estimated and actual values. We collect the prediction residuals to form a distribution for each of the models. We then trial 80 different closed-form distributions to see which of the distributions best fits the residuals from each of the models. These 80 distributions were chosen due to their implementation in scikit-learn \cite{scikit-learn}.
+Each of the models trialled will have a degree of error. Prediction residuals are the difference between the estimated and actual values. We collect the prediction residuals to form a distribution for each of the models. We then trial 80 different closed-form distributions to see which of the distributions best fits the residuals from each of the models. These 80 distributions were chosen due to their implementation in scikit-learn \cite{scikit-learn}.
 
 Once each of the prediction residual distributions are fit with a sensible closed-form distribution, we sample from this new distribution and perturb the demand for the electricity market at each time step within ElecSim.
 
-By perturbing the market by the residuals, we can observe what the effects are of incorrect predictions of demand in an electricity market using the long-term electricity market model, ElecSim. We are able to understand the differences that prediction residuals have on long-term investment decisions as well as generators utilized.
+By perturbing the market by the residuals, we can observe what the effects are of incorrect predictions of demand in an electricity market using ElecSim. %We are able to visualize the differences that prediction residuals have on long-term investment decisions and generators utilized.
 
 ElecSim has previously been validated in \cite{Kell2020}. In this work, we validated our model between the years 2013 and 2018, and recorded the difference between observed electricity mix to predicted electricity mix. We found that we were able to predict each different electricity source better than the naive approach. The naive approach, in this case, was predicting the electricity mix at the last known point in 2013. However, we were able to better predict coal, solar and wind by achieving a mean absolute scaled error (MASE) of ${\sim}$0.4 for these. CCGT and nuclear on the other hand had slightly worse results, achieving a MASE of ${\sim}$0.7.
 
