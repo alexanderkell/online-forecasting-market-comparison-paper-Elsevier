@@ -7,6 +7,7 @@ output: html_notebook
 ```{r sensitivity-analysis}
 library(tidyverse)
 library(reshape2)
+library(scales)
 ```
 
 
@@ -28,8 +29,8 @@ mean_res_long_edited$variable <- gsub('contributed_', '', mean_res_long_edited$v
 
 sensitivity_analysis_plot = ggplot(data=mean_res_long_edited, aes(x=params, color=variable, y=value)) + geom_line() + geom_smooth()+ theme_classic()+ theme(text = element_text(size=27)) + xlab("Standard deviation (MW)") + ylab("Mean Contributed Energy (MWh)")
 
-ggsave("plots/sensitivity_analysis.eps", sensitivity_analysis_plot, dpi=1000, width = 30, height = 20, units = "cm")
-
+ggsave("plots/sensitivity_analysis.pdf", sensitivity_analysis_plot, dpi=1000, width = 30, height = 20, units = "cm")
+print(sensitivity_analysis_plot)
 ```
 
 ```{r}
@@ -41,4 +42,51 @@ mean_res_long_edited$variable <- gsub('total_', '', mean_res_long_edited$variabl
 
 ggplot(data=mean_res_long_edited, aes(x=params, color=variable, y=value)) + geom_line() + geom_smooth()+ theme_classic()+ theme(text = element_text(size=27)) + xlab("Standard deviation (MW)") + ylab("Total Invested in Energy (MWh)")
 
+```
+
+
+```{r}
+all_res = read.csv("/Users/alexanderkell/Documents/PhD/Projects/10-ELECSIM/run/market_forecasting_comparison/notebooks/data/all_results_together.csv")
+all_res
+```
+
+```{r}
+
+all_res_long = melt(all_res, id.vars=c("index", "mean_absolute_error"))
+
+all_res_long_contributed = filter(all_res_long, grepl("contributed",variable))
+all_res_long_contributed
+all_res_long_contributed$variable <- gsub('contributed_', '', all_res_long_contributed$variable)
+all_res_long_contributed
+```
+
+```{r}
+
+ggplot(data=all_res_long_contributed, aes(x=mean_absolute_error, y=value, color=variable)) + geom_point() + geom_smooth(method="lm")+ theme_bw() + ylab("Total mean generated (MWh)")
+
+```
+
+
+```{r}
+
+contributed_total_plot = ggplot(data=filter(all_res_long_contributed, variable!="Biomass"), aes(x=mean_absolute_error, y=value)) + geom_point() + geom_smooth(method="lm")+ theme_bw() + ylab("Total mean\ngenerated (MWh)") + xlab("Mean Absolute Error") + facet_wrap(~variable, scales="free_y", ncol=7)+ theme(text = element_text(size=27))+
+  scale_x_continuous(breaks=c(3000,12000))
+
+ggsave("plots/contributed_total_plot.pdf", contributed_total_plot, dpi=1000, width = 50, height = 10, units = "cm")
+
+print(contributed_total_plot)
+```
+
+
+```{r}
+all_res_long_total = filter(all_res_long, grepl("total",variable))
+all_res_long_total
+all_res_long_total$variable <- gsub('total_', '', all_res_long_total$variable)
+all_res_long_total
+
+total_total_plot = ggplot(data=filter(all_res_long_total, variable!="genco_wealth"), aes(x=mean_absolute_error, y=value)) + geom_point() + geom_smooth(method="lm")+ theme_bw() + ylab("Total mean\ngenerated (MWh)") + xlab("Mean Absolute Error") + facet_wrap(~variable, scales="free_y", ncol=7)+ theme(text = element_text(size=27))+
+  scale_x_continuous(breaks=c(3000,12000))
+
+ggsave("plots/total_total_plot.pdf", total_total_plot, dpi=1000, width = 50, height = 10, units = "cm")
+print(total_total_plot)
 ```

@@ -405,3 +405,35 @@ ggplot(training_mae_testing_mean_std, aes(x=mae_mean, y=training_mean, color=Par
 
 ```
 
+
+```{r}
+offline_results = read.csv('/Users/alexanderkell/Documents/PhD/Projects/10-ELECSIM/run/market_forecasting_comparison/data/results/results/demand_initial_exploration-2020-02-24 05:18:05.717624+00:00.csv')
+head(offline_results)
+```
+
+```{r}
+ggplot(offline_results) + geom_col(aes(x=estimator, y=mean_test_neg_mean_squared_error)) + coord_flip()
+```
+
+```{r}
+
+offline_results_organised = offline_results
+offline_results_organised$`Mean MAE` = - offline_results_organised$mean_test_neg_mean_absolute_error
+offline_results_organised$`Mean MSE` = - offline_results_organised$mean_test_neg_mean_squared_error
+offline_results_organised$`Mean RMSE` = '^'(offline_results_organised$`Mean MSE`, 1/2)
+offline_results_organised = rename(offline_results_organised, c(`Mean Fit Time`=mean_fit_time, `Mean Score Time` = mean_score_time, Estimator = estimator, `Mean R-Squared`=mean_test_r2))
+
+metrics_table = select(offline_results_organised, Estimator, `Mean Fit Time`, `Mean Score Time`, `Mean MSE`, `Mean RMSE`, `Mean MAE`, `Mean R-Squared`)
+
+metrics_table = metrics_table %>%mutate_if(is.numeric, round, digits = 2)
+
+write.csv(metrics_table, "/Users/alexanderkell/Documents/PhD/Papers/7-day-ahead-forecasting-comparison/visualisation-code/market-comparison-visualisation/tables/offline_metrics_table.csv", row.names=FALSE)
+```
+
+
+
+```{r}
+read.csv("/Users/alexanderkell/Documents/PhD/Projects/10-ELECSIM/run/market_forecasting_comparison/notebooks/data/online_error_metrics.csv")
+```
+
+
