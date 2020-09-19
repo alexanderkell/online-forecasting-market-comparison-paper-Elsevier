@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.4.22)  18 SEP 2020 10:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.4.22)  18 SEP 2020 15:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -981,7 +981,7 @@ File: figures/results/sensitivity_analysis.pdf Graphic file (type eps)
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [14]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1275) has occurred while \output is active []
 
  [15]
 Underfull \vbox (badness 1478) has occurred while \output is active []
@@ -1104,4 +1104,4 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  62i,15n,100p,1246b,476s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on elsarticle-template-harv.dvi (17 pages, 114060 bytes).
+Output written on elsarticle-template-harv.dvi (17 pages, 114036 bytes).

@@ -934,9 +934,9 @@ Running this simulation enabled us to see the effect on carbon emissions on the 
 \end{figure*}
 
 
-In this Section we display the mean electricity mix contributed by different electricity sources over the years 2018 to 2035. 
+In this Section we display the mean electricity mix contributed by different electricity sources from 2018 to 2035. 
 
-Figure \ref{fig:pv_coal_nuclear_offshore_outputs} displays the mean photovoltaic (PV) contributed between 2018 and 2035 vs. mean absolute error of the various online regressor models displayed in Figure \ref{fig:online_model_mae_barplot}. A positive correlation can be seen with PV contributed and mean absolute error. This is similar for coal and nuclear output. However, it can be seen that offshore wind reduces with mean absolute error. Output for the reciprocal gas engine also increases with mean absolute error.
+Figure \ref{fig:pv_coal_nuclear_offshore_outputs} displays the mean power contributed between 2018 and 2035 for each source vs. mean absolute error of the various online regressor models displayed in Figure \ref{fig:online_model_mae_barplot}. A positive correlation can be seen with PV contributed and mean absolute error. This is similar for coal and nuclear output. However, it can be seen that offshore wind reduces with mean absolute error. Output for the reciprocal gas engine also increases with mean absolute error.
 
 The reciprocal gas engine was expected to increase with times of high error. This is because, traditionally, reciprocal gas engines are peaker power plants. Peaker power plants provide power at times of peak demand, which cannot be covered by other plants due to them being at their maximum capacity level or out of service. It may also be the case, that with higher proportions of intermittent technologies, there is a larger need for these peaker power plants to fill in for times where there is a deficit in wind speed and solar irradiance.
 
@@ -1100,7 +1100,7 @@ Figure \ref{fig:Carbon_emitted_mean_output} shows an increase in relative mean c
 
 \begin{figure}
 \centering
-\includegraphics[width=0.7\columnwidth]{figures/results/elecsim_results/results_2/Carbon_emitted_mean_output.eps}
+\includegraphics[width=0.8\columnwidth]{figures/results/elecsim_results/results_2/Carbon_emitted_mean_output.eps}
 \caption{Mean carbon emissions between 2018 and 2035.}
 \label{fig:Carbon_emitted_mean_output}
 \end{figure}
@@ -1149,7 +1149,7 @@ In this Section we run a sensitivity analysis to visualise the effects of differ
 \label{fig:sensitivity-analysis}
 \end{figure}
 
-Figure \ref{fig:sensitivity-analysis} displays the results of this sensitivity analysis. At all standard deviations, photovoltaics displays the highest contributed energy, CCGT the second most and Nuclear the third most. Coal, onshore and the others contribute less energy than the top three.
+Figure \ref{fig:sensitivity-analysis} displays the results of this sensitivity analysis. At all standard deviations, photovoltaics displays the highest contributed energy, CCGT the second most and nuclear the third most. Coal, onshore and the others contribute less energy than the top three.
 
 Whilst photovoltaics remains high throughout, it reduces up until a standard deviation of 14,000MW, after which it begins to increase. This reduction up until 14,000MW may be due to the fact that the predicted demand changes so quickly, that photovoltaics are unable to be reliably dispatched on the day-ahead market to meet this changing predicted demand. Nuclear is, however, able to fill the demand that photovoltaics can not, due to its dispatchable nature.
 
