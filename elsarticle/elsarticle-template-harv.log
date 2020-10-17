@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.4.22)  17 OCT 2020 16:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.4.22)  17 OCT 2020 16:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -895,10 +895,7 @@ Underfull \hbox (badness 2753) in paragraph at lines 393--394
 
 [6]
 File: figures/methods/System_overview_large.png Graphic file (type eps)
- <figures/methods/System_overview_large.png>
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [7] [8]
+ <figures/methods/System_overview_large.png> [7] [8]
 LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <8> not available
 (Font)              Font shape `OT1/txr/bx/n' tried instead on input line 532.
 
@@ -1102,4 +1099,4 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  62i,15n,100p,1246b,476s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on elsarticle-template-harv.dvi (18 pages, 116392 bytes).
+Output written on elsarticle-template-harv.dvi (18 pages, 116608 bytes).
