@@ -379,13 +379,16 @@ training_mae_testing_mean_names = training_mae_testing_mean_std %>%
   mutate(Parameters = gsub("C", "(PA) C", Parameters))%>%
   mutate(Parameters = gsub("hidden_", "(MLP) hidden_", Parameters))%>%
   mutate(Parameters = gsub("power", "(Box Cox) power", Parameters))%>%
-  mutate(Parameters = gsub("power", "(Box Cox) power", Parameters)) %>% rename(c("Model" = "Parameters"))
+  # mutate(Parameters = gsub("power", "(Box Cox) power", Parameters)) %>% 
+  rename(c("Model" = "Parameters"))
 
 unique(training_mae_testing_mean_names$Model)
 ```
 
 ```{r}
 online_results = ggplot(training_mae_testing_mean_names, aes(x=mae, y=training_time, color=Model)) + geom_point(alpha=0.5) + theme_classic()+ theme(text = element_text(size=22.5), plot.margin=grid::unit(c(0,0,0,0), "mm"),legend.position = "bottom") + ylab("Training Time log10(S)") + xlab("Mean Absolute Error log10(MAE)")  + scale_x_continuous(trans='log10') + scale_y_continuous(trans='log10') + guides(color=guide_legend(nrow = 4))
+
+print(online_results)
 
 ggsave("/Users/alexanderkell/Documents/PhD/Projects/10-ELECSIM/run/market_forecasting_comparison/notebooks/figures//online_training_time_vs_mae_all_results_opaque.pdf", online_results, dpi=1000, width = 30, height = 20, units = "cm")
 ```

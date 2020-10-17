@@ -149,6 +149,13 @@ G.~Widmer, {Learning in the presence of concept drift and hidden contexts},
 \newblock \href {https://doi.org/10.1007/bf00116900}
   {\path{doi:10.1007/bf00116900}}.
 
+\bibitem{Pindoriya2008}
+N.~M. Pindoriya, S.~N. Singh, S.~K. Singh, {An adaptive wavelet neural
+  network-based energy price forecasting in electricity markets}, IEEE
+  Transactions on Power Systems 23~(3) (2008) 1423--1432.
+\newblock \href {https://doi.org/10.1109/TPWRS.2008.922251}
+  {\path{doi:10.1109/TPWRS.2008.922251}}.
+
 \bibitem{GoncalvesDaSilva2014}
 P.~{Goncalves Da Silva}, D.~Ilic, S.~Karnouskos, {The Impact of Smart Grid
   Prosumer Grouping on Forecasting Accuracy and Its Benefits for Local

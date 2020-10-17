@@ -223,10 +223,10 @@ Multiple papers have looked at demand-side forecasting \cite{Singh2012}. These i
 
 \subsection{Offline learning}
 
-Multiple electricity demand forecasting studies have been undertaken for offline learning \cite{Chen2004, Gross1987, Ghofrani}. Studies have been undertaken using both smart meter data, as well as with aggregated demand, similar to the work in this paper. Smart meters are a type of energy meter installed in each house, which monitor electricity usage at short intervals, such as every 15 or 30 minutes.
+Multiple electricity demand forecasting studies have been undertaken for offline learning \cite{Chen2004, Gross1987, Ghofrani}. Studies have been undertaken using both smart meter data, as well as with aggregated demand, similar to the work in this paper. Smart meters are a type of energy meter installed in each house, which monitor electricity usage at short intervals, such as every 15 or 30 minutes. All of the papers reviews in this subsection focus on offline learning, as opposed to online learning like in this work. Additionally, we look at the long-term impact of poor predictions on the electricity market.
 
 
-Fard \textit{et al.} propose a new hybrid forecasting method based on the wavelet transform, autoregressive integrated moving average (ARIMA) and artificial neural network (ANN) \cite{Fard2014}. The ARIMA method is utilized to capture the linear component of the time series, with the residuals containing the non-linear components. The non-linear parts are decomposed using the discrete wavelet transform which finds the sub-frequencies. These residuals are then used to train an ANN  to predict the future residuals. The ARIMA and ANNs outputs are then summed. Their results show that this technique can improve forecasting results.    
+Fard \textit{et al.} propose a new hybrid forecasting method based on the wavelet transform, autoregressive integrated moving average (ARIMA) and artificial neural network (ANN) \cite{Fard2014}. The ARIMA method is utilized to capture the linear component of the time series, with the residuals containing the non-linear components. The non-linear parts are decomposed using the discrete wavelet transform which finds the sub-frequencies. These residuals are then used to train an ANN  to predict the future residuals. The ARIMA and ANNs outputs are then summed. Their results show that this technique can improve forecasting results.
 
 Humeau \textit{et al.} compare MLPs, SVRs and linear regression at forecasting smart meter data \cite{Humeau2013}. They aggregate different households and observe which algorithms work the best at each level. They find that linear regression outperforms both MLP and SVR when forecasting individual households. However, after aggregating over 32 households, SVR outperforms linear regression.
 
@@ -243,9 +243,9 @@ Johansson \textit{et al}. apply online machine learning algorithms for heat dema
 
 Baram \textit{et al.} combine an ensemble of active learners by developing an active-learning master algorithm \cite{Baram2003}. To achieve this, they propose a simple maximum entropy criterion that provides effective estimates in realistic settings. Their active-learning master algorithm is shown to, in some cases, outperform the best algorithm in the ensemble on a range of classification problems.
 
-Schmitt \textit{et al} also extends on existing algorithms through an extension of the FLORA algorithm in \cite{Schmitt2008, Widmer1996}. The FLORA algorithm generates a rule-based algorithm, which has the ability to make binary decisions. Their FLORA-MC enhances the FLORA algorithm for multi-classification and numerical input values. They use this algorithm for an ambient computing application. Ambient computing is where computing and communication merges into everyday life. They find that their algorithm outperforms traditional offline learners.
+Schmitt \textit{et al} also extends on existing algorithms through an extension of the FLORA algorithm in \cite{Schmitt2008, Widmer1996}. The FLORA algorithm generates a rule-based algorithm, which has the ability to make binary decisions. Their FLORA-MC enhances the FLORA algorithm for multi-classification and numerical input values. They use this algorithm for an ambient computing application. Ambient computing is where computing and communication merges into everyday life. They find that their algorithm outperforms traditional offline learners. Our work focuses on electricity demand, however.
 
-Similarly to us, Pindoriya \textit{et al}. trial several different machine learning methods such as adaptive wavelet neural network (AWNN). They find that AWNN has good prediction properties when compared to other forecasting techniques such as wavelet-ARIMA, multilayer perceptron (MLP) and radial basis function (RBF) neural networks.
+Similarly to us, Pindoriya \textit{et al}. trial several different machine learning methods such as adaptive wavelet neural network (AWNN) for predicting electricity price forecasting \cite{Pindoriya2008}. They find that AWNN has good prediction properties when compared to other forecasting techniques such as wavelet-ARIMA, multilayer perceptron (MLP) and radial basis function (RBF) neural networks. We, however, focus on electricity demand.
 
 
 Goncalves Da Silva \textit{et al}. show the effect of prediction accuracy on local electricity markets \cite{GoncalvesDaSilva2014}. They compare forecasting of groups of consumers. They trial the use of the Seasonal-Naïve and Holt-Winters algorithms and look at the effect that the errors have on trading in an intra-day electricity market of consumers and prosumers. They found that with a photovoltaic penetration of 50\%, over 10\% of the total generation capacity was uncapitalized and roughly 10, 25 and 28\% of the total traded volume were unnecessary buys, demand imbalances and unnecessary sells respectively. This represents energy that the participant has no control. Uncapitalized generation capacity is where a participant could have produced energy, however, it was not sold on the market. Additionally, due to forecast errors, the participant might have sold less than it should have. Our work, however, focuses on a national electricity market, as opposed to a local market.
@@ -1078,7 +1078,7 @@ Figure \ref{fig:Carbon_emitted_mean_output} shows an increase in relative mean c
 
 \begin{figure}
 \centering
-\includegraphics[width=0.8\columnwidth]{figures/results/elecsim_results/results_2/Carbon_emitted_mean_output.eps}
+\includegraphics[width=0.7\columnwidth]{figures/results/elecsim_results/results_2/Carbon_emitted_mean_output.eps}
 \caption{Mean carbon emissions between 2018 and 2035.}
 \label{fig:Carbon_emitted_mean_output}
 \end{figure}

@@ -45,45 +45,45 @@ Warning--there's a number but no volume in DBEIS2019
 Warning--empty year in gbnationalgridstatus_2019
 Warning--empty journal in ESO2019
 Warning--there's a number but no volume in ESO2019
-You've used 52 entries,
+You've used 53 entries,
             2952 wiz_defined-function locations,
-            1039 strings with 15682 characters,
-and the built_in function-call counts, 15339 in all, are:
-= -- 1500
-> -- 502
+            1045 strings with 15883 characters,
+and the built_in function-call counts, 15695 in all, are:
+= -- 1538
+> -- 512
 < -- 0
-+ -- 202
-- -- 150
-* -- 1228
-:= -- 2109
-add.period$ -- 74
-call.type$ -- 52
-change.case$ -- 51
++ -- 206
+- -- 153
+* -- 1261
+:= -- 2156
+add.period$ -- 76
+call.type$ -- 53
+change.case$ -- 52
 chr.to.int$ -- 0
-cite$ -- 65
-duplicate$ -- 404
-empty$ -- 1670
-format.name$ -- 186
-if$ -- 3862
+cite$ -- 66
+duplicate$ -- 412
+empty$ -- 1707
+format.name$ -- 190
+if$ -- 3950
 int.to.chr$ -- 0
-int.to.str$ -- 52
-missing$ -- 52
-newline$ -- 187
-num.names$ -- 51
-pop$ -- 273
+int.to.str$ -- 53
+missing$ -- 53
+newline$ -- 191
+num.names$ -- 52
+pop$ -- 277
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 968
+skip$ -- 988
 stack$ -- 0
-substring$ -- 939
-swap$ -- 105
+substring$ -- 970
+swap$ -- 108
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 13
-while$ -- 131
-width$ -- 54
-write$ -- 458
+while$ -- 134
+width$ -- 55
+write$ -- 468
 (There were 6 error messages)
