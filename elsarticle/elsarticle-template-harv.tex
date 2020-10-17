@@ -239,7 +239,7 @@ In our previous work, we evaluate the performance of ANNs, random forests, suppo
 
 There have been several studies in diverse applications on the use of online machine learning to predict time-series data, however, to the best of our knowledge there are limited examples where this is applied to electricity markets. In our work, we trial a range of algorithms to our problem. Due to time constraints, we do not trial the additional techniques discussed in this literature review within our paper. 
 
-Johansson \textit{et al}. apply online machine learning algorithms for heat demand forecasting \cite{Johansson2017}. They find that their demand predictions display robust behaviour within acceptable error margins. They find that artificial neural networks (ANNs) provide the best forecasting ability of the standard algorithms and can handle data outside of the training set. Johansson \textit{et al.}, however, do not look at the long-term effects of different algorithms.
+Johansson \textit{et al}. apply online machine learning algorithms for heat demand forecasting \cite{Johansson2017}. They find that their demand predictions display robust behaviour within acceptable error margins. They find that artificial neural networks (ANNs) provide the best forecasting ability of the standard algorithms and can handle data outside of the training set. Johansson \textit{et al.}, however, do not look at the long-term effects of different algorithms, which is a central part to this work.
 
 Baram \textit{et al.} combine an ensemble of active learners by developing an active-learning master algorithm \cite{Baram2003}. To achieve this, they propose a simple maximum entropy criterion that provides effective estimates in realistic settings. Their active-learning master algorithm is shown to, in some cases, outperform the best algorithm in the ensemble on a range of classification problems.
 
@@ -607,7 +607,7 @@ Figure \ref{fig:beis_elecsim_historic_comparison} displays the mean absolute err
 
 A number of algorithms perform well, with a low mean absolute error. These include the Lasso, gradient Boosting Regressor and K-neighbours regressor. The best algorithm, similar to \cite{Kell2018a}, was the decision tree-based algorithm, Extra Trees Regressor, with a mean absolute error of $1,604$MWh. This level is well within the average national grid reserve of 2,000MWh.
 
-Table \ref{table:offline_ml_metrics} displays different metrics for measuring the accuracy of the offline machine learning techniques. These include Mean Squared Error (MSE), Root Mean Squared Error (RMSE), Mean Absolute Error (MAE) and the Mean R-Squared. The results largely compliment each other. With high error values in one metric correlating to high error metrics in others for each of the estimators.
+Table \ref{table:offline_ml_metrics} displays different metrics for measuring the accuracy of the offline machine learning techniques. These include Mean Squared Error (MSE), Root Mean Squared Error (RMSE), Mean Absolute Error (MAE) and the Mean R-Squared. The results largely compliment each other. With high error values in one metric correlating to high error metrics in others for each of the estimators. 
 
 
 
@@ -654,7 +654,7 @@ Table \ref{table:offline_ml_metrics} displays different metrics for measuring th
 %\label{fig:best_offline_learning_day_simulation}
 %\end{figure}
 
-Figure \ref{fig:best_offline_learning_day_distribution} displays the distribution of the best offline machine result (Extra Trees Regressor). It can be seen that the max tendered national grid reserve falls well above the 5\% and 95\% percentiles. However, there are occasions where the errors are greater than the maximum tendered national grid reserve. In addition, the majority of the time, the algorithm's predictions fall within the average available tendered national grid reserve.
+Figure \ref{fig:best_offline_learning_day_distribution} displays the distribution of the best offline machine result (Extra Trees Regressor). It can be seen that the max tendered national grid reserve falls well above the 5\% and 95\% percentiles. However, there are occasions where the errors are greater than the maximum tendered national grid reserve. In addition, the majority of the time, the algorithm's predictions fall within the average available tendered national grid reserve. Therefore, there is room for improvement, to ensure that blackouts do not occur and predictions fall within the max tendered national grid reserve.
 
 \begin{figure}[h]
 \centering
@@ -704,7 +704,7 @@ For a small deterioration in MAE it is possible to decrease the time it takes to
 \end{figure}
 
 
-The scoring time, displayed in Figure \ref{fig:offline_score_time_vs_mae}, also displays a large variation between algorithm types. For instance, the MLP regressor takes a shorter time to sample predictions when compared to the K-Neighbors algorithm and support vector regression. It is possible to have a cluster of algorithms with low sample times and low mean absolute errors. However, often a trade-off is required, with a fast prediction time requiring a longer training time and vice-versa. 
+The scoring time, displayed in Figure \ref{fig:offline_score_time_vs_mae}, also displays a large variation between algorithm types. For instance, the MLP regressor takes a shorter time to sample predictions when compared to the K-Neighbors algorithm and support vector regression. It is possible to have a cluster of algorithms with low sample times and low mean absolute errors. However, often a trade-off is required, with a fast prediction time requiring a longer training time and vice-versa. Practitioners, therefore, must decide which aspect is most important for them for their use case: speed of training or of prediction.
 
 
 
@@ -737,12 +737,12 @@ The scoring time, displayed in Figure \ref{fig:offline_score_time_vs_mae}, also 
 To see if we can improve on the predictions, we utilize an online machine learning approach. If we are successful, we should be able to reduce the national grid reserves, reducing cost and emissions.
 
 
-Figure \ref{fig:online_model_mae_barplot} displays the comparison of mean absolute errors for the different trialled online regressor algorithms. To produce this graph, we showed various hyperparameter trials. Where the hyperparameters had the same results, we removed them. For the multilayer perceptron (MLP), we aggregated all hyperparameters, due to the similar nature of the predictions.
+Figure \ref{fig:online_model_mae_barplot} displays the comparison of mean absolute errors for the different trialled online regressor algorithms. To produce this graph, we show various hyperparameter trials. Where the hyperparameters had the same results, we removed them. For the multilayer perceptron (MLP), we aggregated all hyperparameters, due to the similar nature of the predictions.
 
 It can be seen that the best performing algorithm was the Box-Cox regressor, with an MAE of 1100. This is an improvement of over 30\% on the best offline algorithm. The other algorithms perform less well. However, it can be seen that the linear regression algorithm improves significantly for the online case when compared to the offline case. The passive aggressive (PA) algorithm improve significantly with the varying parameters, and the MLP performs poorly in all cases.
 
 
-Table \ref{table:online_ml_metrics} displays the metrics for each of the online methods. This includes the mean MSE, mean RMSE and mean MAE. Again, the metrics largely correlate with each other.
+Table \ref{table:online_ml_metrics} displays the metrics for each of the online methods. This includes the mean MSE, mean RMSE and mean MAE. Again, the metrics largely correlate with each other. Meaning, that the favoured metric can be used when selecting an estimator.
 
 %% Please add the following required packages to your document preamble:
 %% \usepackage{booktabs}
@@ -788,7 +788,7 @@ Linear Regression                                                               
 
 
 
-Figure \ref{fig:best_online_learning_day_distribution} displays the best online algorithm. We can see a significant improvement over the best online algorithm distribution, shown in Figure \ref{fig:best_offline_learning_day_distribution}. We remain within the max tendered national grid reserve for 98.9\% of the time, and the average available tendered national grid reserve is close to the 5\% and 95\% percentiles.
+Figure \ref{fig:best_online_learning_day_distribution} displays the best online algorithm. We can see a significant improvement over the best online algorithm distribution, shown in Figure \ref{fig:best_offline_learning_day_distribution}. We remain within the max tendered national grid reserve for 98.9\% of the time, and the average available tendered national grid reserve is close to the 5\% and 95\% percentiles. This model, therefore would be highly recommended over the best offline version to ensure demand is matched with supply.
 
 
 
@@ -823,7 +823,7 @@ Figures \ref{fig:online_test_vs_mae} and \ref{fig:online_train_vs_mae} display t
 
 Clear clusters can be seen between different types of algorithms and parameter types. With the passive aggressive (PA) algorithm performing the slowest for both training and testing. Different parameter combinations show different results in terms of mean absolute error.
 
-The best performing algorithm is the Box-Cox algorithm, which is also the fastest to both train and test. The linear regression, which performs worse in terms of predictive performance, is as quick to train and test as the Box-Cox algorithm. Additionally, the multilayer perceptron (MLP) is relatively quick to train and test when compared to the PA algorithms. 
+The best performing algorithm is the Box-Cox algorithm, which is also the fastest to both train and test. The linear regression, which performs worse in terms of predictive performance, is as quick to train and test as the Box-Cox algorithm. Additionally, the multilayer perceptron (MLP) is relatively quick to train and test when compared to the PA algorithms. We, therefore, recommend the Box-Cox algorithm as an optimal for training and testing speed as well as accuracy.
 
 It is noted that when compared to the offline algorithms, the training time is a good indicator to the testing time. In other words, algorithms that are fast to train are also fast to test and vice-versa.
 
@@ -922,9 +922,8 @@ It is hypothesized that coal and nuclear output increase to cover the predicted 
 
 %Photovoltaics may be used more with higher errors due to the times at which the errors were greatest. For example, during the day, where demand is higher, as is solar irradiance.
 
-%Photovoltaics may be used more during times of high prediction error due to the fact that t
+%Photovoltaics may be utilised more during times of high prediction error due to the fact that more s
 
-    
     
 
 %\begin{subfigure}
@@ -987,7 +986,7 @@ It is hypothesized that coal and nuclear output increase to cover the predicted 
 
 In this Section, we detail the difference in total technologies invested in over the time period between 2018 to 2035, as predicted by ElecSim.
 
-CCGT, onshore, and reciprocal gas engines investment is less over the time period, as shown in Figure \ref{fig:ccgt_coal_onshore_offshore_totals}. While coal, offshore, nuclear and photovoltaics all exhibit increasing investments.
+CCGT, onshore, and reciprocal gas engines investment is less with an increase in MAE, as shown in Figure \ref{fig:ccgt_coal_onshore_offshore_totals}. While coal, offshore, nuclear and photovoltaics all exhibit increasing investments with MAE. Therefore, a smaller error leads to an increased usage of onshore wind, where lulls in wind supply are covered by CCGT and reciprocal gas engines.
 
 It is hypothesized that coal and nuclear increase in investment due to their dispatchable nature. While onshore, non-dispatchable by nature, become a less attractive investment when compared to the other technologies.
 
@@ -1198,7 +1197,7 @@ In addition to this, we took these errors, or residuals, and perturbed the elect
 
 We observed that with an increase in prediction errors, we get a higher proportion of electricity generated by coal, offshore, nuclear, reciprocal gas engines and photovoltaics. This could be due to the fact that more peaker and dispatchable plants are required to fill in for unexpected demand. In addition, a higher proportion of intermittent renewable energy sources leads to a higher use of peaker power plants to fill in the gaps of intermittency of wind and solar irradiance. However, by reducing the mean absolute error, we are able to reduce the amount of reciprocal gas engine and coal usage.
 
-In future work, we would like to trial a different selection of algorithms and trial different inputs to the algorithms, for instance, by providing the algorithm with two months worth of historical data as dependent variables. Additionally, we would like to see the impact of predicting wind speed and solar irradiance to see how these impact the overall investment patterns and electricity mix. 
+In future work, we would like to trial a different selection of algorithms and trial different inputs to the algorithms, for instance, by providing the algorithm with two months worth of historical data as dependent variables. Additionally, we would like to see the impact of predicting wind speed and solar irradiance to see how these impact the overall investment patterns and electricity mix. We would also like to use ensemble models in future, which combine the results of multiple algorithms.
 
 
 \section{Funding Sources}
