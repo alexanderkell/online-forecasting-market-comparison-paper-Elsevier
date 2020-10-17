@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.4.22)  17 OCT 2020 16:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.4.22)  17 OCT 2020 16:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -863,84 +863,72 @@ Overfull \hbox (1.90001pt too wide) has occurred while \output is active
 [1
 
 
-] [2]
-Underfull \hbox (badness 1292) in paragraph at lines 197--198
-\OT1/txr/m/n/10 negligible im-pact on car-bon emis-sions and use of
- []
-
-[3]
+] [2] [3]
 LaTeX Font Info:    Font shape `OT1/txr/b/it' in size <10> not available
-(Font)              Font shape `OT1/txr/bx/it' tried instead on input line 281.
+(Font)              Font shape `OT1/txr/bx/it' tried instead on input line 277.
  [4]
-Overfull \hbox (3.105pt too wide) detected at line 306
+Overfull \hbox (3.105pt too wide) detected at line 302
 \OML/txmi/m/it/10 L[]\OT1/txr/m/n/10 ([]) = [] + \OML/txmi/m/it/10 ^^U [] ;
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 351--352
+Underfull \hbox (badness 10000) in paragraph at lines 347--348
 []\OT1/txr/m/n/10 Suppose we have the train-ing set:
  []
 
 
-Underfull \hbox (badness 2173) in paragraph at lines 351--352
+Underfull \hbox (badness 2173) in paragraph at lines 347--348
 \OT1/txr/m/n/10 (\OML/txmi/m/it/10 x[]; y[]\OT1/txr/m/n/10 )\OML/txmi/m/it/10 ; [] ; \OT1/txr/m/n/10 (\OML/txmi/m/it/10 x[]; y[]\OT1/txr/m/n/10 )\OML/txmi/m/it/10 ; [] ; \OT1/txr/m/n/10 (\OML/txmi/m/it/10 x[]; y[]\OT1/txr/m/n/10 )$, where $\OML/txmi/m/it/10 x[]$ \OT1/txr/m/n/10 is the in-
  []
 
 [5]
 File: figures/methods/Kell_eEnergy_Fig1.eps Graphic file (type eps)
  <figures/methods/Kell_eEnergy_Fig1.eps>
-Underfull \hbox (badness 2753) in paragraph at lines 393--394
+Underfull \hbox (badness 2753) in paragraph at lines 389--390
 \OT1/txr/m/n/10 sup-pose we have N ob-ser-va-tions $\OML/txmi/m/it/10 y[]; y[]; [] ; y[]$ \OT1/txr/m/n/10 in
  []
 
 [6]
 File: figures/methods/System_overview_large.png Graphic file (type eps)
- <figures/methods/System_overview_large.png> [7] [8]
+ <figures/methods/System_overview_large.png> [7]
 LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <8> not available
-(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 532.
+(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 505.
 
-Underfull \hbox (badness 2573) in paragraph at lines 567--568
+Underfull \hbox (badness 2573) in paragraph at lines 540--541
 []\OT1/txr/m/n/8 [1, 10, 100,
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [9]
+[8] [9]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 614.
+               Default added (so using `tbp') on input line 587.
 
 File: figures/results/offline_model_mae.eps Graphic file (type eps)
 <figures/results/offline_model_mae.eps>
 File: figures/results/ExtraTreesRegressor_distribution_plot.eps Graphic file (type eps)
  <figures/results/ExtraTreesRegressor_distribution_plot.eps>
-File: figures/results/offline_fit_time_vs_mae_all_results_opaque.eps Graphic file (type eps)
- <figures/results/offline_fit_time_vs_mae_all_results_opaque.eps>
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[10]
+File: figures/results/offline_fit_time_vs_mae_all_results_opaque.eps Graphic file (type eps)
+<figures/results/offline_fit_time_vs_mae_all_results_opaque.eps> [10]
 File: figures/results/offline_score_time_vs_mae_all_results_opaque.eps Graphic file (type eps)
  <figures/results/offline_score_time_vs_mae_all_results_opaque.eps>
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 File: figures/results/online_model_mae_barplot.eps Graphic file (type eps)
-<figures/results/online_model_mae_barplot.eps>
+ <figures/results/online_model_mae_barplot.eps>
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 770.
+               Default added (so using `tbp') on input line 743.
 
-
-Underfull \vbox (badness 1735) has occurred while \output is active []
-
- [11]
 File: figures/results/online_learning_dists-power-0.1.eps Graphic file (type eps)
- <figures/results/online_learning_dists-power-0.1.eps>
+<figures/results/online_learning_dists-power-0.1.eps>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[11]
 File: figures/results/online_learning_dists-C-0.1-fit_intercept-true-max_iter-1000-shuffle-false-tol 0.001.eps Graphic file (type eps)
  <figures/results/online_learning_dists-C-0.1-fit_intercept-true-max_iter-1000-shuffle-false-tol 0.001.eps>
 
@@ -948,9 +936,10 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 File: figures/results/both_actual_predicted.eps Graphic file (type eps)
 <figures/results/both_actual_predicted.eps>
-Underfull \vbox (badness 2503) has occurred while \output is active []
 
- [12]
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[12]
 File: figures/results/online_testing_time_vs_mae_all_results_opaque.eps Graphic file (type eps)
  <figures/results/online_testing_time_vs_mae_all_results_opaque.eps>
 File: figures/results/online_training_time_vs_mae_all_results_opaque.eps Graphic file (type eps)
@@ -960,23 +949,16 @@ File: figures/results/contributed_total_plot.pdf Graphic file (type eps)
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[13]
 File: figures/results/total_total_plot.pdf Graphic file (type eps)
- <figures/results/total_total_plot.pdf>
+<figures/results/total_total_plot.pdf>
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+[13]
 File: figures/results/elecsim_results/results_2/Carbon_emitted_mean_output.eps Graphic file (type eps)
-<figures/results/elecsim_results/results_2/Carbon_emitted_mean_output.eps>
+ <figures/results/elecsim_results/results_2/Carbon_emitted_mean_output.eps>
 File: figures/results/sensitivity_analysis.pdf Graphic file (type eps)
- <figures/results/sensitivity_analysis.pdf>
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[14]
-Underfull \vbox (badness 1275) has occurred while \output is active []
-
- [15] (./elsarticle-template-harv.bbl [16]
+ <figures/results/sensitivity_analysis.pdf> [14] [15] (./elsarticle-template-harv.bbl
 Underfull \hbox (badness 1178) in paragraph at lines 68--71
 []\OT1/txr/m/n/8 M. W. Ah-mad, M. Mour-shed, Y. Rezgui, Trees vs Neu-
  []
@@ -986,7 +968,7 @@ Overfull \hbox (0.85022pt too wide) in paragraph at lines 96--103
 \OT1/txr/m/n/8 URL \OT1/cmtt/m/n/8 http://ieeexplore.ieee.org/document/7998331/ 
  []
 
-
+[16]
 Underfull \hbox (badness 2961) in paragraph at lines 105--109
 []\OT1/txr/m/n/8 G. Gross, F. Galiana, Short-term load fore-cast-ing, Pro-
  []
@@ -1017,9 +999,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 115--120
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 Underfull \hbox (badness 1348) in paragraph at lines 160--166
 []\OT1/txr/m/n/8 P. Goncalves Da Silva, D. Ilic, S. Karnouskos, The Im-
  []
@@ -1038,6 +1017,9 @@ Underfull \hbox (badness 1117) in paragraph at lines 188--193
 Underfull \hbox (badness 1102) in paragraph at lines 195--199
 []\OT1/txr/m/n/8 P. Geladi, Mea-sure-ment, re-gres-sion and cal-i-bra-tion, philip
  []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \hbox (badness 1163) in paragraph at lines 215--221
@@ -1070,9 +1052,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 268--274
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [17]
 Underfull \hbox (badness 2057) in paragraph at lines 276--282
 []\OT1/txr/m/n/8 H. Akaike, A New Look at the Sta-tis-ti-cal Model Iden-
  []
@@ -1087,9 +1066,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 276--282
 \OT1/txr/m/n/8 19 (6) (1974) 716--723.  arXiv:arXiv:1011.1669v3,
  []
 
-) [18
+) [17] (./elsarticle-template-harv.aux)
 
-] (./elsarticle-template-harv.aux) ) 
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
  11342 strings out of 480609
  196170 string characters out of 5903656
@@ -1099,4 +1080,4 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  62i,15n,100p,1246b,476s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on elsarticle-template-harv.dvi (18 pages, 116608 bytes).
+Output written on elsarticle-template-harv.dvi (17 pages, 115724 bytes).

@@ -65,11 +65,12 @@
 \citation{Pao2007}
 \citation{Pao2007}
 \citation{Pao2007}
+\citation{Box1964}
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces A three-layer feed forward neural network.\relax }}{6}\protected@file@percent }
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{fig:mlp}{{1}{6}}
 \newlabel{svr:constrains}{{6}{6}}
-\citation{Box1964}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Online Algorithms}{6}\protected@file@percent }
 \citation{Gzik2014}
 \citation{Ma2009}
 \citation{Gzik2014}
@@ -79,46 +80,45 @@
 \citation{Kell}
 \citation{Kell}
 \citation{Kell}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Online Algorithms}{7}\protected@file@percent }
+\citation{Kell2020,DBEIS2019}
+\citation{Kell2020}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Long-term Energy Market Model}{7}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces System overview of ElecSim \cite  {Kell}.\relax }}{7}\protected@file@percent }
 \newlabel{fig:model_details}{{2}{7}}
-\citation{Kell2020,DBEIS2019}
-\citation{Kell2020}
+\newlabel{eq:npv_eq}{{16}{7}}
 \citation{Kell2018a}
 \citation{gbnationalgridstatus_2019}
 \citation{Kim2000}
 \citation{ESO2019}
-\newlabel{eq:npv_eq}{{17}{8}}
 \@writefile{toc}{\contentsline {section}{\numberline {4}Methods}{8}\protected@file@percent }
 \newlabel{sec:methods}{{4}{8}}
 \citation{scikit-learn}
 \citation{Kell2020}
+\citation{ESO2019}
 \newlabel{RF1}{9}
 \@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Hyperparameters for offline machine learning regression algorithms\relax }}{9}\protected@file@percent }
 \newlabel{table:hyperparameter-tuning-offline}{{1}{9}}
 \@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Hyperparameters for online machine learning regression algorithms\relax }}{9}\protected@file@percent }
 \newlabel{table:hyperparameter-tuning-online}{{2}{9}}
-\citation{ESO2019}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Results}{9}\protected@file@percent }
+\newlabel{sec:results}{{5}{9}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Offline Machine Learning}{9}\protected@file@percent }
 \citation{Kell2018a}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Results}{10}\protected@file@percent }
-\newlabel{sec:results}{{5}{10}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Offline Machine Learning}{10}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Offline algorithms mean absolute error comparison, with 95\% confidence interval for 5 runs of each algorithm.\relax }}{10}\protected@file@percent }
 \newlabel{fig:beis_elecsim_historic_comparison}{{3}{10}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Best offline machine learning algorithm (Extra Trees Regressor) distribution.\relax }}{10}\protected@file@percent }
 \newlabel{fig:best_offline_learning_day_distribution}{{4}{10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Time taken to train the offline algorithms versus mean absolute error. Error bars display standard deviation between points.\relax }}{10}\protected@file@percent }
+\newlabel{fig:offline_fit_time_vs_mae}{{5}{10}}
 \@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Different metrics for offline machine learning results.\relax }}{11}\protected@file@percent }
 \newlabel{table:offline_ml_metrics}{{3}{11}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Time taken to train the offline algorithms versus mean absolute error. Error bars display standard deviation between points.\relax }}{11}\protected@file@percent }
-\newlabel{fig:offline_fit_time_vs_mae}{{5}{11}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Online Machine Learning}{11}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Time taken to score the offline algorithm versus mean absolute error. Error bars display standard deviation between points.\relax }}{11}\protected@file@percent }
 \newlabel{fig:offline_score_time_vs_mae}{{6}{11}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Online Machine Learning}{11}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Comparison of mean absolute errors (MAE) for different online regressor algorithms. MLP results for all parameters are shown in a single barchart due to the very similar MAEs for the differing hyperparameters.\relax }}{11}\protected@file@percent }
+\newlabel{fig:online_model_mae_barplot}{{7}{11}}
 \@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Different metrics for online machine learning results.\relax }}{12}\protected@file@percent }
 \newlabel{table:online_ml_metrics}{{4}{12}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Comparison of mean absolute errors (MAE) for different online regressor algorithms. MLP results for all parameters are shown in a single barchart due to the very similar MAEs for the differing hyperparameters.\relax }}{12}\protected@file@percent }
-\newlabel{fig:online_model_mae_barplot}{{7}{12}}
 \@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Best online algorithm (Box-Cox Regressor) distribution.\relax }}{12}\protected@file@percent }
 \newlabel{fig:best_online_learning_day_distribution}{{8}{12}}
 \@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Online machine learning algorithm distribution. (Passive Aggressive Regressor (C=0.1, fit intercept = true, maximum iterations = 1000, shuffle = false, tolerance = 0.001), chosen as it was the worst result for the passive aggressive algorithm.\relax }}{12}\protected@file@percent }
@@ -134,16 +134,18 @@
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.2}Total Energy Generation}{13}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Mean outputs of various technologies vs. mean absolute error from 2018 to 2035 in ElecSim.\relax }}{14}\protected@file@percent }
 \newlabel{fig:pv_coal_nuclear_offshore_outputs}{{13}{14}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Total technologies invested in vs. mean absolute error from 2018 to 2035 in ElecSim.\relax }}{14}\protected@file@percent }
+\newlabel{fig:ccgt_coal_onshore_offshore_totals}{{14}{14}}
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Mean carbon emissions between 2018 and 2035.\relax }}{14}\protected@file@percent }
+\newlabel{fig:Carbon_emitted_mean_output}{{15}{14}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.3}Sensitivity Analysis}{14}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6}Discussion}{14}\protected@file@percent }
-\newlabel{sec:discussion}{{6}{14}}
+\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces Sensitivity analysis of changing demand prediction error using a normal distribution and varying the standard deviation vs. mean contributed energy per type between 2018 and 2035.\relax }}{14}\protected@file@percent }
+\newlabel{fig:sensitivity-analysis}{{16}{14}}
 \citation{Kell2018}
-\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Total technologies invested in vs. mean absolute error from 2018 to 2035 in ElecSim.\relax }}{15}\protected@file@percent }
-\newlabel{fig:ccgt_coal_onshore_offshore_totals}{{14}{15}}
-\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Mean carbon emissions between 2018 and 2035.\relax }}{15}\protected@file@percent }
-\newlabel{fig:Carbon_emitted_mean_output}{{15}{15}}
-\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces Sensitivity analysis of changing demand prediction error using a normal distribution and varying the standard deviation vs. mean contributed energy per type between 2018 and 2035.\relax }}{15}\protected@file@percent }
-\newlabel{fig:sensitivity-analysis}{{16}{15}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Discussion}{15}\protected@file@percent }
+\newlabel{sec:discussion}{{6}{15}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Conclusion}{15}\protected@file@percent }
+\newlabel{sec:conclusion}{{7}{15}}
 \bibstyle{elsarticle-num}
 \bibdata{library,bib_custom,custombibtex}
 \bibcite{Lu1993}{{1}{}{{}}{{}}}
@@ -155,9 +157,6 @@
 \bibcite{Andersen2013}{{7}{}{{}}{{}}}
 \bibcite{Kell}{{8}{}{{}}{{}}}
 \bibcite{Kell2020}{{9}{}{{}}{{}}}
-\@writefile{toc}{\contentsline {section}{\numberline {7}Conclusion}{16}\protected@file@percent }
-\newlabel{sec:conclusion}{{7}{16}}
-\@writefile{toc}{\contentsline {section}{\numberline {8}Funding Sources}{16}\protected@file@percent }
 \bibcite{Singh2012}{{10}{}{{}}{{}}}
 \bibcite{Kell2018}{{11}{}{{}}{{}}}
 \bibcite{Ahmad2017}{{12}{}{{}}{{}}}
@@ -166,6 +165,7 @@
 \bibcite{Tiong2008}{{15}{}{{}}{{}}}
 \bibcite{Quilumba2014}{{16}{}{{}}{{}}}
 \bibcite{Nguyen2017}{{17}{}{{}}{{}}}
+\@writefile{toc}{\contentsline {section}{\numberline {8}Funding Sources}{16}\protected@file@percent }
 \bibcite{Gross1987}{{18}{}{{}}{{}}}
 \bibcite{Ghofrani}{{19}{}{{}}{{}}}
 \bibcite{Fard2014}{{20}{}{{}}{{}}}
