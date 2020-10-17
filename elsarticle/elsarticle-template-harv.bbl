@@ -34,11 +34,6 @@ P.~Vrablecov{\'{a}}, A.~{Bou Ezzeddine}, V.~Rozinajov{\'{a}},
 \newblock \href {https://doi.org/10.1016/j.compeleceng.2017.07.006}
   {\path{doi:10.1016/j.compeleceng.2017.07.006}}.
 
-\bibitem{Singh2012}
-A.~K. Singh, Ibraheem, S.~Khatoon, M.~Muazzam, D.~K. Chaturvedi, {Load
-  forecasting techniques and methodologies: A review}, ICPCES 2012 - 2012 2nd
-  International Conference on Power, Control and Embedded Systems (2012).
-
 \bibitem{Huang2003}
 S.-j. Huang, S.~Member, K.-r. Shih, {Short-Term Load Forecasting Via ARMA Model
   Identification Including Non-Gaussian} 18~(2) (2003) 673--679.
@@ -59,6 +54,11 @@ A.~J.~M. Kell, M.~Forshaw, A.~S. McGough, {Long-Term Electricity Market Agent
   Based Model Validation using Genetic Algorithm based Optimization}, The
   Eleventh ACM International Conference on Future Energy Systems (e-Energy'20)
   (2020).
+
+\bibitem{Singh2012}
+A.~K. Singh, Ibraheem, S.~Khatoon, M.~Muazzam, D.~K. Chaturvedi, {Load
+  forecasting techniques and methodologies: A review}, ICPCES 2012 - 2012 2nd
+  International Conference on Power, Control and Embedded Systems (2012).
 
 \bibitem{Kell2018}
 A.~Kell, A.~S. Mcgough, M.~Forshaw, {Segmenting Residential Smart Meter Data
