@@ -108,7 +108,7 @@ Electricity supply must be matched with demand at all times. This helps reduce t
 
 % Methodology
 
-In this paper, we investigate the impact of eleven offline learning and five online learning algorithms to predict the electricity demand profile over the next 24 hours. We achieve this through integration within the long-term agent-based model, ElecSim. These algorithms include multilayer perceptron neural networks, support vector regression and linear regression. Through the prediction of electricity demand profile over the next 24 hours, we can simulate the predictions made for a day-ahead market. Once we have made these predictions, we sample from the residual distributions and perturb the electricity market demand using the simulation, ElecSim. This enables us to understand the impact of errors on the long-term dynamics of a decentralized electricity market.
+In this paper, we investigate the impact of eleven offline learning and five online learning algorithms to predict the electricity demand profile over the next 24 hours. We achieve this through integration within the long-term agent-based model, ElecSim. Through the prediction of electricity demand profile over the next 24 hours, we can simulate the predictions made for a day-ahead market. Once we have made these predictions, we sample from the residual distributions and perturb the electricity market demand using the simulation, ElecSim. This enables us to understand the impact of errors on the long-term dynamics of a decentralized electricity market.
  
 
 % Results  
@@ -375,7 +375,7 @@ The constant $C>0$ determines the trade-off between the flatness of the support 
 
 \begin{figure}
 \centering
-    \includegraphics[width=0.3\textwidth]{figures/methods/Kell_eEnergy_Fig1.eps}
+    \includegraphics[width=0.3\textwidth]{Kell_eEnergy_Fig1.eps}
     \caption{A three-layer feed forward neural network.}
     \label{fig:mlp}
 \end{figure}
@@ -453,7 +453,7 @@ ElecSim uses a configuration file which details the scenario which can be set by
 
 \begin{figure}
 \centering
-    \includegraphics[width=0.4\textwidth,natwidth=610,natheight=400]{figures/methods/System_overview_large.png}
+    \includegraphics[width=0.4\textwidth]{System_overview_large.png}
     \caption{System overview of ElecSim \cite{Kell}.}
     \label{fig:model_details}
 \end{figure}
@@ -614,7 +614,7 @@ Table \ref{table:offline_ml_metrics} displays different metrics for measuring th
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=\columnwidth,natwidth=500,natheight=260]{figures/results/offline_model_mae.eps}
+\includegraphics[width=\columnwidth]{offline_model_mae.eps}
 \caption{Offline algorithms mean absolute error comparison, with 95\% confidence interval for 5 runs of each algorithm.}
 \label{fig:beis_elecsim_historic_comparison}
 \end{figure}
@@ -622,7 +622,7 @@ Table \ref{table:offline_ml_metrics} displays different metrics for measuring th
 
 %\begin{figure}
 %\centering
-%\includegraphics[width=\columnwidth]{figures/results/offline_rf_actual_predicted.eps}
+%\includegraphics[width=\columnwidth]{offline_rf_actual_predicted.eps}
 %\caption{Best offline machine learning learning algorithm (Extra Trees Regressor) predictions versus actuals for a week in June 2018.}
 %\label{fig:best_offline_learning_day_simulation}
 %\end{figure}
@@ -631,7 +631,7 @@ Figure \ref{fig:best_offline_learning_day_distribution} displays the distributio
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=\columnwidth,natwidth=500,natheight=400]{figures/results/ExtraTreesRegressor_distribution_plot.eps}
+\includegraphics[width=\columnwidth]{ExtraTreesRegressor_distribution_plot.eps}
 \caption{Best offline machine learning algorithm (Extra Trees Regressor) distribution.}
 \label{fig:best_offline_learning_day_distribution}
 \end{figure}
@@ -642,7 +642,7 @@ Figure \ref{fig:best_offline_learning_day_distribution} displays the distributio
 
 %\begin{figure}
 %\centering
-%\includegraphics[width=\columnwidth,natwidth=500,natheight=500]{figures/results/offline_fit_time_vs_mae.eps}
+%\includegraphics[width=\columnwidth,natwidth=500,natheight=500]{offline_fit_time_vs_mae.eps}
 %\caption{Time taken to train the offline models versus mean absolute error. Error bars display standard deviation between points.}
 %\label{fig:offline_fit_time_vs_mae}
 %\end{figure}
@@ -650,7 +650,7 @@ Figure \ref{fig:best_offline_learning_day_distribution} displays the distributio
 %
 %\begin{figure}
 %\centering
-%\includegraphics[width=\columnwidth,natwidth=500,natheight=500]{figures/results/offline_score_time_vs_mae.eps}
+%\includegraphics[width=\columnwidth,natwidth=500,natheight=500]{offline_score_time_vs_mae.eps}
 %\caption{Time taken to score the offline models versus mean absolute error. Error bars display standard deviation between points.}
 %\label{fig:offline_score_time_vs_mae}
 %\end{figure}
@@ -664,14 +664,14 @@ For a small deterioration in MAE it is possible to decrease the time it takes to
 
 %\begin{figure}[h]
 %\centering
-%\includegraphics[width=\columnwidth,natwidth=500,natheight=500]{figures/results/offline_fit_time_vs_mae_all_results.eps}
+%\includegraphics[width=\columnwidth,natwidth=500,natheight=500]{offline_fit_time_vs_mae_all_results.eps}
 %\caption{Time taken to train the offline models versus mean absolute error. Error bars display standard deviation between points.}
 %\label{fig:offline_fit_time_vs_mae}
 %\end{figure}
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=\columnwidth]{figures/results/offline_fit_time_vs_mae_all_results_opaque.eps}
+\includegraphics[width=\columnwidth]{offline_fit_time_vs_mae_all_results_opaque.eps}
 \caption{Time taken to train the offline algorithms versus mean absolute error. Error bars display standard deviation between points.}
 \label{fig:offline_fit_time_vs_mae}
 \end{figure}
@@ -683,7 +683,7 @@ The scoring time, displayed in Figure \ref{fig:offline_score_time_vs_mae}, also 
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=\columnwidth]{figures/results/offline_score_time_vs_mae_all_results_opaque.eps}
+\includegraphics[width=\columnwidth]{offline_score_time_vs_mae_all_results_opaque.eps}
 \caption{Time taken to score the offline algorithm versus mean absolute error. Error bars display standard deviation between points.}
 \label{fig:offline_score_time_vs_mae}
 \end{figure}
@@ -700,7 +700,7 @@ The scoring time, displayed in Figure \ref{fig:offline_score_time_vs_mae}, also 
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.8\columnwidth,natwidth=1300,natheight=750]{figures/results/online_model_mae_barplot.eps}
+\includegraphics[width=0.8\columnwidth]{online_model_mae_barplot.eps}
 \caption{Comparison of mean absolute errors (MAE) for different online regressor algorithms. MLP results for all parameters are shown in a single barchart due to the very similar MAEs for the differing hyperparameters.}
 \label{fig:online_model_mae_barplot}
 \end{figure}
@@ -764,7 +764,7 @@ Linear Regression                                                               
 Figure \ref{fig:best_online_learning_day_distribution} displays the best online algorithm. We can see a significant improvement over the best online algorithm distribution, shown in Figure \ref{fig:best_offline_learning_day_distribution}. We remain within the max tendered national grid reserve for 98.9\% of the time, and the average available tendered national grid reserve is close to the 5\% and 95\% percentiles. This model, therefore would be highly recommended over the best offline version to ensure demand is matched with supply.
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.8\columnwidth,natwidth=500,natheight=485]{figures/results/online_learning_dists-power-0.1.eps}
+\includegraphics[width=0.8\columnwidth]{online_learning_dists-power-01.eps}
 \caption{Best online algorithm (Box-Cox Regressor) distribution.}
 \label{fig:best_online_learning_day_distribution}
 \end{figure}
@@ -773,7 +773,7 @@ Figure \ref{fig:bad_online_learning_day_distribution} displays the residuals for
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.8\columnwidth,natwidth=500,natheight=400]{figures/results/online_learning_dists-C-0.1-fit_intercept-true-max_iter-1000-shuffle-false-tol 0.001.eps}
+\includegraphics[width=0.8\columnwidth]{online_learning_dists-all_params.eps}
 \caption{Online machine learning algorithm distribution. (Passive Aggressive Regressor (C=0.1, fit intercept = true, maximum iterations = 1000, shuffle = false, tolerance = 0.001), chosen as it was the worst result for the passive aggressive algorithm.}
 \label{fig:bad_online_learning_day_distribution}
 \end{figure}
@@ -784,8 +784,8 @@ Figure \ref{fig:both_actual_predicted} displays a comparison between the actual 
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.8\columnwidth]{figures/results/both_actual_predicted.eps}
-\caption{	.}
+\includegraphics[width=0.8\columnwidth]{both_actual_predicted.eps}
+\caption{Best offline algorithm compared to the best online algorithm over a one week period.}
 \label{fig:both_actual_predicted}
 \end{figure}
 
@@ -802,14 +802,14 @@ It is noted that when compared to the offline algorithms, the training time is a
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=\columnwidth]{figures/results/online_testing_time_vs_mae_all_results_opaque.eps}
+\includegraphics[width=\columnwidth]{online_testing_time_vs_mae_all_results_opaque.eps}
 \caption{Time taken to test the online algorithms versus mean absolute error.}
 \label{fig:online_test_vs_mae}
 \end{figure}
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=\columnwidth]{figures/results/online_training_time_vs_mae_all_results_opaque.eps}
+\includegraphics[width=\columnwidth]{online_training_time_vs_mae_all_results_opaque.eps}
 \caption{Time taken to train the online algorithms versus mean absolute error.}
 \label{fig:online_train_vs_mae}
 \end{figure}
@@ -836,14 +836,14 @@ Running this simulation enabled us to see the effect on carbon emissions on the 
 %\centering
 %\begin{subfigure}[b]{0.3\textwidth}
 %%\centering
-%\includegraphics[width=\columnwidth]{figures/results/elecsim_results/results_2/contributed_PV_mean_output}
+%\includegraphics[width=\columnwidth]{elecsim_results/results_2/contributed_PV_mean_output}
 %\caption{Photovoltaic output.}
 %\label{fig:contributed_PV_mean_output}
 %\end{subfigure}
 %\hfil
 %\begin{subfigure}[b]{0.3\textwidth}  
 %%\centering
-%\includegraphics[width=\columnwidth]{figures/results/elecsim_results/results_2/contributed_Coal_mean_output.eps}
+%\includegraphics[width=\columnwidth]{elecsim_results/results_2/contributed_Coal_mean_output.eps}
 %\caption{Coal output.}
 %\label{fig:contributed_Coal_mean_output}
 %\end{subfigure}
@@ -851,7 +851,7 @@ Running this simulation enabled us to see the effect on carbon emissions on the 
 %%\vskip\baselineskip
 %\begin{subfigure}[b]{0.3\textwidth}   
 %%\centering
-%\includegraphics[width=\columnwidth]{figures/results/elecsim_results/results_2/contributed_Nuclear_mean_output.eps}
+%\includegraphics[width=\columnwidth]{elecsim_results/results_2/contributed_Nuclear_mean_output.eps}
 %\caption{Nuclear output.}
 %\label{fig:contributed_Nuclear_mean_output}
 %\end{subfigure}
@@ -859,14 +859,14 @@ Running this simulation enabled us to see the effect on carbon emissions on the 
 %\medskip
 %\begin{subfigure}[b]{0.3\textwidth}   
 %%\centering
-%\includegraphics[width=\columnwidth]{figures/results/elecsim_results/results_2/contributed_Offshore_mean_output.eps}
+%\includegraphics[width=\columnwidth]{elecsim_results/results_2/contributed_Offshore_mean_output.eps}
 %\caption{Offshore output.}
 %\label{fig:contributed_Offshore_mean_output.eps}
 %\end{subfigure}
 %\hfil
 %\begin{subfigure}[b]{0.3\textwidth}   
 %%\centering
-%\includegraphics[width=1\columnwidth]{figures/results/elecsim_results/results_2/contributed_Recip_gas_mean_output.eps}
+%\includegraphics[width=1\columnwidth]{elecsim_results/results_2/contributed_Recip_gas_mean_output.eps}
 %\caption{Reciprocal gas engine output.}
 %\label{fig:contributed_Recip_gas_mean_output}
 %\end{subfigure}
@@ -876,7 +876,7 @@ Running this simulation enabled us to see the effect on carbon emissions on the 
 
 
 \begin{figure*}[h]
-\includegraphics[width=\columnwidth,natwidth=700,natheight=485]{figures/results/contributed_total_plot.pdf}
+\includegraphics[width=\textwidth]{contributed_total_plot.pdf}
 \caption{Mean outputs of various technologies vs. mean absolute error from 2018 to 2035 in ElecSim.}
 \label{fig:pv_coal_nuclear_offshore_outputs}
 \end{figure*}
@@ -898,7 +898,7 @@ It is hypothesized that coal and nuclear output increase to cover the predicted 
 
 %\begin{subfigure}
 %%\centering
-%\includegraphics[width=0.3\textwidth]{figures/results/elecsim_results/contributed_Recip_gas_mean_output.eps}
+%\includegraphics[width=0.3\textwidth]{elecsim_results/contributed_Recip_gas_mean_output.eps}
 %\caption{Mean reciprocal gas engine output vs. mean absolute error from 2018 to 2035 in ElecSim.}
 %\label{fig:contributed_Recip_gas_mean_output}
 %\end{subfigure}
@@ -907,7 +907,7 @@ It is hypothesized that coal and nuclear output increase to cover the predicted 
 %
 %\begin{figure}
 %\centering
-%\includegraphics[width=\columnwidth]{figures/results/elecsim_results/contributed_Coal_mean_output.eps}
+%\includegraphics[width=\columnwidth]{elecsim_results/contributed_Coal_mean_output.eps}
 %\caption{Mean coal output vs. mean absolute error from 2018 to 2035 in ElecSim.}
 %\label{fig:contributed_Coal_mean_output}
 %\end{figure}
@@ -915,7 +915,7 @@ It is hypothesized that coal and nuclear output increase to cover the predicted 
 %
 %\begin{figure}
 %\centering
-%\includegraphics[width=\columnwidth]{figures/results/elecsim_results/contributed_Nuclear_mean_output.eps}
+%\includegraphics[width=\columnwidth]{elecsim_results/contributed_Nuclear_mean_output.eps}
 %\caption{Mean nuclear output vs. mean absolute error from 2018 to 2035 in ElecSim.}
 %\label{fig:contributed_Nuclear_mean_output}
 %\end{figure}
@@ -923,14 +923,14 @@ It is hypothesized that coal and nuclear output increase to cover the predicted 
 %
 %\begin{figure}
 %\centering
-%\includegraphics[width=\columnwidth]{figures/results/elecsim_results/contributed_Offshore_mean_output.eps}
+%\includegraphics[width=\columnwidth]{elecsim_results/contributed_Offshore_mean_output.eps}
 %\caption{Mean offshore output vs. mean absolute error from 2018 to 2035 in ElecSim.}
 %\label{fig:contributed_Offshore_mean_output.eps}
 %\end{figure}
 
 %\begin{figure}
 %\centering
-%\includegraphics[width=\columnwidth]{figures/results/elecsim_results/contributed_Onshore_mean_output.eps}
+%\includegraphics[width=\columnwidth]{elecsim_results/contributed_Onshore_mean_output.eps}
 %\caption{Mean onshore output vs. mean absolute error from 2018 to 2035 in ElecSim.}
 %\label{fig:contributed_Onshore_mean_output.eps}
 %\end{figure}
@@ -938,7 +938,7 @@ It is hypothesized that coal and nuclear output increase to cover the predicted 
 
 %\begin{figure}
 %\centering
-%\includegraphics[width=\columnwidth]{figures/results/elecsim_results/contributed_PV_mean_output}
+%\includegraphics[width=\columnwidth]{elecsim_results/contributed_PV_mean_output}
 %\caption{Mean photovoltaic output vs. mean absolute error from 2018 to 2035 in ElecSim.}
 %\label{fig:contributed_PV_mean_output}
 %\end{figure}
@@ -967,21 +967,21 @@ CCGT and reciprocal gas engines may have decreased in capacity over this time, d
 %\centering
 %\begin{subfigure}[b]{0.3\textwidth}
 %%\centering
-%\includegraphics[width=\columnwidth]{figures/results/elecsim_results/results_2/total_CCGT_mean_output.eps}
+%\includegraphics[width=\columnwidth]{elecsim_results/results_2/total_CCGT_mean_output.eps}
 %\caption{Total CCGT.}
 %\label{fig:total_CCGT_mean_output}
 %\end{subfigure}
 %\hfil
 %\begin{subfigure}[b]{0.3\textwidth}  
 %%\centering
-%\includegraphics[width=\columnwidth]{figures/results/elecsim_results/results_2/total_Coal_mean_output.eps}
+%\includegraphics[width=\columnwidth]{elecsim_results/results_2/total_Coal_mean_output.eps}
 %\caption{Total Coal.}
 %\label{fig:total_Coal_mean_output}
 %\end{subfigure}
 %\hfil
 %%\vskip\baselineskip
 %\begin{subfigure}[b]{0.3\textwidth}   
-%\includegraphics[width=\columnwidth]{figures/results/elecsim_results/results_2/total_Onshore_mean_output.eps}
+%\includegraphics[width=\columnwidth]{elecsim_results/results_2/total_Onshore_mean_output.eps}
 %\caption{Total Onshore.}
 %\label{fig:total_Onshore_mean_output}
 %\end{subfigure}
@@ -989,13 +989,13 @@ CCGT and reciprocal gas engines may have decreased in capacity over this time, d
 %\medskip
 %\begin{subfigure}[b]{0.3\textwidth}   
 %%\centering
-%\includegraphics[width=\columnwidth]{figures/results/elecsim_results/results_2/total_Offshore_mean_output.eps}
+%\includegraphics[width=\columnwidth]{elecsim_results/results_2/total_Offshore_mean_output.eps}
 %\caption{Total Offshore.}
 %\label{fig:total_Offshore_mean_output}
 %\end{subfigure}
 %\hfil
 %\begin{subfigure}[b]{0.3\textwidth}
-%\includegraphics[width=\columnwidth]{figures/results/elecsim_results/results_2/total_Nuclear_mean_output.eps}
+%\includegraphics[width=\columnwidth]{elecsim_results/results_2/total_Nuclear_mean_output.eps}
 %\caption{Total nuclear.}
 %\label{fig:total_nuclear_mean_output}
 %\end{subfigure}
@@ -1003,7 +1003,7 @@ CCGT and reciprocal gas engines may have decreased in capacity over this time, d
 %\begin{subfigure}[b]{0.3\textwidth}  
 %%\centering
 %%\centering
-%\includegraphics[width=\columnwidth]{figures/results/elecsim_results/results_2/total_PV_mean_output.eps}
+%\includegraphics[width=\columnwidth]{elecsim_results/results_2/total_PV_mean_output.eps}
 %\caption{Total photovoltaics.}
 %\label{fig:total_PV_mean_output}
 %\end{subfigure}
@@ -1013,7 +1013,7 @@ CCGT and reciprocal gas engines may have decreased in capacity over this time, d
 
 
 \begin{figure*}[h]
-\includegraphics[width=\columnwidth,natwidth=700,natheight=300]{figures/results/total_total_plot.pdf}
+\includegraphics[width=\textwidth]{total_total_plot.pdf}
 \caption{Total technologies invested in vs. mean absolute error from 2018 to 2035 in ElecSim.}
 \label{fig:ccgt_coal_onshore_offshore_totals}
 \end{figure*}
@@ -1030,7 +1030,7 @@ Figure \ref{fig:Carbon_emitted_mean_output} shows an increase in relative mean c
 %\centering
 %%\vskip\baselineskip
 %\begin{subfigure}[b]{0.33\textwidth}   
-%\includegraphics[width=\columnwidth]{figures/results/elecsim_results/results_2/total_Recip_gas_mean_output.eps}
+%\includegraphics[width=\columnwidth]{elecsim_results/results_2/total_Recip_gas_mean_output.eps}
 %\caption{Total Reciprocal gas engine.}
 %\label{fig:total_Recip_gas_mean_output.eps}
 %\end{subfigure}
@@ -1038,7 +1038,7 @@ Figure \ref{fig:Carbon_emitted_mean_output} shows an increase in relative mean c
 %%\medskip
 %\hfil
 %\begin{subfigure}[b]{0.33\textwidth}   
-%\includegraphics[width=\columnwidth]{figures/results/elecsim_results/results_2/Carbon_emitted_mean_output.eps}
+%\includegraphics[width=\columnwidth]{elecsim_results/results_2/Carbon_emitted_mean_output.eps}
 %\caption{Mean carbon emitted.}
 %\label{fig:Carbon_emitted_mean_output}
 %\end{subfigure}
@@ -1048,7 +1048,7 @@ Figure \ref{fig:Carbon_emitted_mean_output} shows an increase in relative mean c
 
 \begin{figure}
 \centering
-\includegraphics[width=0.6\columnwidth]{figures/results/elecsim_results/results_2/Carbon_emitted_mean_output.eps}
+\includegraphics[width=0.6\columnwidth]{Carbon_emitted_mean_output.eps}
 \caption{Mean carbon emissions between 2018 and 2035.}
 \label{fig:Carbon_emitted_mean_output}
 \end{figure}
@@ -1060,7 +1060,7 @@ In this Section we run a sensitivity analysis to visualise the effects of differ
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.7\columnwidth,natwidth=800, natheight=550]{figures/results/sensitivity_analysis.pdf}
+\includegraphics[width=0.7\columnwidth]{sensitivity_analysis.pdf}
 \caption{Sensitivity analysis of changing demand prediction error using a normal distribution and varying the standard deviation vs. mean contributed energy per type between 2018 and 2035.}
 \label{fig:sensitivity-analysis}
 \end{figure}
@@ -1076,7 +1076,7 @@ After a standard deviation of 14,000MW, photovoltaics increases, whilst nuclear 
 
 %\begin{figure}
 %\centering
-%\includegraphics[width=\columnwidth]{figures/results/elecsim_results/total_Onshore_mean_output.eps}
+%\includegraphics[width=\columnwidth]{elecsim_results/total_Onshore_mean_output.eps}
 %\caption{Total Onshore invested in vs. mean absolute error from 2018 to 2035 in ElecSim.}
 %\label{fig:total_Onshore_mean_output}
 %\end{figure}
@@ -1084,14 +1084,14 @@ After a standard deviation of 14,000MW, photovoltaics increases, whilst nuclear 
 
 %\begin{figure}
 %\centering
-%\includegraphics[width=\columnwidth]{figures/results/elecsim_results/total_PV_mean_output.eps}
+%\includegraphics[width=\columnwidth]{elecsim_results/total_PV_mean_output.eps}
 %\caption{Total photovoltaics invested in vs. mean absolute error from 2018 to 2035 in ElecSim.}
 %\label{fig:total_PV_mean_output}
 %\end{figure}
 
 %\begin{figure}
 %\centering
-%\includegraphics[width=\columnwidth]{figures/results/elecsim_results/total_Recip_gas_mean_output.eps}
+%\includegraphics[width=\columnwidth]{elecsim_results/total_Recip_gas_mean_output.eps}
 %\caption{Total Reciprocal gas engine invested in vs. mean absolute error from 2018 to 2035 in ElecSim.}
 %\label{fig:total_Recip_gas_mean_output.eps}
 %\end{figure}

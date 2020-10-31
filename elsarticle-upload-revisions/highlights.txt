@@ -1,0 +1,6 @@
+Highlights
+
+Online machine learning for load forecasting
+Impact of machine learning on investment decisions
+Effect of prediction error on long term electricity markets
+Computation speed of machine learning algorithms

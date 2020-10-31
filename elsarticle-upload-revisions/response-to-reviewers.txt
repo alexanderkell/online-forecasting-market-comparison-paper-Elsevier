@@ -1,0 +1,9 @@
+Response to reviewers:
+
+Thank you to the reviewers for their helpful comments.
+
+We have amended the document to incorporate these comments into our work.
+
+Specifically, we have answered the question with respect to cost minimisation, and compared these techniques to agent based models. We spoke about the difference in implementation, added a sensitivity analysis and cited to previous work where we look at the different trends in predicting electricity generators.
+
+In addition, we added multiple new metrics in table format, such as MAPE and MAE. We discussed the speeds of the algorithms, and how the cloud could be used for online learning. We also added further detail on the long-term investment algorithm.
